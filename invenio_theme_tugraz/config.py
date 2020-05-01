@@ -19,7 +19,7 @@ INVENIO_THEME_TUGRAZ_BASE_TEMPLATE = 'invenio_theme_tugraz/base.html'
 
 
 # Theme Logo
-THEME_LOGO="images/tug_logo.png"
+THEME_LOGO= 'images/tug_logo.png'
 
 # Instance's theme entrypoint file. Path relative to the ``assets/`` folder.
 INSTANCE_THEME_FILE = './scss/invenio_tugraz_theme/theme.scss'
@@ -40,13 +40,13 @@ SECURITY_LOGIN_USER_TEMPLATE = 'invenio_theme_tugraz/accounts/login.html'
 #SHIBBOLETH_ISACTIVE = 'False'
 
 # icon used in login page
-TUG_ICON = "images/icon_use.png"
+TUG_ICON = 'images/icon_use.png'
 
 # Frontpage title
 THEME_FRONTPAGE_TITLE = "RDM for TUGRAZ"
 
 # Mail server
-#MAIL_SERVER='129.27.11.182'
-#SECURITY_EMAIL_SENDER = "info@invenio-test.tugraz.at"
-#SECURITY_EMAIL_SUBJECT_REGISTER = "Welcome to RDM!"
-#MAIL_SUPPRESS_SEND = False
+MAIL_SERVER= '129.27.11.182'
+SECURITY_EMAIL_SENDER = 'info@invenio-rdm.tugraz.at'
+SECURITY_EMAIL_SUBJECT_REGISTER = 'Welcome to RDM!'
+MAIL_SUPPRESS_SEND = False

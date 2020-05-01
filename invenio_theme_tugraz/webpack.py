@@ -21,7 +21,6 @@ def theme():
         'assets',
         entry={
             # TODO:
-            #'invenio-theme-tugraz-js': './js/invenio_tugraz_theme/tugraz.js',
         },
         dependencies={
             'jquery': '3.1.0'
