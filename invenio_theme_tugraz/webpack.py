@@ -8,10 +8,10 @@
 """JS/CSS Webpack bundles for theme."""
 
 from flask_webpackext import WebpackBundle
-from flask import current_app
 
 def theme():
     """Returns module's webpack bundle.
+
     This is a callable function in order to lazy load `current_app`
     and avoid working outside application context.
     """
