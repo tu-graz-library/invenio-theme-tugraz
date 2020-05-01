@@ -78,6 +78,13 @@ setup(
         'invenio_i18n.translations': [
             'messages = invenio_theme_tugraz',
         ],
+        'invenio_assets.webpack': [
+            'invenio_theme_tugraz = invenio_theme_tugraz.webpack:theme',
+        ],
+        'invenio_config.module': [
+            'invenio_theme_tugraz = invenio_theme_tugraz.config',
+        ],
+
         # TODO: Edit these entry points to fit your needs.
         # 'invenio_access.actions': [],
         # 'invenio_admin.actions': [],
