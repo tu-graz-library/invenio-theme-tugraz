@@ -9,6 +9,7 @@
 
 from flask_webpackext import WebpackBundle
 
+
 def theme():
     """Returns module's webpack bundle.
 
