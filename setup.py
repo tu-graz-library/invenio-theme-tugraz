@@ -43,6 +43,7 @@ setup_requires = [
 
 install_requires = [
     'Flask-BabelEx>=0.9.4',
+    'Flask-WebpackExt>=1.0.0',
 ]
 
 packages = find_packages()
