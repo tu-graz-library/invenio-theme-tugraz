@@ -63,4 +63,3 @@ MAIL_SUPPRESS_SEND = False
 I18N_LANGUAGES = [
      ('de', _('German'))
  ]
-
