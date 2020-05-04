@@ -8,6 +8,8 @@
 
 """invenio module for TUGRAZ theme."""
 
+from flask_babelex import gettext as _
+
 # TODO: This is an example file. Remove it if your package does not use any
 # extra configuration variables.
 
@@ -36,6 +38,9 @@ THEME_FRONTPAGE_TEMPLATE = 'invenio_theme_tugraz/frontpage.html'
 # Login page
 SECURITY_LOGIN_USER_TEMPLATE = 'invenio_theme_tugraz/accounts/login.html'
 
+# footer template
+THEME_FOOTER_TEMPLATE = 'invenio_theme_tugraz/footer.html'
+
 # uncomment this to use the login with Tugraz @ login.html
 SHIBBOLETH_ISACTIVE = 'False'
 
@@ -50,3 +55,12 @@ MAIL_SERVER = '129.27.11.182'
 SECURITY_EMAIL_SENDER = 'info@invenio-rdm.tugraz.at'
 SECURITY_EMAIL_SUBJECT_REGISTER = 'Welcome to RDM!'
 MAIL_SUPPRESS_SEND = False
+
+# Invenio-I18N
+# ============
+# See https://invenio-i18n.readthedocs.io/en/latest/configuration.html
+# Other supported languages (do not include BABEL_DEFAULT_LOCALE in list).
+I18N_LANGUAGES = [
+     ('de', _('German'))
+ ]
+

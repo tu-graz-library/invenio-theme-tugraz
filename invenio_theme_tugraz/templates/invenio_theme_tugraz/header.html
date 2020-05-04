@@ -1,4 +1,5 @@
 {#
+  Copyright (C) 2020 TUGRAZ
   Copyright (C) 2020 mojib wali.
 
   invenio-theme-tugraz is free software; you can redistribute it and/or
@@ -117,6 +118,7 @@
 
               <div class="short-menu-left">
 
+
                 <div id="all-menu-top-left-item">
                   <div class="short-menu-left-lang">
                     <!-- TODO language change not necessary because we have no english version -->
@@ -124,7 +126,17 @@
                   </div>
 
                   <div class="short-menu-left-search">
-
+                        {%- if config.I18N_LANGUAGES %}
+          <span style="margin-right:10px; font-size:18px;">
+                 {%- for l in current_i18n.get_locales() %}
+              {%- if current_i18n.language != l.language %}
+              <a href="{{ url_for('invenio_i18n.set_lang', lang_code=l.language) }}">{{ l.get_display_name() [0:2]}}</a>
+              {% else %}
+              <strong>{{ l.get_display_name() [0:2] }}</strong>
+              {%- endif %}
+              {%- endfor %}
+                  </span>
+              {%- endif %}
                     <a href="/search">
 
                       <svg version="1.1" xmlns="http://www.w3.org/2000/svg"
