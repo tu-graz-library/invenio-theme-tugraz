@@ -41,7 +41,7 @@ SECURITY_LOGIN_USER_TEMPLATE = 'invenio_theme_tugraz/accounts/login.html'
 # footer template
 THEME_FOOTER_TEMPLATE = 'invenio_theme_tugraz/footer.html'
 
-# uncomment this to use the login with Tugraz @ login.html
+# set True if SAML is configured.
 SHIBBOLETH_ISACTIVE = 'False'
 
 # icon used in login page
@@ -59,6 +59,9 @@ MAIL_SUPPRESS_SEND = False
 # Invenio-I18N
 # ============
 # See https://invenio-i18n.readthedocs.io/en/latest/configuration.html
+BABEL_DEFAULT_LOCALE = 'en'
+# Default time zone
+BABEL_DEFAULT_TIMEZONE = 'Europe/Vienna'
 # Other supported languages (do not include BABEL_DEFAULT_LOCALE in list).
 I18N_LANGUAGES = [
      ('de', _('German'))
