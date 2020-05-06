@@ -20,7 +20,7 @@
         <h3 class="text-center panel-free-title">{{_('Log in to account') }}</h3>
 
 
-        {%- if config.SHIBBOLETH_ISACTIVE %}
+        {%- if config.SHIBBOLETH_ISACTIVE == 'True' %}
             <div class="col">
               <a href="{{ url_for('sso_saml.sso', idp='idp') }}" class="btn btn-default btn-lg btn-block"
                 class="btn btn-outline-primary btn-block">
