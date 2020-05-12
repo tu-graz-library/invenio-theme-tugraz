@@ -50,12 +50,6 @@ TUG_ICON = 'images/icon_use.png'
 # Frontpage title
 THEME_FRONTPAGE_TITLE = "RDM for TUGRAZ"
 
-# Mail server
-MAIL_SERVER = '129.27.11.182'
-SECURITY_EMAIL_SENDER = 'info@invenio-rdm.tugraz.at'
-SECURITY_EMAIL_SUBJECT_REGISTER = 'Welcome to RDM!'
-MAIL_SUPPRESS_SEND = False
-
 # Invenio-I18N
 # ============
 # See https://invenio-i18n.readthedocs.io/en/latest/configuration.html
