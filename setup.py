@@ -64,7 +64,7 @@ setup(
     license='MIT',
     author='mojib wali',
     author_email='mojib.wali@tugraz.at',
-    url='https://github.com/https://github.com/mb-wali/invenio-theme-tugraz.git',
+    url='https://github.com/mb-wali/invenio-theme-tugraz',
     packages=packages,
     zip_safe=False,
     include_package_data=True,
