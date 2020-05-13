@@ -41,11 +41,8 @@ SECURITY_LOGIN_USER_TEMPLATE = 'invenio_theme_tugraz/accounts/login.html'
 # footer template
 THEME_FOOTER_TEMPLATE = 'invenio_theme_tugraz/footer.html'
 
-# set True if SAML is configured.
-SHIBBOLETH_ISACTIVE = 'False'
-
 # icon used in login page
-TUG_ICON = 'images/icon_use.png'
+INVENIO_THEME_TUGRAZ_ICON = 'images/icon_use.png'
 
 # Frontpage title
 THEME_FRONTPAGE_TITLE = "RDM for TUGRAZ"
