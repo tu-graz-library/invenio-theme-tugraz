@@ -1,6 +1,8 @@
 {#
   Copyright (C) 2020 TUGRAZ
   Copyright (C) 2020 mojib wali.
+  Copyright (C) 2020 Nikita Lvov
+
 
   invenio-theme-tugraz is free software; you can redistribute it and/or
   modify it under the terms of the MIT License; see LICENSE file for more
@@ -10,16 +12,56 @@
 <footer id="footer" class="footer-bottom">
   <div class="container">
     <div class="row">
-      <div class="col-xs-6 col-xs-push-6 text-right">
-        <!--
-        {%- if config.I18N_LANGUAGES %}
-        {% from "invenio_i18n/macros/language_selector.html" import language_selector_dropdown %}
-        {{ language_selector_dropdown() }}
-        {%- endif %}
-        -->
+
+      <div class="col-xs-12 col-sm-6 col-md-3">
+        <h3 class="footer-title">TU Graz<span></span></h3>
+        <p>Technische Universität Graz</p>
+        <p>Rechbauerstraße 12</p>
+        <p>8010 Graz</p>
+        <p>Tel.: +43 316 873 0</p>
+        <p>Fax: +43 316 873 6009</p>
       </div>
-      <div class="col-xs-6 col-xs-pull-6">
-        {% trans invenio_rdm="http://inveniosoftware.org/products/rdm" %}Powered by <a href="{{invenio_rdm}}">InvenioRDM</a>{% endtrans %}
+
+      <div class="col-xs-12 col-sm-6 col-md-3">
+        <h3 class="widget-title">Other Tools<span></span></h3>
+        <ul class="list-group list-group-flush" id="footer-link">
+          <li class="list-group-item footer-link-item"><a href="https://online.tugraz.at/"><i class="fa fa-external-link" aria-hidden="true"></i> Campus-Management-System</a></li>
+          <li class="list-group-item footer-link-item"><a href="https://tu4u.tugraz.at/"><i class="fa fa-external-link" aria-hidden="true"></i> Intranet</a></li>
+          <li class="list-group-item footer-link-item"><a href="https://tc.tugraz.at/"><i class="fa fa-external-link" aria-hidden="true"></i> E-Learning Platform TeachCenter</a></li>
+        </ul>
+      </div>
+
+      <div class="col-xs-12 col-sm-6 col-md-3">
+        <h3 class="widget-title">Services<span></span></h3>
+        <ul class="list-group list-group-flush" id="footer-link">
+          <li class="list-group-item footer-link-item"><a href="https://search-tug.obvsg.at/"><i class="fa fa-external-link" aria-hidden="true"></i> Library Search</a></li>
+          <li class="list-group-item footer-link-item"><a href="http://archivbestand.tugraz.at/actaproweb/search.xhtml"><i class="fa fa-external-link" aria-hidden="true"></i> Archive</a></li>
+          <li class="list-group-item footer-link-item"><a href="https://graz.pure.elsevier.com/en/"><i class="fa fa-external-link" aria-hidden="true"></i> Research portal</a></li>
+        </ul>
+      </div>
+
+      <div class="col-xs-12 col-sm-6 col-md-3">
+        <h3 class="widget-title">Connect & Follow<span></span></h3>
+        <div class="row">
+          <i class="fa fa-instagram fa-5x" aria-hidden="true"></i>
+          <i class="fa fa-twitter-square fa-5x" aria-hidden="true"></i>
+          <i class="fa fa-youtube-square fa-5x" aria-hidden="true"></i> 
+          <div class="w-100"></div>
+          <i class="fa fa-facebook-official fa-5x" aria-hidden="true"></i>
+          <i class="fa fa-linkedin-square fa-5x" aria-hidden="true"></i>
+          <i class="fa fa-xing-square fa-5x" aria-hidden="true"></i>
+        </div>
+        {#
+          icon grid with links to be placed there
+        #}
+      </div>
+
+
+    </div>
+    <hr class="mt-5 mb-5">
+    <div class="row">
+      <div class="col-md-12 text-center">
+      <p>{% trans invenio_rdm="http://inveniosoftware.org/products/rdm" %}Powered by <a href="{{invenio_rdm}}">InvenioRDM</a>{% endtrans %}</p>
       </div>
     </div>
   </div>
