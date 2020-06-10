@@ -39,6 +39,7 @@ for reqs in extras_require.values():
 setup_requires = [
     'Babel>=1.3',
     'pytest-runner>=3.0.0,<5',
+    'invenio-assets>=1.2.0,<1.3.0',
 ]
 
 install_requires = [

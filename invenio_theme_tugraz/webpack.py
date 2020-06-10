@@ -17,8 +17,6 @@ theme = WebpackThemeBundle(
             entry={
                 'invenio-theme-tugraz-theme':
                     './less/invenio_theme_tugraz/theme.less',
-                #'invenio-theme-tugraz-js':
-                    #'./js/invenio_theme_tugraz/example.js',
             },
             dependencies={}
         )
