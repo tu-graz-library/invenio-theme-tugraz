@@ -80,7 +80,7 @@ setup(
             'messages = invenio_theme_tugraz',
         ],
         'invenio_assets.webpack': [
-            'invenio_theme_tugraz = invenio_theme_tugraz.webpack:theme',
+            'invenio_theme_tugraz_theme = invenio_theme_tugraz.webpack:theme',
         ],
         'invenio_config.module': [
             'invenio_theme_tugraz = invenio_theme_tugraz.config',
