@@ -30,15 +30,28 @@
    }
  }
 
- #footer-link {
-  list-style-type: none;
+
+ .footer-title {
+  font-family: "Source Sans Pro";
+  font-size: 2em;
+  font-weight: 500;
+}
+
+
+#footer-link {
+list-style-type: none;
 }
 
 .footer-link-item {
-  text-decoration: underline;
-  background: none;
-  border: none;
-  padding: 0;
+text-decoration: underline;
+background: none;
+border: none;
+padding: 0;
+}
+
+.footer-univ-desc {
+  margin: 0 0 1em;
+  font-family: "Source Sans Pro";
 }
 
 
