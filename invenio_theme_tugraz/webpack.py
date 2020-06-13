@@ -6,22 +6,19 @@
 
 """JS/CSS Webpack bundles for theme."""
 
-from flask_webpackext import WebpackBundle
+from invenio_assets.webpack import WebpackThemeBundle
 
-
-def theme():
-    """Returns module's webpack bundle.
-
-    This is a callable function in order to lazy load `current_app`
-    and avoid working outside application context.
-    """
-    return WebpackBundle(
-        __name__,
-        'assets',
-        entry={
-            # TODO:
-        },
-        dependencies={
-            'jquery': '3.1.0'
-        }
-    )
+theme = WebpackThemeBundle(
+    __name__,
+    'assets',
+    default='semantic-ui',
+    themes={
+        'semantic-ui': dict(
+            entry={
+                'invenio-theme-tugraz-theme':
+                    './less/invenio_theme_tugraz/theme.less',
+            },
+            dependencies={}
+        )
+    }
+)

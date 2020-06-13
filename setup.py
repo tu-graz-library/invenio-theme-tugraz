@@ -44,6 +44,7 @@ setup_requires = [
 install_requires = [
     'Flask-BabelEx>=0.9.4',
     'Flask-WebpackExt>=1.0.0',
+    'invenio-assets>=1.2.0,<1.3.0',
 ]
 
 packages = find_packages()
@@ -80,7 +81,7 @@ setup(
             'messages = invenio_theme_tugraz',
         ],
         'invenio_assets.webpack': [
-            'invenio_theme_tugraz = invenio_theme_tugraz.webpack:theme',
+            'invenio_theme_tugraz_theme = invenio_theme_tugraz.webpack:theme',
         ],
         'invenio_config.module': [
             'invenio_theme_tugraz = invenio_theme_tugraz.config',

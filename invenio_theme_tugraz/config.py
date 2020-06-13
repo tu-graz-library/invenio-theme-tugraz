@@ -10,9 +10,6 @@
 
 from flask_babelex import gettext as _
 
-# TODO: This is an example file. Remove it if your package does not use any
-# extra configuration variables.
-
 INVENIO_THEME_TUGRAZ_DEFAULT_VALUE = 'foobar'
 """Default value for the application."""
 
@@ -23,12 +20,6 @@ INVENIO_THEME_TUGRAZ_BASE_TEMPLATE = 'invenio_theme_tugraz/base.html'
 # Theme Logo
 THEME_LOGO = 'images/tug_logo.png'
 
-# Instance's theme entrypoint file. Path relative to the ``assets/`` folder.
-INSTANCE_THEME_FILE = './scss/invenio_tugraz_theme/theme.scss'
-
-# Instance's search theme entrypoint file. Path under `assets` folder.
-INSTANCE_SEARCH_THEME_FILE = './scss/invenio_tugraz_theme/search/theme.scss'
-
 # Custom header.html
 THEME_HEADER_TEMPLATE = 'invenio_theme_tugraz/header.html'
 
@@ -37,6 +28,8 @@ THEME_FRONTPAGE_TEMPLATE = 'invenio_theme_tugraz/frontpage.html'
 
 # Login page
 SECURITY_LOGIN_USER_TEMPLATE = 'invenio_theme_tugraz/accounts/login.html'
+
+THEME_HEADER_LOGIN_TEMPLATE = 'invenio_theme_tugraz/accounts/header_login.html'
 
 # footer template
 THEME_FOOTER_TEMPLATE = 'invenio_theme_tugraz/footer.html'
@@ -57,3 +50,20 @@ BABEL_DEFAULT_TIMEZONE = 'Europe/Vienna'
 I18N_LANGUAGES = [
      ('de', _('German'))
  ]
+
+# Invenio-APP-RDM
+# =============
+SEARCH_UI_HEADER_TEMPLATE = 'invenio_theme_tugraz/header.html'
+"""Search page's header template."""
+
+# SEARCH_UI_SEARCH_TEMPLATE = 'invenio_theme_tugraz/search/search.html'
+"""Search page's base template."""
+
+# DEPOSITS_FORMS_BASE_TEMPLATE = 'invenio_app_rdm/deposits/forms/deposits.html'
+"""Deposits form page's base template."""
+
+DEPOSITS_HEADER_TEMPLATE = 'invenio_theme_tugraz/header.html'
+"""Deposits header page's template."""
+
+# DEPOSITS_UPLOADS_TEMPLATE = 'invenio_app_rdm/deposits/uploads.html'
+"""Deposits user's uploads page template."""

@@ -39,4 +39,5 @@ recursive-include invenio_theme_tugraz *.js
 recursive-include invenio_theme_tugraz *.png
 recursive-include invenio_theme_tugraz *.scss
 recursive-include invenio_theme_tugraz *.svg
+recursive-include invenio_theme_tugraz *.less
 recursive-include tests *.py
