@@ -16,29 +16,32 @@ INVENIO_THEME_TUGRAZ_DEFAULT_VALUE = 'foobar'
 INVENIO_THEME_TUGRAZ_BASE_TEMPLATE = 'invenio_theme_tugraz/base.html'
 """Default base template for the demo page."""
 
-
-# Theme Logo
 THEME_LOGO = 'images/tug_logo.png'
+"""TU Graz logo"""
 
-# Custom header.html
 THEME_HEADER_TEMPLATE = 'invenio_theme_tugraz/header.html'
+"""TU Graz header template"""
 
-# override frontpage.html
 THEME_FRONTPAGE_TEMPLATE = 'invenio_theme_tugraz/frontpage.html'
+"""Frontpage template"""
 
-# Login page
 SECURITY_LOGIN_USER_TEMPLATE = 'invenio_theme_tugraz/accounts/login.html'
+"""Login template"""
 
 THEME_HEADER_LOGIN_TEMPLATE = 'invenio_theme_tugraz/accounts/header_login.html'
+"""login page header"""
 
-# footer template
 THEME_FOOTER_TEMPLATE = 'invenio_theme_tugraz/footer.html'
+"""footer template"""
 
-# icon used in login page
 INVENIO_THEME_TUGRAZ_ICON = 'images/icon_use.png'
+"""icon used in login page"""
 
-# Frontpage title
 THEME_FRONTPAGE_TITLE = "RDM for TUGRAZ"
+"""Frontpage title."""
+
+THEME_SITENAME = _('Application Name')
+"""Site name."""
 
 # Invenio-I18N
 # ============
@@ -56,14 +59,5 @@ I18N_LANGUAGES = [
 SEARCH_UI_HEADER_TEMPLATE = 'invenio_theme_tugraz/header.html'
 """Search page's header template."""
 
-# SEARCH_UI_SEARCH_TEMPLATE = 'invenio_theme_tugraz/search/search.html'
-"""Search page's base template."""
-
-# DEPOSITS_FORMS_BASE_TEMPLATE = 'invenio_app_rdm/deposits/forms/deposits.html'
-"""Deposits form page's base template."""
-
 DEPOSITS_HEADER_TEMPLATE = 'invenio_theme_tugraz/header.html'
 """Deposits header page's template."""
-
-# DEPOSITS_UPLOADS_TEMPLATE = 'invenio_app_rdm/deposits/uploads.html'
-"""Deposits user's uploads page template."""
