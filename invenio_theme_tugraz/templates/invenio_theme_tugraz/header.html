@@ -220,20 +220,6 @@
     </div>
   </nav>
 
-
-  <script>
-    function hide() {
-      var x = document.getElementById('heading');
-
-      if (x.style.display === "none") {
-        x.style.display = "block";
-      } else {
-        x.style.display = "none";
-      }
-
-    }
-
-  </script>
   {%- block flashmessages %}
   {%- from "invenio_theme/macros/messages.html" import flashed_messages with context -%}
   {{ flashed_messages() }}
