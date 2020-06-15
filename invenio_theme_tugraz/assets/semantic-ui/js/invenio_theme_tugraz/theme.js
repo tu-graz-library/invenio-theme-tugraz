@@ -1,11 +1,8 @@
-export function hide() {
-    var x = document.getElementById('heading');
+export function toggleVisibility(id) {
+    var element = document.getElementById(id);
+    var isHided = element.style.display === "none";
 
-    if (x.style.display === "none") {
-        x.style.display = "block";
-    } else {
-        x.style.display = "none";
-    }
+    element.style.display = isHided ? "block" : "none";
 }
 
-window.hide = hide;
+window.toggleVisibility = toggleVisibility;
