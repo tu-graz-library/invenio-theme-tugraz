@@ -10,8 +10,8 @@
   <div class="ui grid container">
     <div class="center aligned four column row text-center">
       <div class="col-xs-12 col-sm-6 col-md-3 column left aligned text-left">
-        <h3 class="footer-title">TU Graz</h3>
-        <p class="footer-univ-desc">Technische Universität Graz</p>
+        <h3 class="footer-title">{% trans %}TU Graz{% endtrans %}</h3>
+        <p class="footer-univ-desc">Graz University of Technology</p>
         <p class="footer-univ-desc">Rechbauerstraße 12</p>
         <p class="footer-univ-desc">8010 Graz</p>
         <p class="footer-univ-desc">Tel.: +43 316 873 0</p>
@@ -20,21 +20,22 @@
       <div class="col-xs-12 col-sm-6 col-md-3 column left aligned text-left">
         <h3 class="footer-title">Other Tools</h3>
         <div id="footer-link">
-          <p class="footer-univ-desc"><a href="https://online.tugraz.at/"><i class="fa fa-external-link linkify icon" aria-hidden="true"></i> Campus-Management-System</a></p>
-          <p class="footer-univ-desc"><a href="https://tu4u.tugraz.at/"><i class="fa fa-external-link linkify icon" aria-hidden="true"></i> Intranet</a></p>
-          <p class="footer-univ-desc"><a href="https://tc.tugraz.at/"><i class="fa fa-external-link linkify icon" aria-hidden="true"></i> E-Learning Platform TeachCenter</a></p>
+          <p class="footer-univ-desc"><i class="fa fa-external-link linkify icon" aria-hidden="true"></i>{% trans campus="https://online.tugraz.at/" %}<a href="{{campus}}">Campus-Management-System</a>{% endtrans %}</p>
+          <p class="footer-univ-desc"><i class="fa fa-external-link linkify icon" aria-hidden="true"></i>{% trans intranet="https://tu4u.tugraz.at/" %}<a href="{{intranet}}">Intranet</a>{% endtrans %}</p>
+          <p class="footer-univ-desc"><i class="fa fa-external-link linkify icon" aria-hidden="true"></i>{% trans tc="https://tc.tugraz.at/" %}<a href="{{tc}}">E-Learning Platform TeachCenter</a>{% endtrans %}</p>
         </div>
       </div>
       <div class="col-xs-12 col-sm-6 col-md-3 column left aligned text-left">
         <h3 class="footer-title">Services</h3>
         <div id="footer-link">
-          <p class="footer-univ-desc"><a href="https://search-tug.obvsg.at/"><i class="fa fa-external-link linkify icon" aria-hidden="true"></i> Library Search</a></p>
-          <p class="footer-univ-desc"><a href="http://archivbestand.tugraz.at/actaproweb/search.xhtml"><i class="fa fa-external-link linkify icon" aria-hidden="true"></i> Archive</a></p>
-          <p class="footer-univ-desc"><a href="https://graz.pure.elsevier.com/en/"><i class="fa fa-external-link linkify icon" aria-hidden="true"></i> Research portal</a></p>
+          <p class="footer-univ-desc"><i class="fa fa-external-link linkify icon" aria-hidden="true"></i>{% trans library="https://search-tug.obvsg.at/" %}<a href="{{library}}">Library Search</a>{% endtrans %}</p>
+          <p class="footer-univ-desc"><i class="fa fa-external-link linkify icon" aria-hidden="true"></i>{% trans archive="http://archivbestand.tugraz.at/actaproweb/search.xhtml" %}<a href="{{archive}}">Archive</a>{% endtrans %}</p>
+          <p class="footer-univ-desc"><i class="fa fa-external-link linkify icon" aria-hidden="true"></i>{% trans pure="https://graz.pure.elsevier.com/en/" %}<a href="{{pure}}">Research portal</a>{% endtrans %}</p>
         </div>
       </div>
       <div class="col-xs-12 col-sm-6 col-md-3 column left aligned text-left">
         <h3 class="footer-title">Connect & Follow</h3>
+        {# icon grid with links to be placed there #}
         <i class="fa fa-instagram fa-5x" aria-hidden="true"><i class="instagram icon huge"></i></i>
         <i class="fa fa-twitter-square fa-5x" aria-hidden="true"><i class="twitter square icon huge"></i></i>
         <i class="fa fa-youtube-square fa-5x" aria-hidden="true"><i class="twitter icon huge"></i></i> 
@@ -42,9 +43,6 @@
         <i class="fa fa-facebook-official fa-5x" aria-hidden="true"><i class="facebook square icon huge"></i></i>
         <i class="fa fa-linkedin-square fa-5x" aria-hidden="true"><i class="linkedin icon huge"></i></i>
         <i class="fa fa-xing-square fa-5x" aria-hidden="true"><i class="xing square icon huge"></i></i>
-        {#
-          icon grid with links to be placed there
-        #}
       </div>
     </div>
     <div class="center aligned one column row">

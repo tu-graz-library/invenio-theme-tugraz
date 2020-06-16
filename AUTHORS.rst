@@ -11,3 +11,4 @@ Authors
 invenio module for TUGRAZ theme.
 
 - mojib wali <mojib.wali@tugraz.at>
+- Nikita Lvov <lvov@tugraz.at>
