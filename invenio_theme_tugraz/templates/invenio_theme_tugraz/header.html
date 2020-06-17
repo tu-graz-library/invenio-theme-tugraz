@@ -81,47 +81,25 @@
         <div class="short-menu" id="all-menu-top-table">
 
           <div class="short-menu-left">
-
-
             <div id="all-menu-top-left-item">
-              <div class="short-menu-left-lang">
-                <!-- TODO language change not necessary because we have no english version -->
-
-              </div>
-
               <div class="short-menu-left-search">
                 {%- if config.I18N_LANGUAGES %}
-                <span style="margin-right:10px; font-size:18px;">
+                <span class="short-menu-left-lang" style="margin-right:10px; font-size:18px;">
                   {%- for l in current_i18n.get_locales() %}
                   {%- if current_i18n.language != l.language %}
                   <a
                     href="{{ url_for('invenio_i18n.set_lang', lang_code=l.language) }}">{{ l.get_display_name() [0:2]}}</a>
-                  {% else %}
-                  <strong>{{ l.get_display_name() [0:2] }}</strong>
                   {%- endif %}
                   {%- endfor %}
                 </span>
                 {%- endif %}
-                <div class="search-icon-header">
+                <span class="search-icon-header">
                   <a href="/search">
-                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg"
-                      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/"
-                      xmlns:cc="http://creativecommons.org/ns#" viewBox="0 0 26.01515 26.01515" width="26.015"
-                      height="26.015" class="all-menu-top-icon">
-                      <g transform="translate(1,1)" stroke-miterlimit="10"
-                        style="stroke-linejoin:round;stroke:#000;stroke-miterlimit:10;stroke-width:2;fill:none">
-                        <circle style="stroke-miterlimit:10;stroke-width:2" r="8" cx="8.5" cy="8.5"></circle>
-                        <path d="m14.156 14.156 9.344 9.344"
-                          style="stroke-width:2;stroke-miterlimit:10;stroke-linecap:round"></path>
-                      </g>
-                    </svg>
+                    <i class="search icon large fitted"></i>
                   </a>
-                </div>
+                </span>
               </div>
-
             </div>
-
-
           </div>
 
           <div class="short-menu-right">
