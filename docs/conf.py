@@ -123,7 +123,7 @@ html_theme_options = {
     'github_banner': True,
     'show_powered_by': False,
     'extra_nav_links': {
-        'invenio-theme-tugraz@GitHub': 'https://github.com/https://github.com/mb-wali/invenio-theme-tugraz.git',
+        'invenio-theme-tugraz@GitHub': 'https://github.com/mb-wali/invenio-theme-tugraz',
         'invenio-theme-tugraz@PyPI': 'https://pypi.python.org/pypi/invenio-theme-tugraz/',
     }
 }
