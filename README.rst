@@ -10,7 +10,7 @@
 ======================
 
 .. image:: https://img.shields.io/travis/inveniosoftware/invenio-app-rdm.svg
-        :target: https://travis-ci.org/github.com/mb-wali/invenio-theme-tugraz
+        :target: https://travis-ci.com/github/mb-wali/invenio-theme-tugraz
 
 .. image:: https://img.shields.io/github/license/inveniosoftware/invenio-app-rdm.svg
         :target: https://github.com/mb-wali/invenio-theme-tugraz/blob/master/LICENSE
