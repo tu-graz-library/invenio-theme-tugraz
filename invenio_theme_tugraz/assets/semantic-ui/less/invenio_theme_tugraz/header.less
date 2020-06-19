@@ -65,28 +65,56 @@ a {
   height: 49px;
   width: 100%;
 }
+
 .short-menu-left {
   border-right: 1px solid black;
   display: table-cell;
   text-align: right;
   width: 50%;
 }
+
 .short-menu-right {
   display: table-cell;
   width: 50%;
   color: #000000;
+  & div {
+    & svg {
+      & g {
+        stroke: #000;
+        stroke-linecap: round;
+        stroke-width: 2;
+        fill: none;
+      }
+    }
+  }
+}
+
+.short-menu-right :hover {
+  background-color: #000000;
+  color: #ffffff;
+  & svg {
+    & g {
+      stroke: #fff;
+    }
+  }
 }
 
 .short-menu-left-lang {
-  background-color: transparent;
+  display: inline-block;
+  margin-right: 10px;
+  font-size: 17px !important;
+  font-weight: 300;
   & a {
+    padding: 5px;
+    background-color: transparent;
     color: #000;
+    text-decoration: none;
   }
 }
 
 .short-menu-left-lang:hover {
-  background-color: #000;
   & a {
+    background-color: #000;
     color: #fff;
     text-decoration: none;
   }
@@ -94,16 +122,31 @@ a {
 
 .search-icon-header {
   display: inline-block;
-  background-color: transparent;
+  & a {
+    background-color: transparent;
+    padding: 5px;
+    text-decoration: none;
+    & svg {
+      & g {
+        stroke-linejoin: round;
+        stroke: #000;
+        stroke-miterlimit: 10;
+        stroke-width: 2;
+        fill: none;
+      }
+    }
+  }
 }
 
 .search-icon-header:hover {
-  background-color: #000;
-  & i {
-    color: #fff;
-  }
   & a {
+    background-color: #000;
     text-decoration: none;
+    & svg {
+      & g {
+        stroke: #fff;
+      }
+    }
   }
 }
 
@@ -126,6 +169,13 @@ a {
   vertical-align: top;
   width: 21px;
 }
+
+.short-menu-icon {
+  vertical-align: top;
+  width: 20px;
+  height: 19px;
+}
+
 svg:not(:root) {
   overflow: hidden;
 }
@@ -140,6 +190,7 @@ svg:not(:root) {
 }
 
 .main-menu-box {
+  font-size: 16px;
   box-sizing: border-box;
   display: table;
   margin: 0 auto;
@@ -172,11 +223,6 @@ svg:not(:root) {
 
 .affiliation-logo :hover {
   text-decoration: none;
-}
-
-.short-menu-right :hover {
-  background-color: #000000;
-  color: #ffffff;
 }
 
 .main-menu {

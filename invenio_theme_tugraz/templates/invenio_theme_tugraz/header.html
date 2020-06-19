@@ -84,28 +84,39 @@
             <div id="all-menu-top-left-item">
               <div class="short-menu-left-search">
                 {%- if config.I18N_LANGUAGES %}
-                <span class="short-menu-left-lang" style="margin-right:10px; font-size:18px;">
+                <div class="short-menu-left-lang" style="margin-right:10px; font-size:18px;">
                   {%- for l in current_i18n.get_locales() %}
                   {%- if current_i18n.language != l.language %}
                   <a
-                    href="{{ url_for('invenio_i18n.set_lang', lang_code=l.language) }}">{{ l.get_display_name() [0:2]}}</a>
+                    href="{{ url_for('invenio_i18n.set_lang', lang_code=l.language) }}">{{ l.get_display_name().upper() [0:2]}}</a>
                   {%- endif %}
                   {%- endfor %}
-                </span>
+                </div>
                 {%- endif %}
-                <span class="search-icon-header">
+                <div class="search-icon-header">
                   <a href="/search">
-                    <i class="search icon large fitted"></i>
+                    <svg class="short-menu-icon" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg" height="26.015" width="26.015" version="1.1" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" viewBox="0 0 26.01515 26.01515">
+                      <g stroke-miterlimit="10" transform="translate(1,1)">
+                        <circle cy="8.5" cx="8.5" r="8" style="stroke-miterlimit:10;stroke-width:2"></circle>
+                        <path style="stroke-width:2;stroke-miterlimit:10;stroke-linecap:round" d="m14.156 14.156 9.344 9.344"></path>
+                      </g>
+                    </svg>
                   </a>
-                </span>
+                </div>
               </div>
             </div>
           </div>
 
           <div class="short-menu-right">
             <div class="short-menu-right-h" onclick="toggleVisibility('heading');">
-
-              <i class="fa fa-bars fa-lg"></i><span style="margin-left:3px;">Menu</span>
+              <svg shape-rendering="optimizeQuality" class="short-menu-icon" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg" height="20" width="24.103" version="1.1" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" viewBox="0 0 24.103479 20">
+                <g transform="translate(0 -1032.4)">
+                  <path d="m2.0142 1034.4h20.972"></path>
+                  <path d="m2.0142 1042.4h20.972"></path>
+                  <path d="m2.0142 1050.4h20.972"></path>
+                </g>
+              </svg>
+              <span style="margin-left:3px; font-size:16px; font-weight:300">Main Menu</span>
 
             </div>
           </div>
