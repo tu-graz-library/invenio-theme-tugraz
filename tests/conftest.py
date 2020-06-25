@@ -18,9 +18,23 @@ import tempfile
 import pytest
 from flask import Flask
 from flask_babelex import Babel
+from invenio_i18n import InvenioI18N
 
 from invenio_theme_tugraz import inveniothemetugraz
 from invenio_theme_tugraz.views import blueprint
+
+
+@pytest.fixture()
+def app():
+    """Flask app fixture."""
+    app = Flask('myapp')
+    app.config.update(
+        I18N_LANGUAGES=[('en', 'English'), ('de', 'German')],
+    )
+    Babel(app)
+    InvenioI18N(app)
+    app.register_blueprint(create_blueprint_from_app(app))
+    return app
 
 
 @pytest.fixture(scope='module')
