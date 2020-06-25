@@ -37,7 +37,7 @@ THEME_FOOTER_TEMPLATE = 'invenio_theme_tugraz/footer.html'
 INVENIO_THEME_TUGRAZ_ICON = 'images/icon_use.png'
 """icon used in login page"""
 
-THEME_FRONTPAGE_TITLE = "RDM for TUGRAZ"
+THEME_FRONTPAGE_TITLE = _('Frontpage Title')
 """Frontpage title."""
 
 THEME_SITENAME = _('Application Name')
