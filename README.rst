@@ -15,9 +15,13 @@
 .. image:: https://img.shields.io/github/license/inveniosoftware/invenio-app-rdm.svg
         :target: https://github.com/mb-wali/invenio-theme-tugraz/blob/master/LICENSE
 
-invenio module for TUGRAZ theme.
 
-TODO: Please provide feature overview of module
+TU Graz standard theme.
+
+Features:
+
+* TU Graz header templates.
+* TU Graz overriden theme.
 
 Further documentation is available on
 https://invenio-theme-tugraz.readthedocs.io/
