@@ -60,14 +60,9 @@
 
             <div class="main-menu-entry">
               <div class="right menu">
-                <ul class="no-dots-list">
-                  <div class="item">
-                    {%- block navbar_right %}
-                    <li>{%- include config.THEME_HEADER_LOGIN_TEMPLATE %}</li>
-                    {%- endblock navbar_right %}
-                  </div>
-
-                </ul>
+                {%- block navbar_right %}
+                {%- include config.THEME_HEADER_LOGIN_TEMPLATE %}
+                {%- endblock navbar_right %}
               </div>
             </div>
 
@@ -148,11 +143,11 @@
                 viewBox="0 0 141.10001 51.862499">
                 <g transform="matrix(1.25 0 0 -1.25 0 51.862)">
                   <g transform="scale(.1)">
-                    <path style="fill:#e4154b" d="m0 103.73h207.45v207.46l-207.45 0.01v-207.47z"></path>
-                    <path style="fill:#e4154b" d="m228.19 103.73h207.46v207.46h-207.46v-207.46z"></path>
-                    <path style="fill:#e4154b" d="m456.41 103.73h207.44v207.46h-207.44v-207.46z"></path>
-                    <path style="fill:#e4154b" d="m103.72 0h207.47v207.46h-207.47v-207.46z"></path>
-                    <path style="fill:#e4154b" d="m352.68 207.46h207.44v207.46h-207.44v-207.46z"></path>
+                    <path d="m0 103.73h207.45v207.46l-207.45 0.01v-207.47z"></path>
+                    <path d="m228.19 103.73h207.46v207.46h-207.46v-207.46z"></path>
+                    <path d="m456.41 103.73h207.44v207.46h-207.44v-207.46z"></path>
+                    <path d="m103.72 0h207.47v207.46h-207.47v-207.46z"></path>
+                    <path d="m352.68 207.46h207.44v207.46h-207.44v-207.46z"></path>
                     <path style="fill:#231f20"
                       d="m751.04 277.91h-66.426v33.195h171.19v-33.195h-66.407v-173.73h-38.359v173.73"></path>
                     <path style="fill:#231f20"
@@ -170,7 +165,7 @@
                     <path style="fill:#231f20"
                       d="m985.69 69.375h57.422v-14.414l-36.04-39.473h37.31v-13.633h-60.235v14.297l36.715 39.59h-35.172v13.633">
                     </path>
-                    <path style="fill:#e4154b" d="m1059.6 0h69.102v69.121h-69.102v-69.121z"></path>
+                    <path d="m1059.6 0h69.102v69.121h-69.102v-69.121z"></path>
                   </g>
                 </g>
               </svg>
