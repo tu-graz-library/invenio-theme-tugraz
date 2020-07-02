@@ -2,41 +2,26 @@
 
 {%- if not current_user.is_authenticated %}
 
-
-<a href="{{url_for_security('login', next=request.path)}}">Login
-    <svg shape-rendering="optimizeQuality" class="int-menu-q-open-icon"
-        xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg" height="5.2753mm"
-        width="8.7548mm" version="1.1" xmlns:cc="http://creativecommons.org/ns#"
-        xmlns:dc="http://purl.org/dc/elements/1.1/" viewBox="0 0 31.02118 18.692033">
-        <g style="stroke-width:2.25" transform="translate(-164.49 -416.85)">
-            <path style="stroke-linejoin:round;stroke:#E4154B;stroke-linecap:round;stroke-width:2.5;fill:none"
-                d="m165.63 417.99 14.375 16.43 14.375-16.43"></path>
-        </g>
-    </svg>
-</a>
+<div class="short-menu-right-button">
+    <a href="{{url_for_security('login', next=request.path)}}" style="text-decoration:none">
+        <i class="sign in icon circular"></i> Login
+    </a>
+</div>
 
 
 {%- else %}
 {%- if config.USERPROFILES %}
 
-
-<a href="{{ url_for('invenio_userprofiles.profile') }}">
-    <i class="user icon"></i> {{ current_user.email }}
-</a>
-
-
-<!--- Logout link -->
-<a class="dropdown-item" href="{{url_for_security('logout')}}">{{_('Logout')}}
-    <svg shape-rendering="optimizeQuality" class="int-menu-q-open-icon"
-        xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg" height="5.2753mm"
-        width="8.7548mm" version="1.1" xmlns:cc="http://creativecommons.org/ns#"
-        xmlns:dc="http://purl.org/dc/elements/1.1/" viewBox="0 0 31.02118 18.692033">
-        <g style="stroke-width:2.25" transform="translate(-164.49 -416.85)">
-            <path style="stroke-linejoin:round;stroke:#E4154B;stroke-linecap:round;stroke-width:2.5;fill:none"
-                d="m165.63 417.99 14.375 16.43 14.375-16.43"></path>
-        </g>
-    </svg>
-</a>
+<div class="short-menu-right-button">
+    <a href="{{ url_for('invenio_userprofiles.profile') }}">
+        <i class="user icon"></i> {{ current_user.email }}
+    </a>
+</div>
+<div class="short-menu-right-button">
+    <a class="dropdown-item" href="{{url_for_security('logout')}}">
+        <i class="sign out icon circular"></i>{{_('Logout')}}
+    </a>
+</div>
 
 {%- endif %}
 {%- endif %}
