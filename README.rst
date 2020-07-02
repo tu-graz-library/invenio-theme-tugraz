@@ -15,6 +15,8 @@
 .. image:: https://img.shields.io/github/license/inveniosoftware/invenio-app-rdm.svg
         :target: https://github.com/mb-wali/invenio-theme-tugraz/blob/master/LICENSE
 
+.. image:: https://readthedocs.org/projects/invenio-theme-tugraz/badge/?version=latest
+        :target: https://invenio-theme-tugraz.readthedocs.io/en/latest/?badge=latest
 
 TU Graz standard theme.
 
