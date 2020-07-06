@@ -23,6 +23,8 @@
 
 .. image:: https://readthedocs.org/projects/invenio-theme-tugraz/badge/?version=latest
         :target: https://invenio-theme-tugraz.readthedocs.io/en/latest/?badge=latest
+.. image:: https://coveralls.io/repos/github/mb-wali/invenio-theme-tugraz/badge.svg?branch=master
+        :target: https://coveralls.io/github/mb-wali/invenio-theme-tugraz?branch=master
 
 TU Graz standard theme.
 
