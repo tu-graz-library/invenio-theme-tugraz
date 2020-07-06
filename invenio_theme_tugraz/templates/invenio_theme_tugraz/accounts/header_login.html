@@ -1,6 +1,11 @@
 {%- if config.ACCOUNTS %}
 
 {%- if not current_user.is_authenticated %}
+<div class="short-menu-right-button">
+    <a href="{{ url_for('security.register') }}">
+        <i class="user plus icon circular"></i> Sign Up
+    </a>
+</div>
 
 <div class="short-menu-right-button">
     <a href="{{url_for_security('login', next=request.path)}}" style="text-decoration:none">
