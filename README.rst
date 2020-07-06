@@ -18,7 +18,7 @@
 .. image:: https://img.shields.io/github/tag/mb-wali/invenio-theme-tugraz.svg
         :target: https://github.com/mb-wali/invenio-theme-tugraz/releases
 
-.. image:: https://img.shields.io/github/license/inveniosoftware/invenio-app-rdm.svg
+.. image:: https://img.shields.io/github/license/mb-wali/invenio-theme-tugraz.svg
         :target: https://github.com/mb-wali/invenio-theme-tugraz/blob/master/LICENSE
 
 .. image:: https://readthedocs.org/projects/invenio-theme-tugraz/badge/?version=latest
