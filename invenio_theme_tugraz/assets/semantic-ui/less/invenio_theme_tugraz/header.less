@@ -88,25 +88,27 @@ a {
   width: 50%;
   color: #000000;
   & div {
-    & svg {
-      & g {
-        stroke: #000;
-        stroke-linecap: round;
-        stroke-width: 2;
-        fill: none;
-      }
-    }
+    stroke: #000;
+    stroke-linecap: round;
+    stroke-width: 2;
+    fill: none;
   }
 }
 
 .short-menu-right :hover {
   background-color: #000000;
   color: #ffffff;
-  & svg {
-    & g {
-      stroke: #fff;
-    }
-  }
+  stroke: #fff;
+}
+
+.short-menu-right-button {
+  cursor: pointer;
+  display: inline-block;
+  margin: 12px 0 6px 9px;
+  padding: 5px;
+}
+.short-menu-right-button a:hover {
+  text-decoration: none;
 }
 
 .short-menu-left-lang {
@@ -166,13 +168,6 @@ a {
   color: #000000;
 }
 
-.short-menu-right-h {
-  cursor: pointer;
-  display: inline-block;
-  margin: 12px 0 6px 9px;
-  padding: 5px;
-}
-
 .short-menu-right-main-menu {
   display: inline-block;
   margin-right: 3px;
@@ -191,38 +186,33 @@ svg:not(:root) {
 }
 
 /***********MAIN menu*************/
-.header {
-  min-width: 0;
-
-  position: relative;
-  width: 100%;
-  //height: 100%;
-}
-
-.main-menu-box {
-  font-size: 16px;
-  box-sizing: border-box;
-  display: table;
-  margin: 0 auto;
-  max-width: 1060px;
-  padding: 9px 50px 8px;
-  text-align: left;
-  width: 100%;
-}
 
 .main-menu-entry {
-  display: table-cell;
-  text-align: center;
-}
-.main-menu-entry a {
-  box-decoration-break: clone;
-  padding: 5px 8px;
+  text-align: center !important;
+  & a {
+    font-size: 1.2rem;
+    padding: 5px 8px;
+  }
 }
 
 .main-menu-entry a:hover {
-  background-color: #000000;
-  color: #ffffff;
+  background-color: #000;
+  color: #fff;
   text-decoration: none;
+}
+
+.main-menu-entry-svg {
+  padding-left: 0 !important;
+}
+
+.main-menu-underline {
+  text-align: -webkit-center;
+}
+
+.main-menu-underline-line {
+  background-color: #e4154b;
+  height: 5px;
+  width: 50%;
 }
 
 .affiliation-text a:hover {
@@ -243,14 +233,6 @@ svg:not(:root) {
 @media (max-width: 767.9px) {
   .main-menu {
     height: auto;
-  }
-}
-
-@media (max-width: 767.9px) {
-  .main-menu-entry {
-    display: table-row;
-
-    line-height: 1.9em;
   }
 }
 
@@ -282,14 +264,6 @@ svg:not(:root) {
 
   .affiliation-spacer {
     display: none;
-  }
-}
-
-@media (max-width: 767.9px) {
-  .main-menu-box {
-    margin-top: 15px;
-    width: 100%;
-    text-align: center;
   }
 }
 

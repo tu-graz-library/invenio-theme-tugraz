@@ -6,230 +6,177 @@
  * under the terms of the MIT License; see LICENSE file for more details.
  */
 
- #int-menu-q-home-icon {
-    width: 18px;
-    height: 18px;
-    vertical-align: top;
-    fill: red;
+#int-menu-q-home-icon {
+  width: 18px;
+  height: 18px;
+  vertical-align: top;
+  fill: red;
+}
 
-  }
+/*****logo section******/
+.affiliation-spacer {
+  display: table-cell;
+  vertical-align: middle;
+  width: 100%;
+}
 
-  /*****logo section******/
-  .affiliation-spacer{
-    display: table-cell;
-    vertical-align: middle;
-    width: 100%;
-  }
-
-  .affiliation-logo {
-    display: table-cell;
-    padding: 0 50px 0 0;
-    vertical-align: middle;
-    white-space: nowrap;
-  }
-  .affiliation {
-    background-color: white;
-    display: table;
-    margin: 0 auto 80px;
-    max-width: 1060px;
-    width: 100%;
-    text-decoration: none;
-
-  }
-
-  .affiliation-text {
-    display: table-cell;
-    font-size: 17px;
-    padding: 0 0 0 50px;
-    vertical-align: middle;
-    white-space: nowrap;
-  }
-
-  .affiliation-logo-claim {
-    display: inline-block;
-    font-size: 12px;
-    letter-spacing: 2px;
-    line-height: 17px;
-    padding: 0 17px 0 0;
-    text-align: right;
-    vertical-align: top;
-  }
-
-  a {
-    color: inherit;
-    text-decoration: none;
-    transition: background-color 0.15s ease 0s, color 0.15s ease 0s;
-  }
-  /*****END logo section******/
-
-
-
-  .short-menu {
-    display: table;
-    height: 49px;
-    width: 100%;
-  }
-  .short-menu-left {
-    border-right: 1px solid black;
-    display: table-cell;
-    text-align: right;
-    width: 50%;
-  }
-  .short-menu-right {
-    display: table-cell;
-    vertical-align: top;
-    width: 50%;
-    color:#000000;
-  }
-  .short-menu-left-search {
-    display: inline-block;
-    margin: 12px 9px 6px 0;
-    color:#000000;
-  }
-  .short-menu-right-h {
-    cursor: pointer;
-    display: inline-block;
-    margin: 12px 0 6px 9px;
-    padding: 5px;
-  }
-
-  .short-menu-right-main-menu {
-    display: inline-block;
-    margin-right: 3px;
-    vertical-align: top;
-    width: 21px;
-  }
-  svg:not(:root) {
-    overflow: hidden;
-  }
-
-
-
-  /***********MAIN menu*************/
-  .header {
-    min-width: 0;
-    position: relative;
-    width: 100%;
-  }
-
-  .main-menu-box {
-    box-sizing: border-box;
-    display: table;
-    margin: 0 auto;
-    max-width: 1060px;
-    padding: 9px 50px 8px;
-    text-align: left;
-    width: 100%;
-  }
-
-  .main-menu-entry {
-    display: table-cell;
-    text-align: center;
-  }
-  .main-menu-entry a {
-    box-decoration-break: clone;
-    padding: 5px 8px;
-  }
-
-  .main-menu-entry a:hover{
-    background-color: #000000;
-    color: #ffffff;
-    text-decoration: none;
-  }
-
-  .affiliation-text a:hover{
-    background-color: #000000;
-    color: #ffffff;
-    text-decoration : none;
-  }
-
-  .affiliation-logo :hover{
+.affiliation-logo {
+  display: table-cell;
+  padding: 0 50px 0 0;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+.affiliation {
+  background-color: white;
+  display: table;
+  margin: 0 auto 80px;
+  max-width: 1060px;
+  width: 100%;
   text-decoration: none;
-  }
+}
 
-  .short-menu-right :hover{
-    background-color: #000000;
-    color: #ffffff;
-  }
+.affiliation-text {
+  display: table-cell;
+  font-size: 17px;
+  padding: 0 0 0 50px;
+  vertical-align: middle;
+  white-space: nowrap;
+}
 
-  .main-menu {
-    border-bottom: 1px solid #000;
-    box-sizing: border-box;
-    height: 39px;
-    margin-top: -1px;
-    overflow: hidden;
-    transition: height 0.3s linear 0s;
-  }
+.affiliation-logo-claim {
+  display: inline-block;
+  font-size: 12px;
+  letter-spacing: 2px;
+  line-height: 17px;
+  padding: 0 17px 0 0;
+  text-align: right;
+  vertical-align: top;
+}
 
-  @media (max-width: 767.9px){
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: background-color 0.15s ease 0s, color 0.15s ease 0s;
+}
+/*****END logo section******/
+
+.short-menu {
+  display: table;
+  height: 49px;
+  width: 100%;
+}
+.short-menu-left {
+  border-right: 1px solid black;
+  display: table-cell;
+  text-align: right;
+  width: 50%;
+}
+.short-menu-right {
+  display: table-cell;
+  vertical-align: top;
+  width: 50%;
+  color: #000000;
+}
+.short-menu-left-search {
+  display: inline-block;
+  margin: 12px 9px 6px 0;
+  color: #000000;
+}
+.short-menu-right-h {
+  cursor: pointer;
+  display: inline-block;
+  margin: 12px 0 6px 9px;
+  padding: 5px;
+}
+
+.short-menu-right-main-menu {
+  display: inline-block;
+  margin-right: 3px;
+  vertical-align: top;
+  width: 21px;
+}
+svg:not(:root) {
+  overflow: hidden;
+}
+
+/***********MAIN menu*************/
+
+.affiliation-text a:hover {
+  background-color: #000000;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.affiliation-logo :hover {
+  text-decoration: none;
+}
+
+.short-menu-right :hover {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+.main-menu {
+  border-bottom: 1px solid #000;
+  box-sizing: border-box;
+  height: 39px;
+  margin-top: -1px;
+  overflow: hidden;
+  transition: height 0.3s linear 0s;
+}
+
+@media (max-width: 767.9px) {
   .main-menu {
     height: auto;
   }
-  }
+}
 
-  @media (max-width: 767.9px){
-  .main-menu-entry {
-    display: table-row;
-
-    line-height: 1.9em;
-  }
-  }
-
-  @media screen and (max-width: 767.9px){
+@media screen and (max-width: 767.9px) {
   #int-header-logo-img {
     width: 200px;
     height: 75px;
   }
-  }
+}
 
-  @media screen and (max-width: 767.9px){
+@media screen and (max-width: 767.9px) {
   #int-header-logo {
     padding: 50px 0;
     text-align: center;
-  }}
+  }
+}
 
-  @media screen and (max-width: 767.9px){
-  .affiliation{
+@media screen and (max-width: 767.9px) {
+  .affiliation {
     margin: 0;
     text-align: center;
-
   }
-  .affiliation-text{
+  .affiliation-text {
     display: none;
   }
-  .affiliation-logo-claim{
-    display: none;
-  }
-
-  .affiliation-spacer{
+  .affiliation-logo-claim {
     display: none;
   }
 
+  .affiliation-spacer {
+    display: none;
   }
+}
 
-  @media (max-width: 767.9px){
-  .main-menu-box {
-    margin-top:15px;
-    width: 100%;
-    text-align: center;
-  }
-  }
+.int-menu-q-open-icon {
+  width: 14px;
+  vertical-align: middle;
+  margin-left: 5px;
+}
 
-  .int-menu-q-open-icon {
-    width: 14px;
-    vertical-align: middle;
-    margin-left: 5px;
-  }
+/*********************Custom overrides**********************/
+/** Login with SAML**/
+.col a {
+  cursor: pointer;
+}
 
-  /*********************Custom overrides**********************/
-  /** Login with SAML**/
-  .col a{
-    cursor: pointer;
-  }
-
-  /**** hyperlink hover color ****/
-  a:focus,
-  a:hover {
-  color:#E4154B;
-  text-decoration:underline
-  }
+/**** hyperlink hover color ****/
+a:focus,
+a:hover {
+  color: #e4154b;
+  text-decoration: underline;
+}
