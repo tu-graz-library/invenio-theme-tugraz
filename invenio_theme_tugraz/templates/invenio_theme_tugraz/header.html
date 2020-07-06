@@ -17,64 +17,8 @@
 
       {%- block navbar_header %}
 
-      <div class="header">
-
-        <div class="main-menu" id="heading">
-          <div class="main-menu-box">
-
-            <div class="main-menu-entry">
-              <a href="{{url_for('invenio_theme_frontpage.index')}}" title="Home">
-                <svg shape-rendering="geometricPrecision" id="int-menu-q-home-icon"
-                  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg"
-                  version="1.1" xml:space="preserve" height="36.997" width="35.969"
-                  enable-background="new 0 0 595.28 841.89" y="0px" x="0px" xmlns:cc="http://creativecommons.org/ns#"
-                  xmlns:dc="http://purl.org/dc/elements/1.1/" viewBox="0 0 35.969 36.997451">
-                  <polyline style="stroke:#E4154B;stroke-linecap:square;stroke-width:4;fill:none"
-                    points="282.72 437.28 282.72 414.77 297.71 406.69 312.69 414.77 312.69 437.28"
-                    transform="translate(-279.72 -403.28)">
-                  </polyline>
-
-                </svg>
-              </a>
-            </div>
-
-
-
-            <div class="main-menu-entry">
-              {%- for item in current_menu.submenu('main').children|sort(attribute='order') if item.visible recursive %}
-              <a href="{{ item.url }}">{{ item.text|safe }}
-                <svg shape-rendering="optimizeQuality" class="int-menu-q-open-icon"
-                  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg"
-                  height="5.2753mm" width="8.7548mm" version="1.1" xmlns:cc="http://creativecommons.org/ns#"
-                  xmlns:dc="http://purl.org/dc/elements/1.1/" viewBox="0 0 31.02118 18.692033">
-                  <g style="stroke-width:2.25" transform="translate(-164.49 -416.85)">
-                    <path style="stroke-linejoin:round;stroke:#E4154B;stroke-linecap:round;stroke-width:2.5;fill:none"
-                      d="m165.63 417.99 14.375 16.43 14.375-16.43"></path>
-                  </g>
-                </svg>
-              </a>
-              {%- endfor %}
-            </div>
-
-
-
-            <div class="main-menu-entry">
-              <div class="right menu">
-                {%- block navbar_right %}
-                {%- include config.THEME_HEADER_LOGIN_TEMPLATE %}
-                {%- endblock navbar_right %}
-              </div>
-            </div>
-
-
-          </div>
-
-        </div>
-
-
         <!----MENU------------------------------------------------------------->
         <div class="short-menu" id="all-menu-top-table">
-
           <div class="short-menu-left">
             <div id="all-menu-top-left-item">
               <div class="short-menu-left-search">
@@ -103,16 +47,10 @@
           </div>
 
           <div class="short-menu-right">
-            <div class="short-menu-right-h" onclick="toggleVisibility('heading');">
-              <svg shape-rendering="optimizeQuality" class="short-menu-icon" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg" height="20" width="24.103" version="1.1" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" viewBox="0 0 24.103479 20">
-                <g transform="translate(0 -1032.4)">
-                  <path d="m2.0142 1034.4h20.972"></path>
-                  <path d="m2.0142 1042.4h20.972"></path>
-                  <path d="m2.0142 1050.4h20.972"></path>
-                </g>
-              </svg>
-              <span style="margin-left:3px; font-size:16px; font-weight:300">{{_ ("Main Menu")}}     </span>
-
+           {# <div class="short-menu-right-h">  onclick="toggleVisibility('heading');"> #}
+                {%- block navbar_right %}
+                {%- include config.THEME_HEADER_LOGIN_TEMPLATE %}
+                {%- endblock navbar_right %}
             </div>
           </div>
 
@@ -173,7 +111,38 @@
           </div>
         </div>
         {%- endblock navbar_header %}
-
+        <div class="ui grid stackable container">
+          <div class="three column row centered" style="padding-bottom: 0;">
+            <div class="two wide column main-menu-entry main-menu-entry-svg">
+              <a href="{{url_for('invenio_theme_frontpage.index')}}" title="Home">
+                <svg shape-rendering="geometricPrecision" id="int-menu-q-home-icon"
+                  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg"
+                  version="1.1" xml:space="preserve" height="36.997" width="35.969"
+                  enable-background="new 0 0 595.28 841.89" y="0px" x="0px" xmlns:cc="http://creativecommons.org/ns#"
+                  xmlns:dc="http://purl.org/dc/elements/1.1/" viewBox="0 0 35.969 36.997451">
+                  <polyline style="stroke:#E4154B;stroke-linecap:square;stroke-width:4;fill:none"
+                    points="282.72 437.28 282.72 414.77 297.71 406.69 312.69 414.77 312.69 437.28"
+                    transform="translate(-279.72 -403.28)">
+                  </polyline>
+                </svg>
+                Home
+              </a>
+            </div>
+            {%- for item in current_menu.submenu('main').children|sort(attribute='order') if item.visible recursive %}
+            <div class="two wide column main-menu-entry">
+              <a href="{{ item.url }}">{{ item.text|safe }}</a>
+            </div>
+            {%- endfor %}
+          </div>
+          <div class="row">
+            <div class="column centered main-menu-underline">
+              <div class="main-menu-underline-line"></div>
+            </div>
+          </div>
+           <div class="row">
+          </div>
+        </div>
+        
         <!--
             {%- block navbar_inner %}
             <div id="navbar" class="navbar-collapse collapse">
