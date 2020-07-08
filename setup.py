@@ -62,7 +62,7 @@ setup(
     version=version,
     description=__doc__,
     long_description=readme + '\n\n' + history,
-    keywords='invenio TODO',
+    keywords='invenio, theme, invenioRDM, TU-Graz, Graz University of Technology, statistics',
     license='MIT',
     author='mojib wali',
     author_email='mojib.wali@tugraz.at',
