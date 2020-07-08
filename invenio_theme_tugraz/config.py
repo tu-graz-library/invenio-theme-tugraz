@@ -43,6 +43,9 @@ THEME_FRONTPAGE_TITLE = _('Frontpage Title')
 THEME_SITENAME = _('Application Name')
 """Site name."""
 
+SECURITY_REGISTER_USER_TEMPLATE = \
+    'invenio_theme_tugraz/accounts/register_user.html'
+
 # Invenio-I18N
 # ============
 # See https://invenio-i18n.readthedocs.io/en/latest/configuration.html

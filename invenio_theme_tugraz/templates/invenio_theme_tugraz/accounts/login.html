@@ -19,7 +19,7 @@
       {%- endblock form_header %}
 
 
-      {%- if config.INVENIO_CONFIG_TUGRAZ_SHIBBOLETH == 'True' %}
+      {%- if config.INVENIO_CONFIG_TUGRAZ_SHIBBOLETH %}
       <div class="ui raised segment">
         <img src="{{ url_for('static', filename=config.INVENIO_THEME_TUGRAZ_ICON)}}" height="25px" align="left">
               <a href="{{ url_for('sso_saml.sso', idp='idp') }}">
@@ -28,7 +28,7 @@
             </div>
         <h3 align="center">— OR —</h3>
         {%- endif %}
-        
+
       {%- block form_outer %}
         {%- with form = login_user_form %}
           <form action="{{ url_for_security('login') }}" method="POST"
