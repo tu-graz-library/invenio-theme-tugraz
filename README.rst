@@ -30,7 +30,11 @@ TU Graz standard theme.
 
 Features:
 
-* TU Graz header templates.
+* TU Graz custom header template.
+* TU Graz custom footer template.
+* TU Graz custom login template.
+* TU Graz custom sign up template.
+* TU Grau custom frontpage template.
 * TU Graz overriden theme.
 
 Further documentation is available on
