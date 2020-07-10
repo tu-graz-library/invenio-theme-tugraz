@@ -19,16 +19,17 @@
       {%- endblock form_header %}
 
       {%- if config.INVENIO_CONFIG_TUGRAZ_SHIBBOLETH %}
+      <a href="{{ url_for('sso_saml.sso', idp='onelogin') }}">
       <div class="ui fluid animated fade large button basic" tabindex="0">
         <div class="visible content">
-          <a href="{{ url_for('sso_saml.sso', idp='idp') }}">
+          
             {% trans type='TUG' %} Log in with {{ type }}{% endtrans %}
-          </a>
+         
         </div>
         <div class="hidden content">
           <img src="{{ url_for('static', filename=config.INVENIO_THEME_TUGRAZ_ICON)}}" height="20px">
         </div>
-      </div>
+      </div> </a>
       
       <div class="ui horizontal divider">
         Or
