@@ -19,10 +19,10 @@
       {%- endblock form_header %}
 
       {%- if config.INVENIO_CONFIG_TUGRAZ_SHIBBOLETH %}
-      <div class="ui fluid animated fade button" tabindex="0">
+      <div class="ui fluid animated fade large button basic" tabindex="0">
         <div class="visible content">
           <a href="{{ url_for('sso_saml.sso', idp='idp') }}">
-            {% trans type='TU Graz' %} Log in with {{ type }}{% endtrans %}
+            {% trans type='TUG' %} Log in with {{ type }}{% endtrans %}
           </a>
         </div>
         <div class="hidden content">
