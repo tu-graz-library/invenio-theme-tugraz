@@ -16,6 +16,12 @@ INVENIO_THEME_TUGRAZ_DEFAULT_VALUE = 'foobar'
 INVENIO_THEME_TUGRAZ_BASE_TEMPLATE = 'invenio_theme_tugraz/base.html'
 """Default base template for the demo page."""
 
+INVENIO_THEME_TUGRAZ_ICON = 'images/icon_use.png'
+"""icon used in login page"""
+
+# Invenio-theme
+# ============
+# See https://invenio-theme.readthedocs.io/en/latest/configuration.html
 THEME_LOGO = 'images/tug_logo.png'
 """TU Graz logo"""
 
@@ -25,23 +31,23 @@ THEME_HEADER_TEMPLATE = 'invenio_theme_tugraz/header.html'
 THEME_FRONTPAGE_TEMPLATE = 'invenio_theme_tugraz/frontpage.html'
 """Frontpage template"""
 
-SECURITY_LOGIN_USER_TEMPLATE = 'invenio_theme_tugraz/accounts/login.html'
-"""Login template"""
-
 THEME_HEADER_LOGIN_TEMPLATE = 'invenio_theme_tugraz/accounts/header_login.html'
 """login page header"""
 
 THEME_FOOTER_TEMPLATE = 'invenio_theme_tugraz/footer.html'
 """footer template"""
 
-INVENIO_THEME_TUGRAZ_ICON = 'images/icon_use.png'
-"""icon used in login page"""
-
 THEME_FRONTPAGE_TITLE = _('Frontpage Title')
 """Frontpage title."""
 
 THEME_SITENAME = _('Application Name')
 """Site name."""
+
+# Invenio-accounts
+# ============
+# See https://invenio-accounts.readthedocs.io/en/latest/configuration.html
+SECURITY_LOGIN_USER_TEMPLATE = 'invenio_theme_tugraz/accounts/login.html'
+"""Login template"""
 
 SECURITY_REGISTER_USER_TEMPLATE = \
     'invenio_theme_tugraz/accounts/register_user.html'
@@ -57,8 +63,9 @@ I18N_LANGUAGES = [
      ('de', _('German'))
  ]
 
-# Invenio-APP-RDM
+# Invenio-app-rdm
 # =============
+# See https://invenio-app-rdm.readthedocs.io/en/latest/configuration.html
 SEARCH_UI_HEADER_TEMPLATE = 'invenio_theme_tugraz/header.html'
 """Search page's header template."""
 
