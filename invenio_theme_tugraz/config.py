@@ -28,8 +28,11 @@ THEME_LOGO = 'images/tug_logo.png'
 THEME_HEADER_TEMPLATE = 'invenio_theme_tugraz/header.html'
 """TU Graz header template"""
 
-THEME_FRONTPAGE_TEMPLATE = 'invenio_theme_tugraz/frontpage.html'
+# THEME_FRONTPAGE_TEMPLATE = 'invenio_theme_tugraz/frontpage.html'
 """Frontpage template"""
+
+THEME_FRONTPAGE = False
+"""Use default frontpage."""
 
 THEME_HEADER_LOGIN_TEMPLATE = 'invenio_theme_tugraz/accounts/header_login.html'
 """login page header"""
