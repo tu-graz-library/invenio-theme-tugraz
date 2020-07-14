@@ -32,8 +32,8 @@ def test_init():
     assert 'invenio-theme-tugraz' in app.extensions
 
 
-def test_view(base_client):
-    """Test view."""
-    res = base_client.get("/")
-    assert res.status_code == 200
-    assert 'Welcome to invenio-theme-tugraz' in str(res.data)
+# def test_view(base_client):
+    # """Test view."""
+    # res = base_client.get("/")
+    # assert res.status_code == 200
+    # assert 'Welcome to invenio-theme-tugraz' in str(res.data)

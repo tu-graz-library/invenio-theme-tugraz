@@ -18,17 +18,23 @@
 .. image:: https://img.shields.io/github/tag/mb-wali/invenio-theme-tugraz.svg
         :target: https://github.com/mb-wali/invenio-theme-tugraz/releases
 
-.. image:: https://img.shields.io/github/license/inveniosoftware/invenio-app-rdm.svg
+.. image:: https://img.shields.io/github/license/mb-wali/invenio-theme-tugraz.svg
         :target: https://github.com/mb-wali/invenio-theme-tugraz/blob/master/LICENSE
 
 .. image:: https://readthedocs.org/projects/invenio-theme-tugraz/badge/?version=latest
         :target: https://invenio-theme-tugraz.readthedocs.io/en/latest/?badge=latest
+.. image:: https://coveralls.io/repos/github/mb-wali/invenio-theme-tugraz/badge.svg?branch=master
+        :target: https://coveralls.io/github/mb-wali/invenio-theme-tugraz?branch=master
 
 TU Graz standard theme.
 
 Features:
 
-* TU Graz header templates.
+* TU Graz custom header template.
+* TU Graz custom footer template.
+* TU Graz custom login template.
+* TU Graz custom sign up template.
+* TU Grau custom frontpage template.
 * TU Graz overriden theme.
 
 Further documentation is available on
