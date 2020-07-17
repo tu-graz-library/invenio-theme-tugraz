@@ -14,6 +14,8 @@
 from flask import Blueprint, render_template
 from flask_babelex import gettext as _
 
+from .search import FrontpageRecordsSearch
+
 blueprint = Blueprint(
     'invenio_theme_tugraz',
     __name__,
@@ -24,7 +26,8 @@ blueprint = Blueprint(
 
 @blueprint.route("/")
 def index():
-    """Render a basic view."""
+    """Render frontpage view."""
     return render_template(
         "invenio_theme_tugraz/index.html",
-        module_name=_('invenio-theme-tugraz'))
+        module_name=_('invenio-theme-tugraz'),
+        records=FrontpageRecordsSearch()[:10].sort('-_created').execute(),)

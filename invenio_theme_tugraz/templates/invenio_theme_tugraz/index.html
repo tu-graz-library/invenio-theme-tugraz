@@ -9,122 +9,103 @@
 
 {%- extends config.INVENIO_THEME_TUGRAZ_BASE_TEMPLATE %}
 
+{%- from "invenio_theme_tugraz/macros/authors.html" import authors -%}
+
+
 {%- block page_body %}
 
 <div class="ui container">
 
-  {{_('Welcome to %(module_name)s', module_name=module_name)}}
-  
-  <h2 class="ui center aligned icon header">
-    <i class="list icon"></i>
-    Features
-  </h2>
+  <div class="ui stackable grid">
 
-  <div style="margin-bottom: 30px;"></div>
+    <div class="ten wide column">
+      <h2>{{_('Recent uploads')}}</h2>
 
-  <div class="ui two column divided grid">
-    <div class="row">
-      <div class="column">
-        <h3>Research-Data</h3>
-        <p>
-          Research data can take many forms. It might be:
-          documents, spreadsheets
-          laboratory notebooks, field notebooks, diaries
-          questionnaires, transcripts, codebooks
-          audiotapes, videotapes
-          photographs, films
-          test responses
-          slides, artefacts, specimens, samples
-          collections of digital outputs
-          data files
-          database contents (video, audio, text, images)
-          models, algorithms, scripts
-          contents of an application (input, output, logfiles for analysis software, simulation software, schemas)
-          methodologies and workflows
-          standard operating procedures and protocols
-        </p>
+      {%- for r in records %}
+      {%- set creation_date = r._created|from_isodatetime -%}
+      {%- set record_url = url_for('invenio_records_ui.recid', pid_value=r['recid']) %}
+
+      <!--btn view-->
+      <a href="{{ record_url }}" class="ui right floated button">{{_('View')}}</a>
+      <!--TODO:
+          something with doi
+        -->
+      <div class="left floated left aligned column">
+
+        <!--Publication date badge-->
+        <span class="ui label teal" title="{{_('Publication date')}}">{{ r.publication_date }}
+          {{ (' | ' ~ r.version ~ '') if r.version else ' | Version' }}</span>
+
+        <!--Resource type badge-->
+        <span class="ui label grey" title="{{_('Resource type')}}">{{r.resource_type.type}}</span>
+        <span class="label record-version">
+          <!--TODO: add subtype---></span>
+
+        <!--Access right badge-->
+        <span class="ui label green">{{_('Open Access')}}</span>
       </div>
-      <div class="column">
-        <h3>Open educational resources (OER) </h3>
-        <p>Open educational resources (OER) are freely accessible, openly licensed text, media, and other digital assets
-          that are useful for teaching, learning, and assessing as well as for research purposes.</p>
-      </div>
+
+      <h4><a href="{{ record_url }}">{{r.titles[0].title}}</a></h4>
+      <p>{{ authors(r.creators) }}</p>
+
+      <p class="hidden-xs"><a href="{{record_url}}">{{ r.descriptions[0].description|striptags|truncate(300) }}</a></p>
+
+      <div class="ui tiny header">{% trans user=userprofile, date=creation_date|dateformat('long') %}Uploaded on
+        {{date}}{% endtrans %}</div>
+
+      {%- if not loop.last %}
+      <div class="ui divider"></div>
+      {%- else%}
+      <a href="{{url_for('invenio_search_ui.search')}}" class="ui right floated button">{{_('More')}}</a>
+      {%- endif %}
+      {%- endfor %}
     </div>
-    <div class="row">
-      <div class="column">
-        <h3>Thesis</h3>
-        <p>A thesis statement focuses your ideas into one or two sentences. It should present the topic of your paper
-          and also make a comment about your position in relation to the topic. Your thesis statement should tell your
-          reader what the paper is about and also help guide your writing and keep your argument focused.</p>
+    <!--- END Recent uploads-->
+
+    <!---contact form-->
+    <div class="six wide column">
+
+      <!--contact us-->
+      <div class="ui segment" style="padding-bottom: 10px;">
+        <h4>Need help?</h4>
+        <div style="padding-bottom: 10px;">
+          <a href="{{ url_for('invenio_theme_tugraz.index')}}" class="fluid ui button">Contact us</a>
+        </div>
+        <p>{{config.THEME_SITENAME}} prioritizes all requested related to the COVID-19 outbreak.</p>
+        <p>We can help with:</p>
+
+        <ul>
+          <li>Uploading your research data, software, preprints, etc.</li>
+          <li>One-on-one with {{config.THEME_SITENAME}} supporters.</li>
+          <li>Quota increases beyond our default policy.</li>
+          <li>Scripts for automated uploading of larger datasets.</li>
+        </ul>
+
       </div>
-      <div class="column">
-        <h3>Publications</h3>
-        <p>To publish is to make content available to the general public. While specific use of the term may vary among
-          countries, it is usually applied to text, images, or other audio-visual content, including paper. The word
-          publication means the act of publishing, and also refers to any printed copies.</p>
+
+      <div class="ui segment" style="padding-bottom: 10px;">
+        <h4>Why use {{config.THEME_SITENAME}}?</h4>
+        <ul>
+          <li><strong>Safe</strong> — your research is stored safely for the future in CERN’s Data Centre for as long as
+            CERN exists.</li>
+          <li><strong>Trusted</strong> — built and operated by CERN and OpenAIRE to ensure that everyone can join in
+            Open Science.</li>
+          <li><strong>Citeable</strong> — every upload is assigned a Digital Object Identifier (DOI), to make them
+            citable and trackable.</li>
+          <li><strong>No waiting time</strong> — Uploads are made available online as soon as you hit publish, and your
+            DOI is registered within seconds.</li>
+          <li><strong>Open or closed</strong> — Share e.g. anonymized clinical trial data with only medical
+            professionals via our restricted access mode.</li>
+          <li><strong>Versioning</strong> — Easily update your dataset with our versioning feature.</li>
+          <li><strong>Usage statisics</strong> — All uploads display standards compliant usage statistics</li>
+        </ul>
       </div>
+
+
     </div>
   </div>
-
-  <div style="margin-bottom: 30px;"></div>
-
-
-  <div class="ui divider"></div>
-
-
-  <h2 class="ui center aligned icon header">
-    <i class="chart line icon"></i>
-    Statistic
-  </h2>
-
-
-  <div style="margin-bottom: 50px;"></div>
-
-  <div class="ui two statistics">
-    <div class="statistic">
-      <div class="value">
-        <i class="file alternate card icon"></i> 15000
-      </div>
-      <div class="label">
-        Recorda
-      </div>
-    </div>
-
-
-    <div class="statistic">
-      <div class="value">
-        <i class="users icon"></i> 30
-      </div>
-      <div class="label">
-        Communities
-      </div>
-    </div>
-
-    <div class="statistic">
-      <div class="value">
-        <i class="user icon"></i> 500
-      </div>
-      <div class="label">
-        Users
-      </div>
-    </div>
-
-    <div class="statistic">
-      <div class="value">
-        <i class="address card icon"></i> 50
-      </div>
-      <div class="label">
-        Members
-      </div>
-    </div>
-
-
-  </div>
-
-
-  <div style="margin-bottom: 50px;"></div>
-
 
 </div>
-{%- endblock %}
+</div>
 
+{%- endblock %}

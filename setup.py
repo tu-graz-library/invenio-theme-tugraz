@@ -29,6 +29,15 @@ extras_require = {
     'docs': [
         'Sphinx>=1.5.1',
     ],
+    'mysql': [
+        'invenio-db[mysql]>=1.0.0',
+    ],
+    'postgresql': [
+        'invenio-db[postgresql]>=1.0.0',
+    ],
+    'sqlite': [
+        'invenio-db>=1.0.0',
+    ],
     'tests': tests_require,
 }
 
@@ -46,6 +55,9 @@ install_requires = [
     'Flask-WebpackExt>=1.0.0',
     'invenio-assets>=1.2.0,<1.3.0',
     'invenio-i18n>=1.2.0',
+    'elasticsearch_dsl>=7.2.1',
+    'invenio_search>=1.3.1',
+
 ]
 
 packages = find_packages()
