@@ -8,16 +8,21 @@
     details.
   #}
 
-{%- macro authors(authors_list) %}
-{%- for author in authors_list %}
-{%- if author.orcid %}
-<a href="{{author.orcid|pid_url('orcid')}}"><img class="inline-orcid" src="{{ url_for('static', filename='extra/orcid.png')}}" /></a>
+{%- macro creators (authors_list) %}
+
+{%- for creators in authors_list %}
+
+{%- if creators.identifiers.Orcid %}
+<a href="{{creators.identifiers.Orcid|pid_url('orcid')}}"><img class="inline-orcid" src="{{ url_for('static', filename='extra/orcid.png')}}" /></a>
 {%- endif %}
-<span class="text-muted" {% if author.affiliation %}data-toggle="tooltip" title="{{author.affiliation}}"{% endif %}>{{author.name}}</span>{% if not loop.last %}; {% endif %}
+
+<span class="text-muted" {% if creators.affiliations %} {% for affiliation in creators.affiliations %} data-toggle="tooltip" title="{{affiliation.name}}" {%- endfor %} {% endif %}>{{creators.name}}</span>
+{% if not loop.last %}; {% endif %}
+
 {%- endfor %}
 {%- endmacro %}
 
-
+<!--TODO: contributers-->
 {%- macro contributors(contributors_list) %}
 {%- for group in contributors_list|groupby('type')%}
 <h5>{{group.grouper|contributortype_title}}(s)</h5>

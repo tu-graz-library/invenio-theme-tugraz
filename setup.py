@@ -17,12 +17,13 @@ history = open('CHANGES.rst').read()
 
 tests_require = [
     'check-manifest>=0.25',
-    'coverage>=4.0',
+    # coverage pinned because of https://github.com/nedbat/coveragepy/issues/716
+    'coverage>=4.0,<5.0.0',
     'isort>=4.3.3, <5.0.0',
     'pydocstyle>=2.0.0',
     'pytest-cov>=2.5.1',
     'pytest-pep8>=1.0.6',
-    'pytest-invenio>=1.2.1',
+    'pytest-invenio>=1.3.2',
 ]
 
 extras_require = {

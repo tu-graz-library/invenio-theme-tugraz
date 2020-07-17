@@ -9,7 +9,7 @@
 
 {%- extends config.INVENIO_THEME_TUGRAZ_BASE_TEMPLATE %}
 
-{%- from "invenio_theme_tugraz/macros/authors.html" import authors -%}
+{%- from "invenio_theme_tugraz/macros/authors.html" import creators -%}
 
 
 {%- block page_body %}
@@ -46,12 +46,12 @@
       </div>
 
       <h4><a href="{{ record_url }}">{{r.titles[0].title}}</a></h4>
-      <p>{{ authors(r.creators) }}</p>
+      <p>{{ creators(r.creators) }}</p>
 
       <p class="hidden-xs"><a href="{{record_url}}">{{ r.descriptions[0].description|striptags|truncate(300) }}</a></p>
 
-      <div class="ui tiny header">{% trans user=userprofile, date=creation_date|dateformat('long') %}Uploaded on
-        {{date}}{% endtrans %}</div>
+      <small>{% trans user=userprofile, date=creation_date|dateformat('long') %}Uploaded on
+        {{date}}{% endtrans %}</small>
 
       {%- if not loop.last %}
       <div class="ui divider"></div>
@@ -85,20 +85,7 @@
 
       <div class="ui segment" style="padding-bottom: 10px;">
         <h4>Why use {{config.THEME_SITENAME}}?</h4>
-        <ul>
-          <li><strong>Safe</strong> — your research is stored safely for the future in CERN’s Data Centre for as long as
-            CERN exists.</li>
-          <li><strong>Trusted</strong> — built and operated by CERN and OpenAIRE to ensure that everyone can join in
-            Open Science.</li>
-          <li><strong>Citeable</strong> — every upload is assigned a Digital Object Identifier (DOI), to make them
-            citable and trackable.</li>
-          <li><strong>No waiting time</strong> — Uploads are made available online as soon as you hit publish, and your
-            DOI is registered within seconds.</li>
-          <li><strong>Open or closed</strong> — Share e.g. anonymized clinical trial data with only medical
-            professionals via our restricted access mode.</li>
-          <li><strong>Versioning</strong> — Easily update your dataset with our versioning feature.</li>
-          <li><strong>Usage statisics</strong> — All uploads display standards compliant usage statistics</li>
-        </ul>
+        {% include "invenio_theme_tugraz/benefits.html" %}
       </div>
 
 
