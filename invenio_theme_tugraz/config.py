@@ -25,6 +25,9 @@ INVENIO_THEME_TUGRAZ_ICON = 'images/icon_use.png'
 THEME_LOGO = 'images/tug_logo.png'
 """TU Graz logo"""
 
+THEME_SEARCHBAR = False
+"""Enable or disable the header search bar."""
+
 THEME_HEADER_TEMPLATE = 'invenio_theme_tugraz/header.html'
 """TU Graz header template"""
 
