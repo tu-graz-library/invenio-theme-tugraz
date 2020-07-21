@@ -34,9 +34,9 @@ Features:
 
 * TU Graz custom header template.
 * TU Graz custom footer template.
-* TU Graz custom login template.
-* TU Graz custom sign up template.
-* TU Grau custom frontpage template.
+* TU Graz custom login/signup templates.
+* TU Graz custom frontpage template.
+* TU Graz custom contact template.
 * TU Graz overriden theme.
 
 Further documentation is available on
