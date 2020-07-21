@@ -8,11 +8,10 @@
 
 """invenio module for TUGRAZ theme."""
 
-# TODO: This is an example file. Remove it if you do not need it, including
-# the templates and static folders as well as the test case.
-
 from flask import Blueprint, render_template
 from flask_babelex import gettext as _
+
+from .search import FrontpageRecordsSearch
 
 blueprint = Blueprint(
     'invenio_theme_tugraz',
@@ -24,7 +23,7 @@ blueprint = Blueprint(
 
 @blueprint.route("/")
 def index():
-    """Render a basic view."""
+    """Render frontpage view."""
     return render_template(
         "invenio_theme_tugraz/index.html",
-        module_name=_('invenio-theme-tugraz'))
+        records=FrontpageRecordsSearch()[:5].sort('-_created').execute(),)
