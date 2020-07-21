@@ -16,13 +16,6 @@ readme = open('README.rst').read()
 history = open('CHANGES.rst').read()
 
 tests_require = [
-    'check-manifest>=0.25',
-    # coverage pinned because of https://github.com/nedbat/coveragepy/issues/716
-    'coverage>=4.0,<5.0.0',
-    'isort>=4.3.3, <5.0.0',
-    'pydocstyle>=2.0.0',
-    'pytest-cov>=2.5.1',
-    'pytest-pep8>=1.0.6',
     'pytest-invenio>=1.3.2',
 ]
 
@@ -100,18 +93,6 @@ setup(
         'invenio_config.module': [
             'invenio_theme_tugraz = invenio_theme_tugraz.config',
         ],
-
-        # TODO: Edit these entry points to fit your needs.
-        # 'invenio_access.actions': [],
-        # 'invenio_admin.actions': [],
-        # 'invenio_assets.bundles': [],
-        # 'invenio_base.api_apps': [],
-        # 'invenio_base.api_blueprints': [],
-        # 'invenio_base.blueprints': [],
-        # 'invenio_celery.tasks': [],
-        # 'invenio_db.models': [],
-        # 'invenio_pidstore.minters': [],
-        # 'invenio_records.jsonresolver': [],
     },
     extras_require=extras_require,
     install_requires=install_requires,
@@ -129,6 +110,6 @@ setup(
         'Programming Language :: Python :: 3.6',
         'Programming Language :: Python :: 3.7',
         'Programming Language :: Python :: 3.8',
-        'Development Status :: 1 - Planning',
+        'Development Status :: 3 - Alpha',
     ],
 )
