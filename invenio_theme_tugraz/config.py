@@ -43,7 +43,7 @@ THEME_HEADER_LOGIN_TEMPLATE = 'invenio_theme_tugraz/accounts/header_login.html'
 THEME_FOOTER_TEMPLATE = 'invenio_theme_tugraz/footer.html'
 """footer template"""
 
-THEME_FRONTPAGE_TITLE = _('Frontpage Title')
+THEME_FRONTPAGE_TITLE = _('TU Graz Repository')
 """Frontpage title."""
 
 THEME_SITENAME = _('Repository')
