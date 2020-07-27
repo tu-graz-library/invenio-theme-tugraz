@@ -9,7 +9,7 @@
  invenio-theme-tugraz
 ======================
 
-.. image:: https://img.shields.io/travis/inveniosoftware/invenio-app-rdm.svg
+.. image:: https://travis-ci.com/mb-wali/invenio-theme-tugraz.svg
         :target: https://travis-ci.com/github/mb-wali/invenio-theme-tugraz
 
 .. image:: https://img.shields.io/pypi/dm/invenio-theme-tugraz.svg
