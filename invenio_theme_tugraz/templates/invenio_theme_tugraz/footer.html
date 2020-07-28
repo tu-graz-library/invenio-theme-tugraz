@@ -16,19 +16,133 @@
   {{ webpack['invenio-theme-tugraz-js.js'] }}
 {%- endblock javascript %}
 
+<div id="margin-divider" class="ui divider">
+</div>
+
 <footer id="footer" class="footer-bottom">
-  <div class="ui grid container">
-    <div class="eight wide column left aligned">
-      {% trans invenio_rdm="http://inveniosoftware.org/products/rdm" %}Powered by <a
-        href="{{invenio_rdm}}">InvenioRDM</a>{% endtrans %}
+
+  <div class="ui container">
+
+  <div class="ui grid">
+    <div class="doubling four column row">
+
+      <div class="column">
+      
+        <h2>Repository</h2>
+      
+        <p class="bodytext">
+          Graz University of Technology<br>
+          Rechbauerstraße 12<br>
+          8010 GRAZ<br>
+          AUSTRIA<br>
+          Phone: +43 316 873 0<br>
+          Fax: +43 316 873 6009<br>
+          E-Mail: <a href="javascript:linkTo_UnCryptMailto('ocknvq,kphqBvwitcb0cv');" class="int-link-mail">
+            info<span style="display: none;">
+              noSpam</span>@tugraz.at <i class="envelope outline icon"></i></a><br>
+          <a href="https://www.tugraz.at/en/home/" class="int-link-internal">
+            www.tugraz.at</a><br>
+          <a href="https://tu4u.tugraz.at/campusplan/">Campus map <i class="external alternate icon"></i></a><br>
+          Opening hours: 6 am – 8 pm
+        </p>
+      
+        <h2>Information and service points</h2>
+        <p class="bodytext">
+          Campus Alte Technik<br>
+          Rechbauerstraße 12<br>
+          Phone: +43 316 873 6560<br>
+          <a href="javascript:linkTo_UnCryptMailto('ocknvq,rqtvkgt0cnvg\/vgejpkmBvwitcb0cv');" class="int-link-mail">
+            portier.alte-technik<span style="display: none;">noSpam</span>@tugraz.at <i class="envelope outline icon"></i></a>
+        </p>
+      
+        <p class="bodytext">
+          Campus Neue Technik<br>
+          Stremayrgasse 16<br>
+          Phone: +43 316 873 6570<br>
+          <a href="javascript:linkTo_UnCryptMailto('ocknvq,rqtvkgt0pgwg\/vgejpkmBvwitcb0cv');"
+            class="int-link-mail">portier.neue-technik
+            <span style="display: none;">noSpam</span>@tugraz.at <i class="envelope outline icon"></i></a>
+        </p>
+      
+        <p class="bodytext">
+          Campus Inffeldgasse<br>
+          Inffeldgasse 25D<br>
+          Phone: +43 316 873 6580<br>
+          <a href="javascript:linkTo_UnCryptMailto('ocknvq,rqtvkgt0kphhgnfBvwitcb0cv');" class="int-link-mail">portier.inffeld
+            <span style="display: none;">noSpam</span>@tugraz.at <i class="envelope outline icon"></i></a>
+        </p>
+      
+        <p class="bodytext">
+          <img height="30" width="167" txdam="31701"
+            src="{{ url_for('static', filename='images/TU_Austria_Logo.png')}}"></p>
+      
+      </div>
+      <div class="column">
+      
+        <h2>Features</h2>
+        <p class="bodytext">
+          <a href="https://online.tugraz.at/" target="_blank" class="int-link-external">
+            Campus-Management-System
+            <br>
+            TUGRAZonline <i class="external alternate icon"></i>
+          </a>
+        </p>
+        <p class="bodytext">
+          <a href="https://tu4u.tugraz.at/" target="_blank" class="int-link-external">Intranet
+            <br>
+            TU4U <i class="external alternate icon"></i>
+          </a>
+        </p>
+        <p class="bodytext">
+          <a href="https://tc.tugraz.at/" target="_blank" class="int-link-external">
+            E-Learning-Plattform
+            <br>
+            TeachCenter <i class="external alternate icon"></i>
+          </a>
+        </p>
+      
+      </div>
+    <div class="column">
+    
+      <h2>Services</h2>
+      <p class="bodytext">
+
+        <a href="{{ url_for('invenio_theme_tugraz.comingsoon') }}">
+          PURE<i class="angle right icon"></i></a><br> 
+
+          <a href="{{ url_for('invenio_theme_tugraz.comingsoon') }}">
+            CampusOnline<i class="angle right icon"></i></a><br> 
+      </p>
+      <h2>Follow TU Graz</h2>
+      <p>Social media here.....</p>
+    
     </div>
-    <div class="eight wide column right aligned">
-      <!--
-      {%- if config.I18N_LANGUAGES %}
-      {% from "invenio_i18n/macros/language_selector.html" import language_selector_dropdown %}
-      {{ language_selector_dropdown() }}
-      {%- endif %}
-      -->
+
+      <div class="column">
+      
+        <h2>repository.tugraz.at</h2>
+        <p class="bodytext">
+          <a href="{{ url_for('invenio_theme_tugraz.comingsoon') }}">
+            Impressum<i class="angle right icon"></i>
+          </a>
+          <br>
+          <a href="{{ url_for('invenio_theme_tugraz.comingsoon') }}">
+            Datenschutzerklärung<i class="angle right icon"></i>
+          </a>
+          <br>
+          <a href="{{ url_for('invenio_theme_tugraz.comingsoon') }}">
+            Feedback<i class="angle right icon"></i>
+          </a>
+        </p>
+      
+        <h2>Barrierefreiheit</h2>
+        <p class="bodytext">Tipp:<br> Schrift größer / kleiner mit den<br> Tasten Strg + und Strg -</p>
+        
+      </div>
+
     </div>
+    </div>
+
   </div>
+
 </footer>
