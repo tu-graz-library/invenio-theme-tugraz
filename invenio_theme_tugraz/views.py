@@ -27,10 +27,3 @@ def index():
     return render_template(
         "invenio_theme_tugraz/index.html",
         records=FrontpageRecordsSearch()[:5].sort('-_created').execute(),)
-
-
-@blueprint.route("/comingsoon")
-def comingsoon():
-    """Render a coming soon view."""
-    return render_template(
-        "invenio_theme_tugraz/comingsoon.html",)
