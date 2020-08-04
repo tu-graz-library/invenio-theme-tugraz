@@ -7,23 +7,38 @@
  */
 
  #footer {
-    color: #fff;
+    color: #5E5E5E;
 
-   &.footer-bottom {
-     background-color: #E4154B;
-     padding-top: 15px;
-     padding-bottom: 15px;
-     font-weight: 300;
-     font-size: 14px;
+    /*background-image: url("/static/images/footer.jpg");*/
+    -webkit-background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+    -o-background-size: 100% 100%;
+    background-size: 100% 100%;
+    min-height: 100%;
+    /* the following 2 lines are a hack for IE6 */
+    height: auto !important;
+    height: 100%;
+    width: 100%;
+    background-attachment: fixed;
 
-     a {
-       text-decoration: none;
-       color: #ffffffd6;
-       font-weight: 600;
+    &.footer-bottom {
+      background-color: #fff;
+      padding-top: 15px;
+      padding-bottom: 15px;
+      font-size: 16px;
+ 
+      a {
+        text-decoration: none;
+        color: #5E5E5E;
+ 
+        &:hover, &:focus {
+          color: #ffffff;
+          background-color: #000000;
+        }
+      }
+    }
+  }
 
-       &:hover, &:focus {
-         color: #ffffff;
-       }
-     }
-   }
+ .bodytext{
+   font-size: 16px;
  }
