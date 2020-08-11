@@ -16,19 +16,102 @@
   {{ webpack['invenio-theme-tugraz-js.js'] }}
 {%- endblock javascript %}
 
+<div id="margin-divider" class="ui divider">
+</div>
+
 <footer id="footer" class="footer-bottom">
-  <div class="ui grid container">
-    <div class="eight wide column left aligned">
-      {% trans invenio_rdm="http://inveniosoftware.org/products/rdm" %}Powered by <a
-        href="{{invenio_rdm}}">InvenioRDM</a>{% endtrans %}
+
+  <div class="ui container">
+
+  <div class="ui grid">
+    <div class="doubling four column row">
+
+
+      <div class="column">
+      
+        <h2>repository.tugraz.at</h2>
+        <p class="bodytext">
+          <a href="{{ url_for('invenio_rdm_records.coming_soon') }}">
+            Impressum<i class="angle right icon"></i>
+          </a>
+          <br>
+          <a href="{{ url_for('invenio_rdm_records.coming_soon') }}">
+            Datenschutzerklärung<i class="angle right icon"></i>
+          </a>
+          <br>
+          <a href="{{ url_for('invenio_rdm_records.coming_soon') }}">
+            Feedback<i class="angle right icon"></i>
+          </a>
+        </p>
+        
+      </div>
+
+      <div class="column">
+      
+        <h2>Repository</h2>
+      
+        <p class="bodytext">
+          Graz University of Technology<br>
+          Rechbauerstraße 12<br>
+          8010 GRAZ<br>
+          AUSTRIA<br>
+          Phone: +43 316 873 0<br>
+          Fax: +43 316 873 6009<br>
+          E-Mail: <a href="javascript:linkTo_UnCryptMailto('ocknvq,kphqBvwitcb0cv');" class="int-link-mail">
+            info<span style="display: none;">
+              noSpam</span>@tugraz.at <i class="envelope outline icon"></i></a><br>
+          <a href="https://www.tugraz.at/en/home/" class="int-link-internal">
+            www.tugraz.at</a><br>
+          <a href="https://tu4u.tugraz.at/campusplan/">Campus map <i class="external alternate icon"></i></a><br>
+          Opening hours: 6 am – 8 pm
+        </p>
+
+        <img height="30" width="167" txdam="31701"
+        src="{{ url_for('static', filename='images/TU_Austria_Logo.png')}}">
+
+      </div>
+
+
+      <div class="column">
+      
+        <h2>Features</h2>
+
+        <h4>Scalability</h4>
+        
+        <h4>Institutional integration</h4>
+
+        <h4>Next Generation Repository
+        </h4>
+
+        <h4>Repository Profiles</h4>
+
+        <h4>Resilient</h4>
+
+      </div>
+
+
+    <div class="column">
+    
+      <h2>Connected Services</h2>
+      <p class="bodytext">
+
+        <a href="https://pure.tugraz.at" title="PURE">
+          PURE <i class="external alternate icon"></i></a><br> 
+
+          <a href="http://campusonline.tugraz.at" title="CAMPUS online">
+            CampusOnline <i class="external alternate icon"></i></a><br> 
+      </p>
+
+      <h2>Barrierefreiheit</h2>
+      <p class="bodytext">Tipp:<br> Use Ctrl + and Crtl -<br> to change the font size.</p>
+
     </div>
-    <div class="eight wide column right aligned">
-      <!--
-      {%- if config.I18N_LANGUAGES %}
-      {% from "invenio_i18n/macros/language_selector.html" import language_selector_dropdown %}
-      {{ language_selector_dropdown() }}
-      {%- endif %}
-      -->
+
+
+
     </div>
+    </div>
+
   </div>
+
 </footer>

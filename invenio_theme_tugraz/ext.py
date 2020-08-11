@@ -18,10 +18,6 @@ class inveniothemetugraz(object):
 
     def __init__(self, app=None):
         """Extension initialization."""
-        # TODO: This is an example of translation string with comment. Please
-        # remove it.
-        # NOTE: This is a note to a translator.
-        _('A translation string')
         if app:
             self.init_app(app)
 
@@ -32,12 +28,6 @@ class inveniothemetugraz(object):
 
     def init_config(self, app):
         """Initialize configuration."""
-        # Use theme's base template if theme is installed
-        if 'BASE_TEMPLATE' in app.config:
-            app.config.setdefault(
-                'INVENIO_THEME_TUGRAZ_BASE_TEMPLATE',
-                app.config['BASE_TEMPLATE'],
-            )
         for k in dir(config):
             if k.startswith('INVENIO_THEME_TUGRAZ_'):
                 app.config.setdefault(k, getattr(config, k))
