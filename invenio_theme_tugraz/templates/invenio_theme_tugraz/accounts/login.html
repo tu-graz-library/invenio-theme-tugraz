@@ -1,74 +1,68 @@
 {#
   Copyright (C) 2020 TUGRAZ
-  Copyright (C) 2020 mojib wali.
+  Copyright (C) 2020 mojib wali
+  Copyright (C) 2020 Nikita Lvov
 
   invenio-theme-tugraz is free software; you can redistribute it and/or
   modify it under the terms of the MIT License; see LICENSE file for more
   details.
 #}
-
-{%- extends "invenio_theme/page_cover.html" %}
+{%- extends config.COVER_TEMPLATE %}	
 {% from "invenio_accounts/_macros.html" import render_field, form_errors %}
 
 {% block page_body %}
-  <div class="ui padded segments big form">
-    <div class="ui segment padded">
-      <div class="divider hidden"></div>
-      {%- block form_header %}
-        <h3 class="ui header">{{ _('Log in to account') }}</h3>
-      {%- endblock form_header %}
-
-      {%- if config.INVENIO_CONFIG_TUGRAZ_SHIBBOLETH %}
-      <a href="{{ url_for('sso_saml.sso', idp='idp') }}">
-      <div class="ui fluid animated fade large button basic" tabindex="0">
-        <div class="visible content">
-          
-            {% trans type='TUG' %} Log in with {{ type }}{% endtrans %}
-         
-        </div>
-        <div class="hidden content">
-          <img src="{{ url_for('static', filename=config.INVENIO_THEME_TUGRAZ_ICON)}}" height="20px">
-        </div>
-      </div> 
-    </a>
-      
-      <div class="ui horizontal divider">
-        Or
-      </div>
-      {%- endif %}
-
-      {%- block form_outer %}
-        {%- with form = login_user_form %}
-          <form action="{{ url_for_security('login') }}" method="POST"
-                name="login_user_form">
-            {{ form.hidden_tag() }}
-            {{ form_errors(form) }}
-            {{ render_field(form.email, icon="user icon", autofocus=True, errormsg=False) }}
-            {{ render_field(form.password, icon="lock icon", errormsg=False) }}
-            <button type="submit" class="ui fluid large submit primary button">
-              <i class="ui sign-in icon"></i>{{ _('Log In') }}
-            </button>
-          </form>
-        {%- endwith %}
-      {%- endblock form_outer %}
-      <div class="divider hidden"></div>
-
+<div class="ui container">
+  <div class="ui centered grid">
+    <div class="centered row">
+      <h1 class="ui header accounts-header">{{ _('Log In') }}</h1>
     </div>
-
-    {%- block registerable %}
-      {%- if security.registerable %}
-        <div class="ui primary segment padded">
-            {% trans sitename=config.ACCOUNTS_SITENAME %}New to {{ sitename }}?{% endtrans %}
-            <a href="{{ url_for('security.register') }}">{{ _('Sign Up') }}</a>
+    <div class="sign-form">
+      {%- block form_header %}
+      <img class="ui fluid image" src="{{ url_for('static', filename=config.ACCOUNTS_HEADER_LOGO)}}">
+      {%- block form_outer %}
+      {%- endblock form_outer %}
+      {%- endblock form_header %}
+      {%- with form = login_user_form %}
+      <form class="ui big form"action="{{ url_for_security('login') }}" method="POST" name="login_user_form" style="margin: 15%">
+        {{ form.hidden_tag() }}
+        {{ form_errors(form) }}
+        <div class="field form-input" >
+          <label id="label-email" >Email</label>
+          <input autofocus="" id="email" name="email" required="" type="text" value="">   
         </div>
-      {%- endif %}
-    {%- endblock registerable %}
+        <div class="field form-input">
+          <label id="label-pass">Password</label>
+          <input id="password" name="password" required="" type="password" value="">
+        </div>
+        <div class="tu-button-style">
+            <button type="submit" class="accounts-link" style="margin: 5%">
+              {{ _('Log In') }}
+            </button>
+        </div>
+      </form>
+      <div class="column login-page-button">
+        {%- block registerable %}
+          {%- if security.registerable %}
+            <a class="inverted tiny login-page-button-white" href="{{ url_for('security.register') }}">{{ _('Sign Up ') }}<i class="user plus icon"></i></a>
+          {%- endif %}
+        {%- endblock registerable %}
+      </div>
+      {%- endwith %}
+      <div class="column login-page-button">
+        {%- if config.INVENIO_CONFIG_TUGRAZ_SHIBBOLETH %}
+          <div class="column">
+            <a class="inverted tiny login-page-button-white" href="{{ url_for('sso_saml.sso', idp='idp') }}">{{ _('Login with TU Graz Account ') }}<i class="sign in icon"></i></a>
+          </div>
+        {%- endif %}
+        <div class="column login-page-button">
+          {%- block recoverable %}
+            {%- if security.recoverable %}
+                <a class="ui header inverted tiny login-page-button-white" href="{{ url_for('security.forgot_password') }}">{{ _('Reset Password') }}<i class="external alternate icon"></a>
+            {%- endif %}
+          {%- endblock recoverable %}
+        </div>
+      </div>
+    </div>
   </div>
-
-  {%- block recoverable %}
-    {%- if security.recoverable %}
-      <a class="ui inverted header tiny"
-         href="{{ url_for('security.forgot_password') }}">{{ _('Forgot password?') }}</a>
-    {%- endif %}
-  {%- endblock recoverable %}
+</div>
 {% endblock page_body %}

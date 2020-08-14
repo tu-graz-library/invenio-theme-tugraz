@@ -25,6 +25,9 @@ INVENIO_THEME_TUGRAZ_ICON = 'images/icon_use.png'
 THEME_LOGO = 'images/tug_logo.png'
 """TU Graz logo"""
 
+ACCOUNTS_HEADER_LOGO =  'images/login_logo.png'
+"""TU Logo for forms"""
+
 THEME_SEARCHBAR = False
 """Enable or disable the header search bar."""
 
@@ -52,6 +55,10 @@ THEME_SITENAME = _('Repository')
 # Invenio-accounts
 # ============
 # See https://invenio-accounts.readthedocs.io/en/latest/configuration.html
+
+COVER_TEMPLATE = 'invenio_theme_tugraz/accounts/accounts_base.html'
+"""Cover page template for login and sign up pages."""
+
 SECURITY_LOGIN_USER_TEMPLATE = 'invenio_theme_tugraz/accounts/login.html'
 """Login template"""
 
