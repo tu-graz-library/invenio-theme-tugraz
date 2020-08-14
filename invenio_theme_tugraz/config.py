@@ -25,7 +25,7 @@ INVENIO_THEME_TUGRAZ_ICON = 'images/icon_use.png'
 THEME_LOGO = 'images/tug_logo.png'
 """TU Graz logo"""
 
-ACCOUNTS_HEADER_LOGO =  'images/login_logo.png'
+ACCOUNTS_HEADER_LOGO = 'images/login_logo.png'
 """TU Logo for forms"""
 
 THEME_SEARCHBAR = False
