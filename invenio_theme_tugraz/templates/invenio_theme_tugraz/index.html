@@ -20,10 +20,10 @@
         {%- block frontpage_form %}
         <div class="ui center aligned grid">
           <div class="eight wide column">
-            <form action="/search" class="ui form">
-              <div class="ui fluid big action input">
-                <input type="text" name="q" autofocus="autofocus" class="form-control" placeholder="{{ _("Type and press enter to search") }}">
-                <button type="submit" class="ui icon search button"><i class="search icon"></i></button>
+            <form action="{{config.THEME_SEARCH_ENDPOINT}}" class="ui form" role="search">
+              <div class="ui fluid big action icon input">
+                <input type="text" name="q" autofocus="autofocus" placeholder="{{ _("Type and press enter to search") }}" style="border-radius: 0;">
+                <button type="submit" class="ui icon search button"><i class="icon search"></i></button>
               </div>
             </form>
           </div>
@@ -85,9 +85,9 @@
       {%- if not loop.last %}
       <div class="ui divider"></div>
       {%- else%}
-      <div class="ui center aligned grid">
+      <div class="ui right floated button">
         <div class="eight wide column">
-              <a href="{{url_for('invenio_search_ui.search')}}" class="ui right floated button">{{_('More')}}</a>
+              <a href="{{url_for('invenio_search_ui.search')}}">{{_('More')}}</a>
         </div>
       </div>
       {%- endif %}
