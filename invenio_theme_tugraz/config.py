@@ -19,14 +19,14 @@ INVENIO_THEME_TUGRAZ_BASE_TEMPLATE = 'invenio_theme_tugraz/base.html'
 INVENIO_THEME_TUGRAZ_ICON = 'images/icon_use.png'
 """icon used in login page"""
 
+INVENIO_THEME_TUGRAZ_LOGIN_IMG = 'images/login_logo.png'
+"""TU Logo for forms"""
+
 # Invenio-theme
 # ============
 # See https://invenio-theme.readthedocs.io/en/latest/configuration.html
 THEME_LOGO = 'images/tug_logo.png'
 """TU Graz logo"""
-
-ACCOUNTS_HEADER_LOGO = 'images/login_logo.png'
-"""TU Logo for forms"""
 
 THEME_SEARCHBAR = False
 """Enable or disable the header search bar."""

@@ -7,7 +7,7 @@
   Invenio is free software; you can redistribute it and/or modify it
   under the terms of the MIT License; see LICENSE file for more details.
 #}
-{%- extends config.COVER_TEMPLATE %}	
+{%- extends config.COVER_TEMPLATE %}
 {% from "invenio_accounts/_macros.html" import render_field, form_errors %}
 
 {% block page_body %}
@@ -19,7 +19,7 @@
         <div class="column">
       <div class="ui very padded segment sign-form">
         {%- block form_header %}
-          <img class="ui fluid image" src="{{ url_for('static', filename=config.ACCOUNTS_HEADER_LOGO)}}">
+          <img class="ui fluid image" src="{{ url_for('static', filename=config.INVENIO_THEME_TUGRAZ_LOGIN_IMG)}}">
         {%- block form_outer %}
         {%- endblock form_outer %}
         {%- endblock form_header %}
@@ -66,9 +66,11 @@
         <div class="login-page-button">
           <a class="ui small header" href="{{url_for_security('login', next=request.path)}}">{{ _('Login using your credentials') }}</a>
         </div>
+        {%- if config.INVENIO_CONFIG_TUGRAZ_SHIBBOLETH %}
         <div class="login-page-button">
           <a class="ui small header" href="{{ url_for('sso_saml.sso', idp='idp') }}">{{ _('Login with TU Graz Account ') }}</a>
         </div>
+        {%- endif %}
       </div>
     </div>
 
