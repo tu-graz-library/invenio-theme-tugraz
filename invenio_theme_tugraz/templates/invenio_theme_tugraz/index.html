@@ -58,7 +58,7 @@
 
         <!--Version badge-->
         <span class="label record-version" title="{{_('Version')}}">
-          {{ (' | ' ~ r.version ~ '') if r.version else ' | Version' }}</span>
+          {{ (' | Version ' ~ r.version ~ '') if r.version else ' ' }}</span>
 
         <!--Resource type badge-->
         <span class="ui label grey" title="{{_('Resource type')}}">{{r.resource_type.type}}</span>
@@ -126,7 +126,7 @@
 
   </div>
 
-  <div style="padding-bottom: 10px;"></div>
+  <div class="spacer"></div>
 
 </div>
 
