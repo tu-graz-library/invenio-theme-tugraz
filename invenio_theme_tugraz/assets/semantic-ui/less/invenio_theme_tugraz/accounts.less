@@ -37,14 +37,14 @@
 }
 
 .tu-button-style button {
-cursor: pointer;
-border: 1px solid #FFF;
-background-color: transparent;
-height: 29px;
-color: #fff;
-font-family: "Source Sans Pro";
-font-weight: 300;
-font-size: 16px;
+  cursor: pointer;
+  border: 1px solid #fff;
+  background-color: transparent;
+  height: 29px;
+  color: #fff;
+  font-family: "Source Sans Pro";
+  font-weight: 300;
+  font-size: 16px;
 }
 .tu-button-style button:hover {
   cursor: pointer;
@@ -54,6 +54,9 @@ font-size: 16px;
 
 .field {
   text-align: left !important;
+  & i {
+    color: #fff !important;
+  }
   & label {
     display: flex !important;
     font-weight: 300 !important;
@@ -67,6 +70,10 @@ font-size: 16px;
     color: white !important;
     border-radius: 0 !important;
     width: 100% !important;
+  }
+  & input::placeholder {
+    opacity: 1 !important;
+    color: silver !important;
   }
   & th {
     display: block;
@@ -112,7 +119,7 @@ login and sign-up pages form background color
 }
 
 .login-page-button-white {
-  color: #fff!important;
+  color: #fff !important;
   font-family: "Source Sans Pro";
   font-size: initial;
 }
@@ -125,4 +132,21 @@ login and sign-up pages form background color
   background-color: #000;
   color: #fff !important;
   text-decoration: none;
+}
+
+.form-margin {
+  margin: 15%;
+}
+
+.switch-grid {
+  display: flex;
+}
+
+@media (max-width: 767px) {
+  #switch_left {
+    order: 2;
+  }
+  #switch_right {
+    order: 1;
+  }
 }

@@ -12,12 +12,36 @@
 
 {% block page_body %}
 <div class="ui container">
-  <div class="ui two column stackable centered grid">
+  <div class="ui two column stackable centered grid switch-grid">
     <div class="centered row">
       <h1 class="ui header accounts-header">{{ _('Create an Account') }}</h1>
     </div>
-        <div class="column">
-      <div class="ui very padded segment sign-form">
+        
+    <div class="column" id="switch_left">
+      <div class="ui basic segment">
+        <h4 class="ui header">{{ _('Citeable. Discoverable.') }}</h4>
+        <p class="bodytext">{{ _('Uploads get a Digital Object Identifier (DOI) to make them easily and uniquely citeable.')}}</h5>
+        <h4 class="ui header">{{ _('Communities.') }}</h4>
+        <p class="bodytext">{{ _('Accept or reject uploads to your own community (e.g workshops, EU projects, institutions or entire disciplines).') }}</h5>
+        <h4 class="ui header">{{ _('Trusted Research Data Management') }}</h4>
+        <p class="bodytext">{{ _('Built on top of TU Graz expertise in managing of the research data from the Graz University of Technology.') }}</h5>
+        <div class="ui divider"></div>
+        <div class="centered row">
+          <h4 class="ui header">{{ _('Already have an account?') }}</h4>
+        </div>
+        <div class="login-page-button">
+          <a class="ui small header" href="{{url_for_security('login', next=request.path)}}">{{ _('Login using your credentials') }}</a>
+        </div>
+        {%- if config.INVENIO_CONFIG_TUGRAZ_SHIBBOLETH %}
+        <div class="login-page-button">
+          <a class="ui small header" href="{{ url_for('sso_saml.sso', idp='idp') }}">{{ _('Login with TU Graz Account ') }}</a>
+        </div>
+        {%- endif %}
+      </div>
+    </div>
+
+    <div class="column" id="switch_right">
+      <div class="sign-form">
         {%- block form_header %}
           <img class="ui fluid image" src="{{ url_for('static', filename=config.INVENIO_THEME_TUGRAZ_LOGIN_IMG)}}">
         {%- block form_outer %}
@@ -49,28 +73,6 @@
           {%- endif %}
         </form>
         {%- endwith %}
-      </div>
-    </div>
-    <div class="column">
-      <div class="ui basic segment">
-        <h4 class="ui header">{{ _('Citeable. Discoverable.') }}</h4>
-        <h5 class="ui header">{{ _('Uploads get a Digital Object Identifier (DOI) to make them easily and uniquely citeable.')}}</h5>
-        <h4 class="ui header">{{ _('Communities.') }}</h4>
-        <h5 class="ui header">{{ _('Accept or reject uploads to your own community (e.g workshops, EU projects, institutions or entire disciplines).') }}</h5>
-        <h4 class="ui header">{{ _('Trusted Research Data Management') }}</h4>
-        <h5 class="ui header">{{ _('Built on top of TU Graz expertise in managing of the research data from the Graz University of Technology.') }}</h5>
-        <div class="ui divider"></div>
-        <div class="centered row">
-          <h4 class="ui header">{{ _('Already have an account?') }}</h4>
-        </div>
-        <div class="login-page-button">
-          <a class="ui small header" href="{{url_for_security('login', next=request.path)}}">{{ _('Login using your credentials') }}</a>
-        </div>
-        {%- if config.INVENIO_CONFIG_TUGRAZ_SHIBBOLETH %}
-        <div class="login-page-button">
-          <a class="ui small header" href="{{ url_for('sso_saml.sso', idp='idp') }}">{{ _('Login with TU Graz Account ') }}</a>
-        </div>
-        {%- endif %}
       </div>
     </div>
 
