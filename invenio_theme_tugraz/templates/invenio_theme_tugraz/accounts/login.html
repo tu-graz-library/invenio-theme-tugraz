@@ -64,8 +64,8 @@
         {%- block recoverable %}
         {%- if security.recoverable %}
       <div class="column login-page-button">
-        <a class="ui header inverted tiny login-page-button-white"
-          href="{{ url_for('security.forgot_password') }}">{{ _('Reset Password') }}</a>
+        <a class="inverted tiny login-page-button-white" href="{{ url_for('security.forgot_password') }}">{{ _('Reset Password') }}
+          <i class="unlock alternate icon"></i></a>
       </div>
       {%- endif %}
       {%- endblock recoverable %}
