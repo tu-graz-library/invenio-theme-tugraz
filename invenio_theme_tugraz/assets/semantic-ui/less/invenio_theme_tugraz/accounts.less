@@ -116,6 +116,11 @@ login and sign-up pages form background color
     text-decoration: underline !important;
     cursor: pointer;
   }
+  & a:hover {
+    background-color: #000;
+    color: #fff !important;
+    text-decoration: none;
+  }
 }
 
 .login-page-button-white {
@@ -125,19 +130,18 @@ login and sign-up pages form background color
 }
 
 .login-page-button-black {
-  color: #000000 !important;
-}
-
-.login-page-button a:hover {
-  background-color: #000;
-  color: #fff !important;
-  text-decoration: none;
+  color: #000 !important;
+  font-family: "Source Sans Pro";
+  font-size: initial;
 }
 
 .form-margin {
   margin: 15%;
 }
 
+/***
+allowing to switch columns on the sign-up page on the small screen
+*/
 .switch-grid {
   display: flex;
 }

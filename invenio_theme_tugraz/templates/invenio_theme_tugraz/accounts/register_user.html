@@ -29,12 +29,14 @@
         <div class="centered row">
           <h4 class="ui header">{{ _('Already have an account?') }}</h4>
         </div>
-        <div class="login-page-button">
-          <a class="ui small header" href="{{url_for_security('login', next=request.path)}}">{{ _('Login using your credentials') }}</a>
+        <div class="centered row login-page-button">
+          <a class="login-page-button-black" href="{{url_for_security('login', next=request.path)}}">{{ _('Login using your credentials') }}</a>
         </div>
         {%- if config.INVENIO_CONFIG_TUGRAZ_SHIBBOLETH %}
-        <div class="login-page-button">
-          <a class="ui small header" href="{{ url_for('sso_saml.sso', idp='idp') }}">{{ _('Login with TU Graz Account ') }}</a>
+        <div class="centered row login-page-button">
+          <a class="login-page-button-black" href="{{ url_for('sso_saml.sso', idp='idp') }}">{{ _('Login with TUGRAZ ') }}
+            <img src="{{ url_for('static', filename=config.INVENIO_THEME_TUGRAZ_ICON)}}" height="20px">
+          </a>
         </div>
         {%- endif %}
       </div>
@@ -68,7 +70,9 @@
           </div>
           {%- if config.INVENIO_CONFIG_TUGRAZ_SHIBBOLETH %}
             <div class="centered row login-page-button">
-              <a class="inverted tiny login-page-button-white" href="{{ url_for('sso_saml.sso', idp='idp') }}">{{ _('Sign up with TU Graz Account ') }}<i class="external alternate icon"></i></a>
+              <a class="login-page-button-white" href="{{ url_for('sso_saml.sso', idp='idp') }}">{{ _('Sign up with TUGRAZ ') }}
+                <img src="{{ url_for('static', filename=config.INVENIO_THEME_TUGRAZ_ICON)}}" height="20px">
+              </a>
             </div>
           {%- endif %}
         </form>
