@@ -50,33 +50,34 @@
         {%- endblock form_outer %}
         {%- endblock form_header %}
         {%- with form = register_user_form %}
-        <form class="ui big form"action="{{ url_for_security('login') }}" method="POST" name="login_user_form" style="margin: 15%">
+        <form class="ui big form form-accounts" action="{{ url_for_security('register') }}" method="POST" name="register_user_form">
           {{ form_errors(form) }}
           {{ form.hidden_tag() }}
           {%- block registration_form_fields scoped %}
-              {{ render_field(form.email, icon="envelope icon", autofocus=True, errormsg=False) }}
-              {{ render_field(form.password, icon="lock icon", errormsg=False) }}
-              {%- if form.password_confirm %}
-                {{ render_field(form.password_confirm, icon="lock icon", errormsg=False) }}
-              {%- endif %}
+            {{ render_field(form.email, icon="envelope icon", autofocus=True, errormsg=False) }}
+            {{ render_field(form.password, icon="lock icon", errormsg=False) }}
+            {%- if form.password_confirm %}
+              {{ render_field(form.password_confirm, icon="lock icon", errormsg=False) }}
+            {%- endif %}
           {%- endblock registration_form_fields %}
+
           {%- if form.recaptcha %}
             <div class="grouped fields">{{ form.recaptcha() }}</div>
           {%- endif %}
           <div class="tu-button-style centered row">
-            <button type="submit" class="accounts-link">
+            <button type="submit" class="accounts-link ui fluid large signup submit"">
             {{ _('Sign Up') }}
             </button>
           </div>
-          {%- if config.INVENIO_CONFIG_TUGRAZ_SHIBBOLETH %}
-            <div class="centered row login-page-button">
-              <a class="login-page-button-white" href="{{ url_for('sso_saml.sso', idp='idp') }}">{{ _('Sign up with TUGRAZ ') }}
-                <img src="{{ url_for('static', filename=config.INVENIO_THEME_TUGRAZ_ICON)}}" height="20px">
-              </a>
-            </div>
-          {%- endif %}
         </form>
         {%- endwith %}
+        {%- if config.INVENIO_CONFIG_TUGRAZ_SHIBBOLETH %}
+          <div class="centered row login-page-button">
+            <a class="login-page-button-white" href="{{ url_for('sso_saml.sso', idp='idp') }}">{{ _('Sign up with TUGRAZ ') }}
+              <img src="{{ url_for('static', filename=config.INVENIO_THEME_TUGRAZ_ICON)}}" height="20px">
+            </a>
+          </div>
+        {%- endif %}
       </div>
     </div>
 

@@ -37,13 +37,13 @@
       <!--Login form-->
       {%- block form_outer %}
       {%- with form = login_user_form %}
-      <form class="ui big form form-margin" action="{{ url_for_security('login') }}" method="POST" name="login_user_form">
+      <form class="ui big form form-accounts" action="{{ url_for_security('login') }}" method="POST" name="login_user_form">
         <!--TODO: remove inline style-->
         {{ form.hidden_tag() }}
         {{ form_errors(form) }}
         {{ render_field(form.email, icon="user icon", autofocus=True, errormsg=False) }}
         {{ render_field(form.password, icon="lock icon", errormsg=False) }}
-        <div class="tu-button-style">
+        <div class="tu-button-style centered row">
             <button type="submit" class="accounts-link">
               {{ _('Log In') }}
             </button>
