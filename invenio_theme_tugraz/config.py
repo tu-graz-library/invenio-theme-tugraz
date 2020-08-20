@@ -19,6 +19,9 @@ INVENIO_THEME_TUGRAZ_BASE_TEMPLATE = 'invenio_theme_tugraz/base.html'
 INVENIO_THEME_TUGRAZ_ICON = 'images/icon_use.png'
 """icon used in login page"""
 
+INVENIO_THEME_TUGRAZ_LOGIN_IMG = 'images/login_logo.png'
+"""TU Logo for forms"""
+
 # Invenio-theme
 # ============
 # See https://invenio-theme.readthedocs.io/en/latest/configuration.html
@@ -52,6 +55,10 @@ THEME_SITENAME = _('Repository')
 # Invenio-accounts
 # ============
 # See https://invenio-accounts.readthedocs.io/en/latest/configuration.html
+
+COVER_TEMPLATE = 'invenio_theme_tugraz/accounts/accounts_base.html'
+"""Cover page template for login and sign up pages."""
+
 SECURITY_LOGIN_USER_TEMPLATE = 'invenio_theme_tugraz/accounts/login.html'
 """Login template"""
 
