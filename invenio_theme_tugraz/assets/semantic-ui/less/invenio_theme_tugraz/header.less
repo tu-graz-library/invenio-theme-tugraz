@@ -14,14 +14,7 @@
 }
 
 /*****logo section******/
-.affiliation-spacer {
-  display: table-cell;
-  vertical-align: middle;
-  width: 100%;
-}
-
 .affiliation-logo {
-  display: table-cell;
   vertical-align: middle;
   white-space: nowrap;
   & a {
@@ -204,7 +197,7 @@ svg:not(:root) {
 }
 
 .main-menu-underline-line {
-  border: 2.5px solid #e4154b !important;
+  border: 2px solid #e4154b !important;
   border-radius: 0;
 }
 
@@ -227,43 +220,6 @@ svg:not(:root) {
   transition: height 0.3s linear 0s;
 }
 
-@media (max-width: 767.9px) {
-  .main-menu {
-    height: auto;
-  }
-}
-
-@media screen and (max-width: 767.9px) {
-  #int-header-logo-img {
-    width: 200px;
-    height: 75px;
-  }
-}
-
-@media screen and (max-width: 767.9px) {
-  #int-header-logo {
-    padding: 50px 0;
-    text-align: center;
-  }
-}
-
-@media screen and (max-width: 767.9px) {
-  .affiliation {
-    margin: 0;
-    text-align: center;
-  }
-  .affiliation-text {
-    display: none;
-  }
-  .affiliation-logo-claim {
-    display: none;
-  }
-
-  .affiliation-spacer {
-    display: none;
-  }
-}
-
 .int-menu-q-open-icon {
   width: 14px;
   vertical-align: middle;
@@ -275,4 +231,27 @@ svg:not(:root) {
 .col a {
   cursor: pointer;
 }
+@media screen and (max-width: 767.9px) {
+  #int-header-logo-img {
+    width: 200px;
+    height: 75px;
+  }
+  #main-logo {
+    padding: 30px 0;
+    text-align: center;
+    display: block;
+  }
 
+  #repo-logo{
+    display: none;
+  }
+  .affiliation-logo-claim {
+    display: none;
+  }
+}
+.repo-img{
+  margin-right: 5px;
+}
+.inline-elements{
+  display: flex;
+}
