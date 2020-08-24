@@ -85,10 +85,9 @@
       {%- if not loop.last %}
       <div class="ui divider"></div>
       {%- else%}
-      <div class="ui right floated button">
-        <div class="eight wide column">
-              <a href="{{url_for('invenio_search_ui.search')}}">{{_('More')}}</a>
-        </div>
+      <div class="spacer"></div>
+      <div class="ui two column centered grid">
+        <a class="ui button" href="{{url_for('invenio_search_ui.search')}}">{{_('More')}}</a>
       </div>
       {%- endif %}
       {%- endfor %}
