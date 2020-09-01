@@ -1,16 +1,9 @@
-{#
-  Copyright (C) 2020 TUGRAZ
-  Copyright (C) 2020 mojib wali
-  Copyright (C) 2020 Nikita Lvov
-
-  invenio-theme-tugraz is free software; you can redistribute it and/or
-  modify it under the terms of the MIT License; see LICENSE file for more
-  details.
-#}
-{%- extends config.COVER_TEMPLATE %}	
-{% from "invenio_accounts/_macros.html" import render_field, form_errors %}
-
-{% block page_body %}
+{# Copyright (C) 2020 TUGRAZ Copyright (C) 2020 mojib wali Copyright (C) 2020
+Nikita Lvov invenio-theme-tugraz is free software; you can redistribute it
+and/or modify it under the terms of the MIT License; see LICENSE file for more
+details. #} {%- extends config.COVER_TEMPLATE %} {% from
+"invenio_accounts/_macros.html" import render_field, form_errors %} {% block
+page_body %}
 <div class="ui container">
   <div class="ui centered grid">
     <div class="centered row">
@@ -18,59 +11,65 @@
     </div>
     <div class="sign-form">
       {%- block form_header %}
-      <img class="ui fluid image" src="{{ url_for('static', filename=config.INVENIO_THEME_TUGRAZ_LOGIN_IMG)}}">
+      <img
+        class="ui fluid image"
+        src="{{ url_for('static', filename=config.INVENIO_THEME_TUGRAZ_LOGIN_IMG)}}"
+      />
       {%- endblock form_header %}
 
-            <!--Login with SSO-->
-            {%- if config.INVENIO_CONFIG_TUGRAZ_SHIBBOLETH %}
-            <div class="login-page-button">
-              <a href="{{ url_for('sso_saml.sso', idp='idp') }}" class="inverted tiny image label login-page-button-white">
-                {% trans type='TUGRAZ' %} Login with {{ type }}{% endtrans %}
-                <img src="{{ url_for('static', filename=config.INVENIO_THEME_TUGRAZ_ICON)}}" height="20px">
-              </a>
-            </div>
-            <div class="ui inverted horizontal divider">
-              Or
-            </div>
-            {%- endif %}
+      <!--Login with SSO-->
+      {%- if config.INVENIO_CONFIG_TUGRAZ_SHIBBOLETH %}
+      <div class="login-page-button">
+        <a
+          href="{{ url_for('sso_saml.sso', idp='idp') }}"
+          class="inverted tiny image label login-page-button-white"
+        >
+          {% trans type='TUGRAZ' %} Login with {{ type }}{% endtrans %}
+          <img
+            src="{{ url_for('static', filename=config.INVENIO_THEME_TUGRAZ_ICON)}}"
+            height="20px"
+          />
+        </a>
+      </div>
+      <div class="ui inverted horizontal divider">Or</div>
+      {%- endif %}
 
       <!--Login form-->
-      {%- block form_outer %}
-      {%- with form = login_user_form %}
-      <form class="ui big form form-margin" action="{{ url_for_security('login') }}" method="POST" name="login_user_form">
-        <!--TODO: remove inline style-->
-        {{ form.hidden_tag() }}
-        {{ form_errors(form) }}
-        {{ render_field(form.email, icon="user icon", autofocus=True, errormsg=False) }}
-        {{ render_field(form.password, icon="lock icon", errormsg=False) }}
-        <div class="tu-button-style">
-            <button type="submit" class="accounts-link">
-              {{ _('Log In') }}
-            </button>
+      {%- block form_outer %} {%- with form = login_user_form %}
+      <form
+        class="ui big form form-accounts"
+        action="{{ url_for_security('login') }}"
+        method="POST"
+        name="login_user_form"
+      >
+        {{ form.hidden_tag() }} {{ form_errors(form) }} {{
+        render_field(form.email, icon="user icon", autofocus=True,
+        errormsg=False) }} {{ render_field(form.password, icon="lock icon",
+        errormsg=False) }}
+        <div class="tu-button-style centered row">
+          <button type="submit" class="accounts-link">{{ _('Log In') }}</button>
         </div>
       </form>
-      {%- endwith %}
-      {%- endblock form_outer %}
-
-      {%- block registerable %}
-          {%- if security.registerable %}
-          <div class="column login-page-button">
-            <a class="inverted tiny login-page-button-white" href="{{ url_for('security.register') }}">{{ _('Sign Up ') }}
-              <i class="user plus icon"></i></a>
-            </div>
-          {%- endif %}
-        {%- endblock registerable %}
-      
-        {%- block recoverable %}
-        {%- if security.recoverable %}
+      {%- endwith %} {%- endblock form_outer %} {%- block registerable %} {%- if
+      security.registerable %}
       <div class="column login-page-button">
-        <a class="inverted tiny login-page-button-white" href="{{ url_for('security.forgot_password') }}">{{ _('Reset Password') }}
-          <i class="unlock alternate icon"></i></a>
+        <a
+          class="inverted tiny login-page-button-white"
+          href="{{ url_for('security.register') }}"
+          >{{ _('Sign Up ') }} <i class="user plus icon"></i
+        ></a>
       </div>
-      {%- endif %}
-      {%- endblock recoverable %}
+      {%- endif %} {%- endblock registerable %} {%- block recoverable %} {%- if
+      security.recoverable %}
+      <div class="column login-page-button">
+        <a
+          class="inverted tiny login-page-button-white"
+          href="{{ url_for('security.forgot_password') }}"
+          >{{ _('Reset Password') }} <i class="unlock alternate icon"></i
+        ></a>
+      </div>
+      {%- endif %} {%- endblock recoverable %}
     </div>
-    <div style="margin-bottom: 10px;"></div>
   </div>
-  </div>
+</div>
 {% endblock page_body %}
