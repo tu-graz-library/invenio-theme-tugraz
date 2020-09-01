@@ -98,7 +98,15 @@ search.button
 .ui.search.button:hover{
   background-color:#000000;
 }
-
+/**
+.ui.button{
+  background-color:#e4154b;
+}
+*/
+.ui.button:hover{
+  background-color:#000000;
+  color:#fff;
+}
 /***
 remove corners from border
 **/
@@ -152,5 +160,8 @@ border-radius: 0;
 .ui.action.input:not([class*="left action"])>.buttons:last-child>
 .button, .ui.action.input:not([class*="left action"])>
 .dropdown:last-child {
+  border-radius: 0;
+}
+.ui.basic.button, .ui.basic.buttons .button {
   border-radius: 0;
 }

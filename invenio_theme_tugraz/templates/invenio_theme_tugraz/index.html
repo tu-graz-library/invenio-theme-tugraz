@@ -15,26 +15,24 @@
 {%- block page_body %}
 
 
-{%- block frontpage_search %}
+<div class="ui container">
+  {%- block frontpage_search %}
 
-        {%- block frontpage_form %}
-        <div class="ui center aligned grid">
-          <div class="eight wide column">
-            <form action="{{config.THEME_SEARCH_ENDPOINT}}" class="ui form" role="search">
-              <div class="ui fluid big action icon input">
-                <input type="text" name="q" autofocus="autofocus" placeholder="{{ _("Type and press enter to search") }}" style="border-radius: 0;">
-                <button type="submit" class="ui icon search button"><i class="icon search"></i></button>
-              </div>
-            </form>
-          </div>
+  {%- block frontpage_form %}
+  <div class="ui center aligned grid">
+    <div class="sixteen wide column">
+      <form action="{{config.THEME_SEARCH_ENDPOINT}}" class="ui form" role="search">
+        <div class="ui fluid big action icon input">
+          <input type="text" name="q" autofocus="autofocus" placeholder="{{ _("Type and press enter to search") }}" style="border-radius: 0;">
+          <button type="submit" class="ui icon search button"><i class="icon search"></i></button>
         </div>
-        <div class="ui divider hidden"></div>
-        {%- endblock frontpage_form %}
+      </form>
+    </div>
+  </div>
+  <div class="ui divider hidden"></div>
+  {%- endblock frontpage_form %}
 
 {%- endblock frontpage_search %}
-
-<div class="ui container">
-
   <div class="ui stackable grid">
 
     <!---Recent uploads-->
@@ -85,10 +83,9 @@
       {%- if not loop.last %}
       <div class="ui divider"></div>
       {%- else%}
-      <div class="ui right floated button">
-        <div class="eight wide column">
-              <a href="{{url_for('invenio_search_ui.search')}}">{{_('More')}}</a>
-        </div>
+      <div class="spacer"></div>
+      <div class="ui two column centered grid">
+        <a class="ui button" href="{{url_for('invenio_search_ui.search')}}">{{_('More')}}</a>
       </div>
       {%- endif %}
       {%- endfor %}
