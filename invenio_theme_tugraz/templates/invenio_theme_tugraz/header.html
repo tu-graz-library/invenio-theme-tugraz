@@ -12,10 +12,11 @@
 
   {%- block navbar %}
   <nav>
+    {%- block navbar_header %}
+    {%- include "invenio_theme_tugraz/navbar.html" %}
+    {%- endblock navbar_header %}
+
     <div class="ui container">
-      {%- block navbar_header %}
-      {%- include "invenio_theme_tugraz/navbar.html" %}
-      {%- endblock navbar_header %}
         <div class="ui grid stackable container">
           <div class="three column row centered" style="padding-bottom: 0;">
             <div class="two wide column main-menu-entry main-menu-entry-svg">
@@ -45,14 +46,12 @@
           </div>
         </div>
 
-        <div style="margin-top: 15px;"></div>
+        <div class="spacer"></div>
       </div>
 
-      {%- endblock navbar %}
-
-    </div>
   </nav>
-
+  {%- endblock navbar %}
+  
   {%- block flashmessages %}
   {%- from "invenio_theme/macros/messages.html" import flashed_messages with context -%}
   {{ flashed_messages() }}
