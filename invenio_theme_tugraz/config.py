@@ -59,11 +59,11 @@ THEME_SITENAME = _('Repository')
 # COVER_TEMPLATE = 'invenio_theme_tugraz/accounts/accounts_base.html'
 """Cover page template for login and sign up pages."""
 
-# SECURITY_LOGIN_USER_TEMPLATE = 'invenio_theme_tugraz/accounts/login.html'
+SECURITY_LOGIN_USER_TEMPLATE = 'invenio_theme_tugraz/accounts/login_user.html'
 """Login template"""
 
-# SECURITY_REGISTER_USER_TEMPLATE = \
-#    'invenio_theme_tugraz/accounts/register_user.html'
+SECURITY_REGISTER_USER_TEMPLATE = \
+    'invenio_theme_tugraz/accounts/register_user.html'
 
 # Invenio-I18N
 # ============
