@@ -14,48 +14,57 @@
 {% block page_body %}
 <div class="spacer-long"></div>
 <div class="ui container">
+
   <div class="ui padded segments big form tug-bagrounds">
     <div class="ui login segment padded">
       <div class="divider hidden"></div>
       {%- block form_header %}
-        <h3 class="ui login header">{{ _('Log in to account') }}</h3>
+      <h3 class="ui login header">{{ _('Log in to account') }}</h3>
       {%- endblock form_header %}
+      <!--Login with SSO-->
+      {%- if config.INVENIO_CONFIG_TUGRAZ_SHIBBOLETH %}
+      <div class="login-page-button">
+        <a href="{{ url_for('sso_saml.sso', idp='idp') }}" class="inverted tiny image label login-page-button-white">
+          {% trans type='TUGRAZ' %} Login with {{ type }}{% endtrans %}
+          <img src="{{ url_for('static', filename=config.INVENIO_THEME_TUGRAZ_ICON)}}" height="20px" />
+        </a>
+      </div>
+      <div class="ui inverted horizontal divider">Or</div>
+      {%- endif %}
 
       {%- block form_outer %}
-        {%- with form = login_user_form %}
-          <form action="{{ url_for_security('login') }}" method="POST"
-                name="login_user_form" class="ui big form">
-            {{ form.hidden_tag() }}
-            {{ form_errors(form) }}
-            {{ render_field(form.email, icon="user icon", autofocus=True, errormsg=False) }}
-            {{ render_field(form.password, icon="lock icon", errormsg=False) }}
-            <button type="submit" class="ui fluid large submit primary button">
-              <i class="ui sign-in icon"></i>{{ _('Log In') }}
-            </button>
-          </form>
-        {%- endwith %}
+      {%- with form = login_user_form %}
+      <form action="{{ url_for_security('login') }}" method="POST" name="login_user_form" class="ui big form">
+        {{ form.hidden_tag() }}
+        {{ form_errors(form) }}
+        {{ render_field(form.email, icon="user icon", autofocus=True, errormsg=False) }}
+        {{ render_field(form.password, icon="lock icon", errormsg=False) }}
+        <button type="submit" class="ui fluid large submit primary button">
+          <i class="ui sign-in icon"></i>{{ _('Log In') }}
+        </button>
+      </form>
+      {%- endwith %}
       {%- endblock form_outer %}
       <div class="divider hidden"></div>
 
     </div>
 
     {%- block registerable %}
-      {%- if security.registerable %}
-        <div class="ui primary segment padded text-muted">
-            {% trans sitename=config.ACCOUNTS_SITENAME %}New to {{ sitename }}?{% endtrans %}
-            <a href="{{ url_for_security('register', next=request.args.get('next')) }}">{{ _('Sign Up') }}</a>
-        </div>
-      {%- endif %}
+    {%- if security.registerable %}
+    <div class="ui primary segment padded text-muted">
+      {% trans sitename=config.ACCOUNTS_SITENAME %}New to {{ sitename }}?{% endtrans %}
+      <a href="{{ url_for_security('register', next=request.args.get('next')) }}">{{ _('Sign Up') }}</a>
+    </div>
+    {%- endif %}
     {%- endblock registerable %}
   </div>
 
   {%- block recoverable %}
-    {%- if security.recoverable %}
-      <div class="ui basic segment padded">
-        <a class="ui inverted header tiny"
-           href="{{ url_for_security('forgot_password') }}">{{ _('Forgot password?') }}</a>
-      </div>
-    {%- endif %}
+  {%- if security.recoverable %}
+  <div class="ui basic segment padded">
+    <a class="ui inverted header tiny" href="{{ url_for_security('forgot_password') }}">{{ _('Forgot password?') }}</a>
+  </div>
+  {%- endif %}
   {%- endblock recoverable %}
 </div>
 {% endblock page_body %}
