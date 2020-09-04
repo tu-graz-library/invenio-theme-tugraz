@@ -1,60 +1,36 @@
-{# -*- coding: utf-8 -*-
-
+{#
   Copyright (C) 2020 TUGRAZ
-  Copyright (C) 2020 mojib wali
-  Copyright (C) 2020 Nikita Lvov
+  Copyright (C) 2020 mojib wali.
 
-  Invenio is free software; you can redistribute it and/or modify it
-  under the terms of the MIT License; see LICENSE file for more details.
+  invenio-theme-tugraz is free software; you can redistribute it and/or
+  modify it under the terms of the MIT License; see LICENSE file for more
+  details.
 #}
-{%- extends config.COVER_TEMPLATE %}
+
+{% extends config.INVENIO_THEME_TUGRAZ_ACCOUNT_BASE %}
+
 {% from "invenio_accounts/_macros.html" import render_field, form_errors %}
 
 {% block page_body %}
+<div class="spacer-long"></div>
 <div class="ui container">
-  <div class="ui two column stackable centered grid switch-grid">
-    <div class="centered row">
-      <h1 class="ui header accounts-header">{{ _('Create an Account') }}</h1>
-    </div>
-        
-    <div class="column" id="switch_left">
-      <div class="ui basic segment">
-        <h4 class="ui header">{{ _('Citeable. Discoverable.') }}</h4>
-        <p class="bodytext">{{ _('Uploads get a Digital Object Identifier (DOI) to make them easily and uniquely citeable.')}}</h5>
-        <h4 class="ui header">{{ _('Communities.') }}</h4>
-        <p class="bodytext">{{ _('Accept or reject uploads to your own community (e.g workshops, EU projects, institutions or entire disciplines).') }}</h5>
-        <h4 class="ui header">{{ _('Trusted Research Data Management') }}</h4>
-        <p class="bodytext">{{ _('Built on top of TU Graz expertise in managing of the research data from the Graz University of Technology.') }}</h5>
-        <div class="ui divider"></div>
-        <div class="centered row">
-          <h4 class="ui header">{{ _('Already have an account?') }}</h4>
-        </div>
-        <div class="centered row login-page-button">
-          <a class="login-page-button-black" href="{{url_for_security('login', next=request.path)}}">{{ _('Login using your credentials') }}</a>
-        </div>
-        {%- if config.INVENIO_CONFIG_TUGRAZ_SHIBBOLETH %}
-        <div class="centered row login-page-button">
-          <a class="login-page-button-black" href="{{ url_for('sso_saml.sso', idp='idp') }}">{{ _('Login with TUGRAZ ') }}
-            <img src="{{ url_for('static', filename=config.INVENIO_THEME_TUGRAZ_ICON)}}" height="20px">
-          </a>
-        </div>
-        {%- endif %}
-      </div>
-    </div>
+  <div class="ui padded segments big form">
+    <div class="ui segment padded relaxed">
+      <div class="divider hidden"></div>
 
-    <div class="column" id="switch_right">
-      <div class="sign-form">
-        {%- block form_header %}
-          <img class="ui fluid image" src="{{ url_for('static', filename=config.INVENIO_THEME_TUGRAZ_LOGIN_IMG)}}">
-        {%- block form_outer %}
-        {%- endblock form_outer %}
-        {%- endblock form_header %}
-        {%- with form = register_user_form %}
-        <form class="ui big form form-accounts" action="{{ url_for_security('register') }}" method="POST" name="register_user_form">
+      {%- block form_header %}
+        <h3 class="ui login header">
+          {% trans sitename=config.ACCOUNTS_SITENAME %}Sign up for an {{ sitename }} account!{% endtrans %}
+        </h3>
+      {%- endblock form_header %}
+
+      {%- with form = register_user_form %}
+        <form action="{{ url_for_security('register') }}" method="POST"
+              name="register_user_form">
           {{ form_errors(form) }}
           {{ form.hidden_tag() }}
           {%- block registration_form_fields scoped %}
-            {{ render_field(form.email, icon="envelope icon", autofocus=True, errormsg=False) }}
+            {{ render_field(form.email, icon="user icon", autofocus=True, errormsg=False) }}
             {{ render_field(form.password, icon="lock icon", errormsg=False) }}
             {%- if form.password_confirm %}
               {{ render_field(form.password_confirm, icon="lock icon", errormsg=False) }}
@@ -64,23 +40,19 @@
           {%- if form.recaptcha %}
             <div class="grouped fields">{{ form.recaptcha() }}</div>
           {%- endif %}
-          <div class="tu-button-style centered row">
-            <button type="submit" class="accounts-link ui fluid large signup submit"">
-            {{ _('Sign Up') }}
-            </button>
-          </div>
+
+          <button type="submit" class="ui fluid large signup submit button">
+            <i class="ui edit outline icon"></i>{{ _('Sign Up') }}
+          </button>
         </form>
-        {%- endwith %}
-        {%- if config.INVENIO_CONFIG_TUGRAZ_SHIBBOLETH %}
-          <div class="centered row login-page-button">
-            <a class="login-page-button-white" href="{{ url_for('sso_saml.sso', idp='idp') }}">{{ _('Sign up with TUGRAZ ') }}
-              <img src="{{ url_for('static', filename=config.INVENIO_THEME_TUGRAZ_ICON)}}" height="20px">
-            </a>
-          </div>
-        {%- endif %}
-      </div>
+      {%- endwith %}
+      <div class="divider hidden"></div>
     </div>
 
+    <div class="ui primary segment padded text-muted">
+      {{ _('Already have an account?') }}
+      <a href="{{ url_for_security('login', next=request.args.get('next')) }}">{{ _('Log In') }}</a>
+    </div>
   </div>
 </div>
 

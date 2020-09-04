@@ -14,7 +14,11 @@ INVENIO_THEME_TUGRAZ_DEFAULT_VALUE = 'foobar'
 """Default value for the application."""
 
 INVENIO_THEME_TUGRAZ_BASE_TEMPLATE = 'invenio_theme_tugraz/base.html'
-"""Default base template for the demo page."""
+"""TU Graz Default base template"""
+
+INVENIO_THEME_TUGRAZ_ACCOUNT_BASE = \
+    'invenio_theme_tugraz/accounts/accounts_base.html'
+"""TU Graz Default account base template"""
 
 INVENIO_THEME_TUGRAZ_ICON = 'images/icon_use.png'
 """icon used in login page"""
@@ -56,14 +60,15 @@ THEME_SITENAME = _('Repository')
 # ============
 # See https://invenio-accounts.readthedocs.io/en/latest/configuration.html
 
-COVER_TEMPLATE = 'invenio_theme_tugraz/accounts/accounts_base.html'
+# COVER_TEMPLATE = 'invenio_theme_tugraz/accounts/accounts_base.html'
 """Cover page template for login and sign up pages."""
 
-SECURITY_LOGIN_USER_TEMPLATE = 'invenio_theme_tugraz/accounts/login.html'
+SECURITY_LOGIN_USER_TEMPLATE = 'invenio_theme_tugraz/accounts/login_user.html'
 """Login template"""
 
 SECURITY_REGISTER_USER_TEMPLATE = \
     'invenio_theme_tugraz/accounts/register_user.html'
+"""Sigup template"""
 
 # Invenio-I18N
 # ============

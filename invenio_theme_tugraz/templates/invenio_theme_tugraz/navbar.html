@@ -7,44 +7,48 @@
   details.
 #}
 
-<!----MENU------------------------------------------------------------->
- <div class="short-menu" id="all-menu-top-table">
-  <div class="short-menu-left">
-    <div id="all-menu-top-left-item">
-      <div class="short-menu-left-search">
-        {%- if config.I18N_LANGUAGES %}
-        <div class="short-menu-left-lang" style="margin-right:10px; font-size:18px;">
-          {%- for l in current_i18n.get_locales() %}
-          {%- if current_i18n.language != l.language %}
-          <a
-            href="{{ url_for('invenio_i18n.set_lang', lang_code=l.language) }}">{{ l.get_display_name().upper() [0:2]}}</a>
+<div class="ui container">
+  <div class="short-menu" id="all-menu-top-table">
+    <div class="short-menu-left">
+      <div id="all-menu-top-left-item">
+        <div class="short-menu-left-search">
+          {%- if config.I18N_LANGUAGES %}
+          <div class="short-menu-left-lang" style="margin-right:10px; font-size:18px;">
+            {%- for l in current_i18n.get_locales() %}
+            {%- if current_i18n.language != l.language %}
+            <a
+              href="{{ url_for('invenio_i18n.set_lang', lang_code=l.language) }}">{{ l.get_display_name().upper() [0:2]}}</a>
+            {%- endif %}
+            {%- endfor %}
+          </div>
           {%- endif %}
-          {%- endfor %}
-        </div>
-        {%- endif %}
-        <div class="search-icon-header">
-          <a href="{{url_for('invenio_search_ui.search')}}">
-            <svg class="short-menu-icon" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg" height="26.015" width="26.015" version="1.1" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" viewBox="0 0 26.01515 26.01515">
-              <g stroke-miterlimit="10" transform="translate(1,1)">
-                <circle cy="8.5" cx="8.5" r="8" style="stroke-miterlimit:10;stroke-width:2"></circle>
-                <path style="stroke-width:2;stroke-miterlimit:10;stroke-linecap:round" d="m14.156 14.156 9.344 9.344"></path>
-              </g>
-            </svg>
-          </a>
+          <div class="search-icon-header">
+            <a href="{{url_for('invenio_search_ui.search')}}">
+              <svg class="short-menu-icon" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+                xmlns="http://www.w3.org/2000/svg" height="26.015" width="26.015" version="1.1"
+                xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/"
+                viewBox="0 0 26.01515 26.01515">
+                <g stroke-miterlimit="10" transform="translate(1,1)">
+                  <circle cy="8.5" cx="8.5" r="8" style="stroke-miterlimit:10;stroke-width:2"></circle>
+                  <path style="stroke-width:2;stroke-miterlimit:10;stroke-linecap:round" d="m14.156 14.156 9.344 9.344">
+                  </path>
+                </g>
+              </svg>
+            </a>
+          </div>
         </div>
       </div>
     </div>
-  </div>
 
-  
-  <div class="short-menu-right">
-        {%- block navbar_right %}
-        {%- include config.THEME_HEADER_LOGIN_TEMPLATE %}
-        {%- endblock navbar_right %}
+
+    <div class="short-menu-right">
+      {%- block navbar_right %}
+      {%- include config.THEME_HEADER_LOGIN_TEMPLATE %}
+      {%- endblock navbar_right %}
     </div>
-  
 
-</div>
+
+  </div>
 
 
   <!----END MENU------------------------------------------------------------->
@@ -54,17 +58,16 @@
     <div class="left floated left aligned six wide column" id="repo-logo">
       <div class="inline-elements">
         <div class="repo-img">
-        <img height="51.862"
-      src="{{ url_for('static', filename='images/Icon_1_v2.svg')}}">
-    </div>
-      <div class="affiliation-text">
-        <a title="RDM" href="{{url_for('invenio_theme_tugraz.index')}}">
-          TU Graz
-          <br>
-          {{_ ("Repository")}}
-        </a>
+          <img height="51.862" src="{{ url_for('static', filename='images/Icon_1_v2.svg')}}">
+        </div>
+        <div class="affiliation-text">
+          <a title="RDM" href="{{url_for('invenio_theme_tugraz.index')}}">
+            TU Graz
+            <br>
+            {{_ ("Repository")}}
+          </a>
+        </div>
       </div>
-    </div>
     </div>
     <!--Right-->
     <div class="right floated right aligned six wide column">
@@ -109,5 +112,6 @@
           </svg>
         </a>
       </div>
-    </div>   
+    </div>
   </div>
+</div>
