@@ -86,11 +86,11 @@
       <div class="ui divider"></div>
       {%- else%}
       <div class="spacer"></div>
+      {%- endif %}
+      {%- endfor %}
       <div class="ui two column centered grid">
         <a class="ui button" href="{{url_for('invenio_search_ui.search')}}">{{_('More')}}</a>
       </div>
-      {%- endif %}
-      {%- endfor %}
     </div>
 
 
