@@ -43,40 +43,42 @@
       {%- set creation_date = r._created|from_isodatetime -%}
       {%- set record_url = url_for('invenio_records_ui.recid', pid_value=r['recid']) %}
 
-      <!--btn view-->
-      <a href="{{ record_url }}" class="ui right floated button">{{_('View')}}</a>
-      <!--TODO:
-          something with doi
+      <article>
+        <!--btn view-->
+        <a href="{{ record_url }}" class="ui right floated button">{{_('View')}}</a>
+        <!--TODO:
+        something with doi
         -->
-      <div class="left floated left aligned column">
+        <div class="left floated left aligned column">
 
-        <!--Publication date badge-->
-        <span class="ui label teal" title="{{_('Publication date')}}">{{ r.publication_date }}
-        </span>
+          <!--Publication date badge-->
+          <span class="ui label teal" title="{{_('Publication date')}}">{{ r.publication_date }}
+          </span>
 
-        <!--Version badge-->
-        <span class="label record-version" title="{{_('Version')}}">
-          {{ (' | Version ' ~ r.version ~ '') if r.version else ' ' }}</span>
+          <!--Version badge-->
+          <span class="label record-version" title="{{_('Version')}}">
+            {{ (' | Version ' ~ r.version ~ '') if r.version else ' ' }}</span>
 
-        <!--Resource type badge-->
-        <span class="ui label grey" title="{{_('Resource type')}}">{{r.resource_type.type}}</span>
-        <span class="label record-version">
-          <!--TODO: add subtype---></span>
+          <!--Resource type badge-->
+          <span class="ui label grey" title="{{_('Resource type')}}">{{r.resource_type.type}}</span>
+          <span class="label record-version">
+            <!--TODO: add subtype---></span>
 
-        <!--Access right badge-->
-        <span class="ui label green">{{_('Open Access')}}</span>
+          <!--Access right badge-->
+          <span class="ui label green">{{_('Open Access')}}</span>
 
-      </div>
+        </div>
 
-      <h4><a href="{{ record_url }}">{{r.titles[0].title}}</a></h4>
+        <h4><a href="{{ record_url }}">{{r.titles[0].title}}</a></h4>
 
-      <p>{{ creators(r.creators) }}</p>
+        <p>{{ creators(r.creators) }}</p>
 
-      <p class="hidden-xs"><a href="{{record_url}}">{{ r.descriptions[0].description|striptags|truncate(300) }}</a></p>
+        <p class="hidden-xs"><a href="{{record_url}}">{{ r.descriptions[0].description|striptags|truncate(300) }}</a></p>
 
-      <small>{% trans user=userprofile, date=creation_date|dateformat('long') %}Uploaded on
-        {{date}}{% endtrans %}</small>
+        <small>{% trans user=userprofile, date=creation_date|dateformat('long') %}Uploaded on
+          {{date}}{% endtrans %}</small>
 
+      </article>
       <!----TODO: more versions
       -->
 
