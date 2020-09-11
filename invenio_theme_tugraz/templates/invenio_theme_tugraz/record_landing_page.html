@@ -24,12 +24,19 @@
         <div class="ui grid">
           <div class="two column row">
             <div class="left floated left aligned column">
-              <span class="ui label teal"
-                title="Publication date">{{ record.publication_date|to_date|format_date(format='long') }}</span>
-              <span class="ui label record-version"> Version {{ record.version }}</span>
+              <span class="ui label teal" title="Publication date">
+                {{ record.publication_date|to_date|format_date(format='long') }}
+              </span>
+
+              <span class="ui label record-version">
+                Version {{ record.version }}
+              </span>
             </div>
             <div class="right floated right aligned column">
-              <span class="ui label grey">{{ record.resource_type | vocabulary_title('resource_type') }}</span>
+              <span class="ui label grey">
+                {{ record.resource_type | vocabulary_title('resource_type') }}
+              </span>
+
               {% if record.access_right in ["embargoed", "closed"] %}
               <span class="ui label red">
               {% elif record.access_right == "restricted" %}
@@ -44,9 +51,14 @@
         </div>
 
         <h1>{{ record.titles[0].title }}</h1>
-        <p>{%- include "invenio_rdm_records/details/creators.html" %}</p>
+        <p>
+          {%- include "invenio_rdm_records/details/creators.html" %}
+        </p>
+
         {%- if record.contributors %}
-        <p>{%- include "invenio_rdm_records/details/contributors.html" %}</p>
+        <p>
+          {%- include "invenio_rdm_records/details/contributors.html" %}
+        </p>
         {%- endif %}
 
         <div class="ui grid">
@@ -59,6 +71,7 @@
             </div>
           </div>
         </div>
+
         {%- include "invenio_rdm_records/details/citation.html" %}
         {%- include "invenio_rdm_records/details/keywords.html" %}
         {%- include "invenio_rdm_records/details/description.html" %}
@@ -71,13 +84,17 @@
         {{ file_list_box(files.dumps(), pid) }}
         {%- else %}
         <br>
-        <p style="text-align: center;">No associated files.</p>
+
+        <p style="text-align: center;">
+          No associated files.
+        </p>
         {% endif %}
 
         {# More details #}
 
         {%- endblock record_body %}
       </div>
+
       <div class="six wide column">
         {% block sidebar %}
         <div class="ui segment rdm-sidebar">
