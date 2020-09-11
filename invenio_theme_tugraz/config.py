@@ -9,6 +9,7 @@
 """invenio module for TUGRAZ theme."""
 
 from flask_babelex import gettext as _
+from invenio_rdm_records.config import RECORDS_UI_ENDPOINTS
 
 INVENIO_THEME_TUGRAZ_DEFAULT_VALUE = "foobar"
 """Default value for the application."""
@@ -85,3 +86,7 @@ SEARCH_UI_HEADER_TEMPLATE = "invenio_theme_tugraz/header.html"
 
 DEPOSITS_HEADER_TEMPLATE = "invenio_theme_tugraz/header.html"
 """Deposits header page's template."""
+
+RECORDS_UI_ENDPOINTS["recid"].update(
+    template="invenio_theme_tugraz/record_landing_page.html"
+)
