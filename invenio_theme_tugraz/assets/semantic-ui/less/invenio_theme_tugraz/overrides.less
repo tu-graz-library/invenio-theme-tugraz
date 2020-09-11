@@ -58,7 +58,8 @@ h1, h2, h3, h4, h5, h6,
 .ui.items > .item > .content > .header,
 .ui.menu,
 .ui.header,
-.ui.form input {
+.ui.form input[type],
+.ui.form input[type]:focus {
   font-family: "Source Sans Pro";
 }
 
@@ -97,6 +98,7 @@ h1, h2, h3, h4, h5, h6,
 .ui.action.input:not([class*="left action"]) > .button:last-child,
 .ui.action.input:not([class*="left action"]) > .buttons:last-child > .button,
 .ui.action.input:not([class*="left action"]) > .dropdown:last-child,
-.ui.form input {
+.ui.form input[type],
+.ui.form input[type]:focus {
   border-radius: 0;
 }
