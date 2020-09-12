@@ -14,10 +14,10 @@ from flask_babelex import gettext as _
 from .search import FrontpageRecordsSearch
 
 blueprint = Blueprint(
-    'invenio_theme_tugraz',
+    "invenio_theme_tugraz",
     __name__,
-    template_folder='templates',
-    static_folder='static',
+    template_folder="templates",
+    static_folder="static",
 )
 
 
@@ -26,4 +26,5 @@ def index():
     """Render frontpage view."""
     return render_template(
         "invenio_theme_tugraz/index.html",
-        records=FrontpageRecordsSearch()[:5].sort('-_created').execute(),)
+        records=FrontpageRecordsSearch()[:5].sort("-_created").execute(),
+    )
