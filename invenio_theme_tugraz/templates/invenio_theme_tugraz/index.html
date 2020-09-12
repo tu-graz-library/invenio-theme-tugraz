@@ -44,15 +44,10 @@
       {%- set record_url = url_for('invenio_records_ui.recid', pid_value=r['recid']) %}
 
       <article>
-        <!--btn view-->
-        <a href="{{ record_url }}" class="ui right floated button">
-          {{_('View')}}
-        </a>
-
         <!--TODO:
         something with doi
         -->
-        <div class="left floated left aligned column">
+        <div class="badges">
           <!--Publication date badge-->
           <span class="ui label teal" title="{{_('Publication date')}}">
             {{ r.publication_date }}
