@@ -60,7 +60,7 @@
 
           <!--Resource type badge-->
           <span class="ui label grey" title="{{_('Resource type')}}">
-            {{r.resource_type.type}}
+            {{r.resource_type | cast_to_dict | vocabulary_title('resource_type') }}
           </span>
 
           <span class="label record-version">

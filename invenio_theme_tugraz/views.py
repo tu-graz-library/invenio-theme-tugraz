@@ -11,6 +11,7 @@
 from flask import Blueprint, render_template
 from flask_babelex import gettext as _
 from typing import Dict
+from elasticsearch_dsl.utils import AttrDict
 
 from .search import FrontpageRecordsSearch
 
@@ -39,3 +40,8 @@ def lower_case(str):
 @blueprint.app_template_filter("make_dict_like")
 def make_dict_like(access_right: str) -> Dict[str, str]:
     return {"access_right": access_right}
+
+
+@blueprint.app_template_filter("cast_to_dict")
+def cast_to_dict(attr_dict: AttrDict) -> Dict[str, str]:
+    return attr_dict.to_dict()
