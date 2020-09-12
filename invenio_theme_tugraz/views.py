@@ -28,3 +28,8 @@ def index():
         "invenio_theme_tugraz/index.html",
         records=FrontpageRecordsSearch()[:5].sort("-_created").execute(),
     )
+
+
+@blueprint.app_template_filter("lower_case")
+def lower_case(str):
+    return str.lower()
