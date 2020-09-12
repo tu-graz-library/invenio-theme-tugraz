@@ -66,11 +66,6 @@
           <span class="label record-version">
             <!--TODO: add subtype--->
           </span>
-
-          <!--Access right badge-->
-          <span class="ui label green">
-            {{_('Open Access')}}
-          </span>
         </div>
 
         <h4>
@@ -89,11 +84,22 @@
           </a>
         </p>
 
-        <small>
-          {% trans user=userprofile, date=creation_date|dateformat('long') %}Uploaded on
-          {{date}}{% endtrans %}
-        </small>
+        <div class="ui grid">
+          <div class="two column row">
+            <div class="left floated column">
+              <small>
+                {% trans user=userprofile, date=creation_date|dateformat('long') %}Uploaded on
+                {{date}}{% endtrans %}
+              </small>
+            </div>
 
+            <div class="right floated column">
+              <span class="access-right">
+                {{ r.access_right | make_dict_like | vocabulary_title('access_right') | lower_case }}
+              </span>
+            </div>
+          </div>
+        </div>
       </article>
       <!----TODO: more versions
       -->
