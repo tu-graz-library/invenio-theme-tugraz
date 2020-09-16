@@ -12,7 +12,6 @@ from typing import Dict
 
 from elasticsearch_dsl.utils import AttrDict
 from flask import Blueprint, render_template
-from flask_babelex import gettext as _
 
 from .search import FrontpageRecordsSearch
 
