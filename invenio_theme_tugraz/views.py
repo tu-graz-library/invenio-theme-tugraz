@@ -38,8 +38,8 @@ def lower_case(str):
 
 
 @blueprint.app_template_filter("make_dict_like")
-def make_dict_like(access_right: str) -> Dict[str, str]:
-    return {"access_right": access_right}
+def make_dict_like(value: str, key: str) -> Dict[str, str]:
+    return {key: value}
 
 
 @blueprint.app_template_filter("cast_to_dict")

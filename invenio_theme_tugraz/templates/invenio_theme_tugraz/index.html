@@ -95,7 +95,7 @@
 
             <div class="right floated column">
               <span class="access-right">
-                {{ r.access_right | make_dict_like | vocabulary_title('access_right') | lower_case }}
+                {{ r.access_right | make_dict_like('access_right') | vocabulary_title('access_right') | lower_case }}
               </span>
             </div>
           </div>
