@@ -56,7 +56,7 @@ deploy:
   username: __token__
   password:
     secure: liNULZujbc8nScZRlDiGu5YxnCaiWZ+LJ4IyYJvC5+rZjl5dr/cf1t7STgrN7SckP/7jGO4mJjClroDG3mj/a8y4tA32XSupeRQClDeETuUcOoTvagZnHBPQ8bVOrYUeH0IEpBvGLcBIrt3WEh0ZolP+KOHhrbbkV00hleqlcN78RB1rPEP+zKVOYftzPiaRZJFl338K6Jf4AIoZPaUZNK5HdNBa5cv29VYwJkw+SeOy50duAAaDVQQsXXonIBtzcI9tLqKMbBhiSguHBt+AaKsGeK96n2LwRhBevFtc3iz1bPhJkUxrzsW+6gp1uzHUHgknotM3HPnR1wD+uKU3fc+j7xA4db/tTJpOCBae3Wzmxd13OZx0qLOUaYr5z/Drd+bPRJM9UMmaPtQGTn+kz13ATPvKEGgRzjmWEOrvrnuX9JLVux7zV9sfpfqritxtdfYGzHchw41Kfk8OFLPFTRPO1KE0Nr9CGzV6THSqR6n4AyteZ2VT0sU3w25bQu6obKTvxFq+tdcaHOeZoCCJYJzGwRdkrrWQl+joWJQ8AssOlv3vrmzPWuAWhPjcm2cK9MVTu/LMM1vvUr0vqn58GDylNYyifJFUitZQ7ReWb5GzzgwpcyDYfEK1bOUD00l2kEvrUL1lA64FLCSSjZeBCcnxMq/+odzNfOkXWLk34Ek=
-  distributions: sdist bdist_wheel
+  distributions: compile_catalog sdist bdist_wheel
   on:
     tags: true
     python: "3.6"
