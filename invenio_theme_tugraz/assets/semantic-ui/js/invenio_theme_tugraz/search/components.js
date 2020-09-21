@@ -26,7 +26,7 @@ export const RDMRecordResultsListItem = ({ result, index }) => {
     "metadata.publication_date",
     "No metadata"
   );
-  const status = _.get(
+  const resourceType = _.get(
     result,
     "metadata.resource_type.type",
     "No resource type"
@@ -53,7 +53,7 @@ export const RDMRecordResultsListItem = ({ result, index }) => {
       <Item.Content>
         <div className="badges">
           <Label size="tiny" color="blue">{publicationDate}</Label>
-          <Label size="tiny" color="grey">{status}</Label>
+          <Label size="tiny" color="grey">{resourceType}</Label>
           <Label size="tiny" color="green">{access}</Label>
         </div>
         <Item.Header>{title}</Item.Header>
