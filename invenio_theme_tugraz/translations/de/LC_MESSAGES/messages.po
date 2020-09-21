@@ -6,11 +6,11 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: invenio-theme-tugraz 1.0.0\n"
+"Project-Id-Version: invenio-theme-tugraz 1.0.3\n"
 "Report-Msgid-Bugs-To: mojib.wali@tugraz.at\n"
-"POT-Creation-Date: 2020-06-25 14:39+0200\n"
-"PO-Revision-Date: 2020-06-25 14:39+0200\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: 2020-09-17 11:15+0200\n"
+"PO-Revision-Date: 2020-09-17 11:15+0200\n"
+"Last-Translator: Mojib Wali <mojib.wali@tugraz.at>, 2020\n"
 "Language: de\n"
 "Language-Team: de <LL@li.org>\n"
 "Plural-Forms: nplurals=2; plural=(n != 1)\n"
@@ -19,86 +19,179 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.8.0\n"
 
-#: invenio_theme_tugraz/config.py:43
-msgid "Application Name"
+#: invenio_theme_tugraz/config.py:53
+msgid "TU Graz Repository"
 msgstr ""
 
-#: invenio_theme_tugraz/config.py:54
+#: invenio_theme_tugraz/config.py:56
+#: invenio_theme_tugraz/templates/invenio_theme_tugraz/navbar.html:67
+msgid "Repository"
+msgstr ""
+
+#: invenio_theme_tugraz/config.py:81
 msgid "German"
 msgstr ""
 
-#. NOTE: This is a note to a translator.
-#: invenio_theme_tugraz/ext.py:24
-msgid "A translation string"
+#: invenio_theme_tugraz/templates/invenio_theme_tugraz/accounts/accounts_base.html:27
+#: invenio_theme_tugraz/templates/invenio_theme_tugraz/base.html:27
+msgid "Invenio"
 msgstr ""
 
-#: invenio_theme_tugraz/views.py:30
-msgid "invenio-theme-tugraz"
+#: invenio_theme_tugraz/templates/invenio_theme_tugraz/benefits.html:3
+msgid "Safe"
 msgstr ""
 
-#: invenio_theme_tugraz/templates/invenio_theme_tugraz/footer.html:22
+#: invenio_theme_tugraz/templates/invenio_theme_tugraz/benefits.html:3
+msgid ""
+"your research is stored safely for the future in CERN’s Data Centre for "
+"as long as CERN exists."
+msgstr ""
+
+#: invenio_theme_tugraz/templates/invenio_theme_tugraz/benefits.html:4
+msgid "Trusted"
+msgstr ""
+
+#: invenio_theme_tugraz/templates/invenio_theme_tugraz/benefits.html:4
+msgid ""
+"built and operated by CERN and OpenAIRE to ensure that everyone can join "
+"in Open Science."
+msgstr ""
+
+#: invenio_theme_tugraz/templates/invenio_theme_tugraz/benefits.html:5
+msgid "Citeable"
+msgstr ""
+
+#: invenio_theme_tugraz/templates/invenio_theme_tugraz/benefits.html:5
+msgid ""
+"every upload is assigned a Digital Object Identifier (DOI), to make them "
+"citable and trackable."
+msgstr ""
+
+#: invenio_theme_tugraz/templates/invenio_theme_tugraz/benefits.html:6
+msgid "No waiting time"
+msgstr ""
+
+#: invenio_theme_tugraz/templates/invenio_theme_tugraz/benefits.html:6
+msgid ""
+"Uploads are made available online as soon as you hit publish, and your "
+"DOI is registered within seconds."
+msgstr ""
+
+#: invenio_theme_tugraz/templates/invenio_theme_tugraz/benefits.html:7
+msgid "Open or closed"
+msgstr ""
+
+#: invenio_theme_tugraz/templates/invenio_theme_tugraz/benefits.html:7
+msgid ""
+"Share e.g. anonymized clinical trial data with only medical professionals"
+" via our restricted access mode."
+msgstr ""
+
+#: invenio_theme_tugraz/templates/invenio_theme_tugraz/benefits.html:8
+msgid "Versioning"
+msgstr ""
+
+#: invenio_theme_tugraz/templates/invenio_theme_tugraz/benefits.html:8
+msgid "Easily update your dataset with our versioning feature."
+msgstr ""
+
+#: invenio_theme_tugraz/templates/invenio_theme_tugraz/benefits.html:9
+msgid "Usage statisics"
+msgstr ""
+
+#: invenio_theme_tugraz/templates/invenio_theme_tugraz/benefits.html:9
+msgid "All uploads display standards compliant usage statistics"
+msgstr ""
+
+#: invenio_theme_tugraz/templates/invenio_theme_tugraz/index.html:26
+msgid "Type and press enter to search"
+msgstr ""
+
+#: invenio_theme_tugraz/templates/invenio_theme_tugraz/index.html:40
+msgid "Recent uploads"
+msgstr ""
+
+#: invenio_theme_tugraz/templates/invenio_theme_tugraz/index.html:47
+msgid "View"
+msgstr ""
+
+#: invenio_theme_tugraz/templates/invenio_theme_tugraz/index.html:54
+msgid "Publication date"
+msgstr ""
+
+#: invenio_theme_tugraz/templates/invenio_theme_tugraz/index.html:58
+msgid "Version"
+msgstr ""
+
+#: invenio_theme_tugraz/templates/invenio_theme_tugraz/index.html:62
+msgid "Resource type"
+msgstr ""
+
+#: invenio_theme_tugraz/templates/invenio_theme_tugraz/index.html:67
+msgid "Open Access"
+msgstr ""
+
+#: invenio_theme_tugraz/templates/invenio_theme_tugraz/index.html:77
 #, python-format
 msgid ""
-"Powered by <a\n"
-"        href=\"%(invenio_rdm)s\">InvenioRDM</a>"
+"Uploaded on\n"
+"        %(date)s"
 msgstr ""
 
-#: invenio_theme_tugraz/templates/invenio_theme_tugraz/header.html:119
-msgid "Main Menu"
+#: invenio_theme_tugraz/templates/invenio_theme_tugraz/index.html:88
+msgid "More"
 msgstr ""
 
-#: invenio_theme_tugraz/templates/invenio_theme_tugraz/header.html:132
-msgid "Research Data Management"
-msgstr ""
+#: invenio_theme_tugraz/templates/invenio_theme_tugraz/navbar.html:77
+msgid "SCIENCE"
+msgstr "Wissenschaft"
 
-#: invenio_theme_tugraz/templates/invenio_theme_tugraz/header.html:141
-msgid "WISSEN"
-msgstr ""
+#: invenio_theme_tugraz/templates/invenio_theme_tugraz/navbar.html:78
+msgid "PASSION"
+msgstr "Leidenschaft"
 
-#: invenio_theme_tugraz/templates/invenio_theme_tugraz/header.html:142
-msgid "TECHNIK"
-msgstr ""
-
-#: invenio_theme_tugraz/templates/invenio_theme_tugraz/header.html:143
-msgid "LEIDENSCHAFT"
-msgstr ""
-
-#: invenio_theme_tugraz/templates/invenio_theme_tugraz/header.html:191
-msgid "Search"
-msgstr ""
-
-#: invenio_theme_tugraz/templates/invenio_theme_tugraz/index.html:14
-#, python-format
-msgid "Welcome to %(module_name)s"
-msgstr ""
+#: invenio_theme_tugraz/templates/invenio_theme_tugraz/navbar.html:79
+msgid "TECHNOLOGY"
+msgstr "Technik"
 
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/accounts/header_login.html:30
 msgid "Logout"
 msgstr ""
 
-#: invenio_theme_tugraz/templates/invenio_theme_tugraz/accounts/login.html:18
+#: invenio_theme_tugraz/templates/invenio_theme_tugraz/accounts/login_user.html:22
 msgid "Log in to account"
 msgstr ""
 
-#: invenio_theme_tugraz/templates/invenio_theme_tugraz/accounts/login.html:26
+#: invenio_theme_tugraz/templates/invenio_theme_tugraz/accounts/login_user.html:28
 #, python-format
-msgid " Log in with %(type)s"
+msgid " Login with %(type)s"
 msgstr ""
 
-#: invenio_theme_tugraz/templates/invenio_theme_tugraz/accounts/login.html:41
+#: invenio_theme_tugraz/templates/invenio_theme_tugraz/accounts/login_user.html:43
+#: invenio_theme_tugraz/templates/invenio_theme_tugraz/accounts/register_user.html:54
 msgid "Log In"
 msgstr ""
 
-#: invenio_theme_tugraz/templates/invenio_theme_tugraz/accounts/login.html:53
+#: invenio_theme_tugraz/templates/invenio_theme_tugraz/accounts/login_user.html:55
 #, python-format
 msgid "New to %(sitename)s?"
 msgstr ""
 
-#: invenio_theme_tugraz/templates/invenio_theme_tugraz/accounts/login.html:54
+#: invenio_theme_tugraz/templates/invenio_theme_tugraz/accounts/login_user.html:56
+#: invenio_theme_tugraz/templates/invenio_theme_tugraz/accounts/register_user.html:45
 msgid "Sign Up"
 msgstr ""
 
-#: invenio_theme_tugraz/templates/invenio_theme_tugraz/accounts/login.html:63
+#: invenio_theme_tugraz/templates/invenio_theme_tugraz/accounts/login_user.html:65
 msgid "Forgot password?"
+msgstr ""
+
+#: invenio_theme_tugraz/templates/invenio_theme_tugraz/accounts/register_user.html:23
+#, python-format
+msgid "Sign up for an %(sitename)s account!"
+msgstr ""
+
+#: invenio_theme_tugraz/templates/invenio_theme_tugraz/accounts/register_user.html:53
+msgid "Already have an account?"
 msgstr ""
 
