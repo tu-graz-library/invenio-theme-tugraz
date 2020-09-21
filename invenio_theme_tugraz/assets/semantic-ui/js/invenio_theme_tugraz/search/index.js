@@ -10,12 +10,8 @@ import { defaultComponents, createSearchAppInit } from "@js/invenio_search_ui";
 
 import {
   RDMRecordResultsListItem,
-  RDMRecordResultsGridItem,
-  RDMRecordSearchBarElement,
 } from "./components";
 
 const initSearchApp = createSearchAppInit({
   "ResultsList.item": RDMRecordResultsListItem,
-  "ResultsGrid.item": RDMRecordResultsGridItem,
-  "SearchBar.element": RDMRecordSearchBarElement,
 });
