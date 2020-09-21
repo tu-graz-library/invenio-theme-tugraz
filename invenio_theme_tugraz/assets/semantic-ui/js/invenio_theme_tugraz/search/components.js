@@ -11,7 +11,7 @@
  */
 
 import React from "react";
-import { Card, Item, Input, Label, Button } from "semantic-ui-react";
+import { Card, Item, Input, Label, Button, Grid } from "semantic-ui-react";
 import _ from "lodash";
 import _truncate from "lodash/truncate";
 
@@ -60,16 +60,22 @@ export const RDMRecordResultsListItem = ({ result, index }) => {
           <Label size="tiny" color="blue">{publicationDate}</Label>
           <Label size="tiny" color="blue">{version}</Label>
           <Label size="tiny" color="grey">{resourceType}</Label>
-          <Label size="tiny" color="green">{access}</Label>
         </div>
         <Item.Header>{title}</Item.Header>
         <Item.Meta>{creatorName}</Item.Meta>
         <Item.Description>
           {_truncate(description, { length: 350 })}
         </Item.Description>
-        <Item.Extra>
-          {uploadedDate && <div>Updated on <span>{uploadedDate}</span></div>}
-        </Item.Extra>
+        <Grid columns={2}>
+          <Grid.Row>
+            <Grid.Column>
+              {uploadedDate && <small>Uploaded on {uploadedDate}</small>}
+            </Grid.Column>
+            <Grid.Column>
+              {access && <span className="access-right">{access}</span>}
+            </Grid.Column>
+          </Grid.Row>
+        </Grid>
       </Item.Content>
     </Item>
   );
