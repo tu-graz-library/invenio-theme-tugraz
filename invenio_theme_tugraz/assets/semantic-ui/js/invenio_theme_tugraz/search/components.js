@@ -46,7 +46,7 @@ export const RDMRecordResultsListItem = ({ result, index }) => {
     "metadata.creators[0].name",
     "No creator"
   );
-  const updatedDate = _.get(result, "updated");
+  const uploadedDate = _.get(result, "metadata.publication_date");
   const title = _.get(
     result,
     "metadata.titles[0].title",
@@ -68,7 +68,7 @@ export const RDMRecordResultsListItem = ({ result, index }) => {
           {_truncate(description, { length: 350 })}
         </Item.Description>
         <Item.Extra>
-          {updatedDate && <div>Updated on <span>{updatedDate}</span></div>}
+          {uploadedDate && <div>Updated on <span>{uploadedDate}</span></div>}
         </Item.Extra>
       </Item.Content>
     </Item>
