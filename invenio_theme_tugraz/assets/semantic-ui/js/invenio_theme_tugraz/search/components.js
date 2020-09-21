@@ -51,14 +51,12 @@ export const RDMRecordResultsListItem = ({ result, index }) => {
   return (
     <Item key={index} href={`/records/${result.pid}`}>
       <Item.Content>
-        <Item.Extra>
-          <div>
-            <Label size="tiny" color="blue">{publicationDate}</Label>
-            <Label size="tiny" color="grey">{status}</Label>
-            <Label size="tiny" color="green">{access}</Label>
-            <Button basic floated='right'>View</Button>
-          </div>
-        </Item.Extra>
+        <div className="badges">
+          <Label size="tiny" color="blue">{publicationDate}</Label>
+          <Label size="tiny" color="grey">{status}</Label>
+          <Label size="tiny" color="green">{access}</Label>
+          <Button basic floated='right'>View</Button>
+        </div>
         <Item.Header>{title}</Item.Header>
         <Item.Meta>{creatorName}</Item.Meta>
         <Item.Description>
