@@ -54,16 +54,16 @@ export const RDMRecordResultsListItem = ({ result, index }) => {
   );
 
   return (
-    <Item key={index} href={`/records/${result.pid}`}>
+    <Item key={index}>
       <Item.Content>
         <div className="badges">
           <Label className="teal">{publicationDate}</Label>
           <Label className="record-version">{version}</Label>
           <Label className="grey">{resourceType}</Label>
         </div>
-        <Item.Header>{title}</Item.Header>
+        <Item.Header href={`/records/${result.pid}`}>{title}</Item.Header>
         <Creators creators={creators}/>
-        <Item.Description>
+        <Item.Description href={`/records/${result.pid}`}>
           {_truncate(description, { length: 350 })}
         </Item.Description>
         <Grid columns={2}>
