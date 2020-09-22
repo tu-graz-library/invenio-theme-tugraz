@@ -41,10 +41,10 @@ export const RDMRecordResultsListItem = ({ result, index }) => {
     "metadata.access_right",
     "No access rights"
   );
-  const creatorName = _.get(
+  const creators = _.get(
     result,
-    "metadata.creators[0].name",
-    "No creator"
+    "metadata.creators",
+    []
   );
   const uploadedDate = _.get(result, "metadata.publication_date");
   const title = _.get(
@@ -62,7 +62,7 @@ export const RDMRecordResultsListItem = ({ result, index }) => {
           <Label className="grey">{resourceType}</Label>
         </div>
         <Item.Header>{title}</Item.Header>
-        <Item.Meta>{creatorName}</Item.Meta>
+        <Creators creators={creators}/>
         <Item.Description>
           {_truncate(description, { length: 350 })}
         </Item.Description>
@@ -78,5 +78,28 @@ export const RDMRecordResultsListItem = ({ result, index }) => {
         </Grid>
       </Item.Content>
     </Item>
+  );
+};
+
+export const Creators = ({creators}) => {
+  const creatorTags = creators.map((creator, index) => {
+    return <Creator key={index} creator={creator}/>;
+  });
+
+  return (
+    <div className="creators">
+      {creatorTags}
+    </div>
+  );
+};
+
+export const Creator = ({creator}) => {
+  return (
+    <div className="creator">
+      <a href="https://orcid.org/{creator.identifiers.Orcid}" target="_blank">
+        <img className="inline-orcid" src="/static/extra/orcid.png"/>
+      </a>
+      <span className="text-muted">{creator.name}</span>
+    </div>
   );
 };
