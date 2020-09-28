@@ -34,17 +34,17 @@ def index():
 
 @blueprint.app_template_filter("lower_case")
 def lower_case(str: str):
-    """return the lowered string"""
+    """Return the lowered string."""
     return str.lower()
 
 
 @blueprint.app_template_filter("make_dict_like")
 def make_dict_like(value: str, key: str) -> Dict[str, str]:
-    """convert the value to a dict like structure in the form of a key -> value pair"""
+    """Convert the value to a dict like structure in the form of a key -> value pair."""
     return {key: value}
 
 
 @blueprint.app_template_filter("cast_to_dict")
 def cast_to_dict(attr_dict: AttrDict) -> Dict[str, str]:
-    """return the dict structure of AttrDict variable"""
+    """Return the dict structure of AttrDict variable."""
     return attr_dict.to_dict()
