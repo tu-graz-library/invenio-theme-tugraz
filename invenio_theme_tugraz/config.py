@@ -16,7 +16,8 @@ INVENIO_THEME_TUGRAZ_DEFAULT_VALUE = "foobar"
 INVENIO_THEME_TUGRAZ_BASE_TEMPLATE = "invenio_theme_tugraz/base.html"
 """TU Graz Default base template"""
 
-INVENIO_THEME_TUGRAZ_ACCOUNT_BASE = "invenio_theme_tugraz/accounts/accounts_base.html"
+INVENIO_THEME_TUGRAZ_ACCOUNT_BASE = \
+    "invenio_theme_tugraz/accounts/accounts_base.html"
 """TU Graz Default account base template"""
 
 INVENIO_THEME_TUGRAZ_ICON = "images/icon_use.png"
@@ -44,7 +45,8 @@ THEME_HEADER_TEMPLATE = "invenio_theme_tugraz/header.html"
 THEME_FRONTPAGE = False
 """Use default frontpage."""
 
-THEME_HEADER_LOGIN_TEMPLATE = "invenio_theme_tugraz/accounts/header_login.html"
+THEME_HEADER_LOGIN_TEMPLATE = \
+    "invenio_theme_tugraz/accounts/header_login.html"
 """login page header"""
 
 THEME_FOOTER_TEMPLATE = "invenio_theme_tugraz/footer.html"
@@ -63,10 +65,12 @@ THEME_SITENAME = _("Repository")
 # COVER_TEMPLATE = 'invenio_theme_tugraz/accounts/accounts_base.html'
 """Cover page template for login and sign up pages."""
 
-SECURITY_LOGIN_USER_TEMPLATE = "invenio_theme_tugraz/accounts/login_user.html"
+SECURITY_LOGIN_USER_TEMPLATE = \
+    "invenio_theme_tugraz/accounts/login_user.html"
 """Login template"""
 
-SECURITY_REGISTER_USER_TEMPLATE = "invenio_theme_tugraz/accounts/register_user.html"
+SECURITY_REGISTER_USER_TEMPLATE = \
+    "invenio_theme_tugraz/accounts/register_user.html"
 """Sigup template"""
 
 # Invenio-I18N
