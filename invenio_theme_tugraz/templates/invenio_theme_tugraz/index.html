@@ -11,9 +11,7 @@
 
 {%- from "invenio_theme_tugraz/macros/authors.html" import creators -%}
 
-
 {%- block page_body %}
-
 
 <div class="ui container">
   {%- block frontpage_search %}
@@ -23,8 +21,10 @@
     <div class="sixteen wide column">
       <form action="{{config.THEME_SEARCH_ENDPOINT}}" class="ui form" role="search">
         <div class="ui fluid big action icon input">
-          <input type="text" name="q" autofocus="autofocus" placeholder="{{ _("Type and press enter to search") }}" style="border-radius: 0;">
-          <button type="submit" class="ui icon search button"><i class="icon search"></i></button>
+          <input type="text" name="q" autofocus="autofocus" placeholder="{{ _("Type and press enter to search") }}">
+          <button type="submit" class="ui icon search button">
+            <i class="icon search"></i>
+          </button>
         </div>
       </form>
     </div>
@@ -36,73 +36,99 @@
   <div class="ui stackable grid">
 
     <!---Recent uploads-->
-    <div class="ten wide column">
+    <div class="ten wide column random-records-frontpage">
       <h2>{{_('Recent uploads')}}</h2>
 
       {%- for r in records %}
       {%- set creation_date = r._created|from_isodatetime -%}
       {%- set record_url = url_for('invenio_records_ui.recid', pid_value=r['recid']) %}
 
-      <!--btn view-->
-      <a href="{{ record_url }}" class="ui right floated button">{{_('View')}}</a>
-      <!--TODO:
-          something with doi
+      <article>
+        <!--TODO:
+        something with doi
         -->
-      <div class="left floated left aligned column">
+        <div class="badges">
+          <!--Publication date badge-->
+          <span class="ui label teal" title="{{_('Publication date')}}">
+            {{ r.publication_date }}
+          </span>
 
-        <!--Publication date badge-->
-        <span class="ui label teal" title="{{_('Publication date')}}">{{ r.publication_date }}
-        </span>
+          <!--Version badge-->
+          <span class="ui label record-version" title="{{_('Version')}}">
+            {{ (' Version ' ~ r.version ~ '') if r.version else 'Version' }}
+          </span>
 
-        <!--Version badge-->
-        <span class="label record-version" title="{{_('Version')}}">
-          {{ (' | Version ' ~ r.version ~ '') if r.version else ' ' }}</span>
+          <!--Resource type badge-->
+          <span class="ui label grey" title="{{_('Resource type')}}">
+            {{r.resource_type | cast_to_dict | vocabulary_title('resource_type') }}
+          </span>
 
-        <!--Resource type badge-->
-        <span class="ui label grey" title="{{_('Resource type')}}">{{r.resource_type.type}}</span>
-        <span class="label record-version">
-          <!--TODO: add subtype---></span>
+          <span class="label record-version">
+            <!--TODO: add subtype--->
+          </span>
+        </div>
 
-        <!--Access right badge-->
-        <span class="ui label green">{{_('Open Access')}}</span>
+        <h4>
+          <a href="{{ record_url }}">
+            {{r.titles[0].title}}
+          </a>
+        </h4>
 
-      </div>
+        <p>
+          {{ creators(r.creators) }}
+        </p>
 
-      <h4><a href="{{ record_url }}">{{r.titles[0].title}}</a></h4>
+        <p class="hidden-xs">
+          <a href="{{record_url}}">
+            {{ r.descriptions[0].description | striptags | truncate(300) }}
+          </a>
+        </p>
 
-      <p>{{ creators(r.creators) }}</p>
+        <div class="ui grid">
+          <div class="two column row">
+            <div class="left floated column">
+              <small>
+                {% trans user=userprofile, date=creation_date | dateformat('long')%}
+                Uploaded on {{date}}
+                {% endtrans %}
+              </small>
+            </div>
 
-      <p class="hidden-xs"><a href="{{record_url}}">{{ r.descriptions[0].description|striptags|truncate(300) }}</a></p>
-
-      <small>{% trans user=userprofile, date=creation_date|dateformat('long') %}Uploaded on
-        {{date}}{% endtrans %}</small>
-
+            <div class="right floated column">
+              <span class="access-right">
+                {{ r.access_right | make_dict_like('access_right') | vocabulary_title('access_right') | lower }}
+              </span>
+            </div>
+          </div>
+        </div>
+      </article>
       <!----TODO: more versions
       -->
 
-      {%- if not loop.last %}
-      <div class="ui divider"></div>
-      {%- else%}
-      <div class="spacer"></div>
-      <div class="ui two column centered grid">
-        <a class="ui button" href="{{url_for('invenio_search_ui.search')}}">{{_('More')}}</a>
-      </div>
-      {%- endif %}
       {%- endfor %}
+      <div class="ui two column centered grid">
+        <a class="ui button more" href="{{url_for('invenio_search_ui.search')}}">{{_('More')}}</a>
+      </div>
     </div>
 
 
     <!---segments-->
     <div class="six wide column">
-
       <!--contact us-->
       <div class="ui segment" style="padding-bottom: 10px;">
         <h4>Need help?</h4>
+
         <div style="padding-bottom: 10px;">
-          <a href="{{ url_for('invenio_theme_tugraz.index')}}" class="fluid ui button">Contact us</a>
+          <a href="{{ url_for('invenio_theme_tugraz.index')}}" class="fluid ui button">
+            Contact us
+          </a>
         </div>
-        <p>{{config.THEME_SITENAME}} prioritizes all requested related to the COVID-19 outbreak.</p>
-        <p>We can help with:</p>
+        <p>
+          {{config.THEME_SITENAME}} prioritizes all requested related to the COVID-19 outbreak.
+        </p>
+        <p>
+          We can help with:
+        </p>
 
         <ul>
           <li>Uploading your research data, software, preprints, etc.</li>
@@ -110,21 +136,15 @@
           <li>Quota increases beyond our default policy.</li>
           <li>Scripts for automated uploading of larger datasets.</li>
         </ul>
-
       </div>
 
       <div class="ui segment" style="padding-bottom: 10px;">
         <h4>Why use {{config.THEME_SITENAME}}?</h4>
+
         {% include "invenio_theme_tugraz/benefits.html" %}
       </div>
-
-
     </div>
-
   </div>
-
-  <div class="spacer"></div>
-
 </div>
 
 

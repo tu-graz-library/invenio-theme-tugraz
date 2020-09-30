@@ -8,16 +8,18 @@
 
 """invenio module for TUGRAZ theme."""
 
+from typing import Dict
+
+from elasticsearch_dsl.utils import AttrDict
 from flask import Blueprint, render_template
-from flask_babelex import gettext as _
 
 from .search import FrontpageRecordsSearch
 
 blueprint = Blueprint(
-    'invenio_theme_tugraz',
+    "invenio_theme_tugraz",
     __name__,
-    template_folder='templates',
-    static_folder='static',
+    template_folder="templates",
+    static_folder="static",
 )
 
 
@@ -26,4 +28,20 @@ def index():
     """Render frontpage view."""
     return render_template(
         "invenio_theme_tugraz/index.html",
-        records=FrontpageRecordsSearch()[:5].sort('-_created').execute(),)
+        records=FrontpageRecordsSearch()[:5].sort("-_created").execute(),
+    )  # pragma: no cover
+
+
+@blueprint.app_template_filter("make_dict_like")
+def make_dict_like(value: str, key: str) -> Dict[str, str]:
+    """Convert the value to a dict like structure.
+
+    in the form of a key -> value pair.
+    """
+    return {key: value}  # pragma: no cover
+
+
+@blueprint.app_template_filter("cast_to_dict")
+def cast_to_dict(attr_dict):
+    """Return the dict structure of AttrDict variable."""
+    return AttrDict.to_dict(attr_dict)  # pragma: no cover

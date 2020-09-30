@@ -6,162 +6,120 @@
  * under the terms of the MIT License; see LICENSE file for more details.
  */
 
-/*
-* Logos background frontpage.
-* from rgba(173, 206, 224, 0.52)
-* to #ffffff
-*/
+/***
+ * Logos background frontpage.
+ * from rgba(173, 206, 224, 0.52)
+ * to #ffffff
+ ***/
 .section-content-light-bg {
   background-color: #ffffff;
 }
 
-/*
-* section title.
-* from #0377cd
-* to #000000
-*/
+/***
+ * section title.
+ * from #0377cd
+ * to #000000
+ ***/
 .section-title {
   color: #000000;
 }
 
+
 /***
-login background color
-from : rgba(13,95,137,.8)
-To #ffffff
-*/
+ * login background color
+ * from : rgba(13,95,137,.8)
+ * To #ffffff
+ ***/
 .cover-page {
   //text-align: center;
   background-color: #ffffff;
 }
 
+
 /***
-login & sigup page title
-from : #0377cd
-To #000000
-*/
+ * login & sigup page title
+ * from : #0377cd
+ * To #000000
+ ***/
 .panel-free-title {
   color: #000000;
 }
 
+
 /***
-forcing the font changes
-*/
-* {
+ * force: the font changes
+ ***/
+*,
+html, body,
+h1, h2, h3, h4, h5, h6,
+pre,
+.ui.button,
+.ui.items,
+.ui.accordion .title:not(.ui),
+.ui.items > .item > .content > .header,
+.ui.modal > .header,
+.ui.menu,
+.ui.header,
+.ui.form input[type],
+.ui.form input[type]:focus {
   font-family: "Source Sans Pro";
-  }
-  html, body {
-    font-family: "Source Sans Pro";
-  }
-  body, h1, h2, h3, h4, h5, h6 {
-    font-family: "Source Sans Pro";
-  }
-  .ui.button{
-    font-family: "Source Sans Pro";
-  }
-  .ui.items{
-    font-family: "Source Sans Pro";
-  }
+}
 
-  .ui.form input:not([type]), 
-  .ui.form input[type=date], 
-  .ui.form input[type=datetime-local], 
-  .ui.form input[type=email], 
-  .ui.form input[type=file], 
-  .ui.form input[type=number], 
-  .ui.form input[type=password], 
-  .ui.form input[type=search], 
-  .ui.form input[type=tel], 
-  .ui.form input[type=text], 
-  .ui.form input[type=time], .ui.form input[type=url] {
-    font-family: "Source Sans Pro";
-  }
-  .ui.accordion .title:not(.ui) {
-    font-family: "Source Sans Pro";
-  }
-  .ui.items>.item>.content>.header {
-    font-family: "Source Sans Pro";
-  }
-  .ui.menu{
-    font-family: "Source Sans Pro";
-  }
-  .ui.header {
-    font-family: "Source Sans Pro";
-  }
+pre {
+  font-size: 14px;
+}
+
+
 /***
-search.button
-**/
-
-.ui.search.button{
+ * search.button
+ ***/
+/*.ui.button,*/
+.ui.search.button {
   background-color:#e4154b;
 }
 
-.ui.search.button:hover{
+.ui.button:hover,
+.ui.search.button:hover {
   background-color:#000000;
 }
-/**
-.ui.button{
-  background-color:#e4154b;
-}
-*/
-.ui.button:hover{
-  background-color:#000000;
+
+.ui.button:hover {
   color:#fff;
 }
+
 /***
-remove corners from border
-**/
+ * force: remove corners from border
+ ***/
+.label-keyword,
+.ui.label,
+.ui.button,
+.ui.rdm-sidebar,
+.ui.menu,
+.ui.input > input, /* it seams redundant but it is not */
+.ui.segment,
+.ui.selection.dropdown,
+.ui.card,
+.ui.cards > .card,
+.ui.basic.button, .ui.basic.buttons .button,
+.ui.action.input:not([class*="left action"]) > .button:last-child,
+.ui.action.input:not([class*="left action"]) > .buttons:last-child > .button,
+.ui.action.input:not([class*="left action"]) > .dropdown:last-child,
+.ui.form input[type],
+.ui.form input[type]:focus {
+  border-radius: 0;
+}
+
+/***
+ * force: rdm-side-bar same empty box as on the frontpage
+ ***/
+.ui.rdm-sidebar {
+  background-color: unset;
+  box-shadow: unset;
+}
+
+/***
+ * force: font weight: normal
+ ***/
 .ui.label {
-border-radius: 0;
-}
-
-.ui.button{
-  border-radius: 0;
-}
-
-.ui.rdm-sidebar{
-  border-radius: 0;
-}
-
-.label-keyword {
-  border-radius: 0;
-}
-
-.ui.menu {
-  border-radius: 0;
-}
-
-.ui.form input:not([type]), 
-.ui.form input[type=date], 
-.ui.form input[type=datetime-local], 
-.ui.form input[type=email], 
-.ui.form input[type=file], 
-.ui.form input[type=number], 
-.ui.form input[type=password], 
-.ui.form input[type=search], 
-.ui.form input[type=tel], 
-.ui.form input[type=text], 
-.ui.form input[type=time], 
-.ui.form input[type=url] {
-  border-radius: 0;
-}
-.ui.input>input {
-  border-radius: 0;
-}
-.ui.segment {
-  border-radius: 0;
-}
-.ui.selection.dropdown {
-  border-radius: 0;
-}
-.ui.card, .ui.cards>.card {
-  border-radius: 0;
-}
-.ui.action.input:not([class*="left action"])>.button:last-child, 
-.ui.action.input:not([class*="left action"])>.buttons:last-child>
-.button, .ui.action.input:not([class*="left action"])>
-.dropdown:last-child {
-  border-radius: 0;
-}
-.ui.basic.button, .ui.basic.buttons .button {
-  border-radius: 0;
+  font-weight: 400;
 }
