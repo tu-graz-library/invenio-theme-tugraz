@@ -35,7 +35,7 @@ def index():
 @blueprint.app_template_filter("make_dict_like")
 def make_dict_like(value: str, key: str) -> Dict[str, str]:
     """Convert the value to a dict like structure.
-    
+
     in the form of a key -> value pair.
     """
     return {key: value}  # pragma: no cover
