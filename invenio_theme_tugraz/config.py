@@ -28,6 +28,7 @@ INVENIO_THEME_TUGRAZ_LOGIN_IMG = "images/login_logo.png"
 # Invenio-theme
 # ============
 # See https://invenio-theme.readthedocs.io/en/latest/configuration.html
+#
 THEME_LOGO = "images/tug_logo.png"
 """TU Graz logo"""
 
@@ -86,7 +87,13 @@ SEARCH_UI_HEADER_TEMPLATE = "invenio_theme_tugraz/header.html"
 DEPOSITS_HEADER_TEMPLATE = "invenio_theme_tugraz/header.html"
 """Deposits header page's template."""
 
-RECORDS_UI_ENDPOINTS["recid"].update(
-    template="invenio_theme_tugraz/record_landing_page.html"
-)
+
+# Invenio-rdm-records
+# =============
+# See https://invenio-rdm-records.readthedocs.io/en/latest/configuration.html
+# Uncomment below to override records landingpage.
+# from invenio_rdm_records.config import RECORDS_UI_ENDPOINTS
+# RECORDS_UI_ENDPOINTS["recid"].update(
+#    template="invenio_theme_tugraz/record_landing_page.html"
+# )
 """override the default record landing page"""

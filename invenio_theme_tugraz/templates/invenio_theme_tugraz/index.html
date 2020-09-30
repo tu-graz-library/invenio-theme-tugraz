@@ -55,7 +55,7 @@
 
           <!--Version badge-->
           <span class="ui label record-version" title="{{_('Version')}}">
-            {{ (' Version ' ~ r.version ~ '') if r.version else ' ' }}
+            {{ (' Version ' ~ r.version ~ '') if r.version else 'Version' }}
           </span>
 
           <!--Resource type badge-->
@@ -96,7 +96,7 @@
 
             <div class="right floated column">
               <span class="access-right">
-                {{ r.access_right | make_dict_like('access_right') | vocabulary_title('access_right') | lower_case }}
+                {{ r.access_right | make_dict_like('access_right') | vocabulary_title('access_right') | lower }}
               </span>
             </div>
           </div>
