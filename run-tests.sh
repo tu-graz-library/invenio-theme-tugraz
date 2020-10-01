@@ -7,8 +7,11 @@
 # modify it under the terms of the MIT License; see LICENSE file for more
 # details.
 
-pydocstyle invenio_theme_tugraz tests docs && \
-isort invenio_theme_tugraz tests --check-only --diff && \
-check-manifest --ignore ".travis-*" && \
-sphinx-build -qnNW docs docs/_build/html && \
-pytest
+docker-services-cli up postgresql es redis
+python -m check_manifest --ignore ".travis-*" && \
+python -m sphinx.cmd.build -qnNW docs docs/_build/html && \
+docker-services-cli up es postgresql redis
+python -m pytest
+tests_exit_code=$?
+docker-services-cli down
+exit "$tests_exit_code"
