@@ -24,12 +24,13 @@ cache:
 
 env:
   - REQUIREMENTS=lowest
-  - REQUIREMENTS=release DEPLOY=true
+  - REQUIREMENTS=release
   - REQUIREMENTS=devel
 
 python:
   - "3.6"
   - "3.7"
+  - "3.8"
 
 before_install:
   - "nvm install 6; nvm use 6"
