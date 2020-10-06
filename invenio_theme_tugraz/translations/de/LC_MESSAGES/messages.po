@@ -46,7 +46,8 @@ msgstr "Sicher"
 msgid ""
 "your research is stored safely for the future in TU Graz library for as "
 "long as TU Graz library exists."
-msgstr ""
+msgstr "Ihre Forschung wird für die Zukunft sicher in der Bibliothek der TU Graz gespeichert als "
+"solange die Bibliothek TU Graz existiert."
 
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/benefits.html:4
 msgid "Trusted"
@@ -110,7 +111,7 @@ msgstr ""
 
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/footer.html:38
 msgid "Data protection"
-msgstr ""
+msgstr "Datenschutzerklärung"
 
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/footer.html:42
 msgid "Feedback"
@@ -154,7 +155,7 @@ msgstr ""
 
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/footer.html:79
 msgid "Research Data Management"
-msgstr ""
+msgstr "Forschungsdatenmanagement"
 
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/footer.html:86
 msgid "Accessibility"
@@ -178,7 +179,7 @@ msgstr ""
 
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/index.html:24
 msgid "Type and press enter to search"
-msgstr ""
+msgstr "Suchbegriff eingeben und “Enter” drücken (?)"
 
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/index.html:40
 msgid "Recent uploads"
@@ -246,15 +247,15 @@ msgstr ""
 
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/navbar.html:77
 msgid "SCIENCE"
-msgstr ""
+msgstr "Wissenschaft"
 
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/navbar.html:78
 msgid "PASSION"
-msgstr ""
+msgstr "Leidenschaft"
 
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/navbar.html:79
 msgid "TECHNOLOGY"
-msgstr ""
+msgstr "Technik"
 
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/accounts/header_login.html:8
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/accounts/login_user.html:59
@@ -262,13 +263,10 @@ msgstr ""
 msgid "Sign Up"
 msgstr ""
 
-#: invenio_theme_tugraz/templates/invenio_theme_tugraz/accounts/header_login.html:15
-msgid "Login"
-msgstr ""
 
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/accounts/header_login.html:30
 msgid "Logout"
-msgstr ""
+msgstr "Ausloggen"
 
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/accounts/login_user.html:24
 msgid "Log in to Repository"
@@ -282,11 +280,11 @@ msgstr ""
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/accounts/login_user.html:35
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/accounts/register_user.html:54
 msgid "Or"
-msgstr ""
+msgstr "Oder"
 
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/accounts/login_user.html:46
 msgid "Log In"
-msgstr ""
+msgstr "Einloggen"
 
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/accounts/login_user.html:58
 #, python-format
