@@ -116,30 +116,31 @@
     <div class="six wide column">
       <!--contact us-->
       <div class="ui segment" style="padding-bottom: 10px;">
-        <h4>Need help?</h4>
+        <h4>{{_ ("Need help?")}}     </h4>
 
         <div style="padding-bottom: 10px;">
           <a href="{{ url_for('invenio_theme_tugraz.index')}}" class="fluid ui button">
-            Contact us
+            {{_ ("Contact us")}} 
           </a>
         </div>
         <p>
-          {{config.THEME_SITENAME}} prioritizes all requested related to the COVID-19 outbreak.
+          {{config.THEME_SITENAME}} {{_ ("prioritizes all Recent uploads.")}}
         </p>
         <p>
-          We can help with:
+          {{_ ("We can help with:")}} 
+          
         </p>
 
         <ul>
-          <li>Uploading your research data, software, preprints, etc.</li>
-          <li>One-on-one with {{config.THEME_SITENAME}} supporters.</li>
-          <li>Quota increases beyond our default policy.</li>
-          <li>Scripts for automated uploading of larger datasets.</li>
+          <li>{{_ ("Uploading your research data, software, preprints, etc.")}}</li>
+          <li>{{_ ("One-on-one with {{config.THEME_SITENAME}} supporters.")}}</li>
+          <li>{{_ ("Quota increases beyond our default policy.")}}</li>
+          <li>{{_ ("Scripts for automated uploading of larger datasets.")}}</li>
         </ul>
       </div>
 
       <div class="ui segment" style="padding-bottom: 10px;">
-        <h4>Why use {{config.THEME_SITENAME}}?</h4>
+        <h4>{{_ ("Why use")}} {{config.THEME_SITENAME}}?</h4>
 
         {% include "invenio_theme_tugraz/benefits.html" %}
       </div>
