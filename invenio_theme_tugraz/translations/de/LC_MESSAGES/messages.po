@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: invenio-theme-tugraz 1.0.4\n"
 "Report-Msgid-Bugs-To: mojib.wali@tugraz.at\n"
-"POT-Creation-Date: 2020-10-06 10:27+0200\n"
+"POT-Creation-Date: 2020-10-06 10:40+0200\n"
 "PO-Revision-Date: 2020-10-06 10:27+0200\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: de\n"
@@ -27,25 +27,25 @@ msgstr ""
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/footer.html:31
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/navbar.html:67
 msgid "Repository"
-msgstr ""
+msgstr "Repository"
 
 #: invenio_theme_tugraz/config.py:80
 msgid "German"
-msgstr ""
+msgstr "Deutsche"
 
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/accounts/accounts_base.html:27
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/base.html:27
 msgid "Invenio"
-msgstr ""
+msgstr "Invenio"
 
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/benefits.html:3
 msgid "Safe"
-msgstr ""
+msgstr "Sicher"
 
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/benefits.html:3
 msgid ""
-"your research is stored safely for the future in CERN’s Data Centre for "
-"as long as CERN exists."
+"your research is stored safely for the future in TU Graz library for as "
+"long as TU Graz library exists."
 msgstr ""
 
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/benefits.html:4
@@ -342,4 +342,10 @@ msgstr ""
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/details/doi.html:32
 msgid "DOI"
 msgstr ""
+
+#~ msgid ""
+#~ "your research is stored safely for "
+#~ "the future in CERN’s Data Centre "
+#~ "for as long as CERN exists."
+#~ msgstr ""
 

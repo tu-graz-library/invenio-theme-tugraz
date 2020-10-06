@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: invenio-theme-tugraz 1.0.4\n"
 "Report-Msgid-Bugs-To: mojib.wali@tugraz.at\n"
-"POT-Creation-Date: 2020-10-06 10:27+0200\n"
+"POT-Creation-Date: 2020-10-06 10:40+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -43,8 +43,8 @@ msgstr ""
 
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/benefits.html:3
 msgid ""
-"your research is stored safely for the future in CERN’s Data Centre for "
-"as long as CERN exists."
+"your research is stored safely for the future in TU Graz library for as "
+"long as TU Graz library exists."
 msgstr ""
 
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/benefits.html:4
