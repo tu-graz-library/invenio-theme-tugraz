@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: invenio-theme-tugraz 1.0.4\n"
 "Report-Msgid-Bugs-To: mojib.wali@tugraz.at\n"
-"POT-Creation-Date: 2020-10-06 10:40+0200\n"
+"POT-Creation-Date: 2020-10-06 12:48+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -228,7 +228,11 @@ msgid "Uploading your research data, software, preprints, etc."
 msgstr ""
 
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/index.html:136
-msgid "One-on-one with {{config.THEME_SITENAME}} supporters."
+msgid "One-on-one with"
+msgstr ""
+
+#: invenio_theme_tugraz/templates/invenio_theme_tugraz/index.html:136
+msgid "supporters."
 msgstr ""
 
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/index.html:137
@@ -262,7 +266,7 @@ msgid "Sign Up"
 msgstr ""
 
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/accounts/header_login.html:15
-msgid "Login"
+msgid "Log in"
 msgstr ""
 
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/accounts/header_login.html:30

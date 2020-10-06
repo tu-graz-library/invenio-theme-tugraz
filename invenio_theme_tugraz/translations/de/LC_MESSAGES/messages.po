@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: invenio-theme-tugraz 1.0.4\n"
 "Report-Msgid-Bugs-To: mojib.wali@tugraz.at\n"
-"POT-Creation-Date: 2020-10-06 10:40+0200\n"
+"POT-Creation-Date: 2020-10-06 12:48+0200\n"
 "PO-Revision-Date: 2020-10-06 10:27+0200\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: de\n"
@@ -46,8 +46,9 @@ msgstr "Sicher"
 msgid ""
 "your research is stored safely for the future in TU Graz library for as "
 "long as TU Graz library exists."
-msgstr "Ihre Forschung wird für die Zukunft sicher in der Bibliothek der TU Graz gespeichert als "
-"solange die Bibliothek TU Graz existiert."
+msgstr ""
+"Ihre Forschung wird für die Zukunft sicher in der Bibliothek der TU Graz "
+"gespeichert als solange die Bibliothek TU Graz existiert."
 
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/benefits.html:4
 msgid "Trusted"
@@ -230,7 +231,11 @@ msgid "Uploading your research data, software, preprints, etc."
 msgstr ""
 
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/index.html:136
-msgid "One-on-one with {{config.THEME_SITENAME}} supporters."
+msgid "One-on-one with"
+msgstr ""
+
+#: invenio_theme_tugraz/templates/invenio_theme_tugraz/index.html:136
+msgid "supporters."
 msgstr ""
 
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/index.html:137
@@ -263,6 +268,10 @@ msgstr "Technik"
 msgid "Sign Up"
 msgstr ""
 
+#: invenio_theme_tugraz/templates/invenio_theme_tugraz/accounts/header_login.html:15
+#, fuzzy
+msgid "Log in"
+msgstr "Einloggen"
 
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/accounts/header_login.html:30
 msgid "Logout"
@@ -345,5 +354,8 @@ msgstr ""
 #~ "your research is stored safely for "
 #~ "the future in CERN’s Data Centre "
 #~ "for as long as CERN exists."
+#~ msgstr ""
+
+#~ msgid "One-on-one with {{config.THEME_SITENAME}} supporters."
 #~ msgstr ""
 
