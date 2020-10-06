@@ -31,7 +31,7 @@
                     transform="translate(-279.72 -403.28)">
                   </polyline>
                 </svg>
-                Home
+                {{_ ("Home")}}
               </a>
             </div>
             {%- for item in current_menu.submenu('main').children|sort(attribute='order') if item.visible recursive %}
