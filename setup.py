@@ -79,7 +79,7 @@ setup(
     platforms='any',
     entry_points={
         'invenio_base.apps': [
-            'invenio_theme_tugraz = invenio_theme_tugraz:inveniothemetugraz',
+            'invenio_theme_tugraz = invenio_theme_tugraz:InvenioThemeTugraz',
         ],
         'invenio_base.blueprints': [
             'invenio_theme_tugraz = invenio_theme_tugraz.views:blueprint',

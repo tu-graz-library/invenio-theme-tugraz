@@ -18,23 +18,11 @@ import tempfile
 import pytest
 from flask import Flask
 from flask_babelex import Babel
+from invenio_db import InvenioDB
 from invenio_i18n import InvenioI18N
 
-from invenio_theme_tugraz import inveniothemetugraz
+from invenio_theme_tugraz import InvenioThemeTugraz
 from invenio_theme_tugraz.views import blueprint
-
-
-@pytest.fixture()
-def app():
-    """Flask app fixture."""
-    app = Flask('myapp')
-    app.config.update(
-        I18N_LANGUAGES=[('en', 'English'), ('de', 'German')],
-    )
-    Babel(app)
-    InvenioI18N(app)
-    app.register_blueprint(create_blueprint_from_app(app))
-    return app
 
 
 @pytest.fixture(scope='module')
@@ -46,14 +34,42 @@ def celery_config():
     return {}
 
 
-@pytest.fixture(scope='module')
-def create_app(instance_path):
-    """Application factory fixture."""
-    def factory(**config):
-        app = Flask('testapp', instance_path=instance_path)
-        app.config.update(**config)
-        Babel(app)
-        inveniothemetugraz(app)
-        app.register_blueprint(blueprint)
-        return app
-    return factory
+@pytest.fixture()
+def app(request):
+    """Basic Flask application."""
+    instance_path = tempfile.mkdtemp()
+    app = Flask("testapp")
+    DB = os.getenv("SQLALCHEMY_DATABASE_URI", "sqlite://")
+    app.config.update(
+        I18N_LANGUAGES=[('en', 'English'), ('de', 'German')],
+        SQLALCHEMY_DATABASE_URI=DB,
+        SQLALCHEMY_TRACK_MODIFICATIONS=False,
+    )
+    Babel(app)
+    InvenioDB(app)
+    InvenioRecords(app)
+    InvenioPIDStore(app)
+    InvenioPIDRelations(app)
+    InvenioAccounts(app)
+    InvenioIndexer(app)
+    InvenioSearch(app)
+    InvenioThemeTugraz(app)
+
+    with app.app_context():
+        db_url = str(db.engine.url)
+        if db_url != "sqlite://" and not database_exists(db_url):
+            create_database(db_url)
+        db.create_all()
+
+    def teardown():
+        with app.app_context():
+            db_url = str(db.engine.url)
+            db.session.close()
+            if db_url != "sqlite://":
+                drop_database(db_url)
+            shutil.rmtree(instance_path)
+
+    request.addfinalizer(teardown)
+    app.test_request_context().push()
+
+    return app
