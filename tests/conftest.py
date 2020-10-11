@@ -27,9 +27,9 @@ from invenio_theme_tugraz.views import blueprint
 @pytest.fixture()
 def app():
     """Flask app fixture."""
-    app = Flask('myapp')
+    app = Flask("myapp")
     app.config.update(
-        I18N_LANGUAGES=[('en', 'English'), ('de', 'German')],
+        I18N_LANGUAGES=[("en", "English"), ("de", "German")],
     )
     Babel(app)
     InvenioI18N(app)
@@ -37,7 +37,7 @@ def app():
     return app
 
 
-@pytest.fixture(scope='module')
+@pytest.fixture(scope="module")
 def celery_config():
     """Override pytest-invenio fixture.
 
@@ -46,14 +46,16 @@ def celery_config():
     return {}
 
 
-@pytest.fixture(scope='module')
+@pytest.fixture(scope="module")
 def create_app(instance_path):
     """Application factory fixture."""
+
     def factory(**config):
-        app = Flask('testapp', instance_path=instance_path)
+        app = Flask("testapp", instance_path=instance_path)
         app.config.update(**config)
         Babel(app)
         inveniothemetugraz(app)
         app.register_blueprint(blueprint)
         return app
+
     return factory

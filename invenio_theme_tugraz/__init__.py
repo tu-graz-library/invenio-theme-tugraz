@@ -11,4 +11,4 @@
 from .ext import inveniothemetugraz
 from .version import __version__
 
-__all__ = ('__version__', 'inveniothemetugraz')
+__all__ = ("__version__", "inveniothemetugraz")
