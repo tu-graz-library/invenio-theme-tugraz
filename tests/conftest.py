@@ -12,14 +12,16 @@ See https://pytest-invenio.readthedocs.io/ for documentation on which test
 fixtures are available.
 """
 
+import os
 import shutil
 import tempfile
 
 import pytest
 from flask import Flask
 from flask_babelex import Babel
-from invenio_db import InvenioDB
+from invenio_db import InvenioDB, db
 from invenio_i18n import InvenioI18N
+from invenio_search import InvenioSearch
 
 from invenio_theme_tugraz import InvenioThemeTugraz
 from invenio_theme_tugraz.views import blueprint
@@ -47,11 +49,6 @@ def app(request):
     )
     Babel(app)
     InvenioDB(app)
-    InvenioRecords(app)
-    InvenioPIDStore(app)
-    InvenioPIDRelations(app)
-    InvenioAccounts(app)
-    InvenioIndexer(app)
     InvenioSearch(app)
     InvenioThemeTugraz(app)
 

@@ -30,3 +30,8 @@ def test_init():
     assert 'invenio-theme-tugraz' not in app.extensions
     ext.init_app(app)
     assert 'invenio-theme-tugraz' in app.extensions
+
+
+def test_app(app):
+    """Test extension initialization."""
+    theme = InvenioThemeTugraz(app)
