@@ -8,7 +8,7 @@
 
 """invenio module for TUGRAZ theme."""
 
-from .ext import inveniothemetugraz
+from .ext import InvenioThemeTugraz
 from .version import __version__
 
-__all__ = ('__version__', 'inveniothemetugraz')
+__all__ = ('__version__', 'InvenioThemeTugraz')

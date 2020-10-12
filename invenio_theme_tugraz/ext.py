@@ -13,7 +13,7 @@ from flask_babelex import gettext as _
 from . import config
 
 
-class inveniothemetugraz(object):
+class InvenioThemeTugraz(object):
     """invenio-theme-tugraz extension."""
 
     def __init__(self, app=None):
