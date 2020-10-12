@@ -21,10 +21,5 @@ class FrontpageRecordsSearch(RecordsSearch):
     class Meta:
         """Default index and filter for frontpage search."""
 
-        index = 'records'
-        default_filter = Q(
-            'query_string',
-            query=(
-                   'access_right:open '
-                   )
-        )
+        index = "records"
+        default_filter = Q("query_string", query=("access_right:open "))

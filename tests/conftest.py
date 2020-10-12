@@ -20,14 +20,15 @@ import pytest
 from flask import Flask
 from flask_babelex import Babel
 from invenio_db import InvenioDB, db
-from invenio_i18n import InvenioI18N
 from invenio_search import InvenioSearch
 
 from invenio_theme_tugraz import InvenioThemeTugraz
-from invenio_theme_tugraz.views import blueprint
+
+# from invenio_theme_tugraz.views import blueprint
+# from invenio_i18n import InvenioI18N
 
 
-@pytest.fixture(scope='module')
+@pytest.fixture(scope="module")
 def celery_config():
     """Override pytest-invenio fixture.
 
@@ -43,7 +44,7 @@ def app(request):
     app = Flask("testapp")
     DB = os.getenv("SQLALCHEMY_DATABASE_URI", "sqlite://")
     app.config.update(
-        I18N_LANGUAGES=[('en', 'English'), ('de', 'German')],
+        I18N_LANGUAGES=[("en", "English"), ("de", "German")],
         SQLALCHEMY_DATABASE_URI=DB,
         SQLALCHEMY_TRACK_MODIFICATIONS=False,
     )
