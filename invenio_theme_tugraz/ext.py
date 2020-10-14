@@ -8,8 +8,6 @@
 
 """invenio module for TUGRAZ theme."""
 
-# from flask_babelex import gettext as _
-
 from . import config
 
 

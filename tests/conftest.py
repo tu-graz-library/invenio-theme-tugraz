@@ -20,12 +20,10 @@ import pytest
 from flask import Flask
 from flask_babelex import Babel
 from invenio_db import InvenioDB, db
+from invenio_i18n import InvenioI18N
 from invenio_search import InvenioSearch
 
 from invenio_theme_tugraz import InvenioThemeTugraz
-
-# from invenio_theme_tugraz.views import blueprint
-# from invenio_i18n import InvenioI18N
 
 
 @pytest.fixture(scope="module")
@@ -52,6 +50,7 @@ def app(request):
     InvenioDB(app)
     InvenioSearch(app)
     InvenioThemeTugraz(app)
+    InvenioI18N(app)
 
     with app.app_context():
         db_url = str(db.engine.url)
