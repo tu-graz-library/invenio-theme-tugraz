@@ -24,10 +24,9 @@ from invenio_i18n import InvenioI18N
 from invenio_search import InvenioSearch
 
 from invenio_theme_tugraz import InvenioThemeTugraz
-from invenio_theme_tugraz.views import blueprint
 
 
-@pytest.fixture(scope='module')
+@pytest.fixture(scope="module")
 def celery_config():
     """Override pytest-invenio fixture.
 
@@ -43,7 +42,7 @@ def app(request):
     app = Flask("testapp")
     DB = os.getenv("SQLALCHEMY_DATABASE_URI", "sqlite://")
     app.config.update(
-        I18N_LANGUAGES=[('en', 'English'), ('de', 'German')],
+        I18N_LANGUAGES=[("en", "English"), ("de", "German")],
         SQLALCHEMY_DATABASE_URI=DB,
         SQLALCHEMY_TRACK_MODIFICATIONS=False,
     )
@@ -51,6 +50,7 @@ def app(request):
     InvenioDB(app)
     InvenioSearch(app)
     InvenioThemeTugraz(app)
+    InvenioI18N(app)
 
     with app.app_context():
         db_url = str(db.engine.url)

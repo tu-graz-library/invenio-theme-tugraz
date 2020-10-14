@@ -8,8 +8,6 @@
 
 """invenio module for TUGRAZ theme."""
 
-from flask_babelex import gettext as _
-
 from . import config
 
 
@@ -24,10 +22,10 @@ class InvenioThemeTugraz(object):
     def init_app(self, app):
         """Flask application initialization."""
         self.init_config(app)
-        app.extensions['invenio-theme-tugraz'] = self
+        app.extensions["invenio-theme-tugraz"] = self
 
     def init_config(self, app):
         """Initialize configuration."""
         for k in dir(config):
-            if k.startswith('INVENIO_THEME_TUGRAZ_'):
+            if k.startswith("INVENIO_THEME_TUGRAZ_"):
                 app.config.setdefault(k, getattr(config, k))

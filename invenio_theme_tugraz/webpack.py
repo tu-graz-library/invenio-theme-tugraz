@@ -10,17 +10,15 @@ from invenio_assets.webpack import WebpackThemeBundle
 
 theme = WebpackThemeBundle(
     __name__,
-    'assets',
-    default='semantic-ui',
+    "assets",
+    default="semantic-ui",
     themes={
-        'semantic-ui': dict(
+        "semantic-ui": dict(
             entry={
-                'invenio-theme-tugraz-theme':
-                    './less/invenio_theme_tugraz/theme.less',
-                'invenio-theme-tugraz-js':
-                    './js/invenio_theme_tugraz/theme.js'
+                "invenio-theme-tugraz-theme": "./less/invenio_theme_tugraz/theme.less",
+                "invenio-theme-tugraz-js": "./js/invenio_theme_tugraz/theme.js",
             },
-            dependencies={}
+            dependencies={},
         )
-    }
+    },
 )
