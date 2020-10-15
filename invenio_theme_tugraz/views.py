@@ -28,7 +28,7 @@ def index():
     """Render frontpage view."""
     return render_template(
         "invenio_theme_tugraz/index.html",
-        records=FrontpageRecordsSearch()[:5].sort("-_created").execute(),
+        records=FrontpageRecordsSearch()[:5].sort("-created").execute(),
     )  # pragma: no cover
 
 
