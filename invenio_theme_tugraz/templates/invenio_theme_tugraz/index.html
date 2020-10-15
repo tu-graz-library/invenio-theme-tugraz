@@ -41,7 +41,7 @@
 
       {%- for r in records %}
       {%- set creation_date = r._created|from_isodatetime -%}
-      {%- set record_url = url_for('invenio_records_ui.recid', pid_value=r['recid']) %}
+      {%- set record_url = url_for('invenio_records_ui.recid', pid_value=r['id']) %}
 
       <article>
         <!--TODO:
@@ -50,7 +50,7 @@
         <div class="badges">
           <!--Publication date badge-->
           <span class="ui label teal" title="{{_('Publication date')}}">
-            {{ r.publication_date }}
+            {{ r.metadata.publication_date }}
           </span>
 
           <!--Version badge-->
@@ -60,7 +60,7 @@
 
           <!--Resource type badge-->
           <span class="ui label grey" title="{{_('Resource type')}}">
-            {{r.resource_type | cast_to_dict | vocabulary_title('resource_type') }}
+            {{r.metadata.resource_type | cast_to_dict | vocabulary_title('resource_type') }}
           </span>
 
           <span class="label record-version">
@@ -70,17 +70,17 @@
 
         <h4>
           <a href="{{ record_url }}">
-            {{r.titles[0].title}}
+            {{r.metadata.titles[0].title}}
           </a>
         </h4>
 
         <p>
-          {{ creators(r.creators) }}
+          {{ creators(r.metadata.creators) }}
         </p>
 
         <p class="hidden-xs">
           <a href="{{record_url}}">
-            {{ r.descriptions[0].description | striptags | truncate(300) }}
+            {{ r.metadata.descriptions[0].description | striptags | truncate(300) }}
           </a>
         </p>
 
@@ -96,7 +96,7 @@
 
             <div class="right floated column">
               <span class="access-right">
-                {{ r.access_right | make_dict_like('access_right') | vocabulary_title('access_right') | lower }}
+                {{ r.access.access_right | make_dict_like('access_right') | vocabulary_title('access_right') | lower }}
               </span>
             </div>
           </div>
