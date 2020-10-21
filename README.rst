@@ -9,17 +9,17 @@
  invenio-theme-tugraz
 ======================
 
-.. image:: https://travis-ci.com/mb-wali/invenio-theme-tugraz.svg
-        :target: https://travis-ci.com/github/mb-wali/invenio-theme-tugraz
+.. image:: https://travis-ci.com/tu-graz-library/invenio-theme-tugraz.svg
+        :target: https://travis-ci.com/github/tu-graz-library/invenio-theme-tugraz
 
 .. image:: https://img.shields.io/pypi/dm/invenio-theme-tugraz.svg
         :target: https://pypi.python.org/pypi/invenio-theme-tugraz
 
-.. image:: https://img.shields.io/github/tag/mb-wali/invenio-theme-tugraz.svg
-        :target: https://github.com/mb-wali/invenio-theme-tugraz/releases
+.. image:: https://img.shields.io/github/tag/tu-graz-library/invenio-theme-tugraz.svg
+        :target: https://github.com/tu-graz-library/invenio-theme-tugraz/releases
 
-.. image:: https://img.shields.io/github/license/mb-wali/invenio-theme-tugraz.svg
-        :target: https://github.com/mb-wali/invenio-theme-tugraz/blob/master/LICENSE
+.. image:: https://img.shields.io/github/license/tu-graz-library/invenio-theme-tugraz.svg
+        :target: https://github.com/tu-graz-library/invenio-theme-tugraz/blob/master/LICENSE
 
 .. image:: https://readthedocs.org/projects/invenio-theme-tugraz/badge/?version=latest
         :target: https://invenio-theme-tugraz.readthedocs.io/en/latest/?badge=latest
