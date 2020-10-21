@@ -116,13 +116,13 @@ html_theme = "alabaster"
 
 html_theme_options = {
     "description": "invenio module for TUGRAZ theme.",
-    "github_user": "inveniosoftware",
+    "github_user": "TU Graz",
     "github_repo": "invenio-theme-tugraz",
     "github_button": False,
     "github_banner": True,
     "show_powered_by": False,
     "extra_nav_links": {
-        "invenio-theme-tugraz@GitHub": "https://github.com/mb-wali/invenio-theme-tugraz",
+        "invenio-theme-tugraz@GitHub": "https://github.com/tu-graz-library/invenio-theme-tugraz",
         "invenio-theme-tugraz@PyPI": "https://pypi.python.org/pypi/invenio-theme-tugraz/",
     },
 }

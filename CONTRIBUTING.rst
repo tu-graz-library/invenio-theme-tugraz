@@ -10,7 +10,7 @@ Types of Contributions
 Report Bugs
 ~~~~~~~~~~~
 
-Report bugs at https://github.com/mb-wali/invenio-theme-tugraz/issues.
+Report bugs at https://github.com/tu-graz-library/invenio-theme-tugraz/issues.
 
 If you are reporting a bug, please include:
 
@@ -41,7 +41,7 @@ Submit Feedback
 ~~~~~~~~~~~~~~~
 
 The best way to send feedback is to file an issue at
-https://github.com/mb-wali/invenio-theme-tugraz/issues.
+https://github.com/tu-graz-library/invenio-theme-tugraz/issues.
 
 If you are proposing a feature:
 
@@ -55,7 +55,7 @@ Get Started!
 
 Ready to contribute? Here's how to set up `invenio-theme-tugraz` for local development.
 
-1. Fork the `https://github.com/mb-wali/invenio-theme-tugraz.git` repo on GitHub.
+1. Fork the `https://github.com/tu-graz-library/invenio-theme-tugraz.git` repo on GitHub.
 2. Clone your fork locally:
 
    .. code-block:: console
@@ -114,5 +114,5 @@ Before you submit a pull request, check that it meets these guidelines:
 2. If the pull request adds functionality, the docs should be updated. Put
    your new functionality into a function with a docstring.
 3. The pull request should work for Python 2.7, 3.5 and 3.6. Check
-   https://travis-ci.com/github/mb-wali/invenio-theme-tugraz/pull_requests
+   https://travis-ci.com/github/tu-graz-library/invenio-theme-tugraz/pull_requests
    and make sure that the tests pass for all supported Python versions.
