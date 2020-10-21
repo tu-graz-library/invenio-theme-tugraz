@@ -27,6 +27,8 @@
 .. image:: https://img.shields.io/coveralls/mb-wali/invenio-theme-tugraz.svg
         :target: https://coveralls.io/r/mb-wali/invenio-theme-tugraz
         
+.. image:: https://img.shields.io/badge/code%20style-black-000000.svg
+    :target: https://github.com/psf/black
 
 TU Graz standard theme.
 
