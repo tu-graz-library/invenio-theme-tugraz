@@ -9,8 +9,8 @@
  invenio-theme-tugraz
 ======================
 
-.. image:: https://travis-ci.com/tu-graz-library/invenio-theme-tugraz.svg
-        :target: https://travis-ci.com/github/tu-graz-library/invenio-theme-tugraz
+.. image:: https://github.com/tu-graz-library/invenio-theme-tugraz/workflows/CI/badge.svg
+        :target: https://github.com/tu-graz-library/invenio-theme-tugraz/actions
 
 .. image:: https://img.shields.io/pypi/dm/invenio-theme-tugraz.svg
         :target: https://pypi.python.org/pypi/invenio-theme-tugraz
