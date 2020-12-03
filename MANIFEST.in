@@ -36,3 +36,4 @@ recursive-include invenio_theme_tugraz *.ico
 recursive-include tests *.py
 recursive-include invenio_theme_tugraz *.jpg
 recursive-include invenio_theme_tugraz *.gitkeep
+recursive-include .github/workflows *.yml
