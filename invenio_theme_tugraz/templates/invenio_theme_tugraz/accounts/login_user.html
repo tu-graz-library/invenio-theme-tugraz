@@ -27,7 +27,7 @@
         <!--Log in with SSO-->
         {%- if config.INVENIO_CONFIG_TUGRAZ_SHIBBOLETH %}
         <div class="ui divider"></div>
-        <div class="login-page-button">
+        <div class="login-page-button ui fluid large button">
           <a href="{{ url_for('sso_saml.sso', idp='idp') }}" class="inverted tiny image label">
             {% trans type='TUGRAZ' %} Log in with {{ type }}{% endtrans %}
             <img src="{{ url_for('static', filename=config.INVENIO_THEME_TUGRAZ_ICON)}}" height="20px" />
