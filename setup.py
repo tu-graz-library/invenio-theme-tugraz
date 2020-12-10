@@ -17,8 +17,9 @@ history = open("CHANGES.rst").read()
 
 tests_require = [
     "pytest-invenio>=1.4.0",
+    'invenio-app>=1.3.0,<2.0.0',
     # TODO: remove once a new release is out
-    'docker-services-cli>=0.2.1,<0.3.0',
+    'docker-services-cli>=0.2.1,<0.3.0'
 ]
 
 extras_require = {
