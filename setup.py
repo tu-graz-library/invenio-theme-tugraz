@@ -17,6 +17,7 @@ history = open("CHANGES.rst").read()
 
 tests_require = [
     "pytest-invenio>=1.4.0",
+    'invenio-app>=1.3.0,<2.0.0'
 ]
 
 extras_require = {
