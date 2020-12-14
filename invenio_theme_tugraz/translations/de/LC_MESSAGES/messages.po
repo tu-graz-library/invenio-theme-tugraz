@@ -88,7 +88,8 @@ msgstr "Offen oder geschlossen"
 msgid ""
 "Share e.g. anonymized clinical trial data with only medical professionals"
 " via our restricted access mode."
-msgstr ""
+msgstr "Teilen Sie z.B. anonymisierte klinische Studiendaten nur mit medizinischem Fachpersonal"
+"über unseren eingeschränkten Zugriffsmodus."
 
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/benefits.html:8
 msgid "Versioning"
@@ -306,7 +307,7 @@ msgstr "Einloggen"
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/accounts/login_user.html:59
 #, python-format
 msgid "New to %(sitename)s?"
-msgstr "Neu ins"
+msgstr "Neu im %(sitename)s?"
 
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/accounts/login_user.html:69
 msgid "Forgot password?"
@@ -324,7 +325,8 @@ msgstr "Zitierfähig. Auffindbar."
 msgid ""
 "Uploads get a Digital Object Identifier (DOI) to make them easily and "
 "uniquely citeable."
-msgstr "Uploads erhalten eine DOI und werden damit leicht auffindbar und zitierfähig."
+msgstr "Uploads erhalten eine DOI und werden damit leicht"
+"auffindbar und zitierfähig."
 
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/accounts/register_user.html:30
 msgid "Communities."
@@ -334,7 +336,8 @@ msgstr "Communities"
 msgid ""
 "Accept or reject uploads to your own community (e.g workshops, EU "
 "projects, institutions or entire disciplines)."
-msgstr "Annehmen oder Ablehnen von Uploads in Ihrer eigenen Community (z.B. workshop, EU-Projekt, Forschungseinrichtung, Disziplin)"
+msgstr "Annehmen oder Ablehnen von Uploads in Ihrer eigenen Community (z.B. workshop, EU"
+"-Projekt, Forschungseinrichtung, Disziplin)"
 
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/accounts/register_user.html:34
 msgid "Trusted Research Data Management"
@@ -344,7 +347,8 @@ msgstr "Vertrauenswürdiges Forschungsdatenmanagement"
 msgid ""
 "Built on top of TU Graz expertise in managing of the research data from "
 "the Graz University of Technology."
-msgstr "Gebaut basierend auf Expertise der TU Graz im Bereich Data Management"
+msgstr "Gebaut basierend auf Expertise der"
+"TU Graz im Bereich Data Management"
 
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/accounts/register_user.html:51
 msgid "Sign up with TUGRAZ "
@@ -352,7 +356,7 @@ msgstr "Mit Ihrem TUGonline-Account einloggen"
 
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/details/doi.html:28
 msgid "RDM DOI Badge"
-msgstr "RDM DOI Badge"
+msgstr "RDM DOI Abzeichen"
 
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/details/doi.html:32
 msgid "DOI"
