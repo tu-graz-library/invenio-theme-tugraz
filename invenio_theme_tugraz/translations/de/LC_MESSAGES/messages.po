@@ -217,7 +217,7 @@ msgstr "Brauchen Sie Hilfe?"
 
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/index.html:123
 msgid "Contact us"
-msgstr "Sie erreichen uns unter[Contact]"
+msgstr "Erreichen Sie uns"
 
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/index.html:127
 msgid "prioritizes all Recent uploads."
