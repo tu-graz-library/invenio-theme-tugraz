@@ -22,6 +22,7 @@ from flask_babelex import Babel
 from invenio_db import InvenioDB, db
 from invenio_i18n import InvenioI18N
 from invenio_search import InvenioSearch
+from sqlalchemy_utils.functions import create_database, database_exists, drop_database
 
 from invenio_theme_tugraz import InvenioThemeTugraz
 

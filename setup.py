@@ -18,13 +18,12 @@ history = open("CHANGES.rst").read()
 tests_require = [
     "pytest-invenio>=1.4.0",
     'invenio-app>=1.3.0,<2.0.0',
-    # TODO: remove once a new release is out
-    'docker-services-cli>=0.2.1,<0.3.0'
+    "psycopg2-binary>=2.8.6",
 ]
 
 extras_require = {
     "docs": [
-        "Sphinx>=1.5.1",
+        "Sphinx>=3",
     ],
     "mysql": [
         "invenio-db[mysql]>=1.0.0",
