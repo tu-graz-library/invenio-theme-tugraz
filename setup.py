@@ -18,6 +18,7 @@ history = open("CHANGES.rst").read()
 tests_require = [
     "pytest-invenio>=1.4.0",
     'invenio-app>=1.3.0,<2.0.0',
+    "psycopg2-binary>=2.8.6",
 ]
 
 extras_require = {
