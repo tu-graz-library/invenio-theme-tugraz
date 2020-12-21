@@ -10,23 +10,29 @@
 
 from flask import Flask
 
-from invenio_theme_tugraz import inveniothemetugraz
+from invenio_theme_tugraz import InvenioThemeTugraz
 
 
 def test_version():
     """Test version import."""
     from invenio_theme_tugraz import __version__
+
     assert __version__
 
 
 def test_init():
     """Test extension initialization."""
-    app = Flask('testapp')
-    ext = inveniothemetugraz(app)
-    assert 'invenio-theme-tugraz' in app.extensions
+    app = Flask("testapp")
+    ext = InvenioThemeTugraz(app)
+    assert "invenio-theme-tugraz" in app.extensions
 
-    app = Flask('testapp')
-    ext = inveniothemetugraz()
-    assert 'invenio-theme-tugraz' not in app.extensions
+    app = Flask("testapp")
+    ext = InvenioThemeTugraz()
+    assert "invenio-theme-tugraz" not in app.extensions
     ext.init_app(app)
-    assert 'invenio-theme-tugraz' in app.extensions
+    assert "invenio-theme-tugraz" in app.extensions
+
+
+def test_app(app):
+    """Test extension initialization."""
+    theme = InvenioThemeTugraz(app)

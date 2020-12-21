@@ -19,8 +19,9 @@
     <div class="ui container">
         <div class="ui grid stackable container">
           <div class="three column row centered" style="padding-bottom: 0;">
-            <div class="two wide column main-menu-entry main-menu-entry-svg">
+            <div class="two wide column main-menu-entry">
               <a href="{{url_for('invenio_theme_tugraz.index')}}" title="Home">
+                <span class="home-inline">
                 <svg shape-rendering="geometricPrecision" id="int-menu-q-home-icon"
                   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg"
                   version="1.1" xml:space="preserve" height="36.997" width="35.969"
@@ -31,7 +32,8 @@
                     transform="translate(-279.72 -403.28)">
                   </polyline>
                 </svg>
-                Home
+                {{_ ("Home")}}
+              </span>
               </a>
             </div>
             {%- for item in current_menu.submenu('main').children|sort(attribute='order') if item.visible recursive %}

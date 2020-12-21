@@ -5,14 +5,14 @@
 {%- if config.SECURITY_REGISTERABLE %}
 <div class="short-menu-right-button">
     <a href="{{ url_for('security.register') }}">
-        <i class="user plus icon circular"></i> Sign Up
+        {{_ ("Sign up")}}
     </a>
 </div>
    {%- endif %}
 
 <div class="short-menu-right-button">
     <a href="{{url_for_security('login', next=request.path)}}" style="text-decoration:none">
-        <i class="sign in icon circular"></i> Login
+        {{_ ("Log in")}}
     </a>
 </div>
 
@@ -27,7 +27,7 @@
 </div>
 <div class="short-menu-right-button">
     <a class="dropdown-item" href="{{url_for_security('logout')}}">
-        <i class="sign out icon circular"></i>{{_('Logout')}}
+        {{_('Sign out')}}
     </a>
 </div>
 

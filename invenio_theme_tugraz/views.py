@@ -28,8 +28,8 @@ def index():
     """Render frontpage view."""
     return render_template(
         "invenio_theme_tugraz/index.html",
-        records=FrontpageRecordsSearch()[:5].sort("-_created").execute(),
-    )  # pragma: no cover
+        records=FrontpageRecordsSearch()[:5].sort("-created").execute(),
+    )
 
 
 @blueprint.app_template_filter("make_dict_like")
@@ -38,10 +38,10 @@ def make_dict_like(value: str, key: str) -> Dict[str, str]:
 
     in the form of a key -> value pair.
     """
-    return {key: value}  # pragma: no cover
+    return {key: value}
 
 
 @blueprint.app_template_filter("cast_to_dict")
 def cast_to_dict(attr_dict):
     """Return the dict structure of AttrDict variable."""
-    return AttrDict.to_dict(attr_dict)  # pragma: no cover
+    return AttrDict.to_dict(attr_dict)

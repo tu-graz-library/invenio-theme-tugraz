@@ -67,6 +67,12 @@
 
     {%- block navbar_header %}
     {%- include "invenio_theme_tugraz/navbar.html" %}
+    <!--Flask messages for accounts-->
+    {%- block flashmessages %}
+    {%- from "invenio_theme/macros/messages.html" import flashed_messages with context -%}
+    {{ flashed_messages() }}
+
+    {%- endblock %}
     {%- endblock navbar_header %}
     
     {#

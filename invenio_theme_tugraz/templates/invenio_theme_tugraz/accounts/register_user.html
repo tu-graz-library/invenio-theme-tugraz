@@ -45,13 +45,14 @@
 
         <!--Sigup with SSO-->
         {%- if config.INVENIO_CONFIG_TUGRAZ_SHIBBOLETH %}
-        <div class="login-page-button">
+        <div class="ui divider"></div>
+        <div class="login-page-button ui fluid large button">
           <a href="{{ url_for('sso_saml.sso', idp='idp') }}" class="inverted tiny image label">
             <span style="font-size: 18px;">{{ _('Sign up with TUGRAZ ') }}</span>
             <img src="{{ url_for('static', filename=config.INVENIO_THEME_TUGRAZ_ICON)}}" height="20px" />
           </a>
         </div>
-        <div class="ui inverted horizontal divider"><span class="text-color">Or</span></div>
+        <div class="ui inverted horizontal divider"><span class="text-color">{{_ ("Or")}}</span></div>
         {%- endif %}
 
         {%- block form_header %}
@@ -77,7 +78,7 @@
 
           <div class="centered row">
             <button type="submit" class="ui fluid large submit button">
-              <i class="ui edit outline icon"></i>{{ _('Sign Up') }}
+              <i class="ui edit outline icon"></i>{{ _('Sign up') }}
             </button>
           </div>
         </form>
