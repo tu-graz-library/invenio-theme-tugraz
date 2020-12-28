@@ -217,23 +217,23 @@ msgstr "Brauchen Sie Hilfe?"
 
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/index.html:123
 msgid "Contact us"
-msgstr "Erreichen Sie uns"
+msgstr "Kontaktiere uns"
 
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/index.html:127
 msgid "prioritizes all Recent uploads."
-msgstr "Reiht die neuesten Uploads vor"
+msgstr "Reiht die neuesten Uploads vor."
 
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/index.html:130
 msgid "We can help with:"
-msgstr "Dabei können wir Sie unterstützen"
+msgstr "Wir können helfen bei:"
 
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/index.html:135
 msgid "Uploading your research data, software, preprints, etc."
-msgstr "Hochladen Ihrer Forschungsdaten, Software, Preprints, etc."
+msgstr "Hochladen Ihrer Forschungsdaten, Software, Preprints usw."
 
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/index.html:136
 msgid "One-on-one with"
-msgstr "Eins zu eins mit"
+msgstr "Eins-zu-eins mit"
 
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/index.html:136
 msgid "supporters."
@@ -241,11 +241,11 @@ msgstr "Unterstützern"
 
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/index.html:137
 msgid "Quota increases beyond our default policy."
-msgstr "Erhöhung Ihres Kontingents über das vertraglich Zugesicherte hinaus"
+msgstr "Erhöhung Ihres Kontingents über das vertraglich Zugesicherte hinaus."
 
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/index.html:138
 msgid "Scripts for automated uploading of larger datasets."
-msgstr "Programme, die den automatischen Upload großer Datenmengen unterstützen"
+msgstr "Skripte zum automatisierten Hochladen größerer Datensätze."
 
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/index.html:143
 msgid "Why use"
