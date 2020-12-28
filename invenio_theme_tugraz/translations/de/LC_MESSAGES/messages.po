@@ -288,7 +288,7 @@ msgstr "Ausloggen"
 
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/accounts/login_user.html:24
 msgid "Log in to Repository"
-msgstr "Ins repositorium einloggen"
+msgstr "Anmelden"
 
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/accounts/login_user.html:32
 #, python-format
