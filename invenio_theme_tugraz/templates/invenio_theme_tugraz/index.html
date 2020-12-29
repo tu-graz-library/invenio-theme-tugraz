@@ -82,11 +82,16 @@
         <div class="ui grid">
           <div class="two column row">
             <div class="left floated column">
-              <small>
-                {% trans user=userprofile, date=creation_date | dateformat('long')%}
-                Uploaded on {{date}}
-                {% endtrans %}
-              </small>
+              {%- for s in r.metadata.subjects %}
+              <div class="ui tiny label">{{s.subject}}</div>
+              {%- endfor %}
+              <div>
+                <small>
+                  {% trans user=userprofile, date=creation_date | dateformat('long')%}
+                  Uploaded on {{date}}
+                  {% endtrans %}
+                </small>
+              </div>
             </div>
 
             <div class="right floated column">
