@@ -48,18 +48,13 @@
         something with doi
         -->
         <div class="badges">
-          <!--Publication date badge-->
-          <span class="ui label teal" title="{{_('Publication date')}}">
-            {{ r.metadata.publication_date }}
-          </span>
-
-          <!--Version badge-->
-          <span class="ui label record-version" title="{{_('Version')}}">
-            {{ (' Version ' ~ r.version ~ '') if r.version else 'Version' }}
+          <!--Publication date/Version badge-->
+          <span class="ui label record-version" title="{{_('Publication date')}}">
+            {{ r.metadata.publication_date }} {{ '(' ~ r.metadata.version ~ ')' if r.metadata.version }}
           </span>
 
           <!--Resource type badge-->
-          <span class="ui label grey" title="{{_('Resource type')}}">
+          <span class="ui label teal" title="{{_('Resource type')}}">
             {{r.metadata.resource_type | cast_to_dict | vocabulary_title('resource_type') }}
           </span>
 
