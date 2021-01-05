@@ -36,11 +36,17 @@
               </span>
               </a>
             </div>
-            {%- for item in current_menu.submenu('main').children|sort(attribute='order') if item.visible recursive %}
+            <!--TODO: uncomment this once translation is on place-->
+            <!-- {%- for item in current_menu.submenu('main').children|sort(attribute='order') if item.visible recursive %}
             <div class="two wide column main-menu-entry">
               <a href="{{ item.url }}">{{ item.text|safe }}</a>
             </div>
-            {%- endfor %}
+            {%- endfor %} -->
+
+            <!--TODO: remove this once above is uncommented-->
+            <div class="two wide column main-menu-entry">
+              <a href="{{url_for('invenio_app_rdm.deposits_user')}}">{{_ ("Uploads")}}</a>
+            </div>
           </div>
        
           <div id="margin-divider" class="ui divider main-menu-underline-line">
