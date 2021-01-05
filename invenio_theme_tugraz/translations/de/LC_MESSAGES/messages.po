@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: invenio-theme-tugraz 1.0.4\n"
 "Report-Msgid-Bugs-To: mojib.wali@tugraz.at\n"
-"POT-Creation-Date: 2020-12-14 09:17+0100\n"
+"POT-Creation-Date: 2021-01-04 14:18+0100\n"
 "PO-Revision-Date: 2020-10-06 10:27+0200\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: de\n"
@@ -57,7 +57,9 @@ msgstr "Vertrauenswürdig"
 msgid ""
 "built and operated by CERN and OpenAIRE to ensure that everyone can join "
 "in Open Science."
-msgstr "Gebaut und betrieben von CERN und OpenAIRE; um sicherzugehen, dass jedeR Zugang zu Open Science hat"
+msgstr ""
+"Gebaut und betrieben von CERN und OpenAIRE; um sicherzugehen, dass jedeR "
+"Zugang zu Open Science hat"
 
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/benefits.html:5
 msgid "Citeable"
@@ -67,8 +69,9 @@ msgstr "Zitierfähig "
 msgid ""
 "every upload is assigned a Digital Object Identifier (DOI), to make them "
 "citable and trackable."
-msgstr "Jeder Upload erhält eine DOI um sicherzustellen,"
-"dass er zitierbar und auffindbar ist"
+msgstr ""
+"Jeder Upload erhält eine DOI um sicherzustellen,dass er zitierbar und "
+"auffindbar ist"
 
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/benefits.html:6
 msgid "No waiting time"
@@ -78,7 +81,9 @@ msgstr "Keine Wartezeit"
 msgid ""
 "Uploads are made available online as soon as you hit publish, and your "
 "DOI is registered within seconds."
-msgstr "Uploads stehen sofort nach drücken auf “Veröffentlichen” zur Verfügung. Ihre DOI wird innerhalb von Sekunden registriert."
+msgstr ""
+"Uploads stehen sofort nach drücken auf “Veröffentlichen” zur Verfügung. "
+"Ihre DOI wird innerhalb von Sekunden registriert."
 
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/benefits.html:7
 msgid "Open or closed"
@@ -88,8 +93,9 @@ msgstr "Offen oder geschlossen"
 msgid ""
 "Share e.g. anonymized clinical trial data with only medical professionals"
 " via our restricted access mode."
-msgstr "Teilen Sie z.B. anonymisierte klinische Studiendaten nur mit medizinischem Fachpersonal"
-"über unseren eingeschränkten Zugriffsmodus."
+msgstr ""
+"Teilen Sie z.B. anonymisierte klinische Studiendaten nur mit "
+"medizinischem Fachpersonalüber unseren eingeschränkten Zugriffsmodus."
 
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/benefits.html:8
 msgid "Versioning"
@@ -178,6 +184,10 @@ msgstr "Um die Schriftgröße zu ändern."
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/header.html:35
 msgid "Home"
 msgstr "Startseite"
+
+#: invenio_theme_tugraz/templates/invenio_theme_tugraz/header.html:48
+msgid "Uploads"
+msgstr "Hochladen"
 
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/index.html:24
 msgid "Type and press enter to search"
@@ -325,8 +335,9 @@ msgstr "Zitierfähig. Auffindbar."
 msgid ""
 "Uploads get a Digital Object Identifier (DOI) to make them easily and "
 "uniquely citeable."
-msgstr "Uploads erhalten eine DOI und werden damit leicht"
-"auffindbar und zitierfähig."
+msgstr ""
+"Uploads erhalten eine DOI und werden damit leichtauffindbar und "
+"zitierfähig."
 
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/accounts/register_user.html:30
 msgid "Communities."
@@ -336,8 +347,9 @@ msgstr "Communities"
 msgid ""
 "Accept or reject uploads to your own community (e.g workshops, EU "
 "projects, institutions or entire disciplines)."
-msgstr "Annehmen oder Ablehnen von Uploads in Ihrer eigenen Community (z.B. workshop, EU"
-"-Projekt, Forschungseinrichtung, Disziplin)"
+msgstr ""
+"Annehmen oder Ablehnen von Uploads in Ihrer eigenen Community (z.B. "
+"workshop, EU-Projekt, Forschungseinrichtung, Disziplin)"
 
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/accounts/register_user.html:34
 msgid "Trusted Research Data Management"
@@ -347,8 +359,7 @@ msgstr "Vertrauenswürdiges Forschungsdatenmanagement"
 msgid ""
 "Built on top of TU Graz expertise in managing of the research data from "
 "the Graz University of Technology."
-msgstr "Gebaut basierend auf Expertise der"
-"TU Graz im Bereich Data Management"
+msgstr "Gebaut basierend auf Expertise derTU Graz im Bereich Data Management"
 
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/accounts/register_user.html:51
 msgid "Sign up with TUGRAZ "
@@ -361,3 +372,4 @@ msgstr "RDM DOI Abzeichen"
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/details/doi.html:32
 msgid "DOI"
 msgstr "DOI"
+
