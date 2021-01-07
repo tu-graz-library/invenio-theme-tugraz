@@ -48,18 +48,13 @@
         something with doi
         -->
         <div class="badges">
-          <!--Publication date badge-->
-          <span class="ui label teal" title="{{_('Publication date')}}">
-            {{ r.metadata.publication_date }}
-          </span>
-
-          <!--Version badge-->
-          <span class="ui label record-version" title="{{_('Version')}}">
-            {{ (' Version ' ~ r.version ~ '') if r.version else 'Version' }}
+          <!--Publication date/Version badge-->
+          <span class="ui label record-version" title="{{_('Publication date')}}">
+            {{ r.metadata.publication_date }} {{ '(' ~ r.metadata.version ~ ')' if r.metadata.version }}
           </span>
 
           <!--Resource type badge-->
-          <span class="ui label grey" title="{{_('Resource type')}}">
+          <span class="ui label teal" title="{{_('Resource type')}}">
             {{r.metadata.resource_type | cast_to_dict | vocabulary_title('resource_type') }}
           </span>
 
@@ -87,16 +82,22 @@
         <div class="ui grid">
           <div class="two column row">
             <div class="left floated column">
-              <small>
-                {% trans user=userprofile, date=creation_date | dateformat('long')%}
-                Uploaded on {{date}}
-                {% endtrans %}
-              </small>
+              {%- for s in r.metadata.subjects %}
+              <div class="ui tiny label">{{s.subject}}</div>
+              {%- endfor %}
+              <div>
+                <small>
+                  {% trans user=userprofile, date=creation_date | dateformat('long')%}
+                  Uploaded on {{date}}
+                  {% endtrans %}
+                </small>
+              </div>
             </div>
 
             <div class="right floated column">
               <span class="access-right">
-                {{ r.access.access_right | make_dict_like('access_right') | vocabulary_title('access_right') | lower }}
+                <i class="icon lock open"></i>
+                {{ r.access.access_right | make_dict_like('access_right') | vocabulary_title('access_right') }}
               </span>
             </div>
           </div>
@@ -106,7 +107,7 @@
       -->
 
       {%- endfor %}
-      <div class="ui two column centered grid">
+      <div class="ui centered grid">
         <a class="ui button more" href="{{url_for('invenio_search_ui.search')}}">{{_('More')}}</a>
       </div>
     </div>
