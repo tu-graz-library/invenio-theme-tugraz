@@ -116,7 +116,7 @@ const Footer = ({subjects, createdDate, accessRight}) => {
         )}
       </div>
       <div className="right floated column">
-        <span className="access-right">
+        <span className={`ui access-right ${accessRight.category}`}>
           <i className={`icon ${accessRight.icon}`}></i>
           {accessRight.type}
         </span>
