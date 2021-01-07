@@ -24,6 +24,7 @@ export const RDMRecordResultsListItem = ({ result, index }) => {
   const creators = _.get(result, "metadata.creators", []);
   const title = _.get(result, "metadata.title", "No title");
   const subjects = _.get(result, "metadata.subjects", null);
+  const rights = _.get(result, "metadata.rights", null)
 
   const publicationDate = _.get(result, "ui.publication_date_l10n_long", "No publication date found");
   const createdDate = _.get(result, "ui.created_date_l10n_long", "No creation date found.");
@@ -31,7 +32,7 @@ export const RDMRecordResultsListItem = ({ result, index }) => {
   const access = _.get(result, "ui.access_right.title", "No access rights");
   const accessRightCategory = _.get(result, "ui.access_right.category", "closed");
   const accessRightIcon = _.get(result, "ui.access_right.icon", "closed");
-  const accessRight = {type: access, category: accessRightCategory, icon: accessRightIcon};
+  const accessRight = {type: access, category: accessRightCategory, icon: accessRightIcon, rights};
 
   const href = `/records/${result.id}`;
 
@@ -118,7 +119,9 @@ const Footer = ({subjects, createdDate, accessRight}) => {
       <div className="right floated column">
         <span className={`ui access-right ${accessRight.category}`}>
           <i className={`icon ${accessRight.icon}`}></i>
-          {accessRight.type}
+          {accessRight.type} {accessRight.rights && accessRight.rights.map((right, index) => (
+            <a key={index} href={right.uri}>({right.identifier})</a>
+          ))}
         </span>
       </div>
     </Item.Extra>
