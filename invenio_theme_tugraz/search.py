@@ -21,5 +21,5 @@ class FrontpageRecordsSearch(RecordsSearch):
     class Meta:
         """Default index and filter for frontpage search."""
 
-        index = "rdmrecords"
+        index = "rdmrecords-records"
         default_filter = Q("query_string", query=("access.access_right:open"))
