@@ -99,7 +99,7 @@
                 <i class="icon lock open"></i>
                 {{ r.access.access_right | make_dict_like('access_right') | vocabulary_title('access_right') }}
                 {%- for right in r.metadata.rights %}
-                {{ '(' ~ right.identifier ~ ')' }}
+                <a target="_blank" href="{{right.url}}">{{ '(' ~ right.identifier ~ ')' }}</a>
                 {%- endfor %}
 
               </span>
