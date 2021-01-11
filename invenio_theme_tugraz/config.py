@@ -9,6 +9,7 @@
 """invenio module for TUGRAZ theme."""
 
 from flask_babelex import gettext as _
+from invenio_app_rdm.config import RECORDS_UI_ENDPOINTS
 
 INVENIO_THEME_TUGRAZ_DEFAULT_VALUE = _("TU Graz Repository")
 """Default value for the application."""
@@ -90,7 +91,7 @@ DEPOSITS_HEADER_TEMPLATE = "invenio_theme_tugraz/header.html"
 # See https://invenio-rdm-records.readthedocs.io/en/latest/configuration.html
 # Uncomment below to override records landingpage.
 # from invenio_rdm_records.config import RECORDS_UI_ENDPOINTS
-# RECORDS_UI_ENDPOINTS["recid"].update(
-#    template="invenio_theme_tugraz/record_landing_page.html"
-# )
+RECORDS_UI_ENDPOINTS["recid"].update(
+    template="invenio_theme_tugraz/record_landing_page.html"
+)
 """override the default record landing page"""
