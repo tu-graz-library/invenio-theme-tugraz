@@ -1,8 +1,7 @@
 {#
     Copyright (C) 2020 Zenodo
     Copyright (C) 2020 TUGRAZ
-    Copyright (C) 2020 mojib wali.
-  
+
     invenio-theme-tugraz is free software; you can redistribute it and/or
     modify it under the terms of the MIT License; see LICENSE file for more
     details.
@@ -12,7 +11,7 @@
 
 {%- for creators in authors_list %}
 
-{%- if creators.identifiers.orcid %}
+{%- if creators.identifiers and creators.identifiers.orcid %}
 <a href="{{creators.identifiers.orcid|pid_url('orcid')}}" target="_blank" ><img class="inline-orcid" src="{{ url_for('static', filename='extra/orcid.png')}}" /></a>
 {%- endif %}
 
