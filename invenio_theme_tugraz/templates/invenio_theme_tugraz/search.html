@@ -1,0 +1,82 @@
+{#
+  Copyright (C) 2020 Graz University of Technology
+
+  invenio-theme-tugraz is free software; you can redistribute it and/or modify
+  it under the terms of the MIT License; see LICENSE file for more details.
+#}
+{%- extends config.BASE_TEMPLATE %}
+
+{%- block javascript %}
+    {{ super() }}
+    {{ webpack['invenio-theme-tugraz-search-app.js'] }}
+{%- endblock %}
+
+{%- block page_body %}
+
+<div data-invenio-search-config='{
+  "aggs": [
+    {
+      "aggName": "access_right",
+      "field": "access_right",
+      "title": "Access Right"
+    },
+    {
+      "aggName": "resource_type",
+      "field": "resource_type.type",
+      "title": "Resource Type",
+      "childAgg": {
+        "aggName": "subtype",
+        "field": "resource_type.subtype",
+        "title": "Resource Type"
+      }
+    }
+  ],
+  "appId": "rdm-search",
+  "initialQueryState": {
+    "hiddenParams": null,
+    "size": 10
+  },
+  "layoutOptions": {
+    "gridView": false,
+    "listView": true
+  },
+  "paginationOptions": {
+    "defaultValue": 10,
+    "resultsPerPage": [
+      {
+        "text": "10",
+        "value": 10
+      },
+      {
+        "text": "20",
+        "value": 20
+      },
+      {
+        "text": "50",
+        "value": 50
+      }
+    ]
+  },
+  "searchApi": {
+    "axios": {
+      "headers": {
+        "Accept": "application/vnd.inveniordm.v1+json"
+      },
+      "url": "/api/records",
+      "withCredentials": true
+    }
+  },
+  "sortOrderDisabled": true,
+  "sortOptions": [
+    {
+      "sortBy": "bestmatch",
+      "text": "Best match"
+    },
+    {
+      "sortBy": "newest",
+      "text": "Newest"
+    }
+  ]
+}'></div>
+
+{%- endblock page_body %}

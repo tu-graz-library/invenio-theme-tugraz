@@ -94,3 +94,9 @@ DEPOSITS_HEADER_TEMPLATE = "invenio_theme_tugraz/header.html"
 #    template="invenio_theme_tugraz/record_landing_page.html"
 # )
 """override the default record landing page"""
+
+# Invenio-search-ui
+# =============
+# See https://invenio-search-ui.readthedocs.io/en/latest/configuration.html
+SEARCH_UI_SEARCH_TEMPLATE = "invenio_theme_tugraz/search.html"
+"""override the default search page"""
