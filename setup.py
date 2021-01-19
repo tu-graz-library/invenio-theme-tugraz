@@ -53,7 +53,6 @@ install_requires = [
     "invenio-i18n>=1.2.0",
     "elasticsearch_dsl>=7.2.1",
     "invenio_search>=1.3.1",
-    "invenio_app_rdm>=0.18.8",
     "sqlalchemy-continuum>=1.3.11",
 ]
 
