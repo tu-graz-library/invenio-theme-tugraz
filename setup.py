@@ -15,46 +15,61 @@ from setuptools import find_packages, setup
 readme = open("README.rst").read()
 history = open("CHANGES.rst").read()
 
+invenio_version = '~=3.4.0'
+invenio_search_version = '>=1.4.0,<1.5.0'
+invenio_db_version = '>=1.0.5,<1.1.0'
+
 tests_require = [
-    "pytest-invenio>=1.4.0",
-    "invenio-app>=1.3.0,<2.0.0",
+    "pytest-invenio~=1.4.1",
+    "sqlalchemy-continuum>=1.3.11",
+    "invenio_search>=1.3.1",
     "psycopg2-binary>=2.8.6",
 ]
 
 extras_require = {
-    "docs": [
-        "Sphinx>=3",
+    # Invenio-Search
+    'elasticsearch6': [
+        f'invenio-search[elasticsearch6]{invenio_search_version}'
     ],
-    "mysql": [
-        "invenio-db[mysql]>=1.0.0",
+    'elasticsearch7': [
+        f'invenio-search[elasticsearch7]{invenio_search_version}'
     ],
-    "postgresql": [
-        "invenio-db[postgresql]>=1.0.0",
+    # Invenio-DB
+    'mysql': [
+        f'invenio-db[mysql,versioning]{invenio_db_version}'
     ],
-    "sqlite": [
-        "invenio-db>=1.0.0",
+    'postgresql': [
+        f'invenio-db[postgresql,versioning]{invenio_db_version}'
     ],
-    "tests": tests_require,
+    'sqlite': [
+        f'invenio-db[versioning]{invenio_db_version}'
+    ],
+    # Extras
+    'docs': [
+        'Sphinx>=3,<3.4.2',
+    ],
+    'tests': tests_require,
 }
 
-extras_require["all"] = []
-for reqs in extras_require.values():
-    extras_require["all"].extend(reqs)
+
+extras_require['all'] = []
+for name, reqs in extras_require.items():
+    if name[0] == ':' or name in ('elasticsearch6', 'elasticsearch7',
+                                  'mysql', 'postgresql', 'sqlite'):
+        continue
+    extras_require['all'].extend(reqs)
+
 
 setup_requires = [
-    "Babel>=1.3",
-    "pytest-runner>=3.0.0,<5",
+    'Babel>=2.8',
 ]
 
 install_requires = [
-    "Flask-BabelEx>=0.9.4",
-    "Flask-WebpackExt>=1.0.0",
     "invenio-assets>=1.2.0",
     "invenio-i18n>=1.2.0",
     "elasticsearch_dsl>=7.2.1",
-    "invenio_search>=1.3.1",
     "invenio_app_rdm>=0.18.8",
-    "sqlalchemy-continuum>=1.3.11",
+
 ]
 
 packages = find_packages()
