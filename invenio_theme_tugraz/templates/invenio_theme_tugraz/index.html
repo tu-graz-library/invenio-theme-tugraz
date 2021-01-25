@@ -95,13 +95,10 @@
             </div>
 
             <div class="right floated column">
-              <span class="access-right">
+              <div class="ui tiny label access-right open frontpage-access">
                 <i class="icon lock open"></i>
                 {{ r.access.access_right | make_dict_like('access_right') | vocabulary_title('access_right') }}
-                <!-- {%- for right in r.metadata.rights %}
-                <a target="_blank" href="{{right.url}}">{{ '(' ~ right.identifier ~ ')' }}</a>
-                {%- endfor %} -->
-              </span>
+              </div>
             </div>
           </div>
         </div>
