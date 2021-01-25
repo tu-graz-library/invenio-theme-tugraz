@@ -15,19 +15,14 @@ from invenio_theme_tugraz.views import cast_to_dict, make_dict_like
 
 def test_make_dict_like():
     """Test make_dict_like."""
-    access = {
-        "access_right" : "open"
-    }
+    access = {"access_right": "open"}
     dicts = make_dict_like("open", "access_right")
     assert access == dicts
 
 
 def test_cast_to_dict():
     """Test cast_to_dict."""
-    resource_type = {
-        "subtype" : "publication-datamanagementplan",
-        "type" : "publication"
-    }
-    expected = {'subtype': 'publication-datamanagementplan', 'type': 'publication'}
+    resource_type = {"subtype": "publication-datamanagementplan", "type": "publication"}
+    expected = {"subtype": "publication-datamanagementplan", "type": "publication"}
     attr = cast_to_dict(AttrDict(resource_type))
     assert expected == attr
