@@ -7,7 +7,7 @@
  */
 
  #footer {
-    color: #5E5E5E;
+    color: @footerGrey;
 
     /*background-image: url("/static/images/footer.jpg");*/
     -webkit-background-size: 100% 100%;
@@ -22,18 +22,18 @@
     background-attachment: fixed;
 
     &.footer-bottom {
-      background-color: #f2f2f2;
+      background-color: @footerBottomBackground;
       padding-top: 15px;
       padding-bottom: 15px;
       font-size: 16px;
  
       a {
         text-decoration: none;
-        color: #5E5E5E;
+        color: @footerGrey;
  
         &:hover, &:focus {
-          color: #ffffff;
-          background-color: #000000;
+          color: @primaryLink;
+          background-color: @primaryLinkHoverBackground;
         }
       }
     }
