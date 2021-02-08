@@ -14,12 +14,12 @@
 }
 
 .creator:not(:last-child):after {
-  color: @greyDark;
+  color  : @greyDark;
   content: ';';
 }
 
 .creator {
-  display: inline-block;
+  display     : inline-block;
   margin-right: 5px;
 }
 
@@ -28,17 +28,20 @@
 }
 
 .ui.access-right {
-  color: @accesRight;
+  color: @accessRight;
 
   &.open {
     color: @accessRightOpen;
   }
+
   &.restricted {
     color: @accessRightRestricted;
   }
+
   &.embargoed {
     color: @accessRightEmbargoed;
   }
+
   &.closed {
     color: @accessRightClosed;
   }

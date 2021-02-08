@@ -50,14 +50,20 @@
  * force: the font changes
  ***/
 *,
-html, body,
-h1, h2, h3, h4, h5, h6,
+html,
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
 pre,
 .ui.button,
 .ui.items,
 .ui.accordion .title:not(.ui),
-.ui.items > .item > .content > .header,
-.ui.modal > .header,
+.ui.items>.item>.content>.header,
+.ui.modal>.header,
 .ui.menu,
 .ui.header,
 .ui.form input[type],
@@ -95,15 +101,17 @@ pre {
 .ui.button,
 .ui.rdm-sidebar,
 .ui.menu,
-.ui.input > input, /* it seams redundant but it is not */
+.ui.input>input,
+/* it seams redundant but it is not */
 .ui.segment,
 .ui.selection.dropdown,
 .ui.card,
-.ui.cards > .card,
-.ui.basic.button, .ui.basic.buttons .button,
-.ui.action.input:not([class*="left action"]) > .button:last-child,
-.ui.action.input:not([class*="left action"]) > .buttons:last-child > .button,
-.ui.action.input:not([class*="left action"]) > .dropdown:last-child,
+.ui.cards>.card,
+.ui.basic.button,
+.ui.basic.buttons .button,
+.ui.action.input:not([class*="left action"])>.button:last-child,
+.ui.action.input:not([class*="left action"])>.buttons:last-child>.button,
+.ui.action.input:not([class*="left action"])>.dropdown:last-child,
 .ui.form input[type],
 .ui.form input[type]:focus {
   border-radius: 0;
@@ -114,7 +122,7 @@ pre {
  ***/
 .ui.rdm-sidebar {
   background-color: unset;
-  box-shadow: unset;
+  box-shadow      : unset;
 }
 
 /***

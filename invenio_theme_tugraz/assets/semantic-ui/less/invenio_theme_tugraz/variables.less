@@ -11,52 +11,59 @@
 ** test overriding variables.
 ***/
 
-//@import "../invenio_app_rdm/variables.less";
+
+// @import (reference) "../invenio_app_rdm/variables.less";
 
 //@navbar_background_image: unset;
 //@navbar_background_color: #ffffff;
-@accesRight: #fff;
-@accessRightOpen: #e9711c;
+
+
+// badge colors accessibility
+@accessRight          : #fff;
+@accessRightOpen      : #e9711c;
 @accessRightRestricted: #fbbd08;
-@accessRightEmbargoed: #db2828;
-@accessRightClosed: #db2828;
+@accessRightEmbargoed : #db2828;
+@accessRightClosed    : #db2828;
 
+// primary colors TU Graz
 @tugrazBlack: #231f20;
-@tugrazRed: #e4154b;
-
-@greyDark: #777;
-@greyLight: #E0E1E2;
-
-@primaryLinkInverted: #000;
-@primaryLinkBackgroundInverted: #fff;
-
-@primaryLink: #fff;
-@primaryLinkHoverBackground: #000;
-
-@primaryButton: #fff;
-@primaryButtonHoverBackground: #000;
-
-@primaryButtonInverted: #000f;
-
-@primaryBackground: #fff;
-@primaryText: #000;
+@tugrazRed  : #e4154b;
 
 
-
+// accent colors
+@greyDark              : #777;
+@greyLight             : #E0E1E2;
 @labelKeywordBackground: #E8E8E8;
 
 
-@primaryFormAccounts: #fff;
-@formAccountsInputPlaceholder: #silver;
 
+// link and button colors
+@primaryLinkInverted          : #000;
+@primaryLinkBackgroundInverted: #fff;
+@primaryLink                  : #fff;
+@primaryLinkHoverBackground   : #000;
+@primaryButton                : #fff;
+@primaryButtonHoverBackground : #000;
+@primaryButtonInverted        : #000f;
+
+
+
+// general
+@primaryBackground: #fff;
+@primaryText      : #000;
+
+
+
+//account (signin, signup) specific
+@primaryFormAccounts          : #fff;
+@formAccountsInputPlaceholder : silver;
 @fieldInputSelectionBackground: #50a2ce;
-@signInBackground: #245b78;
+@signInBackground             : #245b78;
 
-
-@footerGrey: #5E5E5E;
+// footer specific
+@footerGrey            : #5E5E5E;
 @footerBottomBackground: #f2f2f2;
 
-
+// record specific
 @recordVersionBackground: #f2f2f2;
-@randomRecordsFrontpageArticle: rgba(34,36,38,.15);
-
+@randomRecordsFrontpageArticle: rgba(34, 36, 38, .15);
