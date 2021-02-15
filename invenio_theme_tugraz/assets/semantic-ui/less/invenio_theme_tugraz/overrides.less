@@ -131,3 +131,33 @@ pre {
 .ui.label {
   font-weight: 400;
 }
+
+.ui.label.access-right {
+  float: right;
+  color: @accessRight;
+  background-color: white;
+
+  &.open {
+    color: @accessRightOpen;
+    background-color: white;
+
+  }
+
+  &.restricted {
+    color: @accessRightRestricted;
+    background-color: white;
+
+  }
+
+  &.embargoed {
+    color: @accessRightEmbargoed;
+    background-color: white;
+
+  }
+
+  &.closed {
+    color: @accessRightClosed;
+    background-color: white;
+
+  }
+}

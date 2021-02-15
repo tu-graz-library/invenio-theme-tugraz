@@ -95,7 +95,7 @@
             </div>
 
             <div class="right floated column">
-              <span class="access-right">
+              <span class="ui label access-right">
                 <i class="icon lock open"></i>
                 {{ r.access.access_right | make_dict_like('access_right') | vocabulary_title('access_right') }}
                 {%- for right in r.metadata.rights %}
