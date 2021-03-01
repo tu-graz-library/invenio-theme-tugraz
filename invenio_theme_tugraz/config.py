@@ -91,13 +91,36 @@ DEPOSITS_HEADER_TEMPLATE = "invenio_theme_tugraz/header.html"
 # See https://invenio-rdm-records.readthedocs.io/en/latest/configuration.html
 # Uncomment below to override records landingpage.
 # from invenio_rdm_records.config import RECORDS_UI_ENDPOINTS
-RECORDS_UI_ENDPOINTS["recid"].update(
-    template="invenio_theme_tugraz/record_landing_page.html"
-)
+# RECORDS_UI_ENDPOINTS["recid"].update(
+#     template="invenio_theme_tugraz/record_landing_page.html"
+# )
 """override the default record landing page"""
 
 # Invenio-search-ui
 # =============
 # See https://invenio-search-ui.readthedocs.io/en/latest/configuration.html
-SEARCH_UI_SEARCH_TEMPLATE = "invenio_theme_tugraz/search.html"
-"""override the default search page"""
+# SEARCH_UI_SEARCH_TEMPLATE = "invenio_theme_tugraz/search.html"
+# """override the default search page"""
+
+TUG_ROUTES = {
+    "index": "/",
+    "comingsoon": "/comingsoon",
+}
+
+# Invenio-app-rdm
+# =============
+# See https://invenio-app-rdm.readthedocs.io/en/latest/configuration.html
+# """override the default search page"""
+# Keep this in sync
+APP_RDM_ROUTES = {
+    "index": "/notvalid/notvalid/notvalid",
+    "help_search": "/help/search",
+    "record_search": "/search2",
+    "record_detail": "/records/<pid_value>",
+    "record_export": "/records/<pid_value>/export/<export_format>",
+    "record_file_preview": "/records/<pid_value>/preview/<path:filename>",
+    "record_file_download": "/records/<pid_value>/files/<path:filename>",
+    "deposit_search": "/uploads",
+    "deposit_create": "/uploads/new",
+    "deposit_edit": "/uploads/<pid_value>",
+}

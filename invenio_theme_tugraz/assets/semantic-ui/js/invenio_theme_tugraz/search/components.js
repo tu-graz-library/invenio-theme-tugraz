@@ -94,7 +94,7 @@ const Creator = ({creator}) => {
   return (
     <div className="creator">
       <Identifiers creator={creator}/>
-      <span className="text-muted">{creator.name}</span>
+      <span className="text-muted">{creator.person_or_org.name}</span>
     </div>
   );
 };

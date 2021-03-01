@@ -12,36 +12,48 @@ from typing import Dict
 
 from elasticsearch_dsl.utils import AttrDict
 from flask import Blueprint, render_template
+from flask_menu import current_menu
 
 from .search import FrontpageRecordsSearch
 
-blueprint = Blueprint(
-    "invenio_theme_tugraz",
-    __name__,
-    template_folder="templates",
-    static_folder="static",
-)
 
+def ui_blueprint(app):
+    """Blueprint for the routes and resources provided by Invenio-theme-tugraz."""
+    routes = app.config.get("TUG_ROUTES")
 
-@blueprint.route("/")
-def index():
-    """Render frontpage view."""
-    return render_template(
-        "invenio_theme_tugraz/index.html",
-        records=FrontpageRecordsSearch()[:5].sort("-created").execute(),
+    blueprint = Blueprint(
+        "invenio_theme_tugraz",
+        __name__,
+        template_folder="templates",
+        static_folder="static",
     )
 
+    blueprint.add_url_rule(routes["index"], view_func=index)
+    blueprint.add_url_rule(routes["comingsoon"], view_func=comingsoon)
 
-@blueprint.app_template_filter("make_dict_like")
-def make_dict_like(value: str, key: str) -> Dict[str, str]:
-    """Convert the value to a dict like structure.
+    @blueprint.app_template_filter("make_dict_like")
+    def make_dict_like(value: str, key: str) -> Dict[str, str]:
+        """Convert the value to a dict like structure.
 
-    in the form of a key -> value pair.
-    """
-    return {key: value}
+        in the form of a key -> value pair.
+        """
+        return {key: value}
+
+    @blueprint.app_template_filter("cast_to_dict")
+    def cast_to_dict(attr_dict):
+        """Return the dict structure of AttrDict variable."""
+        return AttrDict.to_dict(attr_dict)
+
+    return blueprint
 
 
-@blueprint.app_template_filter("cast_to_dict")
-def cast_to_dict(attr_dict):
-    """Return the dict structure of AttrDict variable."""
-    return AttrDict.to_dict(attr_dict)
+def index():
+    """Frontpage."""
+    return render_template(
+        "invenio_theme_tugraz/index.html",
+        records=FrontpageRecordsSearch()[:5].sort("-created").execute())
+
+
+def comingsoon():
+    """Frontpage."""
+    return render_template("invenio_theme_tugraz/comingsoon.html")

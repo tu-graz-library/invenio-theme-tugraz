@@ -41,7 +41,7 @@
 
       {%- for r in records %}
       {%- set creation_date = r._created|from_isodatetime -%}
-      {%- set record_url = url_for('invenio_records_ui.recid', pid_value=r['id']) %}
+      {%- set record_url = url_for('invenio_app_rdm_records.record_detail', pid_value=r.id) %}
 
       <article>
         <!--TODO:
@@ -94,8 +94,9 @@
               </div>
             </div>
 
-            <div class="right floated column">
-              <span class="ui label access-right">
+            <!--Disabled on feb-relase - enable when stable-->
+            <!-- <div class="right floated column">
+              <span class="access-right">
                 <i class="icon lock open"></i>
                 {{ r.access.access_right | make_dict_like('access_right') | vocabulary_title('access_right') }}
                 {%- for right in r.metadata.rights %}
@@ -103,7 +104,7 @@
                 {%- endfor %}
 
               </span>
-            </div>
+            </div> -->
           </div>
         </div>
       </article>
