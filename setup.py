@@ -90,7 +90,7 @@ setup(
             "invenio_theme_tugraz = invenio_theme_tugraz:InvenioThemeTugraz",
         ],
         "invenio_base.blueprints": [
-            "invenio_theme_tugraz = invenio_theme_tugraz.views:blueprint",
+            "invenio_theme_tugraz = invenio_theme_tugraz.views:ui_blueprint",
         ],
         "invenio_i18n.translations": [
             "messages = invenio_theme_tugraz",
