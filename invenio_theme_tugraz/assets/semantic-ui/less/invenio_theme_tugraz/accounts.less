@@ -13,68 +13,68 @@
 
 #login-tug-logo {
   & g {
-    fill: #e4154b;
+    fill: @tugrazRed;
   }
 }
 
 #login-tug-logo:hover {
   & g {
-    fill: #231f20;
+    fill: @tugrazBlack;
   }
 }
 
 .accounts-link {
   margin: 5%;
-  color: #fff;
-  border: 1px solid #fff;
+  color: @primaryLink;
+  border: 1px solid @primaryLink;
   background-color: transparent;
 }
 
 .accounts-link :hover {
   font-size: smaller !important;
-  color: white;
-  background-color: #000000 !important;
+  color: @primaryLink;
+  background-color: @primaryLinkHoverBackground !important;
 }
 
 .tu-button-style button {
   cursor: pointer;
-  border: 1px solid #fff;
+  border: 1px solid @primaryButton;
   background-color: transparent;
   height: 29px;
-  color: #fff;
+  color: @primaryButton;
   font-family: "Source Sans Pro";
   font-weight: 300;
   font-size: 16px;
 }
 .tu-button-style button:hover {
   cursor: pointer;
-  color: white;
-  background-color: #000000 !important;
+  color: @primaryButton;
+  background-color: @primaryButtonHoverBackground !important;
 }
 
 .form-accounts {
   margin: 15%;
   text-align: left !important;
   & i {
-    color: #fff !important;
+    color: @primaryFormAccounts !important;
   }
   & label {
     display: flex !important;
     font-weight: 300 !important;
-    color: white !important;
+    color: @primaryFormAccounts !important;
   }
   & input {
     border: 0px none !important;
     padding: 0px !important;
-    border-bottom: 1px solid white !important;
+    border-bottom: 1px solid @primaryFormAccounts !important;
     background-color: transparent !important;
-    color: white !important;
+    color: @primaryFormAccounts !important;
     border-radius: 0 !important;
     width: 100% !important;
   }
   & input::placeholder {
     opacity: 1 !important;
-    color: silver !important;
+    color: @formAccountsInputPlaceholder !important;
   }
   & th {
     display: block;
@@ -85,7 +85,7 @@
 }
 
 .field > input::selection {
-  background: #50a2ce;
+  background: @fieldInputSelectionBackground;
 }
 
 .accounts-header {
@@ -96,7 +96,7 @@
 login and sign-up pages form background color
 */
 .sign-form {
-  background-color: #245b78 !important;
+  background-color: @signInBackground !important;
   padding: 0 !important;
   height: 100%;
 }
@@ -104,10 +104,10 @@ login and sign-up pages form background color
 .tug-button-login {
   display: flex;
   align-items: center;
-  fill: #e4154b;
+  fill: @tugrazRed;
 }
 .tug-button-login :hover {
-  fill: #000000;
+  fill: @primaryButtonHoverBackground;
 }
 .login-page-button {
   margin: 5%;
@@ -118,20 +118,20 @@ login and sign-up pages form background color
     cursor: pointer;
   }
   & a:hover {
-    background-color: #000;
-    color: #fff !important;
+    background-color: @primaryLinkHoverBackground;
+    color: @primaryLink !important;
     text-decoration: none;
   }
 }
 
 .login-page-button-white {
-  color: #fff !important;
+  color: @primaryButton !important;
   font-family: "Source Sans Pro";
   font-size: initial;
 }
 
 .login-page-button-black {
-  color: #000 !important;
+  color: @primaryButtonInverted !important;
   font-family: "Source Sans Pro";
   font-size: initial;
 }

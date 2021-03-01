@@ -10,7 +10,7 @@
   width: 18px;
   height: 18px;
   vertical-align: top;
-  fill: #e4154b;
+  fill: @tugrazRed;
 }
 
 /*****logo section******/
@@ -18,18 +18,18 @@
   vertical-align: middle;
   white-space: nowrap;
   & a {
-    fill: #e4154b;
+    fill: @tugrazRed;
   }
 }
 
 .affiliation-logo :hover {
   text-decoration: none;
-  fill: #000000;
-  color: #000000;
+  fill: @primaryLinkHoverBackground;
+  color: @primaryLinkHoverBackground;
 }
 
 .affiliation {
-  background-color: white;
+  background-color: @primaryLink;
   display: table;
   margin: 0 auto 80px;
   max-width: 1060px;
@@ -78,12 +78,12 @@ a {
 .short-menu-right {
   display: table-cell;
   width: 50%;
-  color: #000000;
+  color: @primaryLinkInverted;
 }
 
 .short-menu-right :hover {
-  background-color: #000000;
-  color: #ffffff;
+  background-color: @primaryLinkHoverBackground;
+  color: @primaryLink;
 }
 
 .short-menu-right-button {
@@ -104,15 +104,15 @@ a {
   & a {
     padding: 5px;
     background-color: transparent;
-    color: #000;
+    color: @primaryLinkInverted;
     text-decoration: none;
   }
 }
 
 .short-menu-left-lang:hover {
   & a {
-    background-color: #000;
-    color: #fff;
+    background-color: @primaryLinkHoverBackground;
+    color: @primaryLink;
     text-decoration: none;
   }
 }
@@ -126,7 +126,7 @@ a {
     & svg {
       & g {
         stroke-linejoin: round;
-        stroke: #000;
+        stroke: @primaryLinkInverted;
         stroke-miterlimit: 10;
         stroke-width: 2;
         fill: none;
@@ -137,11 +137,11 @@ a {
 
 .search-icon-header:hover {
   & a {
-    background-color: #000;
+    background-color: @primaryLinkHoverBackground;
     text-decoration: none;
     & svg {
       & g {
-        stroke: #fff;
+        stroke: @primaryLink;
       }
     }
   }
@@ -150,7 +150,7 @@ a {
 .short-menu-left-search {
   display: inline-block;
   margin: 12px 9px 6px 0;
-  color: #000000;
+  color: @primaryLinkInverted;
 }
 
 .short-menu-right-main-menu {
@@ -181,8 +181,8 @@ svg:not(:root) {
 }
 
 .main-menu-entry a:hover {
-  background-color: #000;
-  color: #fff;
+  background-color: @primaryLinkHoverBackground;
+  color: @primaryLink;
   text-decoration: none;
 }
 
@@ -191,7 +191,7 @@ svg:not(:root) {
 }
 
 .main-menu-underline-line {
-  border: 2px solid #e0e1e2 !important;
+  border: 2px solid @greyLight !important;
   border-radius: 0;
 }
 
@@ -200,13 +200,13 @@ svg:not(:root) {
 }
 
 .affiliation-text a:hover {
-  background-color: #000000;
-  color: #ffffff;
+  background-color: @primaryLinkHoverBackground;
+  color: @primaryLink;
   text-decoration: none;
 }
 
 .main-menu {
-  border-bottom: 1px solid #000;
+  border-bottom: 1px solid @primaryLinkInverted;
   box-sizing: border-box;
   height: 39px;
   margin-top: -1px;

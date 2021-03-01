@@ -12,7 +12,7 @@
  * to #ffffff
  ***/
 .section-content-light-bg {
-  background-color: #ffffff;
+  background-color: @primaryBackground;
 }
 
 /***
@@ -21,7 +21,7 @@
  * to #000000
  ***/
 .section-title {
-  color: #000000;
+  color: @primaryText;
 }
 
 
@@ -32,7 +32,7 @@
  ***/
 .cover-page {
   //text-align: center;
-  background-color: #ffffff;
+  background-color: @primaryBackground;
 }
 
 
@@ -42,7 +42,7 @@
  * To #000000
  ***/
 .panel-free-title {
-  color: #000000;
+  color: @primaryText;
 }
 
 
@@ -75,16 +75,16 @@ pre {
  ***/
 /*.ui.button,*/
 .ui.search.button {
-  background-color:#e4154b;
+  background-color: @tugrazRed;
 }
 
 .ui.button:hover,
 .ui.search.button:hover {
-  background-color:#000000;
+  background-color: @primaryButtonHoverBackground;
 }
 
 .ui.button:hover {
-  color:#fff;
+  color: @primaryButton;
 }
 
 /***
@@ -122,4 +122,34 @@ pre {
  ***/
 .ui.label {
   font-weight: 400;
+}
+
+.ui.label.access-right {
+  float: right;
+  color: @accessRight;
+  background-color: white;
+
+  &.open {
+    color: @accessRightOpen;
+    background-color: white;
+
+  }
+
+  &.restricted {
+    color: @accessRightRestricted;
+    background-color: white;
+
+  }
+
+  &.embargoed {
+    color: @accessRightEmbargoed;
+    background-color: white;
+
+  }
+
+  &.closed {
+    color: @accessRightClosed;
+    background-color: white;
+
+  }
 }

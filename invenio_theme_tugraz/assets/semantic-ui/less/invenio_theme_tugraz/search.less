@@ -14,7 +14,7 @@
 }
 
 .creator:not(:last-child):after {
-  color: #777;
+  color: @greyDark;
   content: ';';
 }
 
@@ -25,21 +25,4 @@
 
 .identifiers {
   display: inline;
-}
-
-.ui.access-right {
-  color: #FFFFFF;
-
-  &.open {
-    color: @accessRightOpen;
-  }
-  &.restricted {
-    color: @accessRightRestricted;
-  }
-  &.embargoed {
-    color: @accessRightEmbargoed;
-  }
-  &.closed {
-    color: @accessRightClosed;
-  }
 }
