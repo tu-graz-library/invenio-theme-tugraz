@@ -9,6 +9,11 @@
 
 {%- extends config.INVENIO_THEME_TUGRAZ_BASE_TEMPLATE %}
 
+{%- block javascript %}
+  {{ webpack['invenio-theme-tugraz-js.js'] }}
+  <script id="zammad_form_script" src="https://ub-support.tugraz.at/assets/form/form.js"></script>
+{%- endblock javascript %}
+
 {%- from "invenio_theme_tugraz/macros/authors.html" import creators -%}
 
 {%- block page_body %}
@@ -124,7 +129,7 @@
         <h4>{{_ ("Need help?")}}     </h4>
 
         <div style="padding-bottom: 10px;">
-          <a href="{{ url_for('invenio_theme_tugraz.index')}}" class="fluid ui button">
+          <a id="feedback-form" class="fluid ui button">
             {{_ ("Contact us")}} 
           </a>
         </div>
