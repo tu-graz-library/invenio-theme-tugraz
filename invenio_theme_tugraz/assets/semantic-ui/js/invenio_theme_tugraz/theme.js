@@ -4,7 +4,7 @@ $(function() {
   $('#feedback-form').ZammadForm({
     messageTitle: 'Feedback Form',
     messageSubmit: 'Send',
-    messageThankYou: 'Thank you for your message, (#%s). We will get back to as quickly as possible!',
+    messageThankYou: 'Thank you for your message, (#%s). We will get back to you as quickly as possible!',
     modal: true
   });
 });
