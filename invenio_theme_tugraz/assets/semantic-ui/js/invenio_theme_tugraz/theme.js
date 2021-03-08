@@ -1,11 +1,18 @@
-import { jQuery, $ } from 'jquery';
+import $ from 'jquery';
 
 $(function() {
-  $('#feedback-form').ZammadForm({
-    messageTitle: 'Feedback Form',
-    messageSubmit: 'Send',
-    messageThankYou: 'Thank you for your message, (#%s). We will get back to you as quickly as possible!',
-    modal: true
+  let scriptNode = document.createElement("hidden"); //needed for zammad script
+  scriptNode.id = "zammad_form_script";
+  scriptNode.src = "https://ub-support.tugraz.at/assets/form/form.js";
+  document.head.appendChild(scriptNode);
+  
+  $.getScript("https://ub-support.tugraz.at/assets/form/form.js", () => {
+    $('#feedback-form').ZammadForm({
+      messageTitle: 'Feedback Form',
+      messageSubmit: 'Send',
+      messageThankYou: 'Thank you for your message, (#%s). We will get back to you as quickly as possible!',
+      modal: true
+    });
   });
 });
 
