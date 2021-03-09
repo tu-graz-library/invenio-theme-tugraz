@@ -11,9 +11,14 @@
 from typing import Dict
 
 from elasticsearch_dsl.utils import AttrDict
-from flask import Blueprint, render_template
+from flask import Blueprint, current_app, render_template
+from flask_login import login_required
 from flask_menu import current_menu
-
+from invenio_app_rdm.records_ui.views.deposits import (
+    get_form_config,
+    get_search_url,
+    new_record,
+)
 from .search import FrontpageRecordsSearch
 
 
@@ -30,6 +35,7 @@ def ui_blueprint(app):
 
     blueprint.add_url_rule(routes["index"], view_func=index)
     blueprint.add_url_rule(routes["comingsoon"], view_func=comingsoon)
+    blueprint.add_url_rule(routes["deposit_create"], view_func=deposit_create)
 
     @blueprint.app_template_filter("make_dict_like")
     def make_dict_like(value: str, key: str) -> Dict[str, str]:
@@ -51,9 +57,43 @@ def index():
     """Frontpage."""
     return render_template(
         "invenio_theme_tugraz/index.html",
-        records=FrontpageRecordsSearch()[:5].sort("-created").execute())
+        records=FrontpageRecordsSearch()[:5].sort("-created").execute(),
+    )
 
 
 def comingsoon():
     """Frontpage."""
     return render_template("invenio_theme_tugraz/comingsoon.html")
+
+
+def comingsoon():
+    """Frontpage."""
+    return render_template("invenio_theme_tugraz/comingsoon.html")
+
+
+def get_application_details():
+    details = dict()
+    defaults = current_app.config.get("INVENIO_DATACITE_UTILS") or {}
+
+    for key, value in defaults.items():
+        # used if value is not known before application starts (e.g. date, read from file)
+        if callable(value):
+            value = value()
+        details[key] = value
+
+    return details
+
+
+@login_required
+def deposit_create():
+    """Create a new deposit."""
+    forms_config = get_form_config(createUrl=("/api/records"))
+    forms_config["data_cite"] = get_application_details()
+
+    return render_template(
+        "invenio_app_rdm/records/deposit.html",
+        forms_config=forms_config,
+        searchbar_config=dict(searchUrl=get_search_url()),
+        record=new_record(),
+        files=dict(default_preview=None, enabled=True, entries=[], links={}),
+    )

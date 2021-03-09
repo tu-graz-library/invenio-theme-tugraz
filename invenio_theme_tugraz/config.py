@@ -105,6 +105,7 @@ DEPOSITS_HEADER_TEMPLATE = "invenio_theme_tugraz/header.html"
 TUG_ROUTES = {
     "index": "/",
     "comingsoon": "/comingsoon",
+    "deposit_create": "/uploads/new",
 }
 
 # Invenio-app-rdm
@@ -121,6 +122,13 @@ APP_RDM_ROUTES = {
     "record_file_preview": "/records/<pid_value>/preview/<path:filename>",
     "record_file_download": "/records/<pid_value>/files/<path:filename>",
     "deposit_search": "/uploads",
-    "deposit_create": "/uploads/new",
+    "deposit_create": "/notvalid/notvalid/notvalid/uploads/new",
     "deposit_edit": "/uploads/<pid_value>",
+}
+
+INVENIO_DATACITE_UTILS = {
+    "datacite_URL": "https://api.test.datacite.org/dois",
+    "datacite_username": "username",
+    "datacite_password": "password",  # encrypt
+    "datacite_prefix": "10.0356",
 }
