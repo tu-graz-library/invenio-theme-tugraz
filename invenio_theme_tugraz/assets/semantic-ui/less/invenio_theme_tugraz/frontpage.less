@@ -44,3 +44,43 @@ h2 {
 .badges {
   float: right;
 }
+
+/*Zammad form**/
+.zammad-form{
+  .form-group{
+    label{
+      color: @tugrazBlack;
+    }
+    input.form-control{
+      height: 30px;
+      // width: auto;
+      border-radius: 0;
+      font-family: "Source Sans Pro";
+      background: @primaryLinkBackgroundInverted;
+      border: 1px solid rgba(34, 36, 38, 0.15);
+    }
+    textarea{
+      border: 1px solid rgba(34, 36, 38, 0.15);
+    }
+  }
+  .btn{
+    width: 100% !important;
+    cursor: pointer;
+    font-family: "Source Sans Pro";
+    min-height: 1em;
+    line-height: 1em;
+    padding: 0.78571429em 1.5em 0.78571429em;
+    background: @greyLight none;
+    border: 0;
+  }
+  .btn:hover{
+    background: @primaryLinkHoverBackground;
+    color: @primaryButton;
+    font-size: 1rem;
+    font-weight: bold;
+  }
+}:focus{
+  outline: thin;
+  outline-style: solid;
+  outline-color: @outlineColor;
+}
