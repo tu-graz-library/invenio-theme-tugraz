@@ -66,11 +66,6 @@ def comingsoon():
     return render_template("invenio_theme_tugraz/comingsoon.html")
 
 
-def comingsoon():
-    """Frontpage."""
-    return render_template("invenio_theme_tugraz/comingsoon.html")
-
-
 def get_application_details():
     details = dict()
     defaults = current_app.config.get("INVENIO_DATACITE_UTILS") or {}
