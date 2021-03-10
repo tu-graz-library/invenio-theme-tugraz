@@ -8,6 +8,7 @@
 
 """invenio module for TUGRAZ theme."""
 
+import binascii
 from typing import Dict
 
 from elasticsearch_dsl.utils import AttrDict
@@ -20,6 +21,7 @@ from invenio_app_rdm.records_ui.views.deposits import (
     new_record,
 )
 
+from .crypto import Cryptor
 from .search import FrontpageRecordsSearch
 
 
@@ -68,28 +70,31 @@ def comingsoon():
 
 
 def get_application_details():
-    """Frontpage."""
-    details = dict()
-    defaults = current_app.config.get("INVENIO_DATACITE_UTILS") or {}
+    """Application credentials for DOI."""
+    url = current_app.config.get("invenio_datacite_url") or ""
+    username = current_app.config.get("INVENIO_DATACITE_UNAME") or ""
+    password = current_app.config.get("INVENIO_DATACITE_PASS") or ""
+    prefix = current_app.config.get("INVENIO_DATACITE_PREFIX") or ""
 
-    for key, value in defaults.items():
-        # used if value is not known before application starts (e.g. date, read from file)
-        if callable(value):
-            value = value()
-        details[key] = value
+    password_iv, encrypted_password = Cryptor.encrypt(password, Cryptor.KEY)
 
+    details = {
+        "datacite_url": url,
+        "datacite_uname": username,
+        "datacite_pass": binascii.b2a_base64(encrypted_password).rstrip(),
+        "datacite_prefix": prefix,
+        "datacite_password_iv": password_iv,
+    }
     return details
 
 
 @login_required
 def deposit_create():
     """Create a new deposit."""
-    forms_config = get_form_config(createUrl=("/api/records"))
-    forms_config["data_cite"] = get_application_details()
-
     return render_template(
         "invenio_app_rdm/records/deposit.html",
-        forms_config=forms_config,
+        forms_config=get_form_config(createUrl=("/api/records")),
+        datacite_config=get_application_details(),
         searchbar_config=dict(searchUrl=get_search_url()),
         record=new_record(),
         files=dict(default_preview=None, enabled=True, entries=[], links={}),

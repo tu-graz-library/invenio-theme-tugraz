@@ -60,6 +60,8 @@ install_requires = [
     "invenio_search>=1.4.0,<2.0.0",
     # keep this package updated.
     "invenio_app_rdm<=1.0.0",
+    # needed for DOI credential encryption
+    "pycryptodome==3.10.1",
 ]
 
 packages = find_packages()

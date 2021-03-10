@@ -132,3 +132,8 @@ INVENIO_DATACITE_UTILS = {
     "datacite_password": "password",  # encrypt
     "datacite_prefix": "10.0356",
 }
+
+INVENIO_DATACITE_URL = ""
+INVENIO_DATACITE_UNAME = ""
+INVENIO_DATACITE_PASS = "password"
+INVENIO_DATACITE_PREFIX = ""
