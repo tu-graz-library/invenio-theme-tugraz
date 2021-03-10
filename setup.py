@@ -59,7 +59,7 @@ install_requires = [
     "elasticsearch_dsl>=7.2.1",
     "invenio_search>=1.4.0,<2.0.0",
     # keep this package updated.
-    "invenio_app_rdm>=0.18.8",
+    "invenio_app_rdm<=1.0.0",
 ]
 
 packages = find_packages()

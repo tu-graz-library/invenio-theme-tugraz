@@ -19,6 +19,7 @@ from invenio_app_rdm.records_ui.views.deposits import (
     get_search_url,
     new_record,
 )
+
 from .search import FrontpageRecordsSearch
 
 
@@ -67,6 +68,7 @@ def comingsoon():
 
 
 def get_application_details():
+    """Frontpage."""
     details = dict()
     defaults = current_app.config.get("INVENIO_DATACITE_UTILS") or {}
 
