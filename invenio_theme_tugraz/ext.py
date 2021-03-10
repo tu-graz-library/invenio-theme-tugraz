@@ -9,6 +9,7 @@
 """invenio module for TUGRAZ theme."""
 
 from . import config
+from .views import index
 
 
 class InvenioThemeTugraz(object):
@@ -21,6 +22,9 @@ class InvenioThemeTugraz(object):
 
     def init_app(self, app):
         """Flask application initialization."""
+        # add index route rule
+        # https://flask.palletsprojects.com/en/1.1.x/api/#flask.Flask.add_url_rule
+        app.add_url_rule('/', 'index', index)
         self.init_config(app)
         app.extensions["invenio-theme-tugraz"] = self
 
