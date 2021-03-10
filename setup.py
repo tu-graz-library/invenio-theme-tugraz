@@ -62,6 +62,7 @@ install_requires = [
     "invenio_app_rdm<=1.0.0",
     # needed for DOI credential encryption
     "pycryptodome==3.10.1",
+    "invenio-config-tugraz>=0.5.0",
 ]
 
 packages = find_packages()
