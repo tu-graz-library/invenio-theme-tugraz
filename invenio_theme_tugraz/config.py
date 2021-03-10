@@ -105,22 +105,10 @@ DEPOSITS_HEADER_TEMPLATE = "invenio_theme_tugraz/header.html"
 TUG_ROUTES = {
     "index": "/",
     "comingsoon": "/comingsoon",
+    "deposit_create": "/uploads/new",
 }
 
-# Invenio-app-rdm
-# =============
-# See https://invenio-app-rdm.readthedocs.io/en/latest/configuration.html
-# """override the default search page"""
-# Keep this in sync
-APP_RDM_ROUTES = {
-    "index": "/notvalid/notvalid/notvalid",
-    "help_search": "/help/search",
-    "record_search": "/search2",
-    "record_detail": "/records/<pid_value>",
-    "record_export": "/records/<pid_value>/export/<export_format>",
-    "record_file_preview": "/records/<pid_value>/preview/<path:filename>",
-    "record_file_download": "/records/<pid_value>/files/<path:filename>",
-    "deposit_search": "/uploads",
-    "deposit_create": "/uploads/new",
-    "deposit_edit": "/uploads/<pid_value>",
-}
+INVENIO_DATACITE_URL = ""
+INVENIO_DATACITE_UNAME = ""
+INVENIO_DATACITE_PASS = "password"
+INVENIO_DATACITE_PREFIX = ""
