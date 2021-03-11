@@ -10,7 +10,7 @@ import {
 } from "semantic-ui-react";
 import { FieldArray } from "formik";
 
-import { DoiRest, MapDatacite, DecryptAES } from "datacite-rest";
+import { DoiRest, MapDatacite } from "datacite-rest";
 
 export class DoiMint extends Component {
   constructor(props) {
@@ -51,19 +51,10 @@ export class DoiMint extends Component {
           showLoader: true,
         });
 
-      // Decrypt the password
-      const _decrypted = DecryptAES(
-        this.configs.datacite_pass,
-        "01ab38d5e05c92aa098921d9d4626107133c7e2ab0e4849558921ebcc242bcb0",
-        this.configs.datacite_password_iv
-      );
-
-      // TODO: Get values from backend
-      // make request for a new DOI
       const url = this.configs.datacite_url;
       const auth = {
         username: this.configs.datacite_uname,
-        password: _decrypted,
+        password: this.configs.datacite_pass,
       };
       const prefix = this.configs.datacite_prefix;
 
@@ -74,7 +65,7 @@ export class DoiMint extends Component {
 
       // Create a new DOI
       _doirest
-        .create(mapped, auth)
+        .create(mapped, auth, this.configs.datacite_password_iv)
         .then((data) => {
           // if there is an error
           if (data.data.errors) {

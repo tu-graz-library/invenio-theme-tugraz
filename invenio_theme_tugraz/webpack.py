@@ -40,7 +40,7 @@ theme = WebpackThemeBundle(
                 '@ckeditor/ckeditor5-react': '^2.1.0',
 
                 # datacite - rest api plugin
-                'datacite-rest': '^0.1.3',
+                'datacite-rest': '^0.1.4',
 
             },
         )
