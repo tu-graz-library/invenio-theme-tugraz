@@ -8,7 +8,7 @@ $(function() {
   
   $.getScript("https://ub-support.tugraz.at/assets/form/form.js", () => {
     $('#feedback-form').ZammadForm({
-      messageTitle: 'Feedback Form',
+      messageTitle: 'Contact us',
       showTitle: true,
       messageSubmit: 'Submit',
       messageThankYou: 'Thank you for your message, (#%s). We will get back to you as quickly as possible!',
