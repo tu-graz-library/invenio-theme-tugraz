@@ -9,7 +9,7 @@
 """invenio module for TUGRAZ theme."""
 
 from . import config
-from .views import deposit_create, index
+from .views import deposit_create, deposit_edit, index, record_detail
 
 
 class InvenioThemeTugraz(object):
@@ -26,6 +26,8 @@ class InvenioThemeTugraz(object):
         # https://flask.palletsprojects.com/en/1.1.x/api/#flask.Flask.add_url_rule
         app.add_url_rule("/", "index", index)
         app.add_url_rule("/uploads/new", "deposit_create", deposit_create)
+        app.add_url_rule("/uploads/<pid_value>", "deposit_edit", deposit_edit)
+        app.add_url_rule("/records/<pid_value>", "record_detail", record_detail)
         self.init_config(app)
         app.extensions["invenio-theme-tugraz"] = self
 

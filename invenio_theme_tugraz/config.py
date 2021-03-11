@@ -106,9 +106,12 @@ TUG_ROUTES = {
     "index": "/",
     "comingsoon": "/comingsoon",
     "deposit_create": "/uploads/new",
+    "deposit_edit": "/uploads/<pid_value>",
+    "record_detail": "/records/<pid_value>"
 }
 
-INVENIO_DATACITE_URL = ""
-INVENIO_DATACITE_UNAME = ""
-INVENIO_DATACITE_PASS = "password"
-INVENIO_DATACITE_PREFIX = ""
+# Datacite
+# INVENIO_DATACITE_URL = ""
+# INVENIO_DATACITE_UNAME = ""
+# INVENIO_DATACITE_PASS = "password"
+# INVENIO_DATACITE_PREFIX = ""
