@@ -43,6 +43,12 @@
     <div class="ten wide column random-records-frontpage">
       <h2>{{_('Recent uploads')}}</h2>
 
+      {% if not records %}
+      <div class="ui centered grid">
+        <p style="font-size: medium;">There are no public records to show.</p>
+      </div>
+      {% endif %}
+
       {%- for r in records %}
       {%- set creation_date = r._created|from_isodatetime -%}
       {%- set record_url = url_for('invenio_app_rdm_records.record_detail', pid_value=r.id) %}
@@ -116,9 +122,11 @@
       -->
 
       {%- endfor %}
+      {% if records %}
       <div class="ui centered grid">
         <a class="ui button more" href="{{url_for('invenio_search_ui.search')}}">{{_('More')}}</a>
       </div>
+      {%- endif %}
     </div>
 
 
