@@ -9,6 +9,7 @@
 """invenio module for TUGRAZ theme."""
 
 import binascii
+from os import environ
 from typing import Dict
 
 from elasticsearch_dsl.utils import AttrDict
@@ -82,10 +83,10 @@ def comingsoon():
 
 def get_datacite_details():
     """Application credentials for DOI."""
-    url = current_app.config.get("INVENIO_DATACITE_URL") or ""
-    username = current_app.config.get("INVENIO_DATACITE_UNAME") or ""
-    password = current_app.config.get("INVENIO_DATACITE_PASS") or ""
-    prefix = current_app.config.get("INVENIO_DATACITE_PREFIX") or ""
+    url = environ.get('INVENIO_DATACITE_URL') or ""
+    username = environ.get('INVENIO_DATACITE_UNAME') or ""
+    password = environ.get('INVENIO_DATACITE_PASS') or ""
+    prefix = environ.get('INVENIO_DATACITE_PREFIX') or ""
 
     password_iv, encrypted_password = Cryptor.encrypt(password, Cryptor.KEY)
 
