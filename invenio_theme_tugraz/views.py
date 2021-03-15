@@ -12,8 +12,9 @@ import binascii
 from os import environ
 from typing import Dict
 
+import requests
 from elasticsearch_dsl.utils import AttrDict
-from flask import Blueprint, current_app, g, render_template
+from flask import Blueprint, current_app, g, render_template, request
 from flask_login import login_required
 from flask_menu import current_menu
 from invenio_app_rdm.records_ui.views.decorators import (
@@ -51,6 +52,7 @@ def ui_blueprint(app):
     blueprint.add_url_rule(routes["comingsoon"], view_func=comingsoon)
     blueprint.add_url_rule(routes["deposit_create"], view_func=deposit_create)
     blueprint.add_url_rule(routes["record_detail"], view_func=record_detail)
+    blueprint.add_url_rule(routes["getdoi"], view_func=retrieve_doi, methods=["POST"])
 
     @blueprint.app_template_filter("make_dict_like")
     def make_dict_like(value: str, key: str) -> Dict[str, str]:
@@ -83,21 +85,39 @@ def comingsoon():
 
 def get_datacite_details():
     """Application credentials for DOI."""
-    url = environ.get('INVENIO_DATACITE_URL') or ""
-    username = environ.get('INVENIO_DATACITE_UNAME') or ""
-    password = environ.get('INVENIO_DATACITE_PASS') or ""
-    prefix = environ.get('INVENIO_DATACITE_PREFIX') or ""
-
-    password_iv, encrypted_password = Cryptor.encrypt(password, Cryptor.KEY)
+    prefix = environ.get("INVENIO_DATACITE_PREFIX")
 
     details = {
-        "datacite_url": url,
-        "datacite_uname": username,
-        "datacite_pass": binascii.b2a_base64(encrypted_password).rstrip(),
         "datacite_prefix": prefix,
-        "datacite_password_iv": password_iv,
     }
     return details
+
+
+@login_required
+def retrieve_doi():
+    """Retrieve DOI from datacite API."""
+    doi_metadata = request.get_json()
+
+    url = environ.get("INVENIO_DATACITE_URL")
+    username = environ.get("INVENIO_DATACITE_UNAME")
+    password = environ.get("INVENIO_DATACITE_PASS")
+
+    doi_response = requests.post(
+        url,
+        auth=(username, password),
+        json=doi_metadata,
+    )
+
+    response_data = {"code": doi_response.status_code}
+
+    try:
+        doi_response.raise_for_status()
+        response_data["data"] = doi_response.json()
+    except requests.exceptions.RequestException:
+        response_data["errors"] = doi_response.json()["errors"]
+
+    return response_data, response_data["code"]
+
 
 #
 # TODO: change this override behaviour once
@@ -138,6 +158,7 @@ def deposit_edit(draft=None, pid_value=None):
 
     # TODO: get the `is_published` field when reading the draft
     from invenio_pidstore.errors import PIDUnregistered
+
     try:
         service().draft_cls.pid.resolve(pid_value, registered_only=True)
         record["is_published"] = True
@@ -158,7 +179,7 @@ def deposit_edit(draft=None, pid_value=None):
 
 @pass_record
 @pass_record_files
-@user_permissions(actions=['update_draft'])
+@user_permissions(actions=["update_draft"])
 def record_detail(record=None, files=None, pid_value=None, permissions=None):
     """Record detail page (aka landing page)."""
     files_dict = None if files is None else files.to_dict()
