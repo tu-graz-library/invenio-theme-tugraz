@@ -33,7 +33,6 @@ from invenio_rdm_records.resources.config import RDMDraftFilesResourceConfig
 from invenio_rdm_records.resources.serializers import UIJSONSerializer
 from invenio_rdm_records.services import RDMDraftFilesService
 
-from .crypto import Cryptor
 from .search import FrontpageRecordsSearch
 
 
