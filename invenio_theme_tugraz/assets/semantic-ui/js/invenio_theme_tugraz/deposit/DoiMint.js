@@ -10,7 +10,7 @@ import {
 } from "semantic-ui-react";
 import { FieldArray } from "formik";
 
-import { DoiRest, MapDatacite } from "datacite-rest";
+import { FetchDoi, MapDatacite } from "datacite-rest";
 
 export class DoiMint extends Component {
   constructor(props) {
@@ -51,21 +51,17 @@ export class DoiMint extends Component {
           showLoader: true,
         });
 
-      const url = this.configs.datacite_url;
-      const auth = {
-        username: this.configs.datacite_uname,
-        password: this.configs.datacite_pass,
-      };
+      // TODO: get the prefix from backend
       const prefix = this.configs.datacite_prefix;
 
       // get mapped DOI
       const mapped = MapDatacite(this.metadata, this.record.id, prefix);
 
-      const _doirest = new DoiRest(url);
+      const _fetchdoi = new FetchDoi("/getdoi");
 
       // Create a new DOI
-      _doirest
-        .create(mapped, auth, this.configs.datacite_password_iv)
+      _fetchdoi
+        .create(mapped)
         .then((data) => {
           // if there is an error
           if (data.data.errors) {
