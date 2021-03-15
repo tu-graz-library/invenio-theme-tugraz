@@ -110,7 +110,8 @@ TUG_ROUTES = {
     "comingsoon": "/comingsoon",
     "deposit_create": "/uploads/new",
     "deposit_edit": "/uploads/<pid_value>",
-    "record_detail": "/records/<pid_value>"
+    "getdoi": "/getdoi",
+    "record_detail": "/records/<pid_value>",
 }
 
 # Datacite
