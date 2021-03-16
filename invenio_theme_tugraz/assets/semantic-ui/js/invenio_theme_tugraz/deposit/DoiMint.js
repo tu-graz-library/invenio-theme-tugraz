@@ -175,6 +175,12 @@ export class DoiMint extends Component {
                 marginTop: "10px",
               }}
             >
+              {this.state.doi_id && (
+                <Message positive>
+                  <Message.Header>A DOI is registered!</Message.Header>
+                  <p>Please save the deposit. </p>
+                </Message>
+              )}
               <Label
                 style={{
                   cursor: "pointer",
