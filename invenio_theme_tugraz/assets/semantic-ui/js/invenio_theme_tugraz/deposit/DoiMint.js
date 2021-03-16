@@ -47,61 +47,65 @@ export class DoiMint extends Component {
     // this should fetch a new doi
     var pushDoi = (form) => {
       // activate the loader
-        this.setState({
-          showLoader: true,
-        });
+      this.setState({
+        showLoader: true,
+      });
 
-      // TODO: get the prefix from backend
+      // get the prefix from backend
       const prefix = this.configs.datacite_prefix;
 
-      // get mapped DOI
-      const mapped = MapDatacite(this.metadata, this.record.id, prefix);
+      if (prefix !== null) {
+        // get mapped DOI
+        const mapped = MapDatacite(this.metadata, this.record.id, prefix);
 
-      const _fetchdoi = new FetchDoi("/getdoi");
+        const _fetchdoi = new FetchDoi("/getdoi");
 
-      // Create a new DOI
-      _fetchdoi
-        .create(mapped)
-        .then((data) => {
-          // if there is an error
-          if (data.data.errors) {
-            this.setState({
-              showLoader: false,
-              isError: true,
-              errorMsg: data.data.errors[0].title,
-            });
-            // if credentials are wrong!
-          } else if (data.code == 405) {
-            this.setState({
-              showLoader: false,
-              isError: true,
-              errorMsg: "Not configured!",
-            });
-          }
-          // new doi is fetched
-          else {
-            // add new identifier
-            const _identifiers = [
-              {
-                identifier: data.data.data.id,
-                scheme: "doi",
-              },
-            ];
-            // submit the value to the form
-            this.setState({ identifiers: _identifiers });
-            form.setFieldValue("metadata.identifiers", this.state.identifiers);
+        // Create a new DOI
+        _fetchdoi
+          .create(mapped)
+          .then((data) => {
+            // if there is an error
+            if (data.data.errors) {
+              this.setState({
+                showLoader: false,
+                isError: true,
+                errorMsg: data.data.errors[0].title,
+              });
+            }
+            // new doi is fetched
+            else {
+              // add new identifier
+              const _identifiers = [
+                {
+                  identifier: data.data.data.data.id,
+                  scheme: "doi",
+                },
+              ];
+              // submit the value to the form
+              this.setState({ identifiers: _identifiers });
+              form.setFieldValue(
+                "metadata.identifiers",
+                this.state.identifiers
+              );
 
-            this.is_doi = true;
-            // deactivate the loader
-            this.setState({
-              showLoader: false,
-              doi_id: this.state.identifiers[0].identifier,
-            });
-          }
-        })
-        .catch((error) => {
-          console.log("error", error);
+              this.is_doi = true;
+              // deactivate the loader
+              this.setState({
+                showLoader: false,
+                doi_id: this.state.identifiers[0].identifier,
+              });
+            }
+          })
+          .catch((error) => {
+            console.log("error", error);
+          });
+      } else {
+        this.setState({
+          showLoader: false,
+          isError: true,
+          errorMsg: "Not configured!",
         });
+      }
     };
 
     // get a link of dio
