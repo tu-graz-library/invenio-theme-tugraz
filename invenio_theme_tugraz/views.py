@@ -85,9 +85,11 @@ def comingsoon():
 def get_datacite_details():
     """Application credentials for DOI."""
     prefix = environ.get("INVENIO_DATACITE_PREFIX")
+    suffix = environ.get("INVENIO_DATACITE_SUFFIX")
 
     details = {
         "datacite_prefix": prefix,
+        "datacite_suffix": suffix,
     }
     return details
 
