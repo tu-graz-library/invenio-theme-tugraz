@@ -29,8 +29,12 @@ export class DoiMint extends Component {
       this.metadata.identifiers.length > 0 &&
       this.metadata.identifiers[0] != null
     ) {
-      this.is_doi = true;
-      this.id_doi = this.metadata.identifiers[0].identifier;
+      for(var identifier of this.metadata.identifiers){
+        if (identifier.scheme == "doi"){
+          this.is_doi = true;
+          this.id_doi = identifier.identifier;
+        }
+      }
     }
 
     // add metadata to the state

@@ -7,7 +7,11 @@
   #}
   
   {% if metadata.identifiers %}
-  {%- set id_doi = metadata.identifiers[0].identifier %}
+  {% for identifier in metadata.identifiers %}
+  {% if identifier.scheme == 'doi' %}
+
+  
+  {%- set id_doi = identifier.identifier %}
   <dd>
   {% if id_doi %}
     <span class="get-badge" data-toggle="tooltip" data-placement="bottom" style="cursor: pointer;"
@@ -33,4 +37,7 @@
     {{ _("No minted DOI") }}
   {% endif %}
   </dd>
+  {% endif %}
+{% endfor %}
+
   {% endif %}
