@@ -33,7 +33,6 @@ import {
   LanguagesField,
   PublishButton,
   PublicationDateField,
-  PublisherField,
   ResourceTypeField,
   SaveButton,
   SubjectsField,
@@ -44,6 +43,7 @@ import {
 } from "react-invenio-deposit";
 import { AccordionField } from "react-invenio-forms";
 import { DoiMint } from "./DoiMint";
+import { PublisherField } from "./PublisherField";
 
 export class RDMDepositForm extends Component {
   constructor(props) {
@@ -448,7 +448,7 @@ export class RDMDepositForm extends Component {
                   />
                   <DatesField options={this.vocabularies.metadata.dates} />
                   <VersionField />
-                  <PublisherField />
+                  <PublisherField required/>
                   <br />
                 </AccordionField>
                 {/**TODO: uncomment to use FundingField*/}
