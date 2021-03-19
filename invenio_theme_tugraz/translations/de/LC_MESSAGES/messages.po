@@ -217,7 +217,7 @@ msgid ""
 "\n"
 "                  Uploaded on %(date)s\n"
 "                  "
-msgstr ""
+msgstr "Hochgeladen am %(date)s\n"
 
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/index.html:126
 msgid "More"
