@@ -19,7 +19,7 @@ export class PublisherField extends Component {
       <TextField
         fieldPath={fieldPath}
         helpText={
-          'The publisher is used to formulate the citation, so consider the prominence of the role.'
+          'The publisher is used to formulate the citation, if you are plannig to mint a new DOI this publisher will be cited.'
         }
         label={
           <FieldLabel htmlFor={fieldPath} icon={labelIcon} label={label} />
