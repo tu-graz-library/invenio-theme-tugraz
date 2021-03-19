@@ -274,15 +274,15 @@ msgstr "Bibliothek und Archiv"
 
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/navbar.html:78
 msgid "SCIENCE"
-msgstr "Wissenschaft"
+msgstr "WISSEN"
 
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/navbar.html:79
 msgid "PASSION"
-msgstr "Leidenschaft"
+msgstr "TECHNIK"
 
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/navbar.html:80
 msgid "TECHNOLOGY"
-msgstr "Technik"
+msgstr "LEIDENSCHAFT"
 
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/accounts/header_login.html:8
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/accounts/login_user.html:61
