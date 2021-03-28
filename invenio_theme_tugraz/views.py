@@ -28,10 +28,10 @@ from invenio_app_rdm.records_ui.views.deposits import (
     get_search_url,
     new_record,
 )
+from invenio_rdm_records.proxies import current_rdm_records
 from invenio_rdm_records.resources.config import RDMDraftFilesResourceConfig
 from invenio_rdm_records.resources.serializers import UIJSONSerializer
 from invenio_rdm_records.services import RDMDraftFilesService
-from invenio_rdm_records.proxies import current_rdm_records
 
 from .search import FrontpageRecordsSearch
 
