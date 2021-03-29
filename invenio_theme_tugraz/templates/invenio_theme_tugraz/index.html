@@ -73,7 +73,7 @@
         </div>
 
         <h4>
-          <a href="{{ record_url }}">
+          <a href="{{ record_url }}" class="no-decoration">
             {{r.metadata.title}}
           </a>
         </h4>
@@ -83,7 +83,7 @@
         </p>
 
         <p class="hidden-xs">
-          <a href="{{record_url}}">
+          <a href="{{record_url}}" class="no-decoration">
             {{ r.metadata.description | striptags | truncate(300) }}
           </a>
         </p>

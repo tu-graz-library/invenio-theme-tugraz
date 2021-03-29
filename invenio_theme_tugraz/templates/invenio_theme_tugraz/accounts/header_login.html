@@ -4,14 +4,14 @@
 
 {%- if config.SECURITY_REGISTERABLE %}
 <div class="short-menu-right-button">
-    <a href="{{ url_for('security.register') }}">
+    <a href="{{ url_for('security.register') }}" class="no-decoration">
         {{_ ("Sign up")}}
     </a>
 </div>
    {%- endif %}
 
 <div class="short-menu-right-button">
-    <a href="{{url_for_security('login', next=request.path)}}" style="text-decoration:none">
+    <a href="{{url_for_security('login', next=request.path)}}" class="no-decoration">
         {{_ ("Log in")}}
     </a>
 </div>
@@ -21,12 +21,12 @@
 {%- if config.USERPROFILES %}
 
 <div class="short-menu-right-button">
-    <a href="{{ url_for('invenio_userprofiles.profile') }}">
+    <a href="{{ url_for('invenio_userprofiles.profile') }}" class="no-decoration">
         <i class="user icon"></i> {{ current_user.email }}
     </a>
 </div>
 <div class="short-menu-right-button">
-    <a class="dropdown-item" href="{{url_for_security('logout')}}">
+    <a class="dropdown-item no-decoration" href="{{url_for_security('logout')}}">
         {{_('Sign out')}}
     </a>
 </div>

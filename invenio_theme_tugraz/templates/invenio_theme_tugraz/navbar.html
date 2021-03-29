@@ -16,13 +16,13 @@
             {%- for l in current_i18n.get_locales() %}
             {%- if current_i18n.language != l.language %}
             <a
-              href="{{ url_for('invenio_i18n.set_lang', lang_code=l.language) }}">{{ l.get_display_name().upper() [0:2]}}</a>
+              href="{{ url_for('invenio_i18n.set_lang', lang_code=l.language) }}" class="no-decoration">{{ l.get_display_name().upper() [0:2]}}</a>
             {%- endif %}
             {%- endfor %}
           </div>
           {%- endif %}
           <div class="search-icon-header">
-            <a href="{{url_for('invenio_search_ui.search')}}">
+            <a href="{{url_for('invenio_search_ui.search')}}" class="no-decoration">
               <svg class="short-menu-icon" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
                 xmlns="http://www.w3.org/2000/svg" height="26.015" width="26.015" version="1.1"
                 xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/"
@@ -60,7 +60,7 @@
           <img height="51.862" src="{{ url_for('static', filename='images/library_logo.png')}}">
         </div>
         <div class="affiliation-text">
-          <a title="Home" href="{{url_for('invenio_theme_tugraz.index')}}">
+          <a title="Home" href="{{url_for('invenio_theme_tugraz.index')}}" class="no-decoration">
             TU GRAZ
             <br>
             {{_ ("REPOSITORY")}}
@@ -73,7 +73,7 @@
     <!--Right-->
     <div class="right floated right aligned six wide column">
       <div class="affiliation-logo" id="int-header-logo">
-        <a href="https://www.tugraz.at" title="TU Graz Home" target="_blank">
+        <a href="https://www.tugraz.at" title="TU Graz Home" target="_blank" class="no-decoration">
           <div class="affiliation-logo-claim">
             <div class="affiliation-logo-claim-single">{{_ ("SCIENCE")}}</div>
             <div class="affiliation-logo-claim-single">{{_ ("PASSION")}}</div>
