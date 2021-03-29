@@ -279,14 +279,11 @@ export class RDMDepositForm extends Component {
         config={this.config}
         record={this.props.record}
         files={this.props.files}
+        permissions={this.props.permissions}
       >
         <FormFeedback fieldPath="message" />
         <Container style={{ marginTop: "10px" }}>
-          <DepositFormTitle
-            // TODO: make is_published part of the API response
-            //       so we don't have to do this
-            isPublished={this.props.record.is_published}
-          />
+          <DepositFormTitle />
           <Grid>
             <Grid.Row>
               <Grid.Column width={11}>
@@ -296,7 +293,7 @@ export class RDMDepositForm extends Component {
                   label={"Files"}
                   ui={this.accordionStyle}
                 >
-                  {this.noFiles && (
+                  {this.noFiles && this.props.record.is_published && (
                     <p
                       style={{
                         textAlign: "center",
@@ -448,7 +445,7 @@ export class RDMDepositForm extends Component {
                   />
                   <DatesField options={this.vocabularies.metadata.dates} />
                   <VersionField />
-                  <PublisherField required/>
+                  <PublisherField required />
                   <br />
                 </AccordionField>
                 {/**TODO: uncomment to use FundingField*/}
@@ -505,8 +502,11 @@ export class RDMDepositForm extends Component {
                       label={"Protection"}
                       labelIcon={"shield"}
                     />
-                    {this.config.data_cite &&(
-                      <DoiMint record={this.props.record} config={this.config.data_cite}/>
+                    {this.config.data_cite && (
+                      <DoiMint
+                        record={this.props.record}
+                        config={this.config.data_cite}
+                      />
                     )}
                   </Sticky>
                 </Grid.Column>

@@ -20,9 +20,9 @@ tests_require = [
     "invenio-app>=1.3.0,<2.0.0",
 ]
 
-# Should follow inveniosoftware/invenio versions
-invenio_search_version = ">=1.4.0,<2.0.0"
-invenio_db_version = ">=1.0.5,<2.0.0"
+# Should follow invenio-app-rdm
+invenio_search_version = ">=1.4.0,<1.5.0"
+invenio_db_version = ">=1.0.9,<1.1.0"
 
 extras_require = {
     "elasticsearch7": [f"invenio-search[elasticsearch7]{invenio_search_version}"],
@@ -60,7 +60,7 @@ install_requires = [
     "invenio_search>=1.4.0,<2.0.0",
     "invenio_config_tugraz>=0.5.1",
     # keep this package updated.
-    "invenio_app_rdm<=1.0.0",
+    "invenio_app_rdm==2.0.1",
 ]
 
 packages = find_packages()

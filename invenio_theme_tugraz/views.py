@@ -22,13 +22,13 @@ from invenio_app_rdm.records_ui.views.decorators import (
     pass_record,
     pass_record_files,
     service,
-    user_permissions,
 )
 from invenio_app_rdm.records_ui.views.deposits import (
     get_form_config,
     get_search_url,
     new_record,
 )
+from invenio_rdm_records.proxies import current_rdm_records
 from invenio_rdm_records.resources.config import RDMDraftFilesResourceConfig
 from invenio_rdm_records.resources.serializers import UIJSONSerializer
 from invenio_rdm_records.services import RDMDraftFilesService
@@ -146,9 +146,7 @@ def deposit_create():
 @pass_draft
 def deposit_edit(draft=None, pid_value=None):
     """Edit an existing deposit."""
-    # TODO: should be embedded in record service
-    files_service = RDMDraftFilesService()
-    files_list = files_service.list_files(
+    files_list = current_rdm_records.draft_files_service.list_files(
         id_=pid_value,
         identity=g.identity,
         links_config=RDMDraftFilesResourceConfig.links_config,
@@ -156,15 +154,6 @@ def deposit_edit(draft=None, pid_value=None):
 
     serializer = UIJSONSerializer()
     record = serializer.serialize_object_to_dict(draft.to_dict())
-
-    # TODO: get the `is_published` field when reading the draft
-    from invenio_pidstore.errors import PIDUnregistered
-
-    try:
-        service().draft_cls.pid.resolve(pid_value, registered_only=True)
-        record["is_published"] = True
-    except PIDUnregistered:
-        record["is_published"] = False
 
     forms_config = get_form_config(apiUrl=f"/api/records/{pid_value}/draft")
     forms_config["data_cite"] = get_datacite_details()
@@ -175,13 +164,13 @@ def deposit_edit(draft=None, pid_value=None):
         record=record,
         files=files_list.to_dict(),
         searchbar_config=dict(searchUrl=get_search_url()),
+        permissions=draft.has_permissions_to(['new_version'])
     )
 
 
 @pass_record
 @pass_record_files
-@user_permissions(actions=["update_draft"])
-def record_detail(record=None, files=None, pid_value=None, permissions=None):
+def record_detail(record=None, files=None, pid_value=None):
     """Record detail page (aka landing page)."""
     files_dict = None if files is None else files.to_dict()
     return render_template(
@@ -189,5 +178,5 @@ def record_detail(record=None, files=None, pid_value=None, permissions=None):
         record=UIJSONSerializer().serialize_object_to_dict(record.to_dict()),
         pid=pid_value,
         files=files_dict,
-        permissions=permissions,
+        permissions=record.has_permissions_to(['edit', 'new_version']),
     )
