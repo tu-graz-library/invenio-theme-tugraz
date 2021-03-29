@@ -19,7 +19,7 @@
         <div class="ui grid stackable container">
           <div class="three column row centered" style="padding-bottom: 0;">
             <div class="two wide column main-menu-entry">
-              <a href="{{url_for('invenio_theme_tugraz.index')}}" title="Home">
+              <a href="{{url_for('invenio_theme_tugraz.index')}}" title="Home" class="no-decoration">
                 <span class="home-inline">
                 <svg shape-rendering="geometricPrecision" id="int-menu-q-home-icon"
                   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg"
@@ -44,7 +44,7 @@
 
             <!--TODO: remove this once above is uncommented-->
             <div class="two wide column main-menu-entry">
-              <a href="{{url_for('invenio_app_rdm_records.deposit_search')}}">{{_ ("Uploads")}}</a>
+              <a href="{{url_for('invenio_app_rdm_records.deposit_search')}}" class="no-decoration">{{_ ("Uploads")}}</a>
             </div>
           </div>
        
