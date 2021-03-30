@@ -428,8 +428,10 @@ export class RDMDepositForm extends Component {
                   label="Subjects"
                   labelIcon="tag"
                 /> */}
-
-                  <LanguagesField
+                  {/**TODO- enable once issue is solved:
+                   * https://github.com/inveniosoftware/invenio-app-rdm/issues/738
+                   */}
+                  {/* <LanguagesField
                     initialOptions={_get(
                       this.props.record,
                       "ui.languages",
@@ -442,7 +444,7 @@ export class RDMDepositForm extends Component {
                         key: item.id,
                       }))
                     }
-                  />
+                  /> */}
                   <DatesField options={this.vocabularies.metadata.dates} />
                   <VersionField />
                   <PublisherField required />
