@@ -56,6 +56,12 @@
     {%- endblock head %}
   </head>
   <body ng-csp {% if body_css_classes %} class="{{ body_css_classes|join(' ') }}"{% endif %}{% if g.ln %} lang="{{ g.ln.split('_', 1)[0]|safe }}"{% if rtl_direction %} {{ rtl_direction|safe }}{% endif %}{% endif %} itemscope itemtype="http://schema.org/WebPage" data-spy="scroll" data-target=".scrollspy-target">
+    {% if not config.INVENIO_THEME_TUGRAZ_PRODUCTION %}
+    <div class="test-instance-top-sticky">
+      <h4>Test Instance</h4>
+      <p>This is the test instance of the TU Graz Repository. Feel free to test everything and make changes as you wish.</p>
+    </div>
+    {% endif %}
     {%- block body %}
     {%- block browserupgrade %}
     <!--[if lt IE 8]>
