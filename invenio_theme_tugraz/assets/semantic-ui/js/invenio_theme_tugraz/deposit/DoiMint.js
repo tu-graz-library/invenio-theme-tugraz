@@ -113,10 +113,10 @@ export class DoiMint extends Component {
       }
     };
 
-    // get a link of dio
-    var doiLink = (doiId) => {
-      window.open(`https://doi.org/${doiId}`, "_blank");
-    };
+    // // get a link of dio
+    // var doiLink = (doiId) => {
+    //   window.open(`https://doi.org/${doiId}`, "_blank");
+    // };
 
     return (
       <Card className="actions">
@@ -187,13 +187,8 @@ export class DoiMint extends Component {
                 </Message>
               )}
               <Label
-                style={{
-                  cursor: "pointer",
-                }}
                 size="large"
-                as="a"
                 color="blue"
-                onClick={() => doiLink(this.state.doi_id || this.id_doi)}
               >
                 <strong>DOI: </strong>
                 <Label.Detail>{this.state.doi_id || this.id_doi}</Label.Detail>
