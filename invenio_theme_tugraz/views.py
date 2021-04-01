@@ -86,10 +86,12 @@ def get_datacite_details():
     """Application credentials for DOI."""
     prefix = environ.get("INVENIO_DATACITE_PREFIX")
     suffix = environ.get("INVENIO_DATACITE_SUFFIX")
+    host_url = environ.get("INVENIO_SITE_HOSTNAME")
 
     details = {
         "datacite_prefix": prefix,
         "datacite_suffix": suffix,
+        "datacite_host_url": host_url,
     }
     return details
 

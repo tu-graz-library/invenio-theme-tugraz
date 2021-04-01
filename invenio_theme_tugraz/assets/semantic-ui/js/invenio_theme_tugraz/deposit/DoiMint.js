@@ -58,10 +58,11 @@ export class DoiMint extends Component {
       // get the prefix from backend
       const prefix = this.configs.datacite_prefix;
       const suffix = this.configs.datacite_suffix;
+      const host_url = this.configs.datacite_host_url
 
       if (prefix !== null && suffix !== null) {
         // get mapped DOI
-        const mapped = MapDatacite(this.metadata, this.record.id, prefix, suffix);
+        const mapped = MapDatacite(this.metadata, this.record.id, prefix, suffix, host_url);
 
         const _fetchdoi = new FetchDoi("/getdoi");
 
