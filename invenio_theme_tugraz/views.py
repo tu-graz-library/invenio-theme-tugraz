@@ -105,7 +105,7 @@ def retrieve_doi():
 
     doi_response = requests.post(
         url,
-        auth=(username, password),
+        auth=(username, password.encode('utf-8')),
         json=doi_metadata,
     )
 
