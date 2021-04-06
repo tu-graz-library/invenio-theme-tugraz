@@ -6,10 +6,10 @@
   details.
 #}
 
-{% if not config.INVENIO_THEME_TUGRAZ_PRODUCTION %}
-<div class="test-instance-top-sticky">
+{% if not config.THEME_TUGRAZ_PRODUCTION %}
+<div class="ui sticky test-instance">
   <h4>Test Instance</h4>
-  <p>This is the test instance of the TU Graz Repository. Feel free to test everything and make changes as you wish.</p>
+  <p>{{_ ("This is the test instance of the TU Graz Repository. Feel free to test everything and make changes as you wish.")}}</p>
 </div>
 {% endif %}
 
