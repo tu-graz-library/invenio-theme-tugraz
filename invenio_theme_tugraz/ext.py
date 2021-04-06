@@ -34,5 +34,5 @@ class InvenioThemeTugraz(object):
     def init_config(self, app):
         """Initialize configuration."""
         for k in dir(config):
-            if k.startswith("INVENIO_THEME_TUGRAZ_"):
+            if k.startswith("INVENIO_THEME_TUGRAZ_") or k.startswith("THEME_TUGRAZ_"):
                 app.config.setdefault(k, getattr(config, k))

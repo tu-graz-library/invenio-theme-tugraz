@@ -31,8 +31,12 @@ INVENIO_THEME_TUGRAZ_LOGIN_IMG = "images/login_logo.png"
 INVENIO_THEME_TUGRAZ_CONTACT_FORM = False
 """Enable/Disable Contact form."""
 
-INVENIO_THEME_TUGRAZ_PRODUCTION = False
-"""Production environment."""
+THEME_TUGRAZ_PRODUCTION = False
+"""Production environment.
+
+    Can also be set as an environment variable in a .env file. Then the name
+    has to be 'INVENIO_THEME_TUGRAZ_PRODUCTION'.
+"""
 
 # Invenio-theme
 # ============

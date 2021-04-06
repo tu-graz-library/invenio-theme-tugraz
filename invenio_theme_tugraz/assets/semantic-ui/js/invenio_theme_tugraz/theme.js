@@ -1,4 +1,5 @@
 import $ from 'jquery';
+import 'semantic-ui-css';
 
 $(function() {
   let scriptNode = document.createElement("hidden"); //needed for zammad script
@@ -16,6 +17,13 @@ $(function() {
     });
   });
 });
+
+
+$('.ui.sticky.test-instance')
+  .sticky({
+    context: 'body'
+  })
+;
 
 export function toggleVisibility(id) {
     var element = document.getElementById(id);
