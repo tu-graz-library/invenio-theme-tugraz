@@ -308,7 +308,7 @@ export class RDMDepositForm extends Component {
                     isDraftRecord={!this.props.record.is_published}
                     quota={{
                       maxFiles: 100,
-                      maxStorage: 10 ** 10,
+                      maxStorage: 14 ** 10,
                     }}
                   />
                 </AccordionField>
@@ -481,7 +481,7 @@ export class RDMDepositForm extends Component {
               </Grid.Column>
               <Ref innerRef={this.sidebarRef}>
                 <Grid.Column width={5} className="deposit-sidebar">
-                  <Sticky context={this.sidebarRef} offset={20}>
+                  <Sticky context={this.sidebarRef} offset={50}>
                     <Card className="actions">
                       <Card.Content>
                         <SaveButton fluid className="save-button" />
