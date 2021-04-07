@@ -18,7 +18,7 @@ $(function() {
   });
 });
 
-
+// used for sticky test instance notification
 $('.ui.sticky.test-instance')
   .sticky({
     context: 'body'
