@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: invenio-theme-tugraz 1.0.4\n"
 "Report-Msgid-Bugs-To: mojib.wali@tugraz.at\n"
-"POT-Creation-Date: 2021-04-07 12:46+0200\n"
+"POT-Creation-Date: 2021-04-07 13:51+0200\n"
 "PO-Revision-Date: 2020-10-06 10:27+0200\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: de\n"
@@ -46,8 +46,8 @@ msgid ""
 "your research is stored safely for the future in TU Graz library for as "
 "long as TU Graz library exists."
 msgstr ""
-"Ihre Forschung wird für die Zukunft sicher in der Bibliothek der TU Graz "
-"gespeichert als solange die Bibliothek TU Graz existiert."
+"Ihre Forschung ist in der Bibliothek der TU Graz für die Zukunft "
+"gespeichert,solange die Bibliothek der TU Graz existiert."
 
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/benefits.html:4
 msgid "Trusted"
@@ -58,8 +58,8 @@ msgid ""
 "built and operated by CERN and OpenAIRE to ensure that everyone can join "
 "in Open Science."
 msgstr ""
-"Gebaut und betrieben von CERN und OpenAIRE; um sicherzugehen, dass jedeR "
-"Zugang zu Open Science hat"
+"Aufgebaut und betrieben von CERN und OpenAIRE, um sicherzustellen, dass "
+"jeder an Open Science teilnehmen kann."
 
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/benefits.html:5
 msgid "Citeable"
@@ -70,8 +70,8 @@ msgid ""
 "every upload is assigned a Digital Object Identifier (DOI), to make them "
 "citable and trackable."
 msgstr ""
-"Jeder Upload erhält eine DOI um sicherzustellen,dass er zitierbar und "
-"auffindbar ist"
+"Jeder Upload wird mit einem Digital Object Identifier (DOI) versehen,um "
+"ihn zitierfähig und nachverfolgbar zu"
 
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/benefits.html:6
 msgid "No waiting time"
@@ -95,7 +95,7 @@ msgid ""
 " via our restricted access mode."
 msgstr ""
 "Teilen Sie z.B. anonymisierte klinische Studiendaten nur mit "
-"medizinischem Fachpersonalüber unseren eingeschränkten Zugriffsmodus."
+"medizinischem Fachpersonal über unseren eingeschränkten Zugriffsmodus."
 
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/benefits.html:8
 msgid "Versioning"
@@ -103,7 +103,7 @@ msgstr "Versionierung"
 
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/benefits.html:8
 msgid "Easily update your dataset with our versioning feature."
-msgstr "Einfaches Updaten ihrer Datensätze mit unserere Versionierung."
+msgstr "Einfaches Updaten ihrer Datensätze mit unserer Versionierung."
 
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/benefits.html:9
 msgid "Usage statisics"
@@ -192,8 +192,8 @@ msgstr "Testumgebung"
 
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/accounts/accounts_base.html:62
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/header.html:12
-msgid "This is the test instance of the Tu Graz Repository."
-msgstr "Dies ist die Testumgebung des Tu Graz Repositorys."
+msgid "This is the test instance of the TU Graz Repository."
+msgstr "Dies ist die Testumgebung des TU Graz Repositorys."
 
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/header.html:39
 msgid "Home"
@@ -247,11 +247,11 @@ msgstr "Kontaktiere uns"
 
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/index.html:145
 msgid "prioritizes all Recent uploads."
-msgstr "Reiht die neuesten Uploads vor."
+msgstr "reiht die neuesten Uploads vor."
 
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/index.html:148
 msgid "We can help with:"
-msgstr "Wir können helfen bei:"
+msgstr "Dabei können wir helfen:"
 
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/index.html:153
 msgid "Uploading your research data, software, preprints, etc."
@@ -259,7 +259,7 @@ msgstr "Hochladen Ihrer Forschungsdaten, Software, Preprints usw."
 
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/index.html:154
 msgid "One-on-one with"
-msgstr "Eins-zu-eins mit"
+msgstr "One-on-one mit"
 
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/index.html:154
 msgid "supporters."
@@ -267,7 +267,7 @@ msgstr "Unterstützern"
 
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/index.html:155
 msgid "Quota increases beyond our default policy."
-msgstr "Erhöhung Ihres Kontingents über das vertraglich Zugesicherte hinaus."
+msgstr "Quota Erhöhungen über unsere Standard Policy hinaus."
 
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/index.html:156
 msgid "Scripts for automated uploading of larger datasets."
@@ -396,7 +396,9 @@ msgid ""
 "              There is a %(link_start)snewer version%(link_end)s of the "
 "record available.\n"
 "              "
-msgstr "Es ist eine %(link_start)sneuere Version%(link_end)s des Eintrags verfügbar."
+msgstr ""
+"Es ist eine %(link_start)sneuere Version%(link_end)s des Eintrags "
+"verfügbar."
 
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/landingpage/detail.html:64
 msgid "Open Access"
