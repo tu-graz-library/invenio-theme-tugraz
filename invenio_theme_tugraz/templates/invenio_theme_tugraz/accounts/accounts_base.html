@@ -58,8 +58,8 @@
   <body ng-csp {% if body_css_classes %} class="{{ body_css_classes|join(' ') }}"{% endif %}{% if g.ln %} lang="{{ g.ln.split('_', 1)[0]|safe }}"{% if rtl_direction %} {{ rtl_direction|safe }}{% endif %}{% endif %} itemscope itemtype="http://schema.org/WebPage" data-spy="scroll" data-target=".scrollspy-target">
     {% if not config.THEME_TUGRAZ_PRODUCTION %}
     <div class="ui sticky test-instance">
-      <h4>Test Instance</h4>
-      <p>{{_ ("This is the test instance of the TU Graz Repository. Feel free to test everything and make changes as you wish.")}}</p>
+      <h4>{{_ ("Test Instance") }}</h4>
+      <p>{{_ ("This is the test instance of the TU Graz Repository. Feel free to test everything and make changes as you wish.") }}</p>
     </div>
     {% endif %}
     {%- block body %}
