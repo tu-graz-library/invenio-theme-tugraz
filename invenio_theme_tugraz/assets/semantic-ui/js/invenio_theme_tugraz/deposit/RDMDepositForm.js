@@ -481,7 +481,7 @@ export class RDMDepositForm extends Component {
               </Grid.Column>
               <Ref innerRef={this.sidebarRef}>
                 <Grid.Column width={5} className="deposit-sidebar">
-                  <Sticky context={this.sidebarRef} offset={20}>
+                  <Sticky context={this.sidebarRef} offset={50}>
                     <Card className="actions">
                       <Card.Content>
                         <SaveButton fluid className="save-button" />

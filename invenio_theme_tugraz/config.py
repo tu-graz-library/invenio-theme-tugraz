@@ -28,7 +28,7 @@ INVENIO_THEME_TUGRAZ_ICON = "images/icon_use.png"
 INVENIO_THEME_TUGRAZ_LOGIN_IMG = "images/login_logo.png"
 """TU Logo for forms"""
 
-INVENIO_THEME_TUGRAZ_CONTACT_FORM = False
+THEME_TUGRAZ_CONTACT_FORM = False
 """Enable/Disable Contact form."""
 
 THEME_TUGRAZ_PRODUCTION = False
