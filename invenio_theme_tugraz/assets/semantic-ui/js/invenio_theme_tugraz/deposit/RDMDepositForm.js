@@ -308,7 +308,7 @@ export class RDMDepositForm extends Component {
                     isDraftRecord={!this.props.record.is_published}
                     quota={{
                       maxFiles: 100,
-                      maxStorage: 14 ** 10,
+                      maxStorage: 10 ** 10,
                     }}
                   />
                 </AccordionField>
