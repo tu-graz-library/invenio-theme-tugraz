@@ -7,9 +7,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: invenio-theme-tugraz 2.0.5\n"
+"Project-Id-Version: invenio-theme-tugraz 2.0.7\n"
 "Report-Msgid-Bugs-To: mojib.wali@tugraz.at\n"
-"POT-Creation-Date: 2021-04-08 08:50+0200\n"
+"POT-Creation-Date: 2021-04-12 13:20+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -102,79 +102,83 @@ msgstr ""
 msgid "All uploads display standards compliant usage statistics"
 msgstr ""
 
-#: invenio_theme_tugraz/templates/invenio_theme_tugraz/footer.html:33
+#: invenio_theme_tugraz/templates/invenio_theme_tugraz/footer.html:34
 msgid "Documentation"
 msgstr ""
 
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/footer.html:39
-msgid "Handbook"
+msgid "Reference Guide"
 msgstr ""
 
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/footer.html:44
+msgid "Data Protection"
+msgstr ""
+
+#: invenio_theme_tugraz/templates/invenio_theme_tugraz/footer.html:49
+msgid "Terms and Conditions"
+msgstr ""
+
+#: invenio_theme_tugraz/templates/invenio_theme_tugraz/footer.html:53
 msgid "Impressum"
 msgstr ""
 
-#: invenio_theme_tugraz/templates/invenio_theme_tugraz/footer.html:48
-msgid "Data protection"
-msgstr ""
-
-#: invenio_theme_tugraz/templates/invenio_theme_tugraz/footer.html:52
+#: invenio_theme_tugraz/templates/invenio_theme_tugraz/footer.html:57
 msgid "Feedback"
 msgstr ""
 
-#: invenio_theme_tugraz/templates/invenio_theme_tugraz/footer.html:61
+#: invenio_theme_tugraz/templates/invenio_theme_tugraz/footer.html:66
 msgid "Features"
 msgstr ""
 
-#: invenio_theme_tugraz/templates/invenio_theme_tugraz/footer.html:63
+#: invenio_theme_tugraz/templates/invenio_theme_tugraz/footer.html:68
 msgid "Scalability"
 msgstr ""
 
-#: invenio_theme_tugraz/templates/invenio_theme_tugraz/footer.html:65
+#: invenio_theme_tugraz/templates/invenio_theme_tugraz/footer.html:70
 msgid "Institutional integration"
 msgstr ""
 
-#: invenio_theme_tugraz/templates/invenio_theme_tugraz/footer.html:67
+#: invenio_theme_tugraz/templates/invenio_theme_tugraz/footer.html:72
 msgid "Next Generation Repository"
 msgstr ""
 
-#: invenio_theme_tugraz/templates/invenio_theme_tugraz/footer.html:70
+#: invenio_theme_tugraz/templates/invenio_theme_tugraz/footer.html:75
 msgid "Repository Profiles"
 msgstr ""
 
-#: invenio_theme_tugraz/templates/invenio_theme_tugraz/footer.html:72
+#: invenio_theme_tugraz/templates/invenio_theme_tugraz/footer.html:77
 msgid "Resilient"
 msgstr ""
 
-#: invenio_theme_tugraz/templates/invenio_theme_tugraz/footer.html:79
+#: invenio_theme_tugraz/templates/invenio_theme_tugraz/footer.html:84
 msgid "Connected Services"
 msgstr ""
 
-#: invenio_theme_tugraz/templates/invenio_theme_tugraz/footer.html:83
+#: invenio_theme_tugraz/templates/invenio_theme_tugraz/footer.html:88
 msgid "PURE"
 msgstr ""
 
-#: invenio_theme_tugraz/templates/invenio_theme_tugraz/footer.html:86
+#: invenio_theme_tugraz/templates/invenio_theme_tugraz/footer.html:91
 msgid "CampusOnline"
 msgstr ""
 
-#: invenio_theme_tugraz/templates/invenio_theme_tugraz/footer.html:89
+#: invenio_theme_tugraz/templates/invenio_theme_tugraz/footer.html:94
 msgid "Research Data Management"
 msgstr ""
 
-#: invenio_theme_tugraz/templates/invenio_theme_tugraz/footer.html:96
+#: invenio_theme_tugraz/templates/invenio_theme_tugraz/footer.html:101
 msgid "Accessibility"
 msgstr ""
 
-#: invenio_theme_tugraz/templates/invenio_theme_tugraz/footer.html:97
+#: invenio_theme_tugraz/templates/invenio_theme_tugraz/footer.html:102
 msgid "Tipp:"
 msgstr ""
 
-#: invenio_theme_tugraz/templates/invenio_theme_tugraz/footer.html:97
+#: invenio_theme_tugraz/templates/invenio_theme_tugraz/footer.html:102
 msgid "Use Ctrl + and Crtl -"
 msgstr ""
 
-#: invenio_theme_tugraz/templates/invenio_theme_tugraz/footer.html:97
+#: invenio_theme_tugraz/templates/invenio_theme_tugraz/footer.html:102
 msgid "to change the font size."
 msgstr ""
 
