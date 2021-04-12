@@ -12,4 +12,4 @@ This file is imported by ``invenio_theme_tugraz.__init__``,
 and parsed by ``setup.py``.
 """
 
-__version__ = "2.0.7"
+__version__ = "2.0.8"
