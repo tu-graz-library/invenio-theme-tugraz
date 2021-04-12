@@ -1,9 +1,9 @@
 {#
-  Copyright (C) 2020-2021 Graz University of Technology.
+Copyright (C) 2020-2021 Graz University of Technology.
 
-  invenio-theme-tugraz is free software; you can redistribute it and/or
-  modify it under the terms of the MIT License; see LICENSE file for more
-  details.
+invenio-theme-tugraz is free software; you can redistribute it and/or
+modify it under the terms of the MIT License; see LICENSE file for more
+details.
 #}
 
 {%- block css %}
@@ -12,7 +12,7 @@
 {%- endblock %}
 
 {%- block javascript %}
-  {{ webpack['invenio-theme-tugraz-js.js'] }}
+{{ webpack['invenio-theme-tugraz-js.js'] }}
 {%- endblock javascript %}
 
 <div class="spacer"></div>
@@ -21,84 +21,91 @@
 
   <div class="ui container">
 
-  <div class="ui grid">
-    <div class="doubling four column row">
+    <div class="ui grid">
+      <div class="doubling four column row">
 
 
-      <div class="column">
-      
-        <h2>{{_ ("Repository")}}</h2>
-        <p class="bodytext">
-          <a href="https://tu-graz-library.github.io/docs-repository" title="Repository documentation" target="_blank">
-            {{_ ("Documentation")}} <i class="external alternate icon"></i>
-          </a>
-          <br>
-          <a 
-          href="https://www.tugraz.at/fileadmin/user_upload/tugrazExternal/0c4b9c02-50a6-4a31-b5fd-24a0f93b69c5/TUGraz_Repository_Guide.pdf"
-          title="Quick guide" target="_blank">
-          {{_ ("Handbook")}} <i class="external alternate icon"></i>
-          </a>
-          <br>
-          <!-- <a href="{{ url_for('invenio_theme_tugraz.comingsoon') }}">
+        <div class="column">
+
+          <h2>{{_ ("Repository")}}</h2>
+          <p class="bodytext">
+            <a href="https://tu-graz-library.github.io/docs-repository" title="Repository documentation"
+              target="_blank">
+              {{_ ("Documentation")}} <i class="external alternate icon"></i>
+            </a>
+            <br>
+            <a href="{{ url_for('static', filename='documents/TUGraz_Repository_Guide_01_de.pdf') }}"
+              title="Quick guide" target="_blank">
+              {{_ ("Reference Guide")}} <i class="download icon"></i>
+            </a>
+            <br>
+            <a href="{{ url_for('static', filename='documents/TUGraz_Repository_General_Data_Protection_Rights_de.pdf') }}"
+              title="General Data Protection Rights" target="_blank">
+              {{_ ("Data Protection")}} <i class="download icon"></i>
+            </a>
+            <br>
+            <a href="{{ url_for('static', filename='documents/TUGraz_Repository_Terms_And_Conditions_de.pdf') }}"
+              title="Terms and Conditions" target="_blank">
+              {{_ ("Terms and Conditions")}} <i class="download icon"></i>
+            </a>
+            <br>
+            <!-- <a href="{{ url_for('invenio_theme_tugraz.comingsoon') }}">
             {{_ ("Impressum")}}<i class="angle right icon"></i>
-          </a>
-          <br>
-          <a href="{{ url_for('invenio_theme_tugraz.comingsoon') }}">
-            {{_ ("Data protection")}}<i class="angle right icon"></i>
-          </a>
-          <br>
-          <a href="{{ url_for('invenio_theme_tugraz.comingsoon') }}">
-            {{_ ("Feedback")}}<i class="angle right icon"></i>
-          </a> -->
-        </p>
-        
-      </div>
+            </a>
+            <br>
+            <a href="{{ url_for('invenio_theme_tugraz.comingsoon') }}">
+              {{_ ("Feedback")}}<i class="angle right icon"></i>
+            </a> -->
+          </p>
+
+        </div>
 
 
-      <div class="column">
-      
-        <h2>{{_ ("Features")}}</h2>
+        <div class="column">
 
-        <h4>{{_ ("Scalability")}}</h4>
-        
-        <h4>{{_ ("Institutional integration")}}</h4>
+          <h2>{{_ ("Features")}}</h2>
 
-        <h4>{{_ ("Next Generation Repository")}}
-        </h4>
+          <h4>{{_ ("Scalability")}}</h4>
 
-        <h4>{{_ ("Repository Profiles")}}</h4>
+          <h4>{{_ ("Institutional integration")}}</h4>
 
-        <h4>{{_ ("Resilient")}}</h4>
+          <h4>{{_ ("Next Generation Repository")}}
+          </h4>
 
-      </div>
+          <h4>{{_ ("Repository Profiles")}}</h4>
+
+          <h4>{{_ ("Resilient")}}</h4>
+
+        </div>
 
 
-    <div class="column">
-    
-      <h2>{{_ ("Connected Services")}}</h2>
-      <p class="bodytext">
+        <div class="column">
 
-        <a href="https://pure.tugraz.at" title="PURE" target="_blank">
-          {{_ ("PURE")}} <i class="external alternate icon"></i></a><br> 
+          <h2>{{_ ("Connected Services")}}</h2>
+          <p class="bodytext">
 
-          <a href="http://campusonline.tugraz.at" title="CAMPUS online" target="_blank">
-            {{_ ("CampusOnline")}} <i class="external alternate icon"></i></a><br> 
+            <a href="https://pure.tugraz.at" title="PURE" target="_blank">
+              {{_ ("PURE")}} <i class="external alternate icon"></i></a><br>
+
+            <a href="http://campusonline.tugraz.at" title="CAMPUS online" target="_blank">
+              {{_ ("CampusOnline")}} <i class="external alternate icon"></i></a><br>
 
             <a href="https://rdm.tugraz.at" title="Research Data Management" target="_blank">
-              {{_ ("Research Data Management")}} <i class="external alternate icon"></i></a><br> 
-      </p>
-
-     
-    </div>
-
-    <div class="column">
-      <h2>{{_ ("Accessibility")}}</h2>
-      <p class="bodytext">{{_ ("Tipp:")}}<br> {{_ ("Use Ctrl + and Crtl -")}}<br> {{_ ("to change the font size.")}}</p>
-
-    </div>
+              {{_ ("Research Data Management")}} <i class="external alternate icon"></i></a><br>
+          </p>
 
 
-    </div>
+        </div>
+
+        <div class="column">
+          <h2>{{_ ("Accessibility")}}</h2>
+          <p class="bodytext">{{_ ("Tipp:")}}<br> {{_ ("Use Ctrl + and Crtl -")}}<br> {{_ ("to change the font size.")}}
+          </p>
+
+        </div>
+
+
+      </div>
     </div>
 
   </div>

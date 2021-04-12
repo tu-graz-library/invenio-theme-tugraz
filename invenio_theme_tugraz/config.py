@@ -17,9 +17,7 @@ INVENIO_THEME_TUGRAZ_DEFAULT_VALUE = _("TU Graz Repository")
 INVENIO_THEME_TUGRAZ_BASE_TEMPLATE = "invenio_theme_tugraz/base.html"
 """TU Graz Default base template"""
 
-INVENIO_THEME_TUGRAZ_ACCOUNT_BASE = (
-    "invenio_theme_tugraz/accounts/accounts_base.html"
-)
+INVENIO_THEME_TUGRAZ_ACCOUNT_BASE = "invenio_theme_tugraz/accounts/accounts_base.html"
 """TU Graz Default account base template"""
 
 INVENIO_THEME_TUGRAZ_ICON = "images/icon_use.png"
@@ -76,9 +74,7 @@ THEME_SITENAME = _("Repository")
 SECURITY_LOGIN_USER_TEMPLATE = "invenio_theme_tugraz/accounts/login_user.html"
 """Login template"""
 
-SECURITY_REGISTER_USER_TEMPLATE = (
-    "invenio_theme_tugraz/accounts/register_user.html"
-)
+SECURITY_REGISTER_USER_TEMPLATE = "invenio_theme_tugraz/accounts/register_user.html"
 """Sigup template"""
 
 # Invenio-I18N
