@@ -153,7 +153,11 @@ pre {
   }
 }
 
-a:hover i.icon.download,
-i.icon.download:hover {
-  color: @tugrazRed;
+
+a {
+  &:hover, &:focus {
+    i.icon.download {
+      color: @tugrazRed;
+    }
+  }
 }
