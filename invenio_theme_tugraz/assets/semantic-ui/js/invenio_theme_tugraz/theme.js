@@ -1,7 +1,12 @@
 import $ from 'jquery';
 import 'semantic-ui-css';
 
+// called on document ready
 $(function() {
+  importZammadScript();
+});
+
+function importZammadScript() {
   let scriptNode = document.createElement("hidden"); //needed for zammad script
   scriptNode.id = "zammad_form_script";
   scriptNode.src = "https://ub-support.tugraz.at/assets/form/form.js";
@@ -16,7 +21,8 @@ $(function() {
       modal: true
     });
   });
-});
+}
+
 
 // used for sticky test instance notification
 $('.ui.sticky.test-instance')
