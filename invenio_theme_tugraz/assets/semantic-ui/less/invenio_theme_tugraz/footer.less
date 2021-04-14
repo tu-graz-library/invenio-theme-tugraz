@@ -25,14 +25,24 @@
       padding-top: 15px;
       padding-bottom: 15px;
       font-size: 16px;
- 
+
       a {
         text-decoration: none;
         color: @footerGrey;
- 
-        &:hover, &:focus {
+
+        // :focus-visible activates on keyboard only
+        &:hover, &:focus:focus-visible {
           color: @primaryLink;
           background-color: @primaryLinkHoverBackground;
+
+          i.icon.download {
+            color: @tugrazRed;
+          }
+        }
+        
+        // remove blue focus outline if clicked with mouse
+        &:focus:not(:focus-visible) {
+          outline-style: none;
         }
       }
     }
