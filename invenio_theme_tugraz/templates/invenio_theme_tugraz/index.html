@@ -49,7 +49,7 @@
       {% endif %}
 
       {%- for r in records %}
-      {%- set creation_date = r._created|from_isodatetime -%}
+      {%- set creation_date = r.created|from_isodatetime -%}
       {%- set record_url = url_for('invenio_app_rdm_records.record_detail', pid_value=r.id) %}
 
       <article>
