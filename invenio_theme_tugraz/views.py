@@ -14,7 +14,8 @@ from typing import Dict
 
 import requests
 from elasticsearch_dsl.utils import AttrDict
-from flask import Blueprint, current_app, g, render_template, request
+from flask import Blueprint, current_app, g, redirect, render_template, request, url_for
+from flask_babelex import get_locale
 from flask_login import login_required
 from flask_menu import current_menu
 from invenio_app_rdm.records_ui.views.decorators import (
@@ -49,6 +50,9 @@ def ui_blueprint(app):
 
     blueprint.add_url_rule(routes["index"], view_func=index)
     blueprint.add_url_rule(routes["comingsoon"], view_func=comingsoon)
+    blueprint.add_url_rule(routes["guide"], view_func=guide)
+    blueprint.add_url_rule(routes["terms"], view_func=terms)
+    blueprint.add_url_rule(routes["gdpr"], view_func=gdpr)
     blueprint.add_url_rule(routes["deposit_create"], view_func=deposit_create)
     blueprint.add_url_rule(routes["record_detail"], view_func=record_detail)
     blueprint.add_url_rule(routes["getdoi"], view_func=retrieve_doi, methods=["POST"])
@@ -80,6 +84,30 @@ def index():
 def comingsoon():
     """Comingsoon."""
     return render_template("invenio_theme_tugraz/comingsoon.html")
+
+
+def guide():
+    """TUGraz_Repository_Guide."""
+    locale = get_locale()
+    return redirect(url_for('static',
+                            filename=f'documents/TUGraz_Repository_Guide_01_{locale}.pdf',
+                            _external=True))
+
+
+def terms():
+    """Terms_And_Conditions."""
+    locale = get_locale()
+    return redirect(url_for('static',
+                            filename=f'documents/TUGraz_Repository_Terms_And_Conditions_{locale}.pdf',
+                            _external=True))
+
+
+def gdpr():
+    """General_Data_Protection_Rights."""
+    locale = get_locale()
+    return redirect(url_for('static',
+                            filename=f'documents/TUGraz_Repository_General_Data_Protection_Rights_{locale}.pdf',
+                            _external=True))
 
 
 def get_datacite_details():
