@@ -123,6 +123,9 @@ TUG_ROUTES = {
     "deposit_edit": "/uploads/<pid_value>",
     "getdoi": "/getdoi",
     "record_detail": "/records/<pid_value>",
+    "guide": "/guide",
+    "gdpr": "/gdpr",
+    "terms": "/terms",
 }
 
 # Datacite

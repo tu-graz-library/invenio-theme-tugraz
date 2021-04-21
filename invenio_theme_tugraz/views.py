@@ -52,6 +52,9 @@ def ui_blueprint(app):
     blueprint.add_url_rule(routes["deposit_create"], view_func=deposit_create)
     blueprint.add_url_rule(routes["record_detail"], view_func=record_detail)
     blueprint.add_url_rule(routes["getdoi"], view_func=retrieve_doi, methods=["POST"])
+    blueprint.add_url_rule(routes["guide"], view_func=guide)
+    blueprint.add_url_rule(routes["gdpr"], view_func=gdpr)
+    blueprint.add_url_rule(routes["terms"], view_func=terms)
 
     @blueprint.app_template_filter("make_dict_like")
     def make_dict_like(value: str, key: str) -> Dict[str, str]:
@@ -80,6 +83,21 @@ def index():
 def comingsoon():
     """Comingsoon."""
     return render_template("invenio_theme_tugraz/comingsoon.html")
+
+
+def guide():
+    """Guide document."""
+    return current_app.send_static_file('documents/TUGraz_Repository_Guide_01_de.pdf')
+
+
+def gdpr():
+    """General Data Protection Rights document."""
+    return current_app.send_static_file('documents/TUGraz_Repository_General_Data_Protection_Rights_de.pdf')
+
+
+def terms():
+    """Terms and Conditions document."""
+    return current_app.send_static_file('documents/TUGraz_Repository_Terms_And_Conditions_de.pdf')
 
 
 def get_datacite_details():
