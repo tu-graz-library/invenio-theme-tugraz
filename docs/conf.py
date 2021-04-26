@@ -45,8 +45,8 @@ master_doc = "index"
 
 # General information about the project.
 project = u"invenio-theme-tugraz"
-copyright = u"2020, mojib wali"
-author = u"mojib wali"
+copyright = u"2020, Graz University of Technology"
+author = u"Graz University of Technology"
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
@@ -251,7 +251,7 @@ latex_documents = [
         master_doc,
         "invenio-theme-tugraz.tex",
         u"invenio-theme-tugraz Documentation",
-        u"mojib wali",
+        u"Graz University of Technology",
         "manual",
     ),
 ]
