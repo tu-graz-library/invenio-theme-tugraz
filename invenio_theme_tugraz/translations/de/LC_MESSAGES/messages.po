@@ -1,5 +1,5 @@
 # German translations for invenio-theme-tugraz.
-# Copyright (C) 2020 mojib wali
+# Copyright (C) 2020-2021 Graz University of Technology
 # This file is distributed under the same license as the
 # invenio-theme-tugraz project.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: invenio-theme-tugraz 1.0.4\n"
 "Report-Msgid-Bugs-To: mojib.wali@tugraz.at\n"
-"POT-Creation-Date: 2021-04-12 13:20+0200\n"
+"POT-Creation-Date: 2021-04-26 09:08+0200\n"
 "PO-Revision-Date: 2020-10-06 10:27+0200\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: de\n"
@@ -307,8 +307,8 @@ msgid "TECHNOLOGY"
 msgstr "LEIDENSCHAFT"
 
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/accounts/header_login.html:8
-#: invenio_theme_tugraz/templates/invenio_theme_tugraz/accounts/login_user.html:61
-#: invenio_theme_tugraz/templates/invenio_theme_tugraz/accounts/register_user.html:81
+#: invenio_theme_tugraz/templates/invenio_theme_tugraz/accounts/login_user.html:59
+#: invenio_theme_tugraz/templates/invenio_theme_tugraz/accounts/register_user.html:80
 msgid "Sign up"
 msgstr "Registrierung"
 
@@ -324,26 +324,26 @@ msgstr "Ausloggen"
 msgid "Log in to Repository"
 msgstr "Anmelden"
 
-#: invenio_theme_tugraz/templates/invenio_theme_tugraz/accounts/login_user.html:30
+#: invenio_theme_tugraz/templates/invenio_theme_tugraz/accounts/login_user.html:29
 #, python-format
 msgid " Log in with %(type)s"
 msgstr "Einloggen mit"
 
-#: invenio_theme_tugraz/templates/invenio_theme_tugraz/accounts/login_user.html:35
-#: invenio_theme_tugraz/templates/invenio_theme_tugraz/accounts/register_user.html:55
+#: invenio_theme_tugraz/templates/invenio_theme_tugraz/accounts/login_user.html:33
+#: invenio_theme_tugraz/templates/invenio_theme_tugraz/accounts/register_user.html:54
 msgid "Or"
 msgstr "Oder"
 
-#: invenio_theme_tugraz/templates/invenio_theme_tugraz/accounts/login_user.html:47
+#: invenio_theme_tugraz/templates/invenio_theme_tugraz/accounts/login_user.html:45
 msgid "Log In"
 msgstr "Einloggen"
 
-#: invenio_theme_tugraz/templates/invenio_theme_tugraz/accounts/login_user.html:60
+#: invenio_theme_tugraz/templates/invenio_theme_tugraz/accounts/login_user.html:58
 #, python-format
 msgid "New to %(sitename)s?"
 msgstr "Neu im %(sitename)s?"
 
-#: invenio_theme_tugraz/templates/invenio_theme_tugraz/accounts/login_user.html:70
+#: invenio_theme_tugraz/templates/invenio_theme_tugraz/accounts/login_user.html:68
 msgid "Forgot password?"
 msgstr "Passwort vergessen"
 
@@ -385,7 +385,7 @@ msgid ""
 "the Graz University of Technology."
 msgstr "Gebaut basierend auf Expertise derTU Graz im Bereich Data Management"
 
-#: invenio_theme_tugraz/templates/invenio_theme_tugraz/accounts/register_user.html:51
+#: invenio_theme_tugraz/templates/invenio_theme_tugraz/accounts/register_user.html:50
 msgid "Sign up with TUGRAZ "
 msgstr "Mit Ihrem TUGonline-Account einloggen"
 
