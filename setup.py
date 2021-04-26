@@ -79,7 +79,7 @@ setup(
     long_description=readme + "\n\n" + history,
     keywords="invenio, theme, invenioRDM, TU-Graz, Graz University of Technology, statistics",
     license="MIT",
-    author="mojib wali",
+    author="Graz University of Technology",
     author_email="mojib.wali@tugraz.at",
     url="https://github.com/tu-graz-library/invenio-theme-tugraz",
     packages=packages,
