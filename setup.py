@@ -56,11 +56,7 @@ install_requires = [
     "Flask-WebpackExt>=1.0.0",
     "invenio-assets>=1.2.0",
     "invenio-i18n>=1.2.0",
-    "elasticsearch_dsl>=7.2.1",
-    "invenio_search>=1.4.0,<2.0.0",
-    "invenio_config_tugraz>=0.5.1,<0.5.8",
-    # keep this package updated.
-    "invenio_app_rdm==2.0.1",
+    "invenio_config_tugraz>=0.5.8",
 ]
 
 packages = find_packages()
