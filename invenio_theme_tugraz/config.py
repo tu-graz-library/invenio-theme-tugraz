@@ -122,14 +122,5 @@ TUG_ROUTES = {
     "guide": "/guide",
     "terms": "/terms",
     "gdpr": "/gdpr",
-    "deposit_create": "/uploads/new",
-    "deposit_edit": "/uploads/<pid_value>",
-    "getdoi": "/getdoi",
     "record_detail": "/records/<pid_value>",
 }
-
-# Datacite
-# INVENIO_DATACITE_URL = ""
-# INVENIO_DATACITE_UNAME = ""
-# INVENIO_DATACITE_PASS = "password"
-# INVENIO_DATACITE_PREFIX = ""
