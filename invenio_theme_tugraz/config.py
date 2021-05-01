@@ -122,5 +122,4 @@ TUG_ROUTES = {
     "guide": "/guide",
     "terms": "/terms",
     "gdpr": "/gdpr",
-    "record_detail": "/records/<pid_value>",
 }
