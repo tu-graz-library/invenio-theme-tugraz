@@ -44,7 +44,6 @@ def ui_blueprint(app):
     blueprint.add_url_rule(routes["guide"], view_func=guide)
     blueprint.add_url_rule(routes["terms"], view_func=terms)
     blueprint.add_url_rule(routes["gdpr"], view_func=gdpr)
-    blueprint.add_url_rule(routes["record_detail"], view_func=record_detail)
 
     @blueprint.app_template_filter("make_dict_like")
     def make_dict_like(value: str, key: str) -> Dict[str, str]:
