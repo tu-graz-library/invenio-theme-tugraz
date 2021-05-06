@@ -63,9 +63,13 @@ def ui_blueprint(app):
 
 def index():
     """Frontpage."""
+    records = FrontpageRecordsSearch()[:5].sort("-created").execute()
+    for r in records:
+        r = UIJSONSerializer().serialize_object_to_dict(r.to_dict())
+
     return render_template(
         "invenio_theme_tugraz/index.html",
-        records=FrontpageRecordsSearch()[:5].sort("-created").execute(),
+        records=records
     )
 
 
