@@ -204,7 +204,7 @@ export const RDMRecordResultsListItem = ({ result, index }) => {
       <Item.Content style={{ cursor: "default" }}>
         <Item.Extra className="labels-actions">
           {/* For reduced spacing between labels. */}
-          <Label size="tiny" color="blue">
+          <Label size="tiny" className={`record-version`}>
             {publicationDate} ({version})
           </Label>
           <Label size="tiny" color="teal">

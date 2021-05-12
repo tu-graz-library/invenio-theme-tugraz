@@ -9,7 +9,7 @@
 """invenio module for TUGRAZ theme."""
 
 from . import config
-from .deposits import deposit_create, deposit_edit
+from .deposits import deposit_create, deposit_edit, deposit_search
 from .views import index, record_detail
 
 
@@ -29,6 +29,7 @@ class InvenioThemeTugraz(object):
         app.add_url_rule("/records/<pid_value>", "record_detail", record_detail)
         app.add_url_rule("/uploads/new", "deposit_create", deposit_create)
         app.add_url_rule("/uploads/<pid_value>", "deposit_edit", deposit_edit)
+        app.add_url_rule("/uploads", "deposit_search", deposit_search)
         self.init_config(app)
         app.extensions["invenio-theme-tugraz"] = self
 

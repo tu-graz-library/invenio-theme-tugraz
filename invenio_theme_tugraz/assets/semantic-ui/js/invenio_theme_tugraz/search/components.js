@@ -59,7 +59,7 @@ export const RDMRecordResultsListItem = ({ result, index }) => {
     <Item key={index} href={viewLink}>
       <Item.Content>
         <Item.Extra className="labels-actions">
-          <Label size="tiny" color="blue">
+          <Label size="tiny" className={`record-version`}>
             {publicationDate} ({version})
           </Label>
           <Label size="tiny" color="teal">

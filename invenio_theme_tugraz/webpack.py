@@ -20,6 +20,7 @@ theme = WebpackThemeBundle(
                 # overrides RDM deposit form
                 'invenio-theme-tugraz-rdm-deposit': './js/invenio_theme_tugraz/deposit/index.js',
                 'invenio-theme-tugraz-rdm-search': './js/invenio_theme_tugraz/search/index.js',
+                'invenio-theme-tugraz-rdm-user-records-search': './js/invenio_theme_tugraz/user_records_search/index.js',
             },
             dependencies={
                 # add any additional npm dependencies here...
