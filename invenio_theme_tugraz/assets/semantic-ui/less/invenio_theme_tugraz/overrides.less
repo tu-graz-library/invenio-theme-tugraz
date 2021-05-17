@@ -123,32 +123,18 @@ pre {
   font-weight: 400;
 }
 
-.ui.label.access-right {
-  float: right;
-  color: @accessRight;
-  background-color: white;
-
+// override access badges color
+.ui.label.access-status {
   &.open {
-    color: @accessRightOpen;
-    background-color: white;
-
-  }
-
-  &.restricted {
-    color: @accessRightRestricted;
-    background-color: white;
-
+    background-color: @accessRightOpen;
   }
 
   &.embargoed {
-    color: @accessRightEmbargoed;
-    background-color: white;
-
+    background-color: @accessRightEmbargoed;;
   }
 
-  &.closed {
-    color: @accessRightClosed;
-    background-color: white;
-
+  &.metadata-only {
+    background-color: @accessRightMetadata;
   }
+  
 }
