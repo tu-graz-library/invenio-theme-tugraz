@@ -15,7 +15,7 @@
 <a href="{{creators.identifiers.orcid|pid_url('orcid')}}" target="_blank" ><img class="inline-orcid" src="{{ url_for('static', filename='extra/orcid.png')}}" /></a>
 {%- endif %}
 
-<span class="text-muted" {% if creators.affiliations %} {% for affiliation in creators.affiliations %} data-toggle="tooltip" title="{{affiliation.name}}" {%- endfor %} {% endif %}>{{creators.person_or_org.name}}</span>
+<span class="text-muted" {% if creators.affiliations %} {% for affiliation in creators.affiliations %} data-tooltip="{{affiliation.name}}" data-inverted="" {%- endfor %} {% endif %}>{{creators.person_or_org.name}}</span>
 {% if not loop.last %}; {% endif %}
 
 {%- endfor %}
