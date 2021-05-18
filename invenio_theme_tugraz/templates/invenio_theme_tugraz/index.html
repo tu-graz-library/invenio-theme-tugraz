@@ -58,12 +58,12 @@
         -->
         <div class="badges">
           <!--Publication date/Version badge-->
-          <span class="ui label blue" title="{{_('Publication date')}}">
+          <span class="ui label blue" data-tooltip="{{_('Publication date')}}" data-inverted="">
             {{ r.metadata.publication_date }} {{ '(' ~ r.metadata.version ~ ')' if r.metadata.version }}
           </span>
 
           <!--Resource type badge-->
-          <span class="ui label grey" title="{{_('Resource type')}}">
+          <span class="ui label grey" data-tooltip="{{_('Resource type')}}" data-inverted>
             {{r.metadata.resource_type | cast_to_dict | vocabulary_title('resource_type') }}
           </span>
           
