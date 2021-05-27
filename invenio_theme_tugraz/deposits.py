@@ -24,6 +24,15 @@ from invenio_rdm_records.resources.serializers import UIJSONSerializer
 
 
 @login_required
+def deposit_search():
+    """List of user deposits page."""
+    return render_template(
+        "invenio_theme_tugraz/records/search_deposit.html",
+        searchbar_config=dict(searchUrl=get_search_url()),
+    )
+
+
+@login_required
 def deposit_create():
     """Create a new deposit."""
     return render_template(

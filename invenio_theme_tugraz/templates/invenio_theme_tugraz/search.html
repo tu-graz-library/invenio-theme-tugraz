@@ -1,0 +1,106 @@
+{#
+  Copyright (C) 2020 CERN.
+  Copyright (C) 2020 Northwestern University.
+
+  Invenio App RDM is free software; you can redistribute it and/or modify it
+  under the terms of the MIT License; see LICENSE file for more details.
+#}
+{%- set title = _("Search results") %}
+{%- extends config.BASE_TEMPLATE %}
+
+{%- block javascript %}
+    {{ super() }}
+    {{ webpack['invenio-theme-tugraz-rdm-search.js'] }}
+{%- endblock %}
+
+{%- block page_body %}
+
+<!-- TODO: Auto-generate for new API -->
+<div data-invenio-search-config='{
+  "aggs": [
+    {
+      "aggName": "access_status",
+      "field": "access.status",
+      "title": "{{_("Access status")}}"
+    },
+    {
+      "aggName": "resource_type",
+      "field": "resource_type.type",
+      "title": "{{_("Resource type")}}",
+      "childAgg": {
+        "aggName": "subtype",
+        "field": "resource_type.subtype",
+        "title": "{{_("Resource type")}}"
+      }
+    },
+    {
+      "aggName": "languages",
+      "field": "languages",
+      "title": "{{_("Languages")}}"
+    }
+  ],
+  "appId": "rdm-search",
+  "initialQueryState": {
+    "hiddenParams": null,
+    "size": 10,
+    "page": 1,
+    "sortBy": "bestmatch"
+  },
+  "layoutOptions": {
+    "gridView": false,
+    "listView": true
+  },
+  "paginationOptions": {
+    "defaultValue": 10,
+    "resultsPerPage": [
+      {
+        "text": "10",
+        "value": 10
+      },
+      {
+        "text": "20",
+        "value": 20
+      },
+      {
+        "text": "50",
+        "value": 50
+      }
+    ]
+  },
+  "searchApi": {
+    "axios": {
+      "headers": {
+        "Accept": "application/vnd.inveniordm.v1+json"
+      },
+      "url": "/api/records",
+      "withCredentials": true
+    },
+    "invenio": {
+      "requestSerializer": "InvenioRecordsResourcesRequestSerializer"
+    }
+  },
+  "sortOrderDisabled": true,
+  "defaultSortingOnEmptyQueryString": {
+    "sortBy": "newest"
+  },
+  "sortOptions": [
+    {
+      "sortBy": "bestmatch",
+      "text": "{{_("Best match")}}"
+    },
+    {
+      "sortBy": "newest",
+      "text": "{{_("Newest")}}"
+    },
+    {
+      "sortBy": "oldest",
+      "text": "{{_("Oldest")}}"
+    },
+    {
+      "sortBy": "version",
+      "text": "{{_("Version")}}"
+    }
+  ]
+}'></div>
+
+{%- endblock page_body %}

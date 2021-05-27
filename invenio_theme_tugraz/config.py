@@ -113,7 +113,7 @@ DEPOSITS_HEADER_TEMPLATE = "invenio_theme_tugraz/header.html"
 # Invenio-search-ui
 # =============
 # See https://invenio-search-ui.readthedocs.io/en/latest/configuration.html
-# SEARCH_UI_SEARCH_TEMPLATE = "invenio_theme_tugraz/search.html"
+SEARCH_UI_SEARCH_TEMPLATE = "invenio_theme_tugraz/search.html"
 # """override the default search page"""
 
 TUG_ROUTES = {
