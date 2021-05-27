@@ -82,7 +82,7 @@ def guide():
     """TUGraz_Repository_Guide."""
     locale = get_locale()
     return redirect(url_for('static',
-                            filename=f'documents/TUGraz_Repository_Guide_01_{locale}.pdf',
+                            filename=f'documents/TUGraz_Repository_Guide_02_{locale}.pdf',
                             _external=True))
 
 
