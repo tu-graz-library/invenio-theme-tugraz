@@ -64,9 +64,9 @@
 
           <!--Resource type badge-->
           <span class="ui label grey" data-tooltip="{{_('Resource type')}}" data-inverted>
-            {{r.metadata.resource_type | cast_to_dict | vocabulary_title('resource_type') }}
+            {{ r.ui.resource_type.title_l10n }}
           </span>
-          
+
           <span class="ui label access-status {{ r.ui.access_status.id }}" data-tooltip="{{ r.ui.access_status.description_l10n }}" data-inverted="">
             {% if r.ui.access_status.icon %}<i class="icon {{ r.ui.access_status.icon }}"></i>{% endif %}
             {{ r.ui.access_status.title_l10n }}
