@@ -12,12 +12,8 @@ import binascii
 from os import environ
 from typing import Dict
 
-import requests
 from elasticsearch_dsl.utils import AttrDict
-from flask import Blueprint, current_app, g, redirect, render_template, request, url_for
-from flask_babelex import get_locale
-from flask_login import login_required
-from flask_menu import current_menu
+from flask import Blueprint, render_template
 from invenio_app_rdm.records_ui.views.decorators import (
     pass_is_preview,
     pass_record_files,
@@ -41,9 +37,6 @@ def ui_blueprint(app):
 
     blueprint.add_url_rule(routes["index"], view_func=index)
     blueprint.add_url_rule(routes["comingsoon"], view_func=comingsoon)
-    blueprint.add_url_rule(routes["guide"], view_func=guide)
-    blueprint.add_url_rule(routes["terms"], view_func=terms)
-    blueprint.add_url_rule(routes["gdpr"], view_func=gdpr)
 
     @blueprint.app_template_filter("make_dict_like")
     def make_dict_like(value: str, key: str) -> Dict[str, str]:
@@ -82,30 +75,6 @@ def index():
 def comingsoon():
     """Comingsoon."""
     return render_template("invenio_theme_tugraz/comingsoon.html")
-
-
-def guide():
-    """TUGraz_Repository_Guide."""
-    locale = get_locale()
-    return redirect(url_for('static',
-                            filename=f'documents/TUGraz_Repository_Guide_02_{locale}.pdf',
-                            _external=True))
-
-
-def terms():
-    """Terms_And_Conditions."""
-    locale = get_locale()
-    return redirect(url_for('static',
-                            filename=f'documents/TUGraz_Repository_Terms_And_Conditions_{locale}.pdf',
-                            _external=True))
-
-
-def gdpr():
-    """General_Data_Protection_Rights."""
-    locale = get_locale()
-    return redirect(url_for('static',
-                            filename=f'documents/TUGraz_Repository_General_Data_Protection_Rights_{locale}.pdf',
-                            _external=True))
 
 
 @pass_is_preview

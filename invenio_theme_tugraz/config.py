@@ -119,7 +119,4 @@ DEPOSITS_HEADER_TEMPLATE = "invenio_theme_tugraz/header.html"
 TUG_ROUTES = {
     "index": "/",
     "comingsoon": "/comingsoon",
-    "guide": "/guide",
-    "terms": "/terms",
-    "gdpr": "/gdpr",
 }
