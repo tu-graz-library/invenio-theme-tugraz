@@ -10,6 +10,7 @@
 
 
 {% from "invenio_accounts/_macros.html" import render_field, form_errors %}
+{%- from "invenio_oauthclient/_macros.html" import oauth_button %}
 {% block page_body %}
 <div class="spacer-long"></div>
 <div class="spacer-long"></div>
@@ -24,16 +25,31 @@
         {%- endblock form_header %}
         <div class="ui divider"></div>
         <!--Log in with SSO-->
-        {%- if config.INVENIO_CONFIG_TUGRAZ_SHIBBOLETH %}
-        <a href="{{ url_for('sso_saml.sso', idp='idp') }}" class="login-page-button ui fluid large button">
-          {% trans type='TUGRAZ' %} Log in with {{ type }}{% endtrans %}
-          <img src="{{ url_for('static', filename=config.INVENIO_THEME_TUGRAZ_ICON)}}" height="20px" />
-        </a>
-        <div class="spacer-long"></div>
-        <div class="ui inverted horizontal divider"><span class="text-color">{{_ ("Or")}}</span></div>
-        {%- endif %}
+        {% if config.OAUTHCLIENT_REMOTE_APPS or config.SSO_SAML_IDPS %}
+        <div class="ui form">
+          {% for name in config.OAUTHCLIENT_REMOTE_APPS.keys() %}
+            {{ oauth_button(name, next=request.args.get('next')) }}
+          {% endfor %}
+        </div>
+        {% for name in config.SSO_SAML_IDPS.keys() %}
+        <div class="field">
+          <a class="fluid ui basic button large" href="{{ url_for('sso_saml.sso', idp=name) }}">
+            <i class="{{ name|lower() }} icon"></i>
+            {{
+            _('Sign in with %(title)s', title=config.SSO_SAML_IDPS[name]['title']|default("SAML", true))
+            }}
+          </a>
+        </div>
+        {% endfor %}
+        {%- if config.ACCOUNTS_LOCAL_LOGIN_ENABLED %}
+        <div class="ui horizontal divider">
+          Or
+        </div>
+      {%- endif %}
+        {% endif %}
 
         {%- block form_outer %}
+        {%- if config.ACCOUNTS_LOCAL_LOGIN_ENABLED %}
         {%- with form = login_user_form %}
         <div style="padding-bottom: 20px;padding-top: 6px;">
         <form action="{{ url_for_security('login') }}" method="POST" name="login_user_form" class="ui big form">
@@ -47,6 +63,7 @@
         </form>
       </div>
         {%- endwith %}
+        {%- endif %}
         {%- endblock form_outer %}
         <div class="divider hidden"></div>
 
