@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: invenio-theme-tugraz 1.0.4\n"
 "Report-Msgid-Bugs-To: mojib.wali@tugraz.at\n"
-"POT-Creation-Date: 2021-05-10 10:36+0200\n"
+"POT-Creation-Date: 2021-06-22 10:21+0200\n"
 "PO-Revision-Date: 2020-10-06 10:27+0200\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: de\n"
@@ -198,22 +198,36 @@ msgid "to change the font size."
 msgstr "Um die Schriftgröße zu ändern."
 
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/footer.html:117
-#, python-format
+#, fuzzy, python-format
 msgid ""
 "<strong>Powered by</strong>\n"
-"            <a href=\"%(invenio_rdm)s\" target=\"_blank\">"
-msgstr ""
-"<strong>Powered by</strong> <a href=\"%(invenio_rdm)s\" "
-"target=\"_blank\">"
+"            <a href=\"%(invenio_rdm)s\" target=\"_blank\" "
+"title=\"invenioRDM\">"
+msgstr "<strong>Powered by</strong> <a href=\"%(invenio_rdm)s\" target=\"_blank\">"
 
-#: invenio_theme_tugraz/templates/invenio_theme_tugraz/footer.html:127
-#, python-format
+#: invenio_theme_tugraz/templates/invenio_theme_tugraz/footer.html:126
+#, fuzzy, python-format
 msgid ""
 "<strong>Enabled by</strong>\n"
-"            <a href=\"%(fair_data)s\" target=\"_blank\">"
+"            <a href=\"%(fair_data)s\" target=\"_blank\" title=\"Fair Data"
+" Austria\">"
+msgstr "<strong>Enabled by</strong> <a href=\"%(fair_data)s\" target=\"_blank\">"
+
+#: invenio_theme_tugraz/templates/invenio_theme_tugraz/footer.html:140
+#, python-format
+msgid ""
+"\n"
+"            <a href=\"%(oea)s\" target=\"_blank\" title=\"Open Education "
+"Austria\">"
 msgstr ""
-"<strong>Enabled by</strong> <a href=\"%(fair_data)s\" "
-"target=\"_blank\">"
+
+#: invenio_theme_tugraz/templates/invenio_theme_tugraz/footer.html:157
+#, python-format
+msgid ""
+"\n"
+"        <a href=\"%(re3data)s\" target=\"_blank\" title=\"Registry of "
+"Research Data Repositories\">"
+msgstr ""
 
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/accounts/accounts_base.html:61
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/header.html:11
@@ -323,7 +337,7 @@ msgid "TECHNOLOGY"
 msgstr "LEIDENSCHAFT"
 
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/accounts/header_login.html:8
-#: invenio_theme_tugraz/templates/invenio_theme_tugraz/accounts/login_user.html:59
+#: invenio_theme_tugraz/templates/invenio_theme_tugraz/accounts/login_user.html:76
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/accounts/register_user.html:78
 msgid "Sign up"
 msgstr "Registrierung"
@@ -336,30 +350,30 @@ msgstr "Einloggen"
 msgid "Sign out"
 msgstr "Ausloggen"
 
-#: invenio_theme_tugraz/templates/invenio_theme_tugraz/accounts/login_user.html:23
+#: invenio_theme_tugraz/templates/invenio_theme_tugraz/accounts/login_user.html:24
 msgid "Log in to Repository"
 msgstr "Anmelden"
 
-#: invenio_theme_tugraz/templates/invenio_theme_tugraz/accounts/login_user.html:29
-#, python-format
-msgid " Log in with %(type)s"
+#: invenio_theme_tugraz/templates/invenio_theme_tugraz/accounts/login_user.html:38
+#, fuzzy, python-format
+msgid "Sign in with %(title)s"
 msgstr "Einloggen mit"
 
-#: invenio_theme_tugraz/templates/invenio_theme_tugraz/accounts/login_user.html:33
+#: invenio_theme_tugraz/templates/invenio_theme_tugraz/accounts/login_user.html:46
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/accounts/register_user.html:52
 msgid "Or"
 msgstr "Oder"
 
-#: invenio_theme_tugraz/templates/invenio_theme_tugraz/accounts/login_user.html:45
+#: invenio_theme_tugraz/templates/invenio_theme_tugraz/accounts/login_user.html:61
 msgid "Log In"
 msgstr "Einloggen"
 
-#: invenio_theme_tugraz/templates/invenio_theme_tugraz/accounts/login_user.html:58
+#: invenio_theme_tugraz/templates/invenio_theme_tugraz/accounts/login_user.html:75
 #, python-format
 msgid "New to %(sitename)s?"
 msgstr "Neu im %(sitename)s?"
 
-#: invenio_theme_tugraz/templates/invenio_theme_tugraz/accounts/login_user.html:68
+#: invenio_theme_tugraz/templates/invenio_theme_tugraz/accounts/login_user.html:85
 msgid "Forgot password?"
 msgstr "Passwort vergessen"
 
@@ -436,10 +450,6 @@ msgstr ""
 msgid "Reason"
 msgstr "Grund"
 
-#: invenio_theme_tugraz/templates/invenio_theme_tugraz/header.html:52
-msgid "Uploads"
-msgstr "Hochladen"
-
 #~ msgid "Version"
 #~ msgstr "Version"
 
@@ -451,7 +461,6 @@ msgstr "Hochladen"
 
 #~ msgid "Handbook"
 #~ msgstr "Handbuch"
-
 
 #~ msgid "RDM DOI Badge"
 #~ msgstr "RDM DOI Abzeichen"
@@ -469,4 +478,7 @@ msgstr "Hochladen"
 #~ "Enabled by\n"
 #~ "            <a href=\"%(fair_data)s\" target=\"_blank\">"
 #~ msgstr ""
+
+#~ msgid "Uploads"
+#~ msgstr "Hochladen"
 
