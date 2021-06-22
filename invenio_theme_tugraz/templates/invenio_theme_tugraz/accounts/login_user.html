@@ -33,11 +33,11 @@
         </div>
         {% for name in config.SSO_SAML_IDPS.keys() %}
         <div class="field">
-          <a class="fluid ui basic button large" href="{{ url_for('sso_saml.sso', idp=name) }}">
-            <i class="{{ name|lower() }} icon"></i>
+          <a class="login-page-button ui fluid large button" href="{{ url_for('sso_saml.sso', idp=name) }}">
             {{
             _('Sign in with %(title)s', title=config.SSO_SAML_IDPS[name]['title']|default("SAML", true))
             }}
+            <img src="{{ url_for('static', filename=config.INVENIO_THEME_TUGRAZ_ICON)}}" height="20px" />
           </a>
         </div>
         {% endfor %}
