@@ -13,8 +13,13 @@
 
 from flask import render_template
 from flask_login import login_required
-from invenio_app_rdm.records_ui.utils import set_default_value
-from invenio_app_rdm.records_ui.views.decorators import pass_draft, pass_draft_files
+from invenio_app_rdm.records_ui.views.decorators import (
+    pass_draft,
+    pass_draft_files,
+    pass_is_preview,
+    pass_record_files,
+    pass_record_or_draft,
+)
 from invenio_app_rdm.records_ui.views.deposits import (
     get_form_config,
     get_search_url,
@@ -52,4 +57,22 @@ def deposit_edit(draft=None, draft_files=None, pid_value=None):
         files=draft_files.to_dict(),
         searchbar_config=dict(searchUrl=get_search_url()),
         permissions=draft.has_permissions_to(['new_version'])
+    )
+
+
+@pass_is_preview
+@pass_record_or_draft
+@pass_record_files
+def record_detail(record=None, files=None, pid_value=None, is_preview=False):
+    """Record detail page (aka landing page)."""
+    files_dict = None if files is None else files.to_dict()
+
+    return render_template(
+        "invenio_theme_tugraz/landingpage/detail.html",
+        record=UIJSONSerializer().serialize_object_to_dict(record.to_dict()),
+        pid=pid_value,
+        files=files_dict,
+        permissions=record.has_permissions_to(['edit', 'new_version', 'manage',
+                                               'update_draft', 'read_files']),
+        is_preview=is_preview,
     )
