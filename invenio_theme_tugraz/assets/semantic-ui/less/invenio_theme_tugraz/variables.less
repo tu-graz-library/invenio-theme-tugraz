@@ -17,15 +17,19 @@
 
 // badge colors, accessibility
 @accessRight          : #e9711c;
-@accessRightOpen      : #e9711c;
+@accessRightOpen      : @accessRight;
 @accessRightRestricted: #fbbd08;
 @accessRightEmbargoed : #db2828;
-@accessRightClosed    : #db2828;
+@accessRightClosed    : @accessRightEmbargoed;
 @accessRightMetadata    : #2185D0;
 
 // primary colors TU Graz
 @tugrazBlack: #231f20;
 @tugrazRed  : #e4154b;
+
+// general
+@primaryBackground: #fff;
+@primaryText      : #000;
 
 
 // accent colors
@@ -36,24 +40,19 @@
 
 
 // link and button colors
-@primaryLinkInverted          : #000;
-@primaryLinkBackgroundInverted: #fff;
-@primaryLink                  : #fff;
-@primaryLinkHoverBackground   : #000;
-@primaryButton                : #fff;
-@primaryButtonHoverBackground : #000;
+@primaryLinkInverted          : @primaryText;
+@primaryLinkBackgroundInverted: @primaryBackground;
+@primaryLink                  : @primaryBackground;
+@primaryLinkHoverBackground   : @primaryText;
+@primaryButton                : @primaryBackground;
+@primaryButtonHoverBackground : @primaryText;
 @primaryButtonInverted        : #000f;
 
 
 
-// general
-@primaryBackground: #fff;
-@primaryText      : #000;
-
-
 
 // account (signin, signup) specific
-@primaryFormAccounts          : #fff;
+@primaryFormAccounts          : @primaryBackground;
 @formAccountsInputPlaceholder : silver;
 @fieldInputSelectionBackground: #50a2ce;
 @signInBackground             : #245b78;
