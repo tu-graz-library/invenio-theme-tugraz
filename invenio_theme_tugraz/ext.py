@@ -9,8 +9,8 @@
 """invenio module for TUGRAZ theme."""
 
 from . import config
-from .deposits import deposit_create, deposit_edit
-from .views import index, record_detail
+from .deposits import deposit_create, deposit_edit, record_detail
+from .views import index
 
 
 class InvenioThemeTugraz(object):

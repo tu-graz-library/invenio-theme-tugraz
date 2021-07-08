@@ -14,11 +14,6 @@ from typing import Dict
 
 from elasticsearch_dsl.utils import AttrDict
 from flask import Blueprint, render_template
-from invenio_app_rdm.records_ui.views.decorators import (
-    pass_is_preview,
-    pass_record_files,
-    pass_record_or_draft,
-)
 from invenio_rdm_records.resources.serializers import UIJSONSerializer
 
 from .search import FrontpageRecordsSearch
@@ -75,21 +70,3 @@ def index():
 def comingsoon():
     """Comingsoon."""
     return render_template("invenio_theme_tugraz/comingsoon.html")
-
-
-@pass_is_preview
-@pass_record_or_draft
-@pass_record_files
-def record_detail(record=None, files=None, pid_value=None, is_preview=False):
-    """Record detail page (aka landing page)."""
-    files_dict = None if files is None else files.to_dict()
-
-    return render_template(
-        "invenio_theme_tugraz/landingpage/detail.html",
-        record=UIJSONSerializer().serialize_object_to_dict(record.to_dict()),
-        pid=pid_value,
-        files=files_dict,
-        permissions=record.has_permissions_to(['edit', 'new_version', 'manage',
-                                               'update_draft', 'read_files']),
-        is_preview=is_preview,
-    )
