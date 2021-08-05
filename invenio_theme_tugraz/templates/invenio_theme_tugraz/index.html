@@ -108,22 +108,9 @@
               </div>
             </div>
 
-            <!--Disabled on feb-relase - enable when stable-->
-            <!-- <div class="right floated column">
-              <span class="access-right">
-                <i class="icon lock open"></i>
-                {{ r.access.access_right | make_dict_like('access_right') | vocabulary_title('access_right') }}
-                {%- for right in r.metadata.rights %}
-                <a target="_blank" href="{{right.url}}">{{ '(' ~ right.identifier ~ ')' }}</a>
-                {%- endfor %}
-
-              </span>
-            </div> -->
           </div>
         </div>
       </article>
-      <!----TODO: more versions
-      -->
 
       {%- endfor %}
       {% if records %}
