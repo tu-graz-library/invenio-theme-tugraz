@@ -80,15 +80,6 @@ SECURITY_REGISTER_USER_TEMPLATE = (
 )
 """Sigup template"""
 
-# Invenio-I18N
-# ============
-# See https://invenio-i18n.readthedocs.io/en/latest/configuration.html
-BABEL_DEFAULT_LOCALE = "en"
-# Default time zone
-BABEL_DEFAULT_TIMEZONE = "Europe/Vienna"
-# Other supported languages (do not include BABEL_DEFAULT_LOCALE in list).
-I18N_LANGUAGES = [("de", _("German"))]
-
 # Invenio-app-rdm
 # =============
 # See https://invenio-app-rdm.readthedocs.io/en/latest/configuration.html
