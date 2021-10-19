@@ -45,28 +45,35 @@
         <div class="ui horizontal divider">
           {{ _("Or") }}
         </div>
-      {%- endif %}
+        {%- endif %}
         {% endif %}
 
         {%- block form_outer %}
         {%- if config.ACCOUNTS_LOCAL_LOGIN_ENABLED %}
-        {%- with form = login_user_form %}
-        <div style="padding-bottom: 20px;padding-top: 6px;">
-        <form action="{{ url_for_security('login') }}" method="POST" name="login_user_form" class="ui big form">
-          {{ form.hidden_tag() }}
-          {{ form_errors(form) }}
-          {{ render_field(form.email, icon="user icon", autofocus=True, errormsg=False) }}
-          {{ render_field(form.password, icon="lock icon", errormsg=False) }}
-          <button type="submit" class="ui fluid large submit button">
-            <i class="ui sign-in icon"></i>{{ _('Log In') }}
-          </button>
-        </form>
-      </div>
+        <div class="ui styled accordion">
+          <div class="title">
+            <i class="user icon"></i>
+            {{ _('Repository Credentials') }}
+          </div>
+          <div class="content">
+            {%- with form = login_user_form %}
+            <div style="padding-bottom: 20px;padding-top: 6px;">
+              <form action="{{ url_for_security('login') }}" method="POST" name="login_user_form" class="ui big form">
+                {{ form.hidden_tag() }}
+                {{ form_errors(form) }}
+                {{ render_field(form.email, icon="user icon", autofocus=True, errormsg=False) }}
+                {{ render_field(form.password, icon="lock icon", errormsg=False) }}
+                <button type="submit" class="ui fluid large submit button">
+                  <i class="ui sign-in icon"></i>{{ _('Log In') }}
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
         {%- endwith %}
         {%- endif %}
         {%- endblock form_outer %}
         <div class="divider hidden"></div>
-
       </div>
 
       {%- block registerable %}
