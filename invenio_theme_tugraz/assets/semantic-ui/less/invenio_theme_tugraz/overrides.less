@@ -77,12 +77,25 @@ pre {
   background-color: @tugrazRed;
 }
 
-.ui.button:hover,
-.ui.search.button:hover {
-  background-color: @primaryButtonHoverBackground;
+/***
+ * accordion title
+ ***/
+.ui.accordion.styled {
+  .title,
+  .title.active {
+    background-color: @greyLight;
+    color: rgba(0, 0, 0, 0.6);
+  }
 }
 
-.ui.button:hover {
+/***
+ * buttons hover and accordion hover
+ ***/
+.ui.button:hover,
+.ui.search.button:hover,
+.ui.accordion.styled .title:hover,
+.ui.accordion.styled .accordion .title:hover {
+  background-color: @primaryButtonHoverBackground;
   color: @primaryButton;
 }
 
@@ -97,6 +110,7 @@ pre {
 .ui.input > input, /* it seams redundant but it is not */
 .ui.segment,
 .ui.selection.dropdown,
+.ui.accordion.styled,
 .ui.card,
 .ui.cards > .card,
 .ui.basic.button, .ui.basic.buttons .button,
