@@ -39,48 +39,58 @@
     </div>
 
     <div class="column" id="switch_right">
-     
+      
+      
+      <!--Sigup with SSO-->
+      {%- if config.INVENIO_CONFIG_TUGRAZ_SHIBBOLETH %}
+      <div class="ui divider"></div>
+      <a href="{{ url_for('sso_saml.sso', idp='idp') }}" class="login-page-button ui fluid large button">
+        <span style="font-size: 18px;">{{ _('Sign up with TUGRAZ ') }}</span>
+        <img src="{{ url_for('static', filename=config.INVENIO_THEME_TUGRAZ_ICON)}}" height="20px" />
+      </a>
+      <div class="ui inverted horizontal divider"><span class="text-color">{{_ ("Or")}}</span></div>
+      {%- endif %}
 
-        <!--Sigup with SSO-->
-        {%- if config.INVENIO_CONFIG_TUGRAZ_SHIBBOLETH %}
-        <div class="ui divider"></div>
-        <a href="{{ url_for('sso_saml.sso', idp='idp') }}" class="login-page-button ui fluid large button">
-          <span style="font-size: 18px;">{{ _('Sign up with TUGRAZ ') }}</span>
-          <img src="{{ url_for('static', filename=config.INVENIO_THEME_TUGRAZ_ICON)}}" height="20px" />
-        </a>
-        </div>
-        <div class="ui inverted horizontal divider"><span class="text-color">{{_ ("Or")}}</span></div>
-        {%- endif %}
+      {%- block form_header %}
+      <!-- can add a header img-->
+      {%- block form_outer %}
+      {%- endblock form_outer %}
+      {%- endblock form_header %}
 
-        {%- block form_header %}
-        <!-- can add a header img-->
-        {%- block form_outer %}
-        {%- endblock form_outer %}
-        {%- endblock form_header %}
-        {%- with form = register_user_form %}
-        <form class="ui big form" action="{{ url_for_security('register') }}" method="POST" name="register_user_form">
-          {{ form_errors(form) }}
-          {{ form.hidden_tag() }}
-          {%- block registration_form_fields scoped %}
-          {{ render_field(form.email, icon="user icon", autofocus=True, errormsg=False) }}
-          {{ render_field(form.password, icon="lock icon", errormsg=False) }}
-          {%- if form.password_confirm %}
-          {{ render_field(form.password_confirm, icon="lock icon", errormsg=False) }}
-          {%- endif %}
-          {%- endblock registration_form_fields %}
+      {%- with form = register_user_form %}
+        {%- set accordion_active = "active" if form.errors else "" %}
+        <div class="ui padded centered large form">
+          <div class="ui styled accordion">
+            <div class="title {{ accordion_active }}">
+              {{ _('Sign up with repository credentials') }}
+              <i class="user icon"></i>
+            </div>
+            <div class="content {{ accordion_active }}">
+              <form class="ui large form" action="{{ url_for_security('register') }}" method="POST" name="register_user_form">
+                {{ form_errors(form) }}
+                {{ form.hidden_tag() }}
+                {%- block registration_form_fields scoped %}
+                {{ render_field(form.email, icon="user icon", autofocus=True, errormsg=False) }}
+                {{ render_field(form.password, icon="lock icon", errormsg=False) }}
+                {%- if form.password_confirm %}
+                {{ render_field(form.password_confirm, icon="lock icon", errormsg=False) }}
+                {%- endif %}
+                {%- endblock registration_form_fields %}
 
-          {%- if form.recaptcha %}
-          <div class="grouped fields">{{ form.recaptcha() }}</div>
-          {%- endif %}
+                {%- if form.recaptcha %}
+                <div class="grouped fields">{{ form.recaptcha() }}</div>
+                {%- endif %}
 
-          <div class="centered row">
-            <button type="submit" class="ui fluid large submit button">
-              <i class="ui edit outline icon"></i>{{ _('Sign up') }}
-            </button>
+                <div class="centered row">
+                  <button type="submit" class="ui fluid large submit button">
+                    <i class="ui edit outline icon"></i>{{ _('Sign up') }}
+                  </button>
+                </div>
+              </form>
+            </div>
           </div>
-        </form>
-        {%- endwith %}
-   
+        </div>
+      {%- endwith %}
       <div class="ui divider"></div>
     </div>
 
