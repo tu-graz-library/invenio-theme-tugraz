@@ -328,6 +328,8 @@ texinfo_documents = [
 # Example configuration for intersphinx: refer to the Python standard library.
 intersphinx_mapping = {
     "python": ("https://docs.python.org/", None),
+    "flask": ("https://flask.palletsprojects.com/", None),
+    "werkzeug": ("https://werkzeug.palletsprojects.com/", None),
     # TODO: Configure external documentation references, eg:
     # 'Flask-Admin': ('https://flask-admin.readthedocs.io/en/latest/', None),
 }
