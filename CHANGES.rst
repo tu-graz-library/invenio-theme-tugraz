@@ -7,6 +7,12 @@
 
 Changes
 =======
+Version 3.7.0 (released 2021-12-07)
+
+- dep: bump config module #252
+- docs: adjust sphinx to flask2 #251
+- update register and login view #247
+
 Version 3.6.1 (released 2021-09-01)
 
 - fix: add font locally and remove google dependency #242
