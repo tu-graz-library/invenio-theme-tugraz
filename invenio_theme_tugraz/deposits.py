@@ -6,13 +6,11 @@
 # modify it under the terms of the MIT License; see LICENSE file for more
 # details.
 
+"""Routes for record-related pages provided by Invenio-App-RDM."""
 
 from flask import render_template
 from flask_login import login_required
-from invenio_app_rdm.records_ui.views.decorators import (
-    pass_draft,
-    pass_draft_files,
-)
+from invenio_app_rdm.records_ui.views.decorators import pass_draft, pass_draft_files
 from invenio_app_rdm.records_ui.views.deposits import (
     get_form_config,
     get_search_url,
