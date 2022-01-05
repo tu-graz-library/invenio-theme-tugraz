@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 #
-# Copyright (C) 2020-2021 Graz University of Technology.
+# Copyright (C) 2020-2022 Graz University of Technology.
 #
 # invenio-theme-tugraz is free software; you can redistribute it and/or
 # modify it under the terms of the MIT License; see LICENSE file for more
@@ -10,6 +10,7 @@
 
 from . import config
 from .views import index
+from invenio_theme_tugraz.deposits import deposit_create, deposit_edit
 
 
 class InvenioThemeTugraz(object):
@@ -25,6 +26,8 @@ class InvenioThemeTugraz(object):
         # add index route rule
         # https://flask.palletsprojects.com/en/1.1.x/api/#flask.Flask.add_url_rule
         app.add_url_rule("/", "index", index)
+        app.add_url_rule("/uploads/new", "deposit_create", deposit_create)
+        app.add_url_rule("/uploads/<pid_value>", "deposit_edit", deposit_edit)
         self.init_config(app)
         app.extensions["invenio-theme-tugraz"] = self
 
