@@ -18,6 +18,7 @@ history = open("CHANGES.rst").read()
 tests_require = [
     "pytest-invenio>=1.4.0",
     "invenio-app>=1.3.0,<2.0.0",
+    "invenio-app-rdm>=7.0.1,<8.0.0",
 ]
 
 # Should follow invenio-app-rdm
