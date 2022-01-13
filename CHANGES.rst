@@ -7,6 +7,10 @@
 
 Changes
 =======
+Version 3.7.1.dev2 (released 2022-01-13)
+
+- modify: override record deposit template and increase upload size #256
+
 Version 3.7.0 (released 2021-12-07)
 
 - dep: bump config module #252
