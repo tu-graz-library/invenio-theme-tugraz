@@ -56,7 +56,7 @@ install_requires = [
     "Flask-WebpackExt>=1.0.0",
     "invenio-assets>=1.2.0",
     "invenio-i18n>=1.2.0",
-    "invenio_config_tugraz>=0.7.0,<0.8.0",
+    "invenio_config_tugraz>=0.8.0,<0.9.0",
 ]
 
 packages = find_packages()
