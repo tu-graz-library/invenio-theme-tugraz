@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: invenio-theme-tugraz 3.7.0\n"
 "Report-Msgid-Bugs-To: mojib.wali@tugraz.at\n"
-"POT-Creation-Date: 2022-02-14 16:18+0100\n"
+"POT-Creation-Date: 2022-03-03 10:34+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -229,7 +229,7 @@ msgid "Home"
 msgstr ""
 
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/header.html:49
-msgid "Dashboard"
+msgid "My dashboard"
 msgstr ""
 
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/index.html:27

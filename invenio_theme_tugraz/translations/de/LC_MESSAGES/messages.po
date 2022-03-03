@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: invenio-theme-tugraz 1.0.4\n"
 "Report-Msgid-Bugs-To: mojib.wali@tugraz.at\n"
-"POT-Creation-Date: 2022-02-14 16:18+0100\n"
+"POT-Creation-Date: 2022-03-03 10:34+0100\n"
 "PO-Revision-Date: 2020-10-06 10:27+0200\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: de\n"
@@ -240,8 +240,8 @@ msgid "Home"
 msgstr "Startseite"
 
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/header.html:49
-msgid "Dashboard"
-msgstr ""
+msgid "My dashboard"
+msgstr "Meine Übersicht"
 
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/index.html:27
 msgid "Type and press enter to search"
@@ -485,4 +485,7 @@ msgstr "Mit Ihren Repository Daten registrieren"
 
 #~ msgid "Reason"
 #~ msgstr "Grund"
+
+#~ msgid "Dashboard"
+#~ msgstr ""
 
