@@ -5,6 +5,11 @@
 # invenio-theme-tugraz is free software; you can redistribute it and/or
 # modify it under the terms of the MIT License; see LICENSE file for more
 # details.
+#
+# 1) Create message catalog:
+#    $ python setup.py extract_messages
+#    $ python setup.py update_catalog -l de
+#    $ python setup.py compile_catalog
 
 [main]
 host = https://www.transifex.com

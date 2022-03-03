@@ -45,6 +45,9 @@
               <a href="{{ item.url }}" class="no-decoration">{{ item.text|safe }}</a>
             </div>
             {%- endfor %}
+            <div class="two wide column main-menu-entry">
+              <a href="{{ url_for('invenio_app_rdm_records.dashboard') }}" class="no-decoration nowrap-link">{{_ ("My dashboard")}}</a>
+            </div>
           </div>
        
           <div id="margin-divider" class="ui divider main-menu-underline-line">
