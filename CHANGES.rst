@@ -7,6 +7,10 @@
 
 Changes
 =======
+Version 3.8.0 (released 2022-03-03)
+
+- global: migrate to v8 of invenioRDM #257
+
 Version 3.7.0 (released 2021-12-07)
 
 - dep: bump config module #252
