@@ -35,4 +35,4 @@ def test_init():
 
 def test_app(app):
     """Test extension initialization."""
-    theme = InvenioThemeTugraz(app)
+    _ = InvenioThemeTugraz(app)
