@@ -8,8 +8,6 @@
 
 """invenio module for TUGRAZ theme."""
 
-import binascii
-from os import environ
 from typing import Dict
 
 from elasticsearch_dsl.utils import AttrDict
