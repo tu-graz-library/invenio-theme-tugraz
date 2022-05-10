@@ -51,7 +51,9 @@ def records_serializer(records=None):
     """Serialize list of records."""
     record_list = []
     for record in records:
-        record_list.append(UIJSONSerializer().serialize_object_to_dict(record.to_dict()))
+        record_list.append(
+            UIJSONSerializer().serialize_object_to_dict(record.to_dict())
+        )
     return record_list
 
 
@@ -60,8 +62,7 @@ def index():
     records = FrontpageRecordsSearch()[:5].sort("-created").execute()
 
     return render_template(
-        "invenio_theme_tugraz/index.html",
-        records=records_serializer(records)
+        "invenio_theme_tugraz/index.html", records=records_serializer(records)
     )
 
 
