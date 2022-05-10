@@ -20,5 +20,6 @@ class FrontpageRecordsSearch(RecordsSearch):
 
         index = "rdmrecords-records"
         default_filter = Q(
-            "query_string", query=(
-                "access.record:public " "AND versions.is_latest:true"))
+            "query_string",
+            query=("access.record:public " "AND versions.is_latest:true"),
+        )

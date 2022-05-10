@@ -44,9 +44,9 @@ source_suffix = ".rst"
 master_doc = "index"
 
 # General information about the project.
-project = u"invenio-theme-tugraz"
-copyright = u"2020, Graz University of Technology"
-author = u"Graz University of Technology"
+project = "invenio-theme-tugraz"
+copyright = "2020, Graz University of Technology"
+author = "Graz University of Technology"
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
@@ -241,8 +241,8 @@ latex_documents = [
     (
         master_doc,
         "invenio-theme-tugraz.tex",
-        u"invenio-theme-tugraz Documentation",
-        u"Graz University of Technology",
+        "invenio-theme-tugraz Documentation",
+        "Graz University of Technology",
         "manual",
     ),
 ]
@@ -276,7 +276,7 @@ man_pages = [
     (
         master_doc,
         "invenio-theme-tugraz",
-        u"invenio-theme-tugraz Documentation",
+        "invenio-theme-tugraz Documentation",
         [author],
         1,
     )
@@ -295,7 +295,7 @@ texinfo_documents = [
     (
         master_doc,
         "invenio-theme-tugraz",
-        u"invenio-theme-tugraz Documentation",
+        "invenio-theme-tugraz Documentation",
         author,
         "invenio-theme-tugraz",
         "invenio module for TUGRAZ theme.",
