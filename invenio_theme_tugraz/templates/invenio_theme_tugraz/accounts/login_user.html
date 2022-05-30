@@ -53,9 +53,9 @@
         {%- with form = login_user_form %}
         {%- set accordion_active = "active" if form.errors else "" %}
         <div class="ui styled accordion">
-          <div class="title {{ accordion_active }}">
+          <div class="title trigger {{ accordion_active }}">
             {{ _('Log in with repository credentials') }}
-            <i class="user icon"></i>
+            <i class="user icon button"></i>
           </div>
           <div class="content {{ accordion_active }}">
             <form action="{{ url_for_security('login') }}" method="POST" name="login_user_form" class="ui large form">
