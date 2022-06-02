@@ -7,6 +7,15 @@
 
 Changes
 =======
+Version 3.9.1 (released 2022-06-02)
+
+- fix: add trigger to accordion (#265)
+- dep: adapt to v9 of invenioRDM(#263)
+
+Version 3.9.0 (released 2022-05-27)
+
+- global: migrate setup.py to setup.cfg #260 
+
 Version 3.8.0 (released 2022-03-03)
 
 - global: migrate to v8 of invenioRDM #257
