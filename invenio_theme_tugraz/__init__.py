@@ -10,6 +10,6 @@
 
 from .ext import InvenioThemeTugraz
 
-__version__ = "3.9.1"
+__version__ = "3.9.2"
 
 __all__ = ("__version__", "InvenioThemeTugraz")

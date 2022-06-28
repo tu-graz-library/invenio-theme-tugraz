@@ -7,6 +7,10 @@
 
 Changes
 =======
+Version 3.9.2 (released 2022-06-28)
+
+- fix: adopt renaming of serialize function (#269)
+
 Version 3.9.1 (released 2022-06-02)
 
 - fix: add trigger to accordion (#265)
