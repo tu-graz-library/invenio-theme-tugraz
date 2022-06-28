@@ -53,9 +53,7 @@ def records_serializer(records=None):
     """Serialize list of records."""
     record_list = []
     for record in records:
-        record_list.append(
-            UIJSONSerializer().serialize_object_to_dict(record.to_dict())
-        )
+        record_list.append(UIJSONSerializer().dump_obj(record.to_dict()))
     return record_list
 
 
