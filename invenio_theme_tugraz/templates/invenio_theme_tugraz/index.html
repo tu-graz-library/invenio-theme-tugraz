@@ -17,25 +17,8 @@
 {%- block page_body %}
 
 <div class="ui container">
-  {%- block frontpage_search %}
-
-  {%- block frontpage_form %}
-  <div class="ui center aligned grid">
-    <div class="sixteen wide column">
-      <form action="{{config.THEME_SEARCH_ENDPOINT}}" class="ui form" role="search">
-        <div class="ui fluid big action icon input">
-          <input type="text" name="q" autofocus="autofocus" placeholder="{{ _("Type and press enter to search") }}">
-          <button type="submit" class="ui icon search button">
-            <i class="icon search"></i>
-          </button>
-        </div>
-      </form>
-    </div>
-  </div>
   <div class="ui divider hidden"></div>
-  {%- endblock frontpage_form %}
 
-{%- endblock frontpage_search %}
   <div class="ui stackable grid">
 
     <!---Recent uploads-->
