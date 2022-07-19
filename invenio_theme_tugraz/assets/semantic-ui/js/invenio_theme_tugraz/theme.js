@@ -1,5 +1,9 @@
 import $ from "jquery";
 import "semantic-ui-css";
+import { MultipleOptionsSearchBar } from "@js/invenio_search_ui/components";
+import { i18next } from "@translations/invenio_app_rdm/i18next";
+import ReactDOM from "react-dom";
+import React from "react";
 
 // called on document ready
 $(function () {
@@ -37,3 +41,14 @@ export function toggleVisibility(id) {
 }
 
 window.toggleVisibility = toggleVisibility;
+
+const headerSearchbar = document.getElementById("header-search-bar");
+const searchBarOptions = JSON.parse(headerSearchbar.dataset.options);
+
+ReactDOM.render(
+  <MultipleOptionsSearchBar
+    options={searchBarOptions}
+    placeholder={i18next.t("Search records...")}
+  />,
+  headerSearchbar
+);
