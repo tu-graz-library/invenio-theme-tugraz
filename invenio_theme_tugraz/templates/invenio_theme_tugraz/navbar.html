@@ -1,10 +1,30 @@
 {#
-  Copyright (C) 2020-2021 Graz University of Technology.
+  Copyright (C) 2020-2022 Graz University of Technology.
 
   invenio-theme-tugraz is free software; you can redistribute it and/or
   modify it under the terms of the MIT License; see LICENSE file for more
   details.
 #}
+
+{% set options = [
+  {
+    "key": "records",
+    "text": _("All") + " " + config.THEME_SITENAME,
+    "value": url_for("invenio_search_ui.search"),
+  },{
+    "key": "marc21",
+    "text": _("search publications (thesis, books, papers, etc)"),
+    "value": url_for("invenio_records_marc21.search"),
+  },{
+    "key": "lom",
+    "text": _("search open educational resources"),
+    "value": url_for("invenio_records_lom.search"),
+  }
+]
+%}
+
+
+{% set community = true %}
 
 <div class="ui container">
   <div class="short-menu" id="all-menu-top-table">
@@ -12,7 +32,18 @@
       <div id="all-menu-top-left-item">
         <div class="short-menu-left-search">
           <div style="display: inline-block;">
-            {% include "invenio_app_rdm/searchbar.html" %}
+            <div class="item p-0 search-bar rel-mr-1">
+              <div id="header-search-bar" data-options='{{ options | tojson }}'>
+                <div class="ui fluid search">
+                  <div class="ui icon input">
+                    <input autocomplete="off" placeholder="Search records..."
+                      type="text" tabindex="0" class="prompt" value="">
+                    <i aria-hidden="true" class="search icon"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+
           </div>
 
           <div class="short-menu-left-lang">
@@ -53,7 +84,7 @@
             <br>
             {{_ ("REPOSITORY")}}
             <br>
-            {{_ ("LIBRARY & ARCHIVES")}} 
+            {{_ ("LIBRARY & ARCHIVES")}}
           </a>
         </div>
       </div>
