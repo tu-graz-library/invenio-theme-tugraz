@@ -11,14 +11,17 @@
     "key": "records",
     "text": _("All") + " " + config.THEME_SITENAME,
     "value": url_for("invenio_search_ui.search"),
+    "title": "repo",
   },{
     "key": "marc21",
     "text": _("search publications (thesis, books, papers, etc)"),
     "value": url_for("invenio_records_marc21.search"),
+    "title": "publication",
   },{
     "key": "lom",
     "text": _("search open educational resources"),
     "value": url_for("invenio_records_lom.search"),
+    "title": "oer",
   }
 ]
 %}
