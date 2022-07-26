@@ -26,9 +26,6 @@
 ]
 %}
 
-
-{% set community = true %}
-
 <div class="ui container">
   <div class="short-menu" id="all-menu-top-table">
     <div class="short-menu-left">
@@ -36,17 +33,8 @@
         <div class="short-menu-left-search">
           <div style="display: inline-block;">
             <div class="item p-0 search-bar rel-mr-1">
-              <div id="header-search-bar" data-options='{{ options | tojson }}'>
-                <div class="ui fluid search">
-                  <div class="ui icon input">
-                    <input autocomplete="off" placeholder="Search records..."
-                      type="text" tabindex="0" class="prompt" value="">
-                    <i aria-hidden="true" class="search icon"></i>
-                  </div>
-                </div>
-              </div>
+              <div id="header-search-bar" data-options='{{ options | tojson }}'></div>
             </div>
-
           </div>
 
           <div class="short-menu-left-lang">
