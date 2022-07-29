@@ -7,6 +7,16 @@
 
 Changes
 =======
+
+Version v4.0.0 (release 2022-07-29)
+
+- remove unnecessary html code for header-search-bar
+- fix warning from semantic-ui-react Search component
+- add marc21 and lom to the searchbar
+- change searchbar layout and use invenio-app-rdm searchbar
+- remove grey color of community block and reduce size
+- migrate js to use prettier
+
 Version 3.9.2 (released 2022-06-28)
 
 - fix: adopt renaming of serialize function (#269)
