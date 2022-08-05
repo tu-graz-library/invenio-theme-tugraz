@@ -7,22 +7,22 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: invenio-theme-tugraz 3.7.0\n"
+"Project-Id-Version: invenio-theme-tugraz 4.0.0\n"
 "Report-Msgid-Bugs-To: mojib.wali@tugraz.at\n"
-"POT-Creation-Date: 2022-03-03 10:34+0100\n"
+"POT-Creation-Date: 2022-08-05 10:15+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.9.1\n"
+"Generated-By: Babel 2.10.3\n"
 
-#: invenio_theme_tugraz/config.py:13 invenio_theme_tugraz/config.py:62
+#: invenio_theme_tugraz/config.py:13 invenio_theme_tugraz/config.py:60
 msgid "TU Graz Repository"
 msgstr ""
 
-#: invenio_theme_tugraz/config.py:65
+#: invenio_theme_tugraz/config.py:63
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/footer.html:30
 msgid "Repository"
 msgstr ""
@@ -224,35 +224,27 @@ msgstr ""
 msgid "This is the test instance of the TU Graz Repository."
 msgstr ""
 
-#: invenio_theme_tugraz/templates/invenio_theme_tugraz/header.html:39
+#: invenio_theme_tugraz/templates/invenio_theme_tugraz/header.html:40
 msgid "Home"
 msgstr ""
 
-#: invenio_theme_tugraz/templates/invenio_theme_tugraz/header.html:49
-msgid "My dashboard"
-msgstr ""
-
-#: invenio_theme_tugraz/templates/invenio_theme_tugraz/index.html:27
-msgid "Type and press enter to search"
-msgstr ""
-
-#: invenio_theme_tugraz/templates/invenio_theme_tugraz/index.html:43
+#: invenio_theme_tugraz/templates/invenio_theme_tugraz/index.html:26
 msgid "Recent uploads"
 msgstr ""
 
-#: invenio_theme_tugraz/templates/invenio_theme_tugraz/index.html:47
+#: invenio_theme_tugraz/templates/invenio_theme_tugraz/index.html:30
 msgid "There are no public records to show."
 msgstr ""
 
-#: invenio_theme_tugraz/templates/invenio_theme_tugraz/index.html:61
+#: invenio_theme_tugraz/templates/invenio_theme_tugraz/index.html:44
 msgid "Publication date"
 msgstr ""
 
-#: invenio_theme_tugraz/templates/invenio_theme_tugraz/index.html:66
+#: invenio_theme_tugraz/templates/invenio_theme_tugraz/index.html:49
 msgid "Resource type"
 msgstr ""
 
-#: invenio_theme_tugraz/templates/invenio_theme_tugraz/index.html:104
+#: invenio_theme_tugraz/templates/invenio_theme_tugraz/index.html:87
 #, python-format
 msgid ""
 "\n"
@@ -260,67 +252,79 @@ msgid ""
 "                  "
 msgstr ""
 
-#: invenio_theme_tugraz/templates/invenio_theme_tugraz/index.html:118
+#: invenio_theme_tugraz/templates/invenio_theme_tugraz/index.html:101
 msgid "More"
 msgstr ""
 
-#: invenio_theme_tugraz/templates/invenio_theme_tugraz/index.html:128
+#: invenio_theme_tugraz/templates/invenio_theme_tugraz/index.html:111
 msgid "Need help?"
 msgstr ""
 
-#: invenio_theme_tugraz/templates/invenio_theme_tugraz/index.html:132
+#: invenio_theme_tugraz/templates/invenio_theme_tugraz/index.html:115
 msgid "Contact us"
 msgstr ""
 
-#: invenio_theme_tugraz/templates/invenio_theme_tugraz/index.html:137
+#: invenio_theme_tugraz/templates/invenio_theme_tugraz/index.html:120
 msgid "prioritizes all Recent uploads."
 msgstr ""
 
-#: invenio_theme_tugraz/templates/invenio_theme_tugraz/index.html:140
+#: invenio_theme_tugraz/templates/invenio_theme_tugraz/index.html:123
 msgid "We can help with:"
 msgstr ""
 
-#: invenio_theme_tugraz/templates/invenio_theme_tugraz/index.html:145
+#: invenio_theme_tugraz/templates/invenio_theme_tugraz/index.html:128
 msgid "Uploading your research data, software, preprints, etc."
 msgstr ""
 
-#: invenio_theme_tugraz/templates/invenio_theme_tugraz/index.html:146
+#: invenio_theme_tugraz/templates/invenio_theme_tugraz/index.html:129
 msgid "One-on-one with"
 msgstr ""
 
-#: invenio_theme_tugraz/templates/invenio_theme_tugraz/index.html:146
+#: invenio_theme_tugraz/templates/invenio_theme_tugraz/index.html:129
 msgid "supporters."
 msgstr ""
 
-#: invenio_theme_tugraz/templates/invenio_theme_tugraz/index.html:147
+#: invenio_theme_tugraz/templates/invenio_theme_tugraz/index.html:130
 msgid "Quota increases beyond our default policy."
 msgstr ""
 
-#: invenio_theme_tugraz/templates/invenio_theme_tugraz/index.html:148
+#: invenio_theme_tugraz/templates/invenio_theme_tugraz/index.html:131
 msgid "Scripts for automated uploading of larger datasets."
 msgstr ""
 
-#: invenio_theme_tugraz/templates/invenio_theme_tugraz/index.html:153
+#: invenio_theme_tugraz/templates/invenio_theme_tugraz/index.html:136
 msgid "Why use"
 msgstr ""
 
-#: invenio_theme_tugraz/templates/invenio_theme_tugraz/navbar.html:66
+#: invenio_theme_tugraz/templates/invenio_theme_tugraz/navbar.html:12
+msgid "All"
+msgstr ""
+
+#: invenio_theme_tugraz/templates/invenio_theme_tugraz/navbar.html:17
+msgid "Publications"
+msgstr ""
+
+#: invenio_theme_tugraz/templates/invenio_theme_tugraz/navbar.html:22
+msgid "Open Educational Resources"
+msgstr ""
+
+#: invenio_theme_tugraz/templates/invenio_theme_tugraz/navbar.html:76
 msgid "REPOSITORY"
 msgstr ""
 
-#: invenio_theme_tugraz/templates/invenio_theme_tugraz/navbar.html:68
+#: invenio_theme_tugraz/templates/invenio_theme_tugraz/navbar.html:78
 msgid "LIBRARY & ARCHIVES"
 msgstr ""
 
-#: invenio_theme_tugraz/templates/invenio_theme_tugraz/navbar.html:78
+#: invenio_theme_tugraz/templates/invenio_theme_tugraz/navbar.html:88
 msgid "SCIENCE"
 msgstr ""
 
-#: invenio_theme_tugraz/templates/invenio_theme_tugraz/navbar.html:79
+#: invenio_theme_tugraz/templates/invenio_theme_tugraz/navbar.html:89
 msgid "PASSION"
 msgstr ""
 
-#: invenio_theme_tugraz/templates/invenio_theme_tugraz/navbar.html:80
+#: invenio_theme_tugraz/templates/invenio_theme_tugraz/navbar.html:90
 msgid "TECHNOLOGY"
 msgstr ""
 
