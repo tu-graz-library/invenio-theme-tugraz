@@ -8,6 +8,12 @@
 Changes
 =======
 
+Version v4.0.1 (release 2022-08-05)
+
+- update translation
+- improve wording on search options
+
+
 Version v4.0.0 (release 2022-07-29)
 
 - remove unnecessary html code for header-search-bar
