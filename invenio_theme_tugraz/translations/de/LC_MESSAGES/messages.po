@@ -8,22 +8,23 @@ msgid ""
 msgstr ""
 "Project-Id-Version: invenio-theme-tugraz 1.0.4\n"
 "Report-Msgid-Bugs-To: mojib.wali@tugraz.at\n"
-"POT-Creation-Date: 2022-03-03 10:34+0100\n"
-"PO-Revision-Date: 2020-10-06 10:27+0200\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language: de\n"
+"POT-Creation-Date: 2022-08-05 10:15+0200\n"
+"PO-Revision-Date: 2022-08-05 10:21+0200\n"
+"Last-Translator: \n"
 "Language-Team: de <LL@li.org>\n"
-"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+"Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "Generated-By: Babel 2.9.1\n"
+"X-Generator: Poedit 2.3.1\n"
 
-#: invenio_theme_tugraz/config.py:13 invenio_theme_tugraz/config.py:62
+#: invenio_theme_tugraz/config.py:13 invenio_theme_tugraz/config.py:60
 msgid "TU Graz Repository"
 msgstr "TU Graz Repository"
 
-#: invenio_theme_tugraz/config.py:65
+#: invenio_theme_tugraz/config.py:63
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/footer.html:30
 msgid "Repository"
 msgstr "Repository"
@@ -39,8 +40,8 @@ msgstr "Sicher"
 
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/benefits.html:3
 msgid ""
-"your research is stored safely for the future in TU Graz library for as "
-"long as TU Graz library exists."
+"your research is stored safely for the future in TU Graz library for as long "
+"as TU Graz library exists."
 msgstr ""
 "Ihre Forschung ist in der Bibliothek der TU Graz für die Zukunft "
 "gespeichert, solange die Bibliothek der TU Graz existiert."
@@ -51,8 +52,8 @@ msgstr "Vertrauenswürdig"
 
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/benefits.html:4
 msgid ""
-"built and operated by CERN and OpenAIRE to ensure that everyone can join "
-"in Open Science."
+"built and operated by CERN and OpenAIRE to ensure that everyone can join in "
+"Open Science."
 msgstr ""
 "Aufgebaut und betrieben von CERN und OpenAIRE, um sicherzustellen, dass "
 "jeder an Open Science teilnehmen kann."
@@ -66,8 +67,8 @@ msgid ""
 "every upload is assigned a Digital Object Identifier (DOI), to make them "
 "citable and trackable."
 msgstr ""
-"Jeder Upload wird mit einem Digital Object Identifier (DOI) versehen,um "
-"ihn zitierfähig und nachverfolgbar zu"
+"Jeder Upload wird mit einem Digital Object Identifier (DOI) versehen,um ihn "
+"zitierfähig und nachverfolgbar zu"
 
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/benefits.html:6
 msgid "No waiting time"
@@ -75,11 +76,11 @@ msgstr "Keine Wartezeit"
 
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/benefits.html:6
 msgid ""
-"Uploads are made available online as soon as you hit publish, and your "
-"DOI is registered within seconds."
+"Uploads are made available online as soon as you hit publish, and your DOI "
+"is registered within seconds."
 msgstr ""
-"Uploads stehen sofort nach drücken auf “Veröffentlichen” zur Verfügung. "
-"Ihre DOI wird innerhalb von Sekunden registriert."
+"Uploads stehen sofort nach drücken auf “Veröffentlichen” zur Verfügung. Ihre "
+"DOI wird innerhalb von Sekunden registriert."
 
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/benefits.html:7
 msgid "Open or closed"
@@ -87,11 +88,11 @@ msgstr "Offen oder geschlossen"
 
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/benefits.html:7
 msgid ""
-"Share e.g. anonymized clinical trial data with only medical professionals"
-" via our restricted access mode."
+"Share e.g. anonymized clinical trial data with only medical professionals "
+"via our restricted access mode."
 msgstr ""
-"Teilen Sie z.B. anonymisierte klinische Studiendaten nur mit "
-"medizinischem Fachpersonal über unseren eingeschränkten Zugriffsmodus."
+"Teilen Sie z.B. anonymisierte klinische Studiendaten nur mit medizinischem "
+"Fachpersonal über unseren eingeschränkten Zugriffsmodus."
 
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/benefits.html:8
 msgid "Versioning"
@@ -197,17 +198,19 @@ msgstr "Um die Schriftgröße zu ändern."
 #, fuzzy, python-format
 msgid ""
 "<strong>Powered by</strong>\n"
-"            <a href=\"%(invenio_rdm)s\" target=\"_blank\" "
-"title=\"invenioRDM\">"
-msgstr "<strong>Powered by</strong> <a href=\"%(invenio_rdm)s\" target=\"_blank\">"
+"            <a href=\"%(invenio_rdm)s\" target=\"_blank\" title=\"invenioRDM"
+"\">"
+msgstr ""
+"<strong>Powered by</strong> <a href=\"%(invenio_rdm)s\" target=\"_blank\">"
 
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/footer.html:126
 #, fuzzy, python-format
 msgid ""
 "<strong>Enabled by</strong>\n"
-"            <a href=\"%(fair_data)s\" target=\"_blank\" title=\"Fair Data"
-" Austria\">"
-msgstr "<strong>Enabled by</strong> <a href=\"%(fair_data)s\" target=\"_blank\">"
+"            <a href=\"%(fair_data)s\" target=\"_blank\" title=\"Fair Data "
+"Austria\">"
+msgstr ""
+"<strong>Enabled by</strong> <a href=\"%(fair_data)s\" target=\"_blank\">"
 
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/footer.html:140
 #, python-format
@@ -235,103 +238,109 @@ msgstr "Testumgebung"
 msgid "This is the test instance of the TU Graz Repository."
 msgstr "Dies ist die Testumgebung des TU Graz Repositorys."
 
-#: invenio_theme_tugraz/templates/invenio_theme_tugraz/header.html:39
+#: invenio_theme_tugraz/templates/invenio_theme_tugraz/header.html:40
 msgid "Home"
 msgstr "Startseite"
 
-#: invenio_theme_tugraz/templates/invenio_theme_tugraz/header.html:49
-msgid "My dashboard"
-msgstr "Meine Übersicht"
-
-#: invenio_theme_tugraz/templates/invenio_theme_tugraz/index.html:27
-msgid "Type and press enter to search"
-msgstr "Suchbegriff eingeben und “Enter” drücken (?)"
-
-#: invenio_theme_tugraz/templates/invenio_theme_tugraz/index.html:43
+#: invenio_theme_tugraz/templates/invenio_theme_tugraz/index.html:26
 msgid "Recent uploads"
 msgstr "Kürzlich hochgeladene Dateien"
 
-#: invenio_theme_tugraz/templates/invenio_theme_tugraz/index.html:47
+#: invenio_theme_tugraz/templates/invenio_theme_tugraz/index.html:30
 msgid "There are no public records to show."
 msgstr "Es sind keine öffentlich zugänglichen Datensätze vorhanden."
 
-#: invenio_theme_tugraz/templates/invenio_theme_tugraz/index.html:61
+#: invenio_theme_tugraz/templates/invenio_theme_tugraz/index.html:44
 msgid "Publication date"
 msgstr "Datum der Veröffentlichung"
 
-#: invenio_theme_tugraz/templates/invenio_theme_tugraz/index.html:66
+#: invenio_theme_tugraz/templates/invenio_theme_tugraz/index.html:49
 msgid "Resource type"
 msgstr "Art der Veröffentlichung"
 
-#: invenio_theme_tugraz/templates/invenio_theme_tugraz/index.html:104
+#: invenio_theme_tugraz/templates/invenio_theme_tugraz/index.html:87
 #, python-format
 msgid ""
 "\n"
 "                  Uploaded on %(date)s\n"
 "                  "
-msgstr "Hochgeladen am %(date)s\n"
+msgstr ""
+"\n"
+"\t\tHochgeladen am %(date)s"
 
-#: invenio_theme_tugraz/templates/invenio_theme_tugraz/index.html:118
+#: invenio_theme_tugraz/templates/invenio_theme_tugraz/index.html:101
 msgid "More"
 msgstr "Mehr"
 
-#: invenio_theme_tugraz/templates/invenio_theme_tugraz/index.html:128
+#: invenio_theme_tugraz/templates/invenio_theme_tugraz/index.html:111
 msgid "Need help?"
 msgstr "Brauchen Sie Hilfe?"
 
-#: invenio_theme_tugraz/templates/invenio_theme_tugraz/index.html:132
+#: invenio_theme_tugraz/templates/invenio_theme_tugraz/index.html:115
 msgid "Contact us"
 msgstr "Kontaktiere uns"
 
-#: invenio_theme_tugraz/templates/invenio_theme_tugraz/index.html:137
+#: invenio_theme_tugraz/templates/invenio_theme_tugraz/index.html:120
 msgid "prioritizes all Recent uploads."
 msgstr "reiht die neuesten Uploads vor."
 
-#: invenio_theme_tugraz/templates/invenio_theme_tugraz/index.html:140
+#: invenio_theme_tugraz/templates/invenio_theme_tugraz/index.html:123
 msgid "We can help with:"
 msgstr "Dabei können wir helfen:"
 
-#: invenio_theme_tugraz/templates/invenio_theme_tugraz/index.html:145
+#: invenio_theme_tugraz/templates/invenio_theme_tugraz/index.html:128
 msgid "Uploading your research data, software, preprints, etc."
 msgstr "Hochladen Ihrer Forschungsdaten, Software, Preprints usw."
 
-#: invenio_theme_tugraz/templates/invenio_theme_tugraz/index.html:146
+#: invenio_theme_tugraz/templates/invenio_theme_tugraz/index.html:129
 msgid "One-on-one with"
 msgstr "One-on-one mit"
 
-#: invenio_theme_tugraz/templates/invenio_theme_tugraz/index.html:146
+#: invenio_theme_tugraz/templates/invenio_theme_tugraz/index.html:129
 msgid "supporters."
 msgstr "Unterstützern"
 
-#: invenio_theme_tugraz/templates/invenio_theme_tugraz/index.html:147
+#: invenio_theme_tugraz/templates/invenio_theme_tugraz/index.html:130
 msgid "Quota increases beyond our default policy."
 msgstr "Quota Erhöhungen über unsere Standard Policy hinaus."
 
-#: invenio_theme_tugraz/templates/invenio_theme_tugraz/index.html:148
+#: invenio_theme_tugraz/templates/invenio_theme_tugraz/index.html:131
 msgid "Scripts for automated uploading of larger datasets."
 msgstr "Skripte zum automatisierten Hochladen größerer Datensätze."
 
-#: invenio_theme_tugraz/templates/invenio_theme_tugraz/index.html:153
+#: invenio_theme_tugraz/templates/invenio_theme_tugraz/index.html:136
 msgid "Why use"
 msgstr "Warum"
 
-#: invenio_theme_tugraz/templates/invenio_theme_tugraz/navbar.html:66
+#: invenio_theme_tugraz/templates/invenio_theme_tugraz/navbar.html:12
+msgid "All"
+msgstr "Alle"
+
+#: invenio_theme_tugraz/templates/invenio_theme_tugraz/navbar.html:17
+msgid "Publications"
+msgstr "Publikationen"
+
+#: invenio_theme_tugraz/templates/invenio_theme_tugraz/navbar.html:22
+msgid "Open Educational Resources"
+msgstr "Open Educational Resources"
+
+#: invenio_theme_tugraz/templates/invenio_theme_tugraz/navbar.html:76
 msgid "REPOSITORY"
 msgstr "Repository"
 
-#: invenio_theme_tugraz/templates/invenio_theme_tugraz/navbar.html:68
+#: invenio_theme_tugraz/templates/invenio_theme_tugraz/navbar.html:78
 msgid "LIBRARY & ARCHIVES"
 msgstr "Bibliothek und Archiv"
 
-#: invenio_theme_tugraz/templates/invenio_theme_tugraz/navbar.html:78
+#: invenio_theme_tugraz/templates/invenio_theme_tugraz/navbar.html:88
 msgid "SCIENCE"
 msgstr "WISSEN"
 
-#: invenio_theme_tugraz/templates/invenio_theme_tugraz/navbar.html:79
+#: invenio_theme_tugraz/templates/invenio_theme_tugraz/navbar.html:89
 msgid "PASSION"
 msgstr "TECHNIK"
 
-#: invenio_theme_tugraz/templates/invenio_theme_tugraz/navbar.html:80
+#: invenio_theme_tugraz/templates/invenio_theme_tugraz/navbar.html:90
 msgid "TECHNOLOGY"
 msgstr "LEIDENSCHAFT"
 
@@ -393,8 +402,7 @@ msgid ""
 "Uploads get a Digital Object Identifier (DOI) to make them easily and "
 "uniquely citeable."
 msgstr ""
-"Uploads erhalten eine DOI und werden damit leichtauffindbar und "
-"zitierfähig."
+"Uploads erhalten eine DOI und werden damit leichtauffindbar und zitierfähig."
 
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/accounts/register_user.html:28
 msgid "Communities."
@@ -402,8 +410,8 @@ msgstr "Communities"
 
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/accounts/register_user.html:30
 msgid ""
-"Accept or reject uploads to your own community (e.g workshops, EU "
-"projects, institutions or entire disciplines)."
+"Accept or reject uploads to your own community (e.g workshops, EU projects, "
+"institutions or entire disciplines)."
 msgstr ""
 "Annehmen oder Ablehnen von Uploads in Ihrer eigenen Community (z.B. "
 "workshop, EU-Projekt, Forschungseinrichtung, Disziplin)"
@@ -414,8 +422,8 @@ msgstr "Vertrauenswürdiges Forschungsdatenmanagement"
 
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/accounts/register_user.html:34
 msgid ""
-"Built on top of TU Graz expertise in managing of the research data from "
-"the Graz University of Technology."
+"Built on top of TU Graz expertise in managing of the research data from the "
+"Graz University of Technology."
 msgstr "Gebaut basierend auf Expertise derTU Graz im Bereich Data Management"
 
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/accounts/register_user.html:48
@@ -425,6 +433,12 @@ msgstr "Mit Ihrem TUGonline-Account registrieren"
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/accounts/register_user.html:65
 msgid "Sign up with repository credentials"
 msgstr "Mit Ihren Repository Daten registrieren"
+
+#~ msgid "My dashboard"
+#~ msgstr "Meine Übersicht"
+
+#~ msgid "Type and press enter to search"
+#~ msgstr "Suchbegriff eingeben und “Enter” drücken (?)"
 
 #~ msgid "Version"
 #~ msgstr "Version"
@@ -444,17 +458,6 @@ msgstr "Mit Ihren Repository Daten registrieren"
 #~ msgid "DOI"
 #~ msgstr "DOI"
 
-#~ msgid "Open Access"
-#~ msgstr ""
-
-#~ msgid "No minted DOI"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "Enabled by\n"
-#~ "            <a href=\"%(fair_data)s\" target=\"_blank\">"
-#~ msgstr ""
-
 #~ msgid "Uploads"
 #~ msgstr "Hochladen"
 
@@ -472,20 +475,15 @@ msgstr "Mit Ihren Repository Daten registrieren"
 
 #~ msgid ""
 #~ "\n"
-#~ "            There is a %(link_start)snewer "
-#~ "version%(link_end)s of the record available."
-#~ "\n"
+#~ "            There is a %(link_start)snewer version%(link_end)s of the "
+#~ "record available.\n"
 #~ "            "
 #~ msgstr ""
-#~ "Es ist eine %(link_start)sneuere "
-#~ "Version%(link_end)s des Eintrags verfügbar."
+#~ "Es ist eine %(link_start)sneuere Version%(link_end)s des Eintrags "
+#~ "verfügbar."
 
 #~ msgid "Files"
 #~ msgstr "Dateien"
 
 #~ msgid "Reason"
 #~ msgstr "Grund"
-
-#~ msgid "Dashboard"
-#~ msgstr ""
-
