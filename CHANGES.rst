@@ -8,6 +8,10 @@
 Changes
 =======
 
+Version v4.10.0 (release 2022-10-13)
+
+- global: migrate to v10 (#282)
+
 Version v4.0.2 (release 2022-09-09)
 
 - release v4.0.1
