@@ -6,6 +6,7 @@
   details.
 #}
 
+{% if config.THEME_TUGRAZ_POER %}
 {% set options = [
   {
     "key": "records",
@@ -25,6 +26,20 @@
   }
 ]
 %}
+
+{% else %}
+
+{% set options = [
+  {
+    "key": "records",
+    "text": _("All") + " " + config.THEME_SITENAME,
+    "value": url_for("invenio_search_ui.search"),
+    "title": "repo",
+  }
+]
+%}
+
+{% endif %}
 
 <div class="ui container">
   <div class="short-menu" id="all-menu-top-table">
