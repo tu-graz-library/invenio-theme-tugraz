@@ -10,7 +10,7 @@
 
 from typing import Dict
 
-from elasticsearch_dsl.utils import AttrDict
+from opensearch_dsl.utils import AttrDict
 from flask import Blueprint, render_template
 from invenio_rdm_records.resources.serializers import UIJSONSerializer
 
