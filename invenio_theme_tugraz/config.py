@@ -35,7 +35,7 @@ THEME_TUGRAZ_PRODUCTION = False
     has to be 'INVENIO_THEME_TUGRAZ_PRODUCTION'.
 """
 
-THEME_TUGRAZ_POER = False
+THEME_TUGRAZ_POER = True
 """True/False if the publication & oer packages are installed."""
 
 # Invenio-theme
