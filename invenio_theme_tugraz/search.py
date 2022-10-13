@@ -8,8 +8,8 @@
 
 """Frontpage records."""
 
-from invenio_search.engine import dsl
 from invenio_search.api import RecordsSearch
+from invenio_search.engine import dsl
 
 
 class FrontpageRecordsSearch(RecordsSearch):
