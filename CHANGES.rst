@@ -8,6 +8,11 @@
 Changes
 =======
 
+Version v4.10.1 (release 2022-11-10)
+
+- dep: bump in invenio-assets
+
+
 Version v4.10.0 (release 2022-10-13)
 
 - global: migrate to v10 (#282)
