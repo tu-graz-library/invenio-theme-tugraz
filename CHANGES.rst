@@ -8,6 +8,11 @@
 Changes
 =======
 
+Version v4.11.1 (release 2023-04-20)
+
+- fix: increase invenio-config-tugraz
+
+
 Version v4.11.0 (release 2023-04-20)
 
 - global: make dependencies compatible with v11
