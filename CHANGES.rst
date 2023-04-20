@@ -8,6 +8,11 @@
 Changes
 =======
 
+Version v4.11.0 (release 2023-04-20)
+
+- global: make dependencies compatible with v11
+
+
 Version v4.10.1 (release 2022-11-10)
 
 - dep: bump in invenio-assets
