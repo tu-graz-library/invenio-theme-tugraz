@@ -1,5 +1,5 @@
 {#
-  Copyright (C) 2020-2021 Graz University of Technology.
+  Copyright (C) 2020-2023 Graz University of Technology.
 
   invenio-theme-tugraz is free software; you can redistribute it and/or
   modify it under the terms of the MIT License; see LICENSE file for more
@@ -23,11 +23,11 @@
 
     <!---Recent uploads-->
     <div class="ten wide column random-records-frontpage">
-      <h2>{{_('Recent uploads')}}</h2>
+      <h2>{{ _('Recent uploads') }}</h2>
 
       {% if not records %}
       <div class="ui centered grid">
-        <p style="font-size: medium;">{{_('There are no public records to show.')}}</p>
+        <p style="font-size: medium;">{{ _('There are no public records to show.') }}</p>
       </div>
       {% endif %}
 
@@ -41,12 +41,12 @@
         -->
         <div class="badges">
           <!--Publication date/Version badge-->
-          <span class="ui label blue" data-tooltip="{{_('Publication date')}}" data-inverted="">
+          <span class="ui label blue" data-tooltip="{{ _('Publication date') }}" data-inverted="">
             {{ r.metadata.publication_date }} {{ '(' ~ r.metadata.version ~ ')' if r.metadata.version }}
           </span>
 
           <!--Resource type badge-->
-          <span class="ui label grey" data-tooltip="{{_('Resource type')}}" data-inverted>
+          <span class="ui label grey" data-tooltip="{{ _('Resource type') }}" data-inverted>
             {{ r.ui.resource_type.title_l10n }}
           </span>
 
@@ -62,7 +62,7 @@
 
         <h4>
           <a href="{{ record_url }}" class="no-decoration">
-            {{r.metadata.title}}
+            {{ r.metadata.title }}
           </a>
         </h4>
 
@@ -80,7 +80,7 @@
           <div class="two column row">
             <div class="left floated column">
               {%- for s in r.metadata.subjects %}
-              <div class="ui tiny label">{{s.subject}}</div>
+              <div class="ui tiny label">{{ s.subject }}</div>
               {%- endfor %}
               <div>
                 <small>
@@ -98,7 +98,7 @@
       {%- endfor %}
       {% if records %}
       <div class="ui centered grid">
-        <a class="ui button more" href="{{url_for('invenio_search_ui.search')}}">{{_('More')}}</a>
+        <a class="ui button more" href="{{ url_for('invenio_search_ui.search') }}">{{ _('More') }}</a>
       </div>
       {%- endif %}
     </div>
@@ -106,34 +106,57 @@
 
     <!---segments-->
     <div class="six wide column">
-      <!--contact us-->
       <div class="ui segment" style="padding-bottom: 10px;">
-        <h4>{{_ ("Need help?")}}</h4>
+        <h4>{{ _("You can upload different types of records:") }}</h4>
+
+        <p style="margin: 14px">
+          <span class="ui left floated" style="text-align: justify; width:300px; display:inline-block;">
+            {{ _("Visibility of uploaded content is maximized through synchronization with data hubs (DataCite).") }}
+          </span>
+          <a class="ui positive right floated button" href="me/uploads" title="Research Data">
+            <i aria-hidden="true" class="upload icon"></i>
+            {{ _("Upload Research Output") }}
+          </a>
+        </p>
+        <p style="margin: 14px;">
+          <span class="ui left floated" style="text-align: justify; width:300px; display:inline-block;">
+            {{ _("Open Educational Resources (OER) will be visible on various discovery tools like the OERhub.") }}
+          </span>
+
+          <a class="ui positive right floated button" href="lom/uploads" title="Open Educational Resources">
+            <i aria-hidden="true" class="upload icon"></i>
+            {{ _("Upload OER") }}
+          </a>
+        </p>
+      </div>
+
+      <!--contact us-->
+      <div class="ui segment">
+        <h4>{{ _("Need help?") }}</h4>
         {%- if config.THEME_TUGRAZ_CONTACT_FORM %}
         <div style="padding-bottom: 10px;">
           <a id="feedback-form" class="fluid ui button">
-            {{_ ("Contact us")}} 
+            {{ _("Contact us") }}
           </a>
         </div>
         {%- endif %}
         <p>
-          {{config.THEME_SITENAME}} {{_ ("prioritizes all Recent uploads.")}}
+          {{ config.THEME_SITENAME }} {{ _("prioritizes all Recent uploads.") }}
         </p>
         <p>
-          {{_ ("We can help with:")}} 
-          
+          {{ _("We can help with:") }}
         </p>
 
         <ul>
-          <li>{{_ ("Uploading your research data, software, preprints, etc.")}}</li>
-          <li>{{_ ("One-on-one with")}} {{config.THEME_SITENAME}} {{_ ("supporters.")}}</li>
-          <li>{{_ ("Quota increases beyond our default policy.")}}</li>
-          <li>{{_ ("Scripts for automated uploading of larger datasets.")}}</li>
+          <li>{{ _("Uploading your research data, software, preprints, etc.") }}</li>
+          <li>{{ _("One-on-one with") }} {{ config.THEME_SITENAME }} {{ _("supporters.") }}</li>
+          <li>{{ _("Quota increases beyond our default policy.") }}</li>
+          <li>{{ _("Scripts for automated uploading of larger datasets.") }}</li>
         </ul>
       </div>
 
       <div class="ui segment" style="padding-bottom: 10px;">
-        <h4>{{_ ("Why use")}} {{config.THEME_SITENAME}}?</h4>
+        <h4>{{ _("Why use") }} {{ config.THEME_SITENAME }}?</h4>
 
         {% include "invenio_theme_tugraz/benefits.html" %}
       </div>
