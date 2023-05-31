@@ -1,22 +1,22 @@
 # Translations template for invenio-theme-tugraz.
-# Copyright (C) 2022 Graz University of Technology
+# Copyright (C) 2023 Graz University of Technology
 # This file is distributed under the same license as the
 # invenio-theme-tugraz project.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
 #
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: invenio-theme-tugraz 4.0.0\n"
+"Project-Id-Version: invenio-theme-tugraz 4.11.1\n"
 "Report-Msgid-Bugs-To: mojib.wali@tugraz.at\n"
-"POT-Creation-Date: 2022-08-05 10:15+0200\n"
+"POT-Creation-Date: 2023-05-26 09:37+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.10.3\n"
+"Generated-By: Babel 2.10.1\n"
 
 #: invenio_theme_tugraz/config.py:13 invenio_theme_tugraz/config.py:60
 msgid "TU Graz Repository"
@@ -256,43 +256,67 @@ msgstr ""
 msgid "More"
 msgstr ""
 
-#: invenio_theme_tugraz/templates/invenio_theme_tugraz/index.html:111
-msgid "Need help?"
+#: invenio_theme_tugraz/templates/invenio_theme_tugraz/index.html:110
+msgid "You can upload different types of records:"
 msgstr ""
 
-#: invenio_theme_tugraz/templates/invenio_theme_tugraz/index.html:115
-msgid "Contact us"
+#: invenio_theme_tugraz/templates/invenio_theme_tugraz/index.html:114
+msgid ""
+"Visibility of uploaded content is maximized through synchronization with "
+"data hubs (DataCite)."
 msgstr ""
 
-#: invenio_theme_tugraz/templates/invenio_theme_tugraz/index.html:120
-msgid "prioritizes all Recent uploads."
+#: invenio_theme_tugraz/templates/invenio_theme_tugraz/index.html:118
+msgid "Upload Research Output"
 msgstr ""
 
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/index.html:123
-msgid "We can help with:"
+msgid ""
+"Open Educational Resources (OER) will be visible on various discovery "
+"tools like the OERhub."
 msgstr ""
 
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/index.html:128
+msgid "Upload OER"
+msgstr ""
+
+#: invenio_theme_tugraz/templates/invenio_theme_tugraz/index.html:135
+msgid "Need help?"
+msgstr ""
+
+#: invenio_theme_tugraz/templates/invenio_theme_tugraz/index.html:139
+msgid "Contact us"
+msgstr ""
+
+#: invenio_theme_tugraz/templates/invenio_theme_tugraz/index.html:144
+msgid "prioritizes all Recent uploads."
+msgstr ""
+
+#: invenio_theme_tugraz/templates/invenio_theme_tugraz/index.html:147
+msgid "We can help with:"
+msgstr ""
+
+#: invenio_theme_tugraz/templates/invenio_theme_tugraz/index.html:151
 msgid "Uploading your research data, software, preprints, etc."
 msgstr ""
 
-#: invenio_theme_tugraz/templates/invenio_theme_tugraz/index.html:129
+#: invenio_theme_tugraz/templates/invenio_theme_tugraz/index.html:152
 msgid "One-on-one with"
 msgstr ""
 
-#: invenio_theme_tugraz/templates/invenio_theme_tugraz/index.html:129
+#: invenio_theme_tugraz/templates/invenio_theme_tugraz/index.html:152
 msgid "supporters."
 msgstr ""
 
-#: invenio_theme_tugraz/templates/invenio_theme_tugraz/index.html:130
+#: invenio_theme_tugraz/templates/invenio_theme_tugraz/index.html:153
 msgid "Quota increases beyond our default policy."
 msgstr ""
 
-#: invenio_theme_tugraz/templates/invenio_theme_tugraz/index.html:131
+#: invenio_theme_tugraz/templates/invenio_theme_tugraz/index.html:154
 msgid "Scripts for automated uploading of larger datasets."
 msgstr ""
 
-#: invenio_theme_tugraz/templates/invenio_theme_tugraz/index.html:136
+#: invenio_theme_tugraz/templates/invenio_theme_tugraz/index.html:159
 msgid "Why use"
 msgstr ""
 
