@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: invenio-theme-tugraz 1.0.4\n"
 "Report-Msgid-Bugs-To: mojib.wali@tugraz.at\n"
-"POT-Creation-Date: 2022-08-05 10:15+0200\n"
-"PO-Revision-Date: 2022-08-05 10:21+0200\n"
+"POT-Creation-Date: 2023-05-26 09:37+0200\n"
+"PO-Revision-Date: 2023-05-31 15:27+0200\n"
 "Last-Translator: \n"
 "Language-Team: de <LL@li.org>\n"
 "Language: de\n"
@@ -198,8 +198,8 @@ msgstr "Um die Schriftgröße zu ändern."
 #, fuzzy, python-format
 msgid ""
 "<strong>Powered by</strong>\n"
-"            <a href=\"%(invenio_rdm)s\" target=\"_blank\" title=\"invenioRDM"
-"\">"
+"            <a href=\"%(invenio_rdm)s\" target=\"_blank\" "
+"title=\"invenioRDM\">"
 msgstr ""
 "<strong>Powered by</strong> <a href=\"%(invenio_rdm)s\" target=\"_blank\">"
 
@@ -272,43 +272,71 @@ msgstr ""
 msgid "More"
 msgstr "Mehr"
 
-#: invenio_theme_tugraz/templates/invenio_theme_tugraz/index.html:111
+#: invenio_theme_tugraz/templates/invenio_theme_tugraz/index.html:110
+msgid "You can upload different types of records:"
+msgstr "Upload verschiedener Arten von Datensätzen:"
+
+#: invenio_theme_tugraz/templates/invenio_theme_tugraz/index.html:114
+msgid ""
+"Visibility of uploaded content is maximized through synchronization with "
+"data hubs (DataCite)."
+msgstr ""
+"Steigerung der Sichtbarkeit der Datensätze durch Synchronisation mit "
+"Harvestern (DataCite)."
+
+#: invenio_theme_tugraz/templates/invenio_theme_tugraz/index.html:118
+msgid "Upload Research Output"
+msgstr "Upload Forschungsergebnisse"
+
+#: invenio_theme_tugraz/templates/invenio_theme_tugraz/index.html:123
+msgid ""
+"Open Educational Resources (OER) will be visible on various discovery tools "
+"like the OERhub."
+msgstr ""
+"Open Educational Resources (OER) werden auf Suchmaschinen wie OERhub "
+"sichtbar sein."
+
+#: invenio_theme_tugraz/templates/invenio_theme_tugraz/index.html:128
+msgid "Upload OER"
+msgstr "Upload OER"
+
+#: invenio_theme_tugraz/templates/invenio_theme_tugraz/index.html:135
 msgid "Need help?"
 msgstr "Brauchen Sie Hilfe?"
 
-#: invenio_theme_tugraz/templates/invenio_theme_tugraz/index.html:115
+#: invenio_theme_tugraz/templates/invenio_theme_tugraz/index.html:139
 msgid "Contact us"
 msgstr "Kontaktiere uns"
 
-#: invenio_theme_tugraz/templates/invenio_theme_tugraz/index.html:120
+#: invenio_theme_tugraz/templates/invenio_theme_tugraz/index.html:144
 msgid "prioritizes all Recent uploads."
 msgstr "reiht die neuesten Uploads vor."
 
-#: invenio_theme_tugraz/templates/invenio_theme_tugraz/index.html:123
+#: invenio_theme_tugraz/templates/invenio_theme_tugraz/index.html:147
 msgid "We can help with:"
 msgstr "Dabei können wir helfen:"
 
-#: invenio_theme_tugraz/templates/invenio_theme_tugraz/index.html:128
+#: invenio_theme_tugraz/templates/invenio_theme_tugraz/index.html:151
 msgid "Uploading your research data, software, preprints, etc."
 msgstr "Hochladen Ihrer Forschungsdaten, Software, Preprints usw."
 
-#: invenio_theme_tugraz/templates/invenio_theme_tugraz/index.html:129
+#: invenio_theme_tugraz/templates/invenio_theme_tugraz/index.html:152
 msgid "One-on-one with"
 msgstr "One-on-one mit"
 
-#: invenio_theme_tugraz/templates/invenio_theme_tugraz/index.html:129
+#: invenio_theme_tugraz/templates/invenio_theme_tugraz/index.html:152
 msgid "supporters."
 msgstr "Unterstützern"
 
-#: invenio_theme_tugraz/templates/invenio_theme_tugraz/index.html:130
+#: invenio_theme_tugraz/templates/invenio_theme_tugraz/index.html:153
 msgid "Quota increases beyond our default policy."
 msgstr "Quota Erhöhungen über unsere Standard Policy hinaus."
 
-#: invenio_theme_tugraz/templates/invenio_theme_tugraz/index.html:131
+#: invenio_theme_tugraz/templates/invenio_theme_tugraz/index.html:154
 msgid "Scripts for automated uploading of larger datasets."
 msgstr "Skripte zum automatisierten Hochladen größerer Datensätze."
 
-#: invenio_theme_tugraz/templates/invenio_theme_tugraz/index.html:136
+#: invenio_theme_tugraz/templates/invenio_theme_tugraz/index.html:159
 msgid "Why use"
 msgstr "Warum"
 
@@ -457,9 +485,6 @@ msgstr "Mit Ihren Repository Daten registrieren"
 
 #~ msgid "DOI"
 #~ msgstr "DOI"
-
-#~ msgid "Uploads"
-#~ msgstr "Hochladen"
 
 #~ msgid "German"
 #~ msgstr "Deutsche"
