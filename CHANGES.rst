@@ -8,6 +8,13 @@
 Changes
 =======
 
+Version v4.11.2 (release 2023-06-01)
+
+- frontpage: layout changes
+- translation: add oer frontpage translation
+- WIP: oer upload button on frontpage
+
+
 Version v4.11.1 (release 2023-04-20)
 
 - fix: increase invenio-config-tugraz
