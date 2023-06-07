@@ -8,6 +8,11 @@
 Changes
 =======
 
+Version v4.11.3 (release 2023-06-07)
+
+- fix: frontpage upload buttons small monitor
+
+
 Version v4.11.2 (release 2023-06-01)
 
 - frontpage: layout changes
