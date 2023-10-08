@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 #
-# Copyright (C) 2020-2021 Graz University of Technology.
+# Copyright (C) 2020-2023 Graz University of Technology.
 #
 # invenio-theme-tugraz is free software; you can redistribute it and/or
 # modify it under the terms of the MIT License; see LICENSE file for more
@@ -8,7 +8,7 @@
 
 """invenio module for TUGRAZ theme."""
 
-from flask_babelex import gettext as _
+from invenio_i18n import gettext as _
 
 INVENIO_THEME_TUGRAZ_DEFAULT_VALUE = _("TU Graz Repository")
 """Default value for the application."""
