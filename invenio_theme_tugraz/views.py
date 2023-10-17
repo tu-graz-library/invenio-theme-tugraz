@@ -10,8 +10,14 @@
 
 from typing import Dict
 
-from flask import Blueprint, render_template
-from invenio_rdm_records.resources.serializers import UIJSONSerializer
+from flask import Blueprint, g, render_template
+from flask_login import current_user, login_required
+from flask_menu import current_menu
+from invenio_i18n import lazy_gettext as _
+
+# from invenio_rdm_records.resources.serializers import UIJSONSerializer
+from invenio_records_dublin_core.resources.serializers import DublinCoreJSONSerializer
+from invenio_users_resources.proxies import current_user_resources
 from opensearch_dsl.utils import AttrDict
 
 from .search import FrontpageRecordsSearch
@@ -22,6 +28,19 @@ blueprint = Blueprint(
     template_folder="templates",
     static_folder="static",
 )
+
+
+@blueprint.route("/me/overview")
+@login_required
+def overview():
+    """Overview."""
+    url = current_user_resources.users_service.links_item_tpl.expand(
+        g.identity, current_user
+    )["avatar"]
+    return render_template(
+        "invenio_theme_tugraz/overview.html",
+        user_avatar=url,
+    )
 
 
 @blueprint.app_template_filter("make_dict_like")
@@ -39,6 +58,32 @@ def cast_to_dict(attr_dict):
     return AttrDict.to_dict(attr_dict)
 
 
+@blueprint.before_app_first_request
+def modify_user_dashboard():
+    """Modify user dashboard."""
+    user_dashboard_menu = current_menu.submenu("dashboard")
+
+    # order matters, this has to be here, otherwise it want override the orginal
+    # entry
+    user_dashboard_menu.submenu("uploads").register(
+        "invenio_app_rdm_users.uploads",
+        text=_("Research Results"),
+        order=1,
+    )
+
+    user_dashboard_menu.submenu("overview").register(
+        "invenio_theme_tugraz.overview",
+        text=_("Overview"),
+        order=0,
+    )
+
+    current_menu.submenu("actions.deposit").register(
+        "invenio_theme_tugraz.overview",
+        _("My dashboard"),
+        order=1,
+    )
+
+
 def ui_blueprint(app):
     """Blueprint for the routes and resources provided by Invenio-theme-tugraz."""
     routes = app.config.get("TUG_ROUTES")
@@ -51,10 +96,8 @@ def ui_blueprint(app):
 
 def records_serializer(records=None):
     """Serialize list of records."""
-    record_list = []
-    for record in records:
-        record_list.append(UIJSONSerializer().dump_obj(record.to_dict()))
-    return record_list
+    serializer = DublinCoreJSONSerializer()
+    return [serializer.dump_obj(r.to_dict()) for r in records]
 
 
 def index():

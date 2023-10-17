@@ -1,0 +1,101 @@
+{#
+  Copyright (C) 2020-2023 Graz University of Technology.
+
+  invenio-theme-tugraz is free software; you can redistribute it and/or
+  modify it under the terms of the MIT License; see LICENSE file for more
+  details.
+#}
+
+<!---Recent uploads-->
+<div class="ten wide column random-records-frontpage">
+  <h2>{{ _("Recent uploads") }}</h2>
+
+  {% if not records %}
+  <div class="ui centered grid">
+    <p style="font-size: medium;">{{ _("There are no public records to show.") }}</p>
+  </div>
+  {% endif %}
+
+  {%- for r in records %}
+  {%- set creation_date = r.created | from_isodatetime -%}
+  {%- set record_url = r.original.view %}
+
+  <article>
+    <div class="badges">
+      <!--Publication date/Version badge-->
+      <span class="ui label blue" data-tooltip="{{ _('Publication date') }}" data-inverted="">
+        {{ r.metadata.dates[0] }}
+      </span>
+
+      <!--Resource type badge-->
+      <span class="ui label grey" data-tooltip="{{ _('Resource type') }}" data-inverted>
+        {%- for type in r.metadata.types %}
+        {{ type }}
+        {%- endfor %}
+      </span>
+
+      <span class="ui label access-status {{ r.access_status.id }}" data-tooltip="{{
+                   r.access_status.description_l10n }}" data-inverted="">
+
+        <i class="icon {{ r.access_status.icon }}"></i>
+        {{ r.access_status.title_l10n }}
+      </span>
+
+      <span class="ui label schema">
+        {%- if r.original.schema == "lom" %}
+        {{ _("OER") }}
+        {%- elif r.original.schema == "rdm" %}
+        {{ _("Research Result") }}
+        {%- elif r.original.schema == "marc21" %}
+        {{ _("Publication") }}
+        {%- endif %}
+      </span>
+    </div>
+
+    <h4>
+      <a href="{{ record_url }}" class="no-decoration">
+        {{ r.metadata.titles[0] }}
+      </a>
+    </h4>
+
+    <p>
+      {%- for creator in r.metadata.creators %}
+      <span>{{ creator }}</span>
+      {%- endfor %}
+    </p>
+
+    <p class="hidden-xs">
+      <a href="{{record_url}}" class="no-decoration">
+        {{ r.metadata.descriptions | join(" ") | striptags | truncate(300) }}
+      </a>
+    </p>
+
+    <div class="ui grid">
+      <div class="two column row">
+        <div class="left floated column">
+          {%- for subject in r.metadata.subjects %}
+          <div class="ui tiny label">{{ subject }}</div>
+          {%- endfor %}
+          <div>
+            <small>
+              {#
+              {% trans user=userprofile, date=creation_date | dateformat("long")%}
+              Uploaded on {{date}}
+              {% endtrans %}
+              #}
+            </small>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </article>
+
+  {%- endfor %}
+
+  {% if records %}
+  <div class="ui centered grid">
+    <a class="ui button more" href="{{ url_for('invenio_search_ui.search') }}">{{ _("More") }}</a>
+  </div>
+  {%- endif %}
+</div>

@@ -150,7 +150,6 @@ pre {
   &.metadata-only {
     background-color: @accessRightMetadata;
   }
-  
 }
 
 @font-face {
@@ -165,4 +164,16 @@ pre {
   src: url('./fonts/SourceSansPro/SourceSansPro-Italic.ttf') format('truetype');
   font-weight: 400;
   font-style: italic;
+}
+
+/**
+ * mainly for the overview. maybe this should be written more specific to apply
+ * only for the overview use case.
+ */
+.ui.segment:first-child {
+  margin-top: 1em;
+}
+
+.ui.equal.height .ui.segment {
+  height: 100%;
 }

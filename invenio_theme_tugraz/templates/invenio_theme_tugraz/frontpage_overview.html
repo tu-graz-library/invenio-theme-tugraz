@@ -1,0 +1,104 @@
+{#
+  Copyright (C) 2020-2023 Graz University of Technology.
+
+  invenio-theme-tugraz is free software; you can redistribute it and/or
+  modify it under the terms of the MIT License; see LICENSE file for more
+  details.
+#}
+
+<div class="sixteen wide column random-records-frontpage">
+  <div class="four column ui equal height grid">
+    <div class="column">
+      <div class="ui segment image">
+        <h2>{{ _("Research Result") }}</h2>
+
+        <div>
+          this is a short description for what research results could be found in this repository. there are three links.
+          one link will lead you to a browse functionality which shows what is inside of the repository. one link will
+          lead you to the search page which gives the possibility to search explicitly in the research results. the last
+          link leads to the upload page to upload new research results to the repository
+        </div>
+
+        <ul>
+          <li>
+            <a href="research-results/browse">Browse</a>
+          </li>
+          <li>
+            <a href="records/search">Search</a>
+          </li>
+          <li>
+            <a href="me/uploads">Upload</a>
+          </li>
+        </ul>
+        <!-- <img alt="Research Result" src="{{ url_for('static', filename='images/cyan_400x400.png') }}"> -->
+      </div>
+    </div>
+    <div class="column">
+      <div class="ui segment image">
+        <h2>{{ _("Communities") }}</h2>
+        <div>
+          this short description shows what communities represents in the repository. there are three links. one will
+          lead to the browsing feature, one to the search functionality and the last to the creation side.
+        </div>
+
+        <ul>
+          <li>
+            <a href="communities/browse">Browse</a>
+          </li>
+          <li>
+            <a href="communities">Search</a>
+          </li>
+          <li>
+            <a href="communities/new">Upload</a>
+          </li>
+        </ul>
+        <!-- <img alt="Communities" src="{{ url_for('static', filename='images/dark_blue_400x400.png') }}"> -->
+      </div>
+    </div>
+    <div class="column">
+      <div class="ui segment image">
+        <h2>{{ _("Publications") }}</h2>
+
+        <div>
+          this short description describes what publication means within this repository. there are two links. one lead
+          to a browse function and one to the search. publications are not meant to be open for everyone, but for
+          librarians only.
+        </div>
+
+        <ul>
+          <li>
+            <a href="publications/browse">Browse</a>
+          </li>
+          <li>
+            <a href="marc/search">Search</a>
+          </li>
+        </ul>
+        <!--<img alt="Publications" src="{{ url_for('static', filename='images/red_400x400.png') }}"> -->
+      </div>
+    </div>
+    <div class="column">
+      <div class="ui segment image">
+        <h2>{{ _("OER") }}</h2>
+
+        <div>
+          this short description describes what OER's are. there are three links. as the others already introduced there
+          is a link to the browse functionality, one to the search and one to the upload. about the upload you get more
+          information what is necessary to be allowed to upload if you click on the upload button.
+        </div>
+
+        <ul>
+          <li>
+            <a href="oer/browse">Browse</a>
+          </li>
+          <li>
+            <a href="lom/search">Search</a>
+          </li>
+          <li>
+            <a href="lom/uploads">Upload</a>
+          </li>
+        </ul>
+        <!--<img alt="Open Educational Resources" src="{{ url_for('static', filename='images/rosa_400x400.png') }}"> -->
+      </div>
+    </div>
+  </div>
+</div>
