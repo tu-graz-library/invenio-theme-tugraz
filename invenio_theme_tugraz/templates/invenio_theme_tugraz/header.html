@@ -1,5 +1,5 @@
 {#
-  Copyright (C) 2020-2021 Graz University of Technology.
+  Copyright (C) 2020-2023 Graz University of Technology.
 
   invenio-theme-tugraz is free software; you can redistribute it and/or
   modify it under the terms of the MIT License; see LICENSE file for more
@@ -37,24 +37,17 @@
                               transform="translate(-279.72 -403.28)">
                     </polyline>
                   </svg>
-                  {{_ ("Home")}}
+                  {{ _("Home") }}
                 </span>
               </a>
             </div>
 
-
-
-            {%- for item in current_menu.submenu('main').children|sort(attribute='order') if item.visible recursive %}
-              <div class="two wide column main-menu-entry">
-                <a role="menuitem" href="{{ item.url }}" class="no-decoration">{{ item.text|safe }}</a>
-              </div>
-            {% endfor %}
-
-            {% for item in current_menu.submenu('actions').children|sort(attribute='order') if item.visible recursive %}
-              <div class="two wide column main-menu-entry">
-                <a role="menuitem" href="{{ item.url }}" class="no-decoration">{{ item.text|safe }}</a>
-              </div>
-            {% endfor %}
+            <div class="two wide column main-menu-entry">
+              <a role="menuitem" href="/communities" class="no-decoration">{{ _("Communities") }}</a>
+            </div>
+            <div class="two wide column main-menu-entry">
+              <a role="menuitem" href="/me/overview" class="no-decoration">{{ _("My dashboard") }}</a>
+            </div>
           </div>
 
           <div id="margin-divider" class="ui divider main-menu-underline-line">
@@ -73,10 +66,4 @@
       {{ flashed_messages() }}
     {%- endblock %}
   </header>
-
-  {#
-  {%- block breadcrumbs %}
-    {%- include "invenio_theme/breadcrumbs.html" %}
-  {%- endblock breadcrumbs %}
-  #}
 </div>

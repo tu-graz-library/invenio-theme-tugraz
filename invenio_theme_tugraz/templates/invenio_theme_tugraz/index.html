@@ -12,8 +12,6 @@
   {{ webpack['invenio-theme-tugraz-js.js'] }}
 {%- endblock javascript %}
 
-{%- from "invenio_theme_tugraz/macros/authors.html" import creators -%}
-
 {%- block page_body %}
 
 <div class="ui container">
@@ -21,91 +19,13 @@
 
   <div class="ui stackable grid">
 
-    <!---Recent uploads-->
-    <div class="ten wide column random-records-frontpage">
-      <h2>{{ _('Recent uploads') }}</h2>
+    {% include "invenio_theme_tugraz/frontpage_overview.html" %}
 
-      {% if not records %}
-      <div class="ui centered grid">
-        <p style="font-size: medium;">{{ _('There are no public records to show.') }}</p>
-      </div>
-      {% endif %}
-
-      {%- for r in records %}
-      {%- set creation_date = r.created|from_isodatetime -%}
-      {%- set record_url = url_for('invenio_app_rdm_records.record_detail', pid_value=r.id) %}
-
-      <article>
-        <!--TODO:
-        something with doi
-        -->
-        <div class="badges">
-          <!--Publication date/Version badge-->
-          <span class="ui label blue" data-tooltip="{{ _('Publication date') }}" data-inverted="">
-            {{ r.metadata.publication_date }} {{ '(' ~ r.metadata.version ~ ')' if r.metadata.version }}
-          </span>
-
-          <!--Resource type badge-->
-          <span class="ui label grey" data-tooltip="{{ _('Resource type') }}" data-inverted>
-            {{ r.ui.resource_type.title_l10n }}
-          </span>
-
-          <span class="ui label access-status {{ r.ui.access_status.id }}" data-tooltip="{{ r.ui.access_status.description_l10n }}" data-inverted="">
-            {% if r.ui.access_status.icon %}<i class="icon {{ r.ui.access_status.icon }}"></i>{% endif %}
-            {{ r.ui.access_status.title_l10n }}
-          </span>
-
-          <span class="label record-version">
-            <!--TODO: add subtype--->
-          </span>
-        </div>
-
-        <h4>
-          <a href="{{ record_url }}" class="no-decoration">
-            {{ r.metadata.title }}
-          </a>
-        </h4>
-
-        <p>
-          {{ creators(r.metadata.creators) }}
-        </p>
-
-        <p class="hidden-xs">
-          <a href="{{record_url}}" class="no-decoration">
-            {{ r.metadata.description | striptags | truncate(300) }}
-          </a>
-        </p>
-
-        <div class="ui grid">
-          <div class="two column row">
-            <div class="left floated column">
-              {%- for s in r.metadata.subjects %}
-              <div class="ui tiny label">{{ s.subject }}</div>
-              {%- endfor %}
-              <div>
-                <small>
-                  {% trans user=userprofile, date=creation_date | dateformat('long')%}
-                  Uploaded on {{date}}
-                  {% endtrans %}
-                </small>
-              </div>
-            </div>
-
-          </div>
-        </div>
-      </article>
-
-      {%- endfor %}
-      {% if records %}
-      <div class="ui centered grid">
-        <a class="ui button more" href="{{ url_for('invenio_search_ui.search') }}">{{ _('More') }}</a>
-      </div>
-      {%- endif %}
-    </div>
-
+    {% include "invenio_theme_tugraz/recent_uploads.html" %}
 
     <!---segments-->
     <div class="six wide column">
+      {#
       <div class="ui segment" style="padding-bottom: 10px;">
         <h4>{{ _("You can upload different types of records:") }}</h4>
 
@@ -134,6 +54,7 @@
           </div>
         </div>
       </div>
+      #}
 
       <!--contact us-->
       <div class="ui segment">
