@@ -1,168 +1,169 @@
 {#
-Copyright (C) 2020-2021 Graz University of Technology.
+  Copyright (C) 2020-2023 Graz University of Technology.
 
-invenio-theme-tugraz is free software; you can redistribute it and/or
-modify it under the terms of the MIT License; see LICENSE file for more
-details.
+  invenio-theme-tugraz is free software; you can redistribute it and/or
+  modify it under the terms of the MIT License; see LICENSE file for more
+  details.
 #}
 
 {%- block css %}
-
-{{ webpack['invenio-theme-tugraz-theme.css'] }}
+  {{ webpack['invenio-theme-tugraz-theme.css'] }}
 {%- endblock %}
 
 {%- block javascript %}
-{{ webpack['invenio-theme-tugraz-js.js'] }}
+  {{ webpack['invenio-theme-tugraz-js.js'] }}
 {%- endblock javascript %}
 
 <div class="spacer"></div>
 
 <footer id="footer" class="footer-bottom">
-
   <div class="ui container">
-
     <div class="ui grid">
       <div class="doubling four column row">
-
-
         <div class="column">
+          <h2>{{ _("Repository") }}</h2>
+          <div class="ui list">
+            <div class="item">
+              <a href="https://tu-graz-library.github.io/docs-repository" title="Repository documentation"
+                 target="_blank">
+                 {{ _("Documentation") }} <i class="external alternate icon"></i>
+              </a>
+            </div>
 
-          <h2>{{_ ("Repository")}}</h2>
-          <p class="bodytext">
-            <a href="https://tu-graz-library.github.io/docs-repository" title="Repository documentation"
-              target="_blank">
-              {{_ ("Documentation")}} <i class="external alternate icon"></i>
-            </a>
-            <br>
-            <a href="{{ url_for('invenio_config_tugraz.guide') }}"
-              title="Quick guide" target="_blank">
-              {{_ ("Reference Guide")}} <i class="download icon"></i>
-            </a>
-            <br>
-            <a href="{{ url_for('invenio_app_rdm.help_search') }}"
-              title="Search guide">
-              {{_ ("Search Guide")}}<i class="angle right icon"></i>
-            </a>
-            <br>
-            <a href="{{ url_for('invenio_config_tugraz.gdpr') }}"
-              title="General Data Protection Rights" target="_blank">
-              {{_ ("Data Protection")}} <i class="download icon"></i>
-            </a>
-            <br>
-            <a href="{{ url_for('invenio_config_tugraz.terms') }}"
-              title="Terms and Conditions" target="_blank">
-              {{_ ("Terms and Conditions")}} <i class="download icon"></i>
-            </a>
-            <br>
-            <!-- <a href="{{ url_for('invenio_theme_tugraz.comingsoon') }}">
-            {{_ ("Impressum")}}<i class="angle right icon"></i>
-            </a>
-            <br>
-            <a href="{{ url_for('invenio_theme_tugraz.comingsoon') }}">
-              {{_ ("Feedback")}}<i class="angle right icon"></i>
-            </a> -->
-          </p>
+            <div class="item">
+              <a href="{{ url_for('invenio_config_tugraz.guide') }}"
+                 title="Quick guide" target="_blank">
+                 {{ _("Reference Guide") }} <i class="download icon"></i>
+              </a>
+            </div>
 
+            <div class="item">
+              <a href="{{ url_for('invenio_app_rdm.help_search') }}"
+                 title="Search guide">
+                 {{ _("Search Guide") }}<i class="angle right icon"></i>
+              </a>
+            </div>
+
+            <div class="item">
+              <a href="{{ url_for('invenio_config_tugraz.gdpr') }}"
+                 title="General Data Protection Rights" target="_blank">
+                 {{ _("Data Protection") }} <i class="download icon"></i>
+              </a>
+            </div>
+
+            <div class="item">
+              <a href="{{ url_for('invenio_config_tugraz.terms') }}"
+                 title="Terms and Conditions" target="_blank">
+                 {{ _("Terms and Conditions") }} <i class="download icon"></i>
+              </a>
+            </div>
+          </div>
         </div>
 
 
         <div class="column">
+          <h2>{{ _("Features") }}</h2>
 
-          <h2>{{_ ("Features")}}</h2>
-
-          <h4>{{_ ("Scalability")}}</h4>
-
-          <h4>{{_ ("Institutional integration")}}</h4>
-
-          <h4>{{_ ("Next Generation Repository")}}
-          </h4>
-
-          <h4>{{_ ("Repository Profiles")}}</h4>
-
-          <h4>{{_ ("Resilient")}}</h4>
-
+          <div class="ui list">
+            <div class="item">{{ _("Scalability") }}</div>
+            <div class="item">{{ _("Institutional integration") }}</div>
+            <div class="item">{{ _("Next Generation Repository") }}</div>
+            <div class="item">{{ _("Repository Profiles") }}</div>
+            <div class="item">{{ _("Resilient") }}</div>
+          </div>
         </div>
 
 
         <div class="column">
+          <h2>{{ _("Connected Services") }}</h2>
+          <div class="ui list">
+            <div class="item">
+              <a href="https://pure.tugraz.at" title="PURE" target="_blank">
+                {{ _("PURE") }} <i class="external alternate icon"></i>
+              </a>
+            </div>
 
-          <h2>{{_ ("Connected Services")}}</h2>
-          <p class="bodytext">
+            <div class="item">
+              <a href="http://campusonline.tugraz.at" title="CAMPUS online" target="_blank">
+                {{ _("CampusOnline") }} <i class="external alternate icon"></i>
+              </a>
+            </div>
 
-            <a href="https://pure.tugraz.at" title="PURE" target="_blank">
-              {{_ ("PURE")}} <i class="external alternate icon"></i></a><br>
-
-            <a href="http://campusonline.tugraz.at" title="CAMPUS online" target="_blank">
-              {{_ ("CampusOnline")}} <i class="external alternate icon"></i></a><br>
-
-            <a href="https://rdm.tugraz.at" title="Research Data Management" target="_blank">
-              {{_ ("Research Data Management")}} <i class="external alternate icon"></i></a><br>
-          </p>
-
-
+            <div class="item">
+              <a href="https://rdm.tugraz.at" title="Research Data Management" target="_blank">
+                {{ _("Research Data Management") }} <i class="external alternate icon"></i>
+              </a>
+            </div>
+          </div>
         </div>
 
         <div class="column">
-          <h2>{{_ ("Accessibility")}}</h2>
-          <p class="bodytext">{{_ ("Tipp:")}}<br> {{_ ("Use Ctrl + and Crtl -")}}<br> {{_ ("to change the font size.")}}
-          </p>
-
+          <h2>{{ _("Accessibility") }}</h2>
+          <div class="ui list">
+            <div class="item">
+              {{ _("Tipp:") }}
+            </div>
+            <div class="item">
+              {{ _("Use Ctrl + and Crtl -") }}
+            </div>
+            <div class="item">
+              {{ _("to change the font size.") }}
+            </div>
+          </div>
         </div>
 
       </div>
+
       <div class="ui divider"></div>
+
       <div class="doubling four column row">
         <div class="column">
           <div class="logos">
-            {% trans invenio_rdm="http://inveniosoftware.org/products/rdm" %}<strong>Powered by</strong>
-            <a href="{{invenio_rdm}}" target="_blank" title="invenioRDM">{% endtrans %}
-            <br>
-            <img src="{{ url_for('static', filename='images/inveniordm-tail.svg')}}" alt="invenioRDM" height="90px">
-          </a>
-        </div>
+            <strong>Powered by</strong>
+            <a href="http://inveniosoftware.org/products/rdm" target="_blank" title="invenioRDM">
+              <img src="{{ url_for("static", filename="images/inveniordm-tail.svg")}}"
+                 alt="InvenioRDM logo"
+                 style="display: block; height: 90px; margin-top: 8px;">
+            </a>
+          </div>
         </div>
         <div class="column">
           <div class="logos">
-            {% trans fair_data="https://forschungsdaten.at/en/fair-data-austria/" %}<strong>Enabled by</strong>
-            <a href="{{fair_data}}" target="_blank" title="Fair Data Austria">{% endtrans %}
-            <br>
-            <img src="{{ url_for('static', filename='images/Fair_Data_Austria_orangerot.png')}}" alt="Fair Data Austria"
-              style="
-              width: 230px;
-              margin-top: 15px;
-              height: auto;">
+            <strong>Enabled by</strong>
+            <a href="https://forschungsdaten.at/en/fair-data-austria/" target="_blank" title="Fair Data Austria">
+              <img src="{{ url_for("static", filename="images/Fair_Data_Austria_orangerot.png")}}"
+                   alt="Fair Data Austria"
+                   style="display: block; height: auto; margin-top: 15px; width: 230px;">
             </a>
           </div>
         </div>
 
         <div class="column">
           <div class="logos">
-            {% trans oea="https://www.openeducation.at" %}
-            <a href="{{oea}}" target="_blank" title="Open Education Austria">{% endtrans %}
-            <br>
-            <img src="{{ url_for('static', filename='images/oea.svg')}}" alt="Open Education Austria"
-              style="
-              margin-top: -5px;
-              margin-left: 10px;
-              width: 200px;
-              height: auto;">
+            <strong>Supported by</strong>
+            <a href="https://www.openeducation.at" target="_blank" title="Open Education Austria">
+              <img src="{{ url_for("static", filename="images/oea.svg")}}"
+                   alt="Open Education Austria"
+                   style="display: block; height: auto; margin-top: 15px; width: 200px;">
             </a>
           </div>
         </div>
       </div>
 
       <div class="ui divider"></div>
-      <div class="sixteen wide column">
-        <div class="logos">
-        {% trans re3data="https://www.re3data.org/repository/r3d100013565" %}
-        <a href="{{re3data}}" target="_blank" title="Registry of Research Data Repositories">{% endtrans %}
-        <img src="{{ url_for('static', filename='images/re3data.svg')}}" alt="Registry of Research Data Repositories"
-        style="
-        width: 300px;
-        height: auto;">
-      </a>
+
+      <div class="doubling four column row">
+        <div class="column">
+          <div class="logos">
+            <strong>Listed on</strong>
+            <a href="https://www.re3data.org/repository/r3d100013565" target="_blank" title="Registry of Research Data Repositories">
+              <img src="{{ url_for("static", filename="images/re3data.svg")}}"
+                   alt="Registry of Research Data Repositories"
+                   style="display: block; height: auto; width: 300px;">
+            </a>
+          </div>
+        </div>
+      </div>
     </div>
-      </div>
-      </div>
-</div>
+  </div>
 </footer>

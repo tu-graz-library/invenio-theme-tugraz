@@ -8,7 +8,7 @@
 
 {%- extends config.INVENIO_THEME_TUGRAZ_BASE_TEMPLATE %}
 
-{%- set active_dashboard_menu_item = 'overview' %}
+{%- set active_dashboard_menu_item = "overview" %}
 {%- set title = _("Overview") %}
 
 {%- block page_body %}
@@ -25,7 +25,7 @@
         <div class="ui segment" style="height: 480px">
           <h2>{{ _("Research Result") }}</h2>
           <div class="ui left floated image">
-            <img alt="Research Result" src="{{ url_for('static', filename='images/cyan_400x400.png') }}">
+            <img alt="Research Result" src="{{ url_for("static", filename="images/cyan_400x400.png") }}">
           </div>
           <div class="ui right floated text">
             describe research results
@@ -35,7 +35,7 @@
       <div class="column">
         <div class="ui segment" style="height: 480px">
           <h2>{{ _("Communities") }}</h2>
-          <img class="ui left floated image" alt="Communities" src="{{ url_for('static', filename='images/dark_blue_400x400.png') }}">
+          <img class="ui left floated image" alt="Communities" src="{{ url_for("static", filename="images/dark_blue_400x400.png") }}">
           <div>
             describe the communities
           </div>
@@ -44,7 +44,7 @@
       <div class="column">
         <div class="ui segment" style="height: 480px">
           <h2>{{ _("Requests") }}</h2>
-          <img class="ui left floated image" alt="Requests" src="{{ url_for('static', filename='images/light_green_400x400.png') }}">
+          <img class="ui left floated image" alt="Requests" src="{{ url_for("static", filename="images/light_green_400x400.png") }}">
 
           <div>
             describe requests
@@ -54,7 +54,7 @@
       <div class="column">
         <div class="ui segment" style="height: 480px">
           <h2>{{ _("Publications") }}</h2>
-          <img class="ui left floated image" alt="Publications" src="{{ url_for('static', filename='images/red_400x400.png') }}">
+          <img class="ui left floated image" alt="Publications" src="{{ url_for("static", filename="images/red_400x400.png") }}">
           <div>
             describe publications
           </div>
@@ -63,7 +63,7 @@
       <div class="column">
         <div class="ui segment" style="height: 480px">
           <h2>{{ _("OER") }}</h2>
-          <img class="ui left floated image" alt="Open Educational Resources" src="{{ url_for('static', filename='images/rosa_400x400.png') }}">
+          <img class="ui left floated image" alt="Open Educational Resources" src="{{ url_for("static", filename="images/rosa_400x400.png") }}">
 
           <div>
             describe open educational resources

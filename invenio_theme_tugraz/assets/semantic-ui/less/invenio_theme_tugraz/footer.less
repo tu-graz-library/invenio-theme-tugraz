@@ -1,5 +1,5 @@
 /*
- *   Copyright (C) 2020-2021 Graz University of Technology.
+ * Copyright (C) 2020-2023 Graz University of Technology.
  *
  * invenio-theme-tugraz  is free software; you can redistribute it and/or modify it
  * under the terms of the MIT License; see LICENSE file for more details.
@@ -7,18 +7,8 @@
 
  #footer {
     color: @footerGrey;
-
-    /*background-image: url("/static/images/footer.jpg");*/
-    -webkit-background-size: 100% 100%;
-    -moz-background-size: 100% 100%;
-    -o-background-size: 100% 100%;
-    background-size: 100% 100%;
     min-height: 100%;
-    /* the following 2 lines are a hack for IE6 */
-    height: auto !important;
-    height: 100%;
     width: 100%;
-    background-attachment: fixed;
 
     &.footer-bottom {
       background-color: @footerBottomBackground;
@@ -39,7 +29,7 @@
             color: @tugrazRed;
           }
         }
-        
+
         // remove blue focus outline if clicked with mouse
         &:focus:not(:focus-visible) {
           outline-style: none;

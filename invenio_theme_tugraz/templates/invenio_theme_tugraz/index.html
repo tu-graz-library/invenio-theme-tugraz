@@ -25,37 +25,6 @@
 
     <!---segments-->
     <div class="six wide column">
-      {#
-      <div class="ui segment" style="padding-bottom: 10px;">
-        <h4>{{ _("You can upload different types of records:") }}</h4>
-
-        <div class="ui grid">
-          <div class="sixteen wide mobile eight wide computer column">
-            <span>
-              {{ _("Visibility of uploaded content is maximized through synchronization with data hubs (DataCite).") }}
-            </span>
-          </div>
-          <div class="sixteen wide mobile eight wide computer column">
-            <a class="ui fluid positive button" href="me/uploads" title="Research Data">
-              <i aria-hidden="true" class="upload icon"></i>
-              {{ _("Upload Research Output") }}
-            </a>
-          </div>
-          <div class="sixteen wide mobile eight wide computer column">
-            <span>
-              {{ _("Open Educational Resources (OER) will be visible on various discovery tools like the OERhub.") }}
-            </span>
-          </div>
-          <div class="sixteen wide mobile eight wide computer column">
-            <a class="ui fluid positive button" href="lom/uploads" title="Open Educational Resources">
-              <i aria-hidden="true" class="upload icon"></i>
-              {{ _("Upload OER") }}
-            </a>
-          </div>
-        </div>
-      </div>
-      #}
-
       <!--contact us-->
       <div class="ui segment">
         <h4>{{ _("Need help?") }}</h4>
@@ -82,7 +51,7 @@
       </div>
 
       <div class="ui segment" style="padding-bottom: 10px;">
-        <h4>{{ _("Why use") }} {{ config.THEME_SITENAME }}?</h4>
+        <h4>{{ _("Why use") }} {{ config.THEME_SITENAME }}</h4>
 
         {% include "invenio_theme_tugraz/benefits.html" %}
       </div>

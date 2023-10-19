@@ -7,58 +7,58 @@
 #}
 
 {% if not config.THEME_TUGRAZ_PRODUCTION %}
-<div class="ui sticky test-instance">
-  <h4>{{_ ("Test Instance") }}</h4>
-  <p>{{_ ("This is the test instance of the TU Graz Repository.") }}</p>
-</div>
+  <div class="ui sticky test-instance">
+    <h4>{{ _("Test Instance") }}</h4>
+    <p>{{ _("This is the test instance of the TU Graz Repository.") }}</p>
+  </div>
 {% endif %}
 
 <div>
   <header>
     {%- block navbar %}
-    <nav>
-      {%- block navbar_header %}
-      {%- include "invenio_theme_tugraz/navbar.html" %}
-      {%- endblock navbar_header %}
+      <nav>
+        {%- block navbar_header %}
+          {%- include "invenio_theme_tugraz/navbar.html" %}
+        {%- endblock navbar_header %}
 
-      <div class="ui container">
-        <div class="ui grid stackable container">
-          <div class="three column row centered" style="padding-bottom: 0;">
-            <div class="two wide column main-menu-entry">
-              <a href="{{url_for('invenio_theme_tugraz.index')}}" title="Home" class="no-decoration">
-                <span class="home-inline">
-                  <svg shape-rendering="geometricPrecision" id="int-menu-q-home-icon"
-                       xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg"
-                       version="1.1" xml:space="preserve" height="36.997" width="35.969"
-                       enable-background="new 0 0 595.28 841.89" y="0px" x="0px" xmlns:cc="http://creativecommons.org/ns#"
-                       xmlns:dc="http://purl.org/dc/elements/1.1/" viewBox="0 0 35.969 36.997451">
-                    <polyline style="stroke:#E4154B;stroke-linecap:square;stroke-width:4;fill:none"
-                              points="282.72 437.28 282.72 414.77 297.71 406.69 312.69 414.77 312.69 437.28"
-                              transform="translate(-279.72 -403.28)">
-                    </polyline>
-                  </svg>
-                  {{ _("Home") }}
-                </span>
-              </a>
+        <div class="ui container">
+          <div class="ui grid stackable container">
+            <div class="three column row centered" style="padding-bottom: 0;">
+              <div class="two wide column main-menu-entry">
+                <a href="{{url_for('invenio_theme_tugraz.index')}}" title="Home" class="no-decoration">
+                  <span class="home-inline">
+                    <svg shape-rendering="geometricPrecision" id="int-menu-q-home-icon"
+                         xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg"
+                         version="1.1" xml:space="preserve" height="36.997" width="35.969"
+                         enable-background="new 0 0 595.28 841.89" y="0px" x="0px" xmlns:cc="http://creativecommons.org/ns#"
+                         xmlns:dc="http://purl.org/dc/elements/1.1/" viewBox="0 0 35.969 36.997451">
+                         <polyline style="stroke:#E4154B;stroke-linecap:square;stroke-width:4;fill:none"
+                                   points="282.72 437.28 282.72 414.77 297.71 406.69 312.69 414.77 312.69 437.28"
+                                   transform="translate(-279.72 -403.28)">
+                         </polyline>
+                    </svg>
+                    {{ _("Home") }}
+                  </span>
+                </a>
+              </div>
+
+              <div class="two wide column main-menu-entry">
+                <a role="menuitem" href="/communities" class="no-decoration">{{ _("Communities") }}</a>
+              </div>
+              <div class="two wide column main-menu-entry">
+                <a role="menuitem" href="/me/overview" class="no-decoration">{{ _("My dashboard") }}</a>
+              </div>
             </div>
 
-            <div class="two wide column main-menu-entry">
-              <a role="menuitem" href="/communities" class="no-decoration">{{ _("Communities") }}</a>
-            </div>
-            <div class="two wide column main-menu-entry">
-              <a role="menuitem" href="/me/overview" class="no-decoration">{{ _("My dashboard") }}</a>
+            <div id="margin-divider" class="ui divider main-menu-underline-line">
+
             </div>
           </div>
 
-          <div id="margin-divider" class="ui divider main-menu-underline-line">
-
-          </div>
+          <div class="spacer"></div>
         </div>
 
-        <div class="spacer"></div>
-      </div>
-
-    </nav>
+      </nav>
     {%- endblock navbar %}
 
     {%- block flashmessages %}
