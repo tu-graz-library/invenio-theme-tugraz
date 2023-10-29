@@ -24,11 +24,11 @@
       <div class="badges">
         <!--Publication date/Version badge-->
         <span class="ui label blue" data-tooltip="{{ _("Publication date") }}" data-inverted="">
-          {{ r.metadata.dates[0] }}
+          {{ r.created_date_l10n_long }}
         </span>
 
         <!--Resource type badge-->
-        <span class="ui label grey" data-tooltip="{{ _("Resource type") }}" data-inverted>
+        <span class="ui label grey" data-tooltip="{{ _("Resource type") }}" data-inverted="">
           {%- for type in r.metadata.types %}
             {{ type }}
           {%- endfor %}
@@ -40,7 +40,7 @@
           {{ r.access_status.title_l10n }}
         </span>
 
-        <span class="ui label schema">
+        <span class="ui label schema" data-tooltip="Schema Type" data-inverted="">
           {{ r.original.schema_l10n }}
         </span>
       </div>

@@ -17,4 +17,4 @@ class FrontpageRecordsSearch(RecordsSearch):
     class Meta:
         """Default index and filter for frontpage search."""
 
-        index = "dublin-core"
+        index = "global-search"
