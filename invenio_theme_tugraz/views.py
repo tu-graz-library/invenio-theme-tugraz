@@ -16,7 +16,9 @@ from flask_menu import current_menu
 from invenio_i18n import lazy_gettext as _
 
 # from invenio_rdm_records.resources.serializers import UIJSONSerializer
-from invenio_records_dublin_core.resources.serializers import DublinCoreJSONSerializer
+from invenio_records_global_search.resources.serializers import (
+    GlobalSearchJSONSerializer,
+)
 from invenio_users_resources.proxies import current_user_resources
 from opensearch_dsl.utils import AttrDict
 
@@ -96,7 +98,7 @@ def ui_blueprint(app):
 
 def records_serializer(records=None):
     """Serialize list of records."""
-    serializer = DublinCoreJSONSerializer()
+    serializer = GlobalSearchJSONSerializer()
     return [serializer.dump_obj(r.to_dict()) for r in records]
 
 
