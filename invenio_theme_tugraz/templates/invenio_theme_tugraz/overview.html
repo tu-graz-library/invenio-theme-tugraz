@@ -20,53 +20,59 @@
     <h2>Overview</h2>
 
 
-    <div class="ui two column stackable grid overview">
+    <div class="ui five column stackable grid overview">
       <div class="column">
         <div class="ui segment" style="height: 480px">
           <h2>{{ _("Research Result") }}</h2>
-          <div class="ui left floated image">
+          <a class="ui left floated image" href="/me/uploads">
             <img alt="Research Result" src="{{ url_for("static", filename="images/cyan_400x400.png") }}">
-          </div>
+          </a>
           <div class="ui right floated text">
-            describe research results
+            Research results gives the base on which publications are built.
           </div>
         </div>
       </div>
       <div class="column">
         <div class="ui segment" style="height: 480px">
           <h2>{{ _("Communities") }}</h2>
-          <img class="ui left floated image" alt="Communities" src="{{ url_for("static", filename="images/dark_blue_400x400.png") }}">
+          <a class="ui left floated image" href="/me/communities">
+            <img alt="Communities" src="{{ url_for("static", filename="images/dark_blue_400x400.png") }}">
+          </a>
           <div>
-            describe the communities
+            Communities form the area local interests could be planted on.
           </div>
         </div>
       </div>
       <div class="column">
         <div class="ui segment" style="height: 480px">
           <h2>{{ _("Requests") }}</h2>
-          <img class="ui left floated image" alt="Requests" src="{{ url_for("static", filename="images/light_green_400x400.png") }}">
-
+          <a class="ui left floated image" href="/me/requests">
+            <img alt="Requests" src="{{ url_for("static", filename="images/light_green_400x400.png") }}">
+          </a>
           <div>
-            describe requests
+            Requests build the bridge to communicate with the administration.
           </div>
         </div>
       </div>
       <div class="column">
         <div class="ui segment" style="height: 480px">
           <h2>{{ _("Publications") }}</h2>
-          <img class="ui left floated image" alt="Publications" src="{{ url_for("static", filename="images/red_400x400.png") }}">
+          <a class="ui left floated image" href="/publications/uploads">
+            <img alt="Publications" src="{{ url_for("static", filename="images/red_400x400.png") }}">
+          </a>
           <div>
-            describe publications
+            Publications are the synthesized result of research.
           </div>
         </div>
       </div>
       <div class="column">
         <div class="ui segment" style="height: 480px">
           <h2>{{ _("OER") }}</h2>
-          <img class="ui left floated image" alt="Open Educational Resources" src="{{ url_for("static", filename="images/rosa_400x400.png") }}">
-
+          <a class="ui left floated image" href="/oer/uploads">
+            <img alt="Open Educational Resources" src="{{ url_for("static", filename="images/rosa_400x400.png") }}">
+          </a>
           <div>
-            describe open educational resources
+            Open Educational Resources are the basis for training other possible scientists.
           </div>
         </div>
       </div>
