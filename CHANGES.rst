@@ -8,6 +8,19 @@
 Changes
 =======
 
+Version v4.12.0 (release 2023-11-10)
+
+- setup: move python supported window
+- overview: rephrase text
+- menu: temporarily remove overwrite
+- ui: change paths to data-models
+- global: change to invenio-records-global-search
+- refactor: apply semantic-ui, indentation, copyright
+- layout: improve
+- theme: add separate search entry for rdm
+- global: make it compatible with v12
+
+
 Version v4.11.3 (release 2023-06-07)
 
 - fix: frontpage upload buttons small monitor
