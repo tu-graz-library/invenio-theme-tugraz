@@ -1,312 +1,301 @@
-# German translations for invenio-theme-tugraz.
-# Copyright (C) 2020-2021 Graz University of Technology
+# English translations for invenio-theme-tugraz.
+# Copyright (C) 2023 Graz University of Technology
 # This file is distributed under the same license as the
 # invenio-theme-tugraz project.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: invenio-theme-tugraz 1.0.4\n"
+"Project-Id-Version: invenio-theme-tugraz 4.12.0\n"
 "Report-Msgid-Bugs-To: mojib.wali@tugraz.at\n"
 "POT-Creation-Date: 2023-11-20 15:04+0100\n"
-"PO-Revision-Date: 2023-11-20 15:29+0100\n"
-"Last-Translator: \n"
-"Language-Team: de <LL@li.org>\n"
-"Language: de\n"
+"PO-Revision-Date: 2023-11-22 14:47+0100\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"Generated-By: Babel 2.9.1\n"
+"Generated-By: Babel 2.13.1\n"
+"Last-Translator: \n"
 "X-Generator: Poedit 2.3.1\n"
 
 #: invenio_theme_tugraz/config.py:13 invenio_theme_tugraz/config.py:60
 msgid "TU Graz Repository"
-msgstr "TU Graz Repository"
+msgstr ""
 
 #: invenio_theme_tugraz/config.py:63
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/footer.html:24
 msgid "Repository"
-msgstr "Repository"
+msgstr ""
 
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/overview.html:12
 #: invenio_theme_tugraz/views.py:80
 msgid "Overview"
-msgstr "Übersicht"
+msgstr ""
 
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/header.html:49
 #: invenio_theme_tugraz/views.py:86
 msgid "My dashboard"
-msgstr "Meine Übersicht"
+msgstr ""
 
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/accounts/accounts_base.html:26
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/base.html:34
 msgid "Invenio"
-msgstr "Invenio"
+msgstr ""
 
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/benefits.html:10
 msgid "Safe"
-msgstr "Sicher"
+msgstr ""
 
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/benefits.html:10
 msgid ""
-"your research is stored safely for the future in TU Graz library for as long "
-"as TU Graz library exists."
+"your research is stored safely for the future in TU Graz library for as "
+"long as TU Graz library exists."
 msgstr ""
-"Ihre Forschung ist in der Bibliothek der TU Graz für die Zukunft "
-"gespeichert, solange die Bibliothek der TU Graz existiert."
 
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/benefits.html:11
 msgid "Trusted"
-msgstr "Vertrauenswürdig"
+msgstr ""
 
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/benefits.html:11
 msgid ""
-"built and operated by CERN and OpenAIRE to ensure that everyone can join in "
-"Open Science."
+"built and operated by CERN and OpenAIRE to ensure that everyone can join "
+"in Open Science."
 msgstr ""
-"Aufgebaut und betrieben von CERN und OpenAIRE, um sicherzustellen, dass "
-"jeder an Open Science teilnehmen kann."
 
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/benefits.html:12
 msgid "Citeable"
-msgstr "Zitierfähig "
+msgstr ""
 
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/benefits.html:12
 msgid ""
 "every upload is assigned a Digital Object Identifier (DOI), to make them "
 "citable and trackable."
 msgstr ""
-"Jeder Upload wird mit einem Digital Object Identifier (DOI) versehen,um ihn "
-"zitierfähig und nachverfolgbar zu"
 
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/benefits.html:13
 msgid "No waiting time"
-msgstr "Keine Wartezeit"
+msgstr ""
 
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/benefits.html:13
 msgid ""
-"Uploads are made available online as soon as you hit publish, and your DOI "
-"is registered within seconds."
+"Uploads are made available online as soon as you hit publish, and your "
+"DOI is registered within seconds."
 msgstr ""
-"Uploads stehen sofort nach drücken auf “Veröffentlichen” zur Verfügung. Ihre "
-"DOI wird innerhalb von Sekunden registriert."
 
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/benefits.html:14
 msgid "Open or closed"
-msgstr "Offen oder geschlossen"
+msgstr ""
 
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/benefits.html:14
 msgid ""
-"Share e.g. anonymized clinical trial data with only medical professionals "
-"via our restricted access mode."
+"Share e.g. anonymized clinical trial data with only medical "
+"professionals via our restricted access mode."
 msgstr ""
-"Teilen Sie z.B. anonymisierte klinische Studiendaten nur mit medizinischem "
-"Fachpersonal über unseren eingeschränkten Zugriffsmodus."
 
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/benefits.html:15
 msgid "Versioning"
-msgstr "Versionierung"
+msgstr ""
 
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/benefits.html:15
 msgid "Easily update your dataset with our versioning feature."
-msgstr "Einfaches Updaten ihrer Datensätze mit unserer Versionierung."
+msgstr ""
 
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/benefits.html:16
 msgid "Usage statisics"
-msgstr "Nutzungsstatistiken"
+msgstr ""
 
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/benefits.html:16
 msgid "All uploads display standards compliant usage statistics"
-msgstr "Alle Uploads entsprechen den Standards der Nutzungsstatistiken."
+msgstr ""
 
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/footer.html:29
 msgid "Documentation"
-msgstr "Dokumentation"
+msgstr ""
 
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/footer.html:36
 msgid "Reference Guide"
-msgstr "Handbuch"
+msgstr ""
 
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/footer.html:43
 msgid "Search Guide"
-msgstr "Suchanleitung"
+msgstr ""
 
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/footer.html:50
 msgid "Data Protection"
-msgstr "Datenschutzerklärung"
+msgstr ""
 
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/footer.html:57
 msgid "Terms and Conditions"
-msgstr "Nutzungsbedingungen"
+msgstr ""
 
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/footer.html:65
 msgid "Features"
-msgstr "Features"
+msgstr ""
 
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/footer.html:68
 msgid "Scalability"
-msgstr "Skalierbarkeit"
+msgstr ""
 
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/footer.html:69
 msgid "Institutional integration"
-msgstr "Institutionelle Einbindung"
+msgstr ""
 
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/footer.html:70
 msgid "Next Generation Repository"
-msgstr "Repositorium der nächsten Generation"
+msgstr ""
 
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/footer.html:71
 msgid "Repository Profiles"
-msgstr "Repositorienprofile"
+msgstr ""
 
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/footer.html:72
 msgid "Resilient"
-msgstr "Resilient, widerstandsfähig"
+msgstr ""
 
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/footer.html:78
 msgid "Connected Services"
-msgstr "Verbundene Services "
+msgstr ""
 
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/footer.html:82
 msgid "PURE"
-msgstr "PURE"
+msgstr ""
 
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/footer.html:88
 msgid "CampusOnline"
-msgstr "CampusOnline"
+msgstr ""
 
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/footer.html:94
 msgid "Research Data Management"
-msgstr "Forschungsdatenmanagement"
+msgstr ""
 
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/footer.html:101
 msgid "Accessibility"
-msgstr "Barrierefreiheit"
+msgstr ""
 
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/footer.html:104
 msgid "Tipp:"
-msgstr "Tipp"
+msgstr ""
 
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/footer.html:107
 msgid "Use Ctrl + and Crtl -"
-msgstr "Verwenden Sie Strg+ und Strg-"
+msgstr ""
 
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/footer.html:110
 msgid "to change the font size."
-msgstr "Um die Schriftgröße zu ändern."
+msgstr ""
 
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/frontpage_overview.html:13
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/overview.html:26
 msgid "Research Result"
-msgstr "Forschungsergebnisse"
+msgstr ""
 
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/frontpage_overview.html:16
 msgid "Description for research result"
 msgstr ""
-"Forschungsergebnisse ist der Sammelbegriff für alles was bei einem "
-"Forschungsprojekt an Ergebnisse vorhanden sind. Sie beschreiben auf welchen "
-"Daten die Publikationen fußen. Sie beschreiben mit welchen Tools die "
-"Forschungsdaten gesammelt und bearbeitet wurden. Die folgenden Verlinkungen "
-"bieten die Möglichkeit Forschungsergebnisse dem Repository hinzuzufügen, "
-"aber auch die Ergebnisse anderer Personen zu suchen."
+"Research results is the collective term for all the results of a "
+"research project. They describe the data on which the publications are "
+"based. They describe the tools used to collect and process the research "
+"data. The following links offer the possibility to add research results "
+"to the repository, but also to search for the results of other people."
 
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/frontpage_overview.html:36
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/navbar.html:22
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/overview.html:59
 msgid "Publications"
-msgstr "Publikationen"
+msgstr ""
 
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/frontpage_overview.html:39
 msgid "Description for publications"
 msgstr ""
-"Publikationen umfassen sehr viele Bereiche. Es werden OpenAccess papers aus "
-"Pure importiert. Es werden OpenAcces Verlagspublikationen veröffentlicht. Es "
-"werden Digitalisate angeboten. Es werden Hochschulschriften einer breiten "
-"Masse an Personen zur Verfügung gestellt. Die Suche bietet die Möglichkeit "
-"aus der Menge an Publikationen das richtige zu wählen."
+"Publications cover many areas. OpenAccess papers are imported from Pure. "
+"OpenAccess publisher publications are published. Digital copies are "
+"offered. University publications are made available to a wide range of "
+"people. The search offers the possibility to choose the right "
+"publication from the many available."
 
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/frontpage_overview.html:56
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/overview.html:70
 msgid "OER"
-msgstr "OER"
+msgstr ""
 
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/frontpage_overview.html:59
 msgid "Description for open educational resources"
 msgstr ""
-"Open Educational Resources sind offene Bildungsresourcen die einen "
-"niederschwelligen Zugriff zu freien Bildungsresourcen bieten."
+"Open Educational Resources are open educational resources that offer low-"
+"threshold access to free educational resources."
 
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/accounts/accounts_base.html:61
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/header.html:11
 msgid "Test Instance"
-msgstr "Testumgebung"
+msgstr ""
 
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/accounts/accounts_base.html:62
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/header.html:12
 msgid "This is the test instance of the TU Graz Repository."
-msgstr "Dies ist die Testumgebung des TU Graz Repositorys."
+msgstr ""
 
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/header.html:40
 msgid "Home"
-msgstr "Startseite"
+msgstr ""
 
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/header.html:46
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/overview.html:37
 msgid "Communities"
-msgstr "Communities"
+msgstr ""
 
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/index.html:30
 msgid "Need help?"
-msgstr "Brauchen Sie Hilfe?"
+msgstr ""
 
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/index.html:34
 msgid "Contact us"
-msgstr "Kontaktiere uns"
+msgstr ""
 
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/index.html:39
 msgid "prioritizes all Recent uploads."
-msgstr "reiht die neuesten Uploads vor."
+msgstr ""
 
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/index.html:42
 msgid "We can help with:"
-msgstr "Dabei können wir helfen:"
+msgstr ""
 
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/index.html:46
 msgid "Uploading your research data, software, preprints, etc."
-msgstr "Hochladen Ihrer Forschungsdaten, Software, Preprints usw."
+msgstr ""
 
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/index.html:47
 msgid "One-on-one with"
-msgstr "One-on-one mit"
+msgstr ""
 
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/index.html:47
 msgid "supporters."
-msgstr "Unterstützern"
+msgstr ""
 
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/index.html:48
 msgid "Quota increases beyond our default policy."
-msgstr "Quota Erhöhungen über unsere Standard Policy hinaus."
+msgstr ""
 
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/index.html:49
 msgid "Scripts for automated uploading of larger datasets."
-msgstr "Skripte zum automatisierten Hochladen größerer Datensätze."
+msgstr ""
 
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/index.html:54
 msgid "Why use"
-msgstr "Warum"
+msgstr ""
 
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/navbar.html:12
 msgid "All"
-msgstr "Alle"
+msgstr ""
 
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/navbar.html:17
 msgid "Research Results"
-msgstr "Forschungsergebenisse"
+msgstr ""
 
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/navbar.html:27
 msgid "Open Educational Resources"
-msgstr "Open Educational Resources"
+msgstr ""
 
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/navbar.html:78
 msgid "TU GRAZ"
@@ -314,236 +303,131 @@ msgstr ""
 
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/navbar.html:80
 msgid "REPOSITORY"
-msgstr "Repository"
+msgstr ""
 
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/navbar.html:82
 msgid "LIBRARY & ARCHIVES"
-msgstr "Bibliothek und Archiv"
+msgstr ""
 
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/navbar.html:92
 msgid "SCIENCE"
-msgstr "WISSEN"
+msgstr ""
 
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/navbar.html:93
 msgid "PASSION"
-msgstr "TECHNIK"
+msgstr ""
 
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/navbar.html:94
 msgid "TECHNOLOGY"
-msgstr "LEIDENSCHAFT"
+msgstr ""
 
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/overview.html:48
 msgid "Requests"
-msgstr "Anfragen"
+msgstr ""
 
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/recent_uploads.html:11
 msgid "Recent uploads"
-msgstr "Kürzlich hochgeladene Dateien"
+msgstr ""
 
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/recent_uploads.html:15
 msgid "There are no public records to show."
-msgstr "Es sind keine öffentlich zugänglichen Datensätze vorhanden."
+msgstr ""
 
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/recent_uploads.html:26
 msgid "Publication date"
-msgstr "Datum der Veröffentlichung"
+msgstr ""
 
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/recent_uploads.html:31
 msgid "Resource type"
-msgstr "Art der Veröffentlichung"
+msgstr ""
 
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/recent_uploads.html:89
 msgid "More"
-msgstr "Mehr"
+msgstr ""
 
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/accounts/header_login.html:8
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/accounts/login_user.html:82
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/accounts/register_user.html:86
 msgid "Sign up"
-msgstr "Registrieren"
+msgstr ""
 
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/accounts/header_login.html:15
 msgid "Log in"
-msgstr "Einloggen"
+msgstr ""
 
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/accounts/header_login.html:30
 msgid "Sign out"
-msgstr "Ausloggen"
+msgstr ""
 
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/accounts/login_user.html:24
 msgid "Log in to Repository"
-msgstr "Anmelden"
+msgstr ""
 
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/accounts/login_user.html:38
 #, python-format
 msgid "Log in with %(title)s"
-msgstr "Einloggen mit %(title)s"
+msgstr ""
 
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/accounts/login_user.html:46
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/accounts/register_user.html:51
 msgid "Or"
-msgstr "Oder"
+msgstr ""
 
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/accounts/login_user.html:57
 msgid "Log in with repository credentials"
-msgstr "Loggen Sie sich mit Ihrem Repository-Account ein"
+msgstr ""
 
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/accounts/login_user.html:67
 msgid "Log In"
-msgstr "Einloggen"
+msgstr ""
 
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/accounts/login_user.html:81
 #, python-format
 msgid "New to %(sitename)s?"
-msgstr "Neu im %(sitename)s?"
+msgstr ""
 
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/accounts/login_user.html:91
 msgid "Forgot password?"
-msgstr "Passwort vergessen"
+msgstr ""
 
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/accounts/register_user.html:20
 msgid "Create an Account"
-msgstr "Einen Account erstellen"
+msgstr ""
 
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/accounts/register_user.html:25
 msgid "Citeable. Discoverable."
-msgstr "Zitierfähig. Auffindbar."
+msgstr ""
 
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/accounts/register_user.html:27
 msgid ""
 "Uploads get a Digital Object Identifier (DOI) to make them easily and "
 "uniquely citeable."
 msgstr ""
-"Uploads erhalten eine DOI und werden damit leichtauffindbar und zitierfähig."
 
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/accounts/register_user.html:28
 msgid "Communities."
-msgstr "Communities"
+msgstr ""
 
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/accounts/register_user.html:30
 msgid ""
-"Accept or reject uploads to your own community (e.g workshops, EU projects, "
-"institutions or entire disciplines)."
+"Accept or reject uploads to your own community (e.g workshops, EU "
+"projects, institutions or entire disciplines)."
 msgstr ""
-"Annehmen oder Ablehnen von Uploads in Ihrer eigenen Community (z.B. "
-"workshop, EU-Projekt, Forschungseinrichtung, Disziplin)"
 
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/accounts/register_user.html:32
 msgid "Trusted Research Data Management"
-msgstr "Vertrauenswürdiges Forschungsdatenmanagement"
+msgstr ""
 
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/accounts/register_user.html:34
 msgid ""
-"Built on top of TU Graz expertise in managing of the research data from the "
-"Graz University of Technology."
-msgstr "Gebaut basierend auf Expertise derTU Graz im Bereich Data Management"
+"Built on top of TU Graz expertise in managing of the research data from "
+"the Graz University of Technology."
+msgstr ""
 
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/accounts/register_user.html:48
 msgid "Sign up with TUGRAZ "
-msgstr "Mit Ihrem TUGonline-Account registrieren"
+msgstr ""
 
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/accounts/register_user.html:65
 msgid "Sign up with repository credentials"
-msgstr "Mit Ihren Repository Daten registrieren"
-
-#~ msgid "Impressum"
-#~ msgstr "Imprint"
-
-#~ msgid "Feedback"
-#~ msgstr "Feedback"
-
-#, fuzzy, python-format
-#~ msgid ""
-#~ "<strong>Powered by</strong>\n"
-#~ "            <a href=\"%(invenio_rdm)s\" target=\"_blank\" "
-#~ "title=\"invenioRDM\">"
-#~ msgstr ""
-#~ "<strong>Powered by</strong> <a href=\"%(invenio_rdm)s\" target=\"_blank\">"
-
-#, fuzzy, python-format
-#~ msgid ""
-#~ "<strong>Enabled by</strong>\n"
-#~ "            <a href=\"%(fair_data)s\" target=\"_blank\" title=\"Fair Data "
-#~ "Austria\">"
-#~ msgstr ""
-#~ "<strong>Enabled by</strong> <a href=\"%(fair_data)s\" target=\"_blank\">"
-
-#, python-format
-#~ msgid ""
-#~ "\n"
-#~ "                  Uploaded on %(date)s\n"
-#~ "                  "
-#~ msgstr ""
-#~ "\n"
-#~ "\t\tHochgeladen am %(date)s"
-
-#~ msgid "You can upload different types of records:"
-#~ msgstr "Upload verschiedener Arten von Datensätzen:"
-
-#~ msgid ""
-#~ "Visibility of uploaded content is maximized through synchronization with "
-#~ "data hubs (DataCite)."
-#~ msgstr ""
-#~ "Steigerung der Sichtbarkeit der Datensätze durch Synchronisation mit "
-#~ "Harvestern (DataCite)."
-
-#~ msgid "Upload Research Output"
-#~ msgstr "Upload Forschungsergebnisse"
-
-#~ msgid ""
-#~ "Open Educational Resources (OER) will be visible on various discovery "
-#~ "tools like the OERhub."
-#~ msgstr ""
-#~ "Open Educational Resources (OER) werden auf Suchmaschinen wie OERhub "
-#~ "sichtbar sein."
-
-#~ msgid "Upload OER"
-#~ msgstr "Upload OER"
-
-#~ msgid "Type and press enter to search"
-#~ msgstr "Suchbegriff eingeben und “Enter” drücken (?)"
-
-#~ msgid "Version"
-#~ msgstr "Version"
-
-#~ msgid ""
-#~ "\n"
-#~ "                Uploaded on %(date)s\n"
-#~ "                "
-#~ msgstr "Hochgeladen am %(date)s\n"
-
-#~ msgid "Handbook"
-#~ msgstr "Handbuch"
-
-#~ msgid "RDM DOI Badge"
-#~ msgstr "RDM DOI Abzeichen"
-
-#~ msgid "DOI"
-#~ msgstr "DOI"
-
-#~ msgid "German"
-#~ msgstr "Deutsche"
-
-#~ msgid "New version"
-#~ msgstr "neue Version"
-
-#~ msgid "New upload"
-#~ msgstr "Neuer upload"
-
-#~ msgid "Edit upload"
-#~ msgstr "Upload bearbeiten"
-
-#~ msgid ""
-#~ "\n"
-#~ "            There is a %(link_start)snewer version%(link_end)s of the "
-#~ "record available.\n"
-#~ "            "
-#~ msgstr ""
-#~ "Es ist eine %(link_start)sneuere Version%(link_end)s des Eintrags "
-#~ "verfügbar."
-
-#~ msgid "Files"
-#~ msgstr "Dateien"
-
-#~ msgid "Reason"
-#~ msgstr "Grund"
+msgstr ""
