@@ -8,6 +8,13 @@
 Changes
 =======
 
+Version v4.12.1 (release 2023-11-23)
+
+- translation: change text on frontpage overview
+- ui: comment browse functionality
+- ui: remove scss, not used
+
+
 Version v4.12.0 (release 2023-11-10)
 
 - setup: move python supported window
