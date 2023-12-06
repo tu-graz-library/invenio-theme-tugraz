@@ -28,7 +28,7 @@
             <img alt="Research Result" src="{{ url_for("static", filename="images/cyan_400x400.png") }}">
           </a>
           <div class="ui right floated text">
-            Research results gives the base on which publications are built.
+            {{ _("Overview: Description for research result") }}
           </div>
         </div>
       </div>
@@ -39,7 +39,7 @@
             <img alt="Communities" src="{{ url_for("static", filename="images/dark_blue_400x400.png") }}">
           </a>
           <div>
-            Communities form the area local interests could be planted on.
+            {{ _("Overview: Description of Communities") }}
           </div>
         </div>
       </div>
@@ -50,7 +50,7 @@
             <img alt="Requests" src="{{ url_for("static", filename="images/light_green_400x400.png") }}">
           </a>
           <div>
-            Requests build the bridge to communicate with the administration.
+            {{ _("Overview: Description of Requests") }}
           </div>
         </div>
       </div>
@@ -61,18 +61,18 @@
             <img alt="Publications" src="{{ url_for("static", filename="images/red_400x400.png") }}">
           </a>
           <div>
-            Publications are the synthesized result of research.
+            {{ _("Overview: Description for publications") }}
           </div>
         </div>
       </div>
       <div class="column">
         <div class="ui segment" style="height: 480px">
-          <h2>{{ _("OER") }}</h2>
+          <h2>{{ _("Educational Resources") }}</h2>
           <a class="ui left floated image" href="/oer/uploads">
             <img alt="Open Educational Resources" src="{{ url_for("static", filename="images/rosa_400x400.png") }}">
           </a>
           <div>
-            Open Educational Resources are the basis for training other possible scientists.
+            {{ _("Overview: Description for open educational resources") }}
           </div>
         </div>
       </div>
