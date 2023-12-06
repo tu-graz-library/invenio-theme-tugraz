@@ -8,16 +8,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: invenio-theme-tugraz 4.12.0\n"
 "Report-Msgid-Bugs-To: mojib.wali@tugraz.at\n"
-"POT-Creation-Date: 2023-11-20 15:04+0100\n"
-"PO-Revision-Date: 2023-11-22 14:47+0100\n"
-"Language: en\n"
+"POT-Creation-Date: 2023-12-06 09:52+0100\n"
+"PO-Revision-Date: 2023-12-06 10:03+0100\n"
+"Last-Translator: \n"
 "Language-Team: en <LL@li.org>\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language: en\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "Generated-By: Babel 2.13.1\n"
-"Last-Translator: \n"
 "X-Generator: Poedit 2.3.1\n"
 
 #: invenio_theme_tugraz/config.py:13 invenio_theme_tugraz/config.py:60
@@ -50,8 +50,8 @@ msgstr ""
 
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/benefits.html:10
 msgid ""
-"your research is stored safely for the future in TU Graz library for as "
-"long as TU Graz library exists."
+"your research is stored safely for the future in TU Graz library for as long "
+"as TU Graz library exists."
 msgstr ""
 
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/benefits.html:11
@@ -60,8 +60,8 @@ msgstr ""
 
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/benefits.html:11
 msgid ""
-"built and operated by CERN and OpenAIRE to ensure that everyone can join "
-"in Open Science."
+"built and operated by CERN and OpenAIRE to ensure that everyone can join in "
+"Open Science."
 msgstr ""
 
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/benefits.html:12
@@ -80,8 +80,8 @@ msgstr ""
 
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/benefits.html:13
 msgid ""
-"Uploads are made available online as soon as you hit publish, and your "
-"DOI is registered within seconds."
+"Uploads are made available online as soon as you hit publish, and your DOI "
+"is registered within seconds."
 msgstr ""
 
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/benefits.html:14
@@ -90,8 +90,8 @@ msgstr ""
 
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/benefits.html:14
 msgid ""
-"Share e.g. anonymized clinical trial data with only medical "
-"professionals via our restricted access mode."
+"Share e.g. anonymized clinical trial data with only medical professionals "
+"via our restricted access mode."
 msgstr ""
 
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/benefits.html:15
@@ -192,13 +192,25 @@ msgid "Research Result"
 msgstr ""
 
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/frontpage_overview.html:16
-msgid "Description for research result"
+msgid "Frontpage: Description for research result"
 msgstr ""
-"Research results is the collective term for all the results of a "
-"research project. They describe the data on which the publications are "
-"based. They describe the tools used to collect and process the research "
-"data. The following links offer the possibility to add research results "
-"to the repository, but also to search for the results of other people."
+"Research results is the collective term for all the results of a research "
+"project. They describe the data, source code and all digital objects on "
+"which publication results are based. These include the tools used to collect "
+"and process the research data. The following links offer the possibility to "
+"add research results to the repository, but also to search for the results "
+"of other people."
+
+#: invenio_theme_tugraz/templates/invenio_theme_tugraz/frontpage_overview.html:26
+#: invenio_theme_tugraz/templates/invenio_theme_tugraz/frontpage_overview.html:49
+#: invenio_theme_tugraz/templates/invenio_theme_tugraz/frontpage_overview.html:69
+msgid "Search"
+msgstr ""
+
+#: invenio_theme_tugraz/templates/invenio_theme_tugraz/frontpage_overview.html:29
+#: invenio_theme_tugraz/templates/invenio_theme_tugraz/frontpage_overview.html:72
+msgid "Upload"
+msgstr ""
 
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/frontpage_overview.html:36
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/navbar.html:22
@@ -207,24 +219,26 @@ msgid "Publications"
 msgstr ""
 
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/frontpage_overview.html:39
-msgid "Description for publications"
+msgid "Frontpage: Description for publications"
 msgstr ""
-"Publications cover many areas. OpenAccess papers are imported from Pure. "
-"OpenAccess publisher publications are published. Digital copies are "
-"offered. University publications are made available to a wide range of "
-"people. The search offers the possibility to choose the right "
-"publication from the many available."
+"The section of publications covers citations from several areas. Open Access "
+"papers are imported from Pure. Publications from Open Access publishers are "
+"shared. Digital copies are offered. University publications are made "
+"available to a wide range of people.  The following link offers the "
+"possibility to search among publications."
 
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/frontpage_overview.html:56
-#: invenio_theme_tugraz/templates/invenio_theme_tugraz/overview.html:70
-msgid "OER"
+msgid "Educational Resources"
 msgstr ""
 
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/frontpage_overview.html:59
-msgid "Description for open educational resources"
+msgid "Frontpage: Description for open educational resources"
 msgstr ""
-"Open Educational Resources are open educational resources that offer low-"
-"threshold access to free educational resources."
+"In this area, you can upload your openly licensed educational content (OER, "
+"Open Educational Resources) and search for educational resources uploaded by "
+"others. Your uploaded content will be automatically transferred to the "
+"OERhub.at. To upload something in this area, an OER certificate and "
+"activation of your account is required."
 
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/accounts/accounts_base.html:61
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/header.html:11
@@ -321,9 +335,39 @@ msgstr ""
 msgid "TECHNOLOGY"
 msgstr ""
 
+#: invenio_theme_tugraz/templates/invenio_theme_tugraz/overview.html:31
+msgid "Overview: Description for research result"
+msgstr "Research results gives the base on which publications are built."
+
+#: invenio_theme_tugraz/templates/invenio_theme_tugraz/overview.html:42
+msgid "Overview: Description of Communities"
+msgstr ""
+"Grow a community of individuals to sustain the platform going forward and "
+"thereby organize, curate and collaborate on records for your institution, "
+"project, topic or event."
+
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/overview.html:48
 msgid "Requests"
 msgstr ""
+
+#: invenio_theme_tugraz/templates/invenio_theme_tugraz/overview.html:53
+msgid "Overview: Description of Requests"
+msgstr ""
+"Check for incoming notifications and community assignments or inquiries."
+
+#: invenio_theme_tugraz/templates/invenio_theme_tugraz/overview.html:64
+msgid "Overview: Description for publications"
+msgstr "Publications are the synthesized result of research."
+
+#: invenio_theme_tugraz/templates/invenio_theme_tugraz/overview.html:70
+msgid "OER"
+msgstr ""
+
+#: invenio_theme_tugraz/templates/invenio_theme_tugraz/overview.html:75
+msgid "Overview: Description for open educational resources"
+msgstr ""
+"Open Educational Resources are the basis for training other possible "
+"scientists."
 
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/recent_uploads.html:11
 msgid "Recent uploads"
@@ -347,7 +391,7 @@ msgstr ""
 
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/accounts/header_login.html:8
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/accounts/login_user.html:82
-#: invenio_theme_tugraz/templates/invenio_theme_tugraz/accounts/register_user.html:86
+#: invenio_theme_tugraz/templates/invenio_theme_tugraz/accounts/register_user.html:82
 msgid "Sign up"
 msgstr ""
 
@@ -369,7 +413,7 @@ msgid "Log in with %(title)s"
 msgstr ""
 
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/accounts/login_user.html:46
-#: invenio_theme_tugraz/templates/invenio_theme_tugraz/accounts/register_user.html:51
+#: invenio_theme_tugraz/templates/invenio_theme_tugraz/accounts/register_user.html:47
 msgid "Or"
 msgstr ""
 
@@ -410,8 +454,8 @@ msgstr ""
 
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/accounts/register_user.html:30
 msgid ""
-"Accept or reject uploads to your own community (e.g workshops, EU "
-"projects, institutions or entire disciplines)."
+"Accept or reject uploads to your own community (e.g workshops, EU projects, "
+"institutions or entire disciplines)."
 msgstr ""
 
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/accounts/register_user.html:32
@@ -420,14 +464,14 @@ msgstr ""
 
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/accounts/register_user.html:34
 msgid ""
-"Built on top of TU Graz expertise in managing of the research data from "
-"the Graz University of Technology."
+"Built on top of TU Graz expertise in managing of the research data from the "
+"Graz University of Technology."
 msgstr ""
 
-#: invenio_theme_tugraz/templates/invenio_theme_tugraz/accounts/register_user.html:48
-msgid "Sign up with TUGRAZ "
+#: invenio_theme_tugraz/templates/invenio_theme_tugraz/accounts/register_user.html:44
+msgid "Sign up with TUGRAZ"
 msgstr ""
 
-#: invenio_theme_tugraz/templates/invenio_theme_tugraz/accounts/register_user.html:65
+#: invenio_theme_tugraz/templates/invenio_theme_tugraz/accounts/register_user.html:61
 msgid "Sign up with repository credentials"
 msgstr ""

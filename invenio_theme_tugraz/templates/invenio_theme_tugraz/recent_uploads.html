@@ -12,7 +12,9 @@
 
   {% if not records %}
     <div class="ui centered grid">
-      <p style="font-size: medium;">{{ _("There are no public records to show.") }}</p>
+      <p style="font-size: medium;">
+        {{ _("There are no public records to show.") }}
+      </p>
     </div>
   {% endif %}
 
@@ -22,12 +24,12 @@
 
     <article>
       <div class="badges">
-        <!--Publication date/Version badge-->
+        {# Publication date/Version badge #}
         <span class="ui label blue" data-tooltip="{{ _("Publication date") }}" data-inverted="">
           {{ r.created_date_l10n_long }}
         </span>
 
-        <!--Resource type badge-->
+        {# Resource type badge #}
         <span class="ui label grey" data-tooltip="{{ _("Resource type") }}" data-inverted="">
           {%- for type in r.metadata.types %}
             {{ type }}
@@ -35,7 +37,8 @@
         </span>
 
         <span class="ui label access-status {{ r.access_status.id }}"
-              data-tooltip="{{ r.access_status.description_l10n }}" data-inverted="">
+              data-tooltip="{{ r.access_status.description_l10n }}"
+              data-inverted="">
           <i class="icon {{ r.access_status.icon }}"></i>
           {{ r.access_status.title_l10n }}
         </span>
