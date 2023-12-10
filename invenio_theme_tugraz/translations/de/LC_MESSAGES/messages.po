@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: invenio-theme-tugraz 1.0.4\n"
 "Report-Msgid-Bugs-To: mojib.wali@tugraz.at\n"
-"POT-Creation-Date: 2023-12-06 11:04+0100\n"
-"PO-Revision-Date: 2023-12-06 11:31+0100\n"
+"POT-Creation-Date: 2023-12-06 23:09+0100\n"
+"PO-Revision-Date: 2023-12-06 23:24+0100\n"
 "Last-Translator: \n"
 "Language-Team: de <LL@li.org>\n"
 "Language: de\n"
@@ -240,6 +240,8 @@ msgid "Search for publications"
 msgstr "Suchen Sie nach Publikationen"
 
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/frontpage_overview.html:56
+#: invenio_theme_tugraz/templates/invenio_theme_tugraz/navbar.html:27
+#: invenio_theme_tugraz/templates/invenio_theme_tugraz/overview.html:70
 msgid "Educational Resources"
 msgstr "Bildungsinhalte"
 
@@ -249,9 +251,9 @@ msgstr ""
 "In diesem Bereich können Sie Ihre offen lizenzierten Bildungsinhalte (OER, "
 "Open Educational Resources) hochladen und nach Bildungsressourcen suchen, "
 "die von anderen hochgeladen wurden. Ihre hochgeladenen Inhalte werden "
-"automatisch auf den <a href=\"oerhub.at\">OERhub.at</a> übertragen. Um etwas "
-"in diesem Bereich hochzuladen, ist ein OER-Zertifikat und die Aktivierung "
-"Ihres Accounts erforderlich."
+"automatisch auf den <a href=\"https://oerhub.at\" target=\"_blank\">OERhub."
+"at</a> übertragen. Um etwas in diesem Bereich hochzuladen, ist ein OER-"
+"Zertifikat und die Aktivierung Ihres Accounts erforderlich."
 
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/frontpage_overview.html:69
 msgid "Search for educational resourses"
@@ -332,10 +334,6 @@ msgstr "Alle"
 msgid "Research Results"
 msgstr "Forschungsergebenisse"
 
-#: invenio_theme_tugraz/templates/invenio_theme_tugraz/navbar.html:27
-msgid "Open Educational Resources"
-msgstr "Open Educational Resources"
-
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/navbar.html:78
 msgid "TU GRAZ"
 msgstr ""
@@ -387,15 +385,11 @@ msgid "Overview: Description for publications"
 msgstr ""
 "Die Veröffentlichungen sind das zusammengefasste Ergebnis der Forschung."
 
-#: invenio_theme_tugraz/templates/invenio_theme_tugraz/overview.html:70
-msgid "OER"
-msgstr "OER"
-
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/overview.html:75
 msgid "Overview: Description for open educational resources"
 msgstr ""
-"Offene Bildungsressourcen sind die Grundlage für die Ausbildung anderer "
-"möglicher Wissenschaftler."
+"Veröffentlichen Sie hier Ihre offen lizenzierten Bildungsmaterialien (OER), "
+"damit andere sie finden und weiternutzen können."
 
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/recent_uploads.html:11
 msgid "Recent uploads"
@@ -506,6 +500,12 @@ msgstr "Mit Ihrem TUGonline-Account registrieren"
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/accounts/register_user.html:61
 msgid "Sign up with repository credentials"
 msgstr "Mit Ihren Repository Daten registrieren"
+
+#~ msgid "Open Educational Resources"
+#~ msgstr "Open Educational Resources"
+
+#~ msgid "OER"
+#~ msgstr "OER"
 
 #~ msgid "Search"
 #~ msgstr "Suche"

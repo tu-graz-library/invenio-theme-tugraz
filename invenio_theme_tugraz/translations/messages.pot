@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: invenio-theme-tugraz 4.12.1\n"
 "Report-Msgid-Bugs-To: mojib.wali@tugraz.at\n"
-"POT-Creation-Date: 2023-12-06 11:04+0100\n"
+"POT-Creation-Date: 2023-12-06 23:09+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -215,6 +215,8 @@ msgid "Search for publications"
 msgstr ""
 
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/frontpage_overview.html:56
+#: invenio_theme_tugraz/templates/invenio_theme_tugraz/navbar.html:27
+#: invenio_theme_tugraz/templates/invenio_theme_tugraz/overview.html:70
 msgid "Educational Resources"
 msgstr ""
 
@@ -301,10 +303,6 @@ msgstr ""
 msgid "Research Results"
 msgstr ""
 
-#: invenio_theme_tugraz/templates/invenio_theme_tugraz/navbar.html:27
-msgid "Open Educational Resources"
-msgstr ""
-
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/navbar.html:78
 msgid "TU GRAZ"
 msgstr ""
@@ -347,10 +345,6 @@ msgstr ""
 
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/overview.html:64
 msgid "Overview: Description for publications"
-msgstr ""
-
-#: invenio_theme_tugraz/templates/invenio_theme_tugraz/overview.html:70
-msgid "OER"
 msgstr ""
 
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/overview.html:75
