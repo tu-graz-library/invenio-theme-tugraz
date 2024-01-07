@@ -8,6 +8,15 @@
 Changes
 =======
 
+Version v4.12.2 (release 2024-01-07)
+
+- ui: use only first type
+- ui: change overview logos
+- wording: improve
+- wording: improve wording
+- fix: multiple subjects not displayed in one row
+
+
 Version v4.12.1 (release 2023-11-23)
 
 - translation: change text on frontpage overview
