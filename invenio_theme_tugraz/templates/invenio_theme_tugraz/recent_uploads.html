@@ -31,9 +31,7 @@
 
         {# Resource type badge #}
         <span class="ui label grey" data-tooltip="{{ _("Resource type") }}" data-inverted="">
-          {%- for type in r.metadata.types %}
-            {{ type }}
-          {%- endfor %}
+          {{ r.metadata.types[0] }}
         </span>
 
         <span class="ui label access-status {{ r.access_status.id }}"
