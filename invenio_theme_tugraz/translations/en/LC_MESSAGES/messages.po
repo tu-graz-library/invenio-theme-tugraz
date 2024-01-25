@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: invenio-theme-tugraz 4.12.0\n"
 "Report-Msgid-Bugs-To: mojib.wali@tugraz.at\n"
-"POT-Creation-Date: 2024-01-25 21:47+0100\n"
-"PO-Revision-Date: 2024-01-25 21:47+0100\n"
+"POT-Creation-Date: 2024-01-25 22:36+0100\n"
+"PO-Revision-Date: 2024-01-25 22:44+0100\n"
 "Last-Translator: \n"
 "Language-Team: en <LL@li.org>\n"
 "Language: en\n"
@@ -48,9 +48,7 @@ msgid "Safe"
 msgstr ""
 
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/benefits.html:10
-msgid ""
-"your research is stored safely for the future in TU Graz library for as long "
-"as TU Graz library exists."
+msgid "Your research is stored safely for the future in TU Graz library."
 msgstr ""
 
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/benefits.html:11
@@ -58,9 +56,7 @@ msgid "Trusted"
 msgstr ""
 
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/benefits.html:11
-msgid ""
-"built and operated by CERN and OpenAIRE to ensure that everyone can join in "
-"Open Science."
+msgid "Built by CERN and TU Graz. Operated by TU Graz."
 msgstr ""
 
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/benefits.html:12
@@ -68,9 +64,7 @@ msgid "Citeable"
 msgstr ""
 
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/benefits.html:12
-msgid ""
-"every upload is assigned a Digital Object Identifier (DOI), to make them "
-"citable and trackable."
+msgid "Every upload is assigned a Digital Object Identifier (DOI)."
 msgstr ""
 
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/benefits.html:13
@@ -79,8 +73,8 @@ msgstr ""
 
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/benefits.html:13
 msgid ""
-"Uploads are made available online as soon as you hit publish, and your DOI "
-"is registered within seconds."
+"Uploads are made available online as soon as you hit publish. Your DOI is "
+"registered within seconds."
 msgstr ""
 
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/benefits.html:14
@@ -88,9 +82,7 @@ msgid "Open or closed"
 msgstr ""
 
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/benefits.html:14
-msgid ""
-"Share e.g. anonymized clinical trial data with only medical professionals "
-"via our restricted access mode."
+msgid "Share private or anonymized data via the restricted access mode."
 msgstr ""
 
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/benefits.html:15
@@ -98,7 +90,7 @@ msgid "Versioning"
 msgstr ""
 
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/benefits.html:15
-msgid "Easily update your dataset with our versioning feature."
+msgid "Easily update your dataset with the versioning feature."
 msgstr ""
 
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/benefits.html:16
@@ -106,7 +98,7 @@ msgid "Usage statisics"
 msgstr ""
 
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/benefits.html:16
-msgid "All uploads display standards compliant usage statistics"
+msgid "All uploads display standards compliant usage statistics."
 msgstr ""
 
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/footer.html:29
