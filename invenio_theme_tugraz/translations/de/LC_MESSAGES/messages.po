@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: invenio-theme-tugraz 1.0.4\n"
 "Report-Msgid-Bugs-To: mojib.wali@tugraz.at\n"
-"POT-Creation-Date: 2023-12-06 23:09+0100\n"
-"PO-Revision-Date: 2023-12-06 23:24+0100\n"
+"POT-Creation-Date: 2024-01-25 21:51+0100\n"
+"PO-Revision-Date: 2024-01-25 21:51+0100\n"
 "Last-Translator: \n"
 "Language-Team: de <LL@li.org>\n"
 "Language: de\n"
@@ -30,11 +30,11 @@ msgid "Repository"
 msgstr "Repository"
 
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/overview.html:12
-#: invenio_theme_tugraz/views.py:80
+#: invenio_theme_tugraz/views.py:70
 msgid "Overview"
 msgstr "Übersicht"
 
-#: invenio_theme_tugraz/views.py:86
+#: invenio_theme_tugraz/views.py:76
 msgid "My dashboard"
 msgstr "Meine Übersicht"
 
@@ -117,7 +117,7 @@ msgstr "Nutzungsstatistiken"
 
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/benefits.html:16
 msgid "All uploads display standards compliant usage statistics"
-msgstr "Alle Uploads entsprechen den Standards der Nutzungsstatistiken."
+msgstr "Alle Uploads entsprechen den Standards der Nutzungsstatistiken"
 
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/footer.html:29
 msgid "Documentation"
@@ -196,12 +196,15 @@ msgid "to change the font size."
 msgstr "Um die Schriftgröße zu ändern."
 
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/frontpage_overview.html:13
+#: invenio_theme_tugraz/templates/invenio_theme_tugraz/navbar.html:17
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/overview.html:26
-msgid "Research Result"
-msgstr "Forschungsergebnisse"
+msgid "Research Results"
+msgstr "Forschungsergebenisse"
 
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/frontpage_overview.html:16
-msgid "Frontpage: Description for research result"
+#, fuzzy
+#| msgid "Frontpage: Description for research result"
+msgid "Frontpage: Description for research results"
 msgstr ""
 "Forschungsergebnisse ist der Sammelbegriff für alle Ergebnisse eines "
 "Forschungsprojekts. Sie beschreiben die Daten, den Quellcode und alle "
@@ -213,7 +216,7 @@ msgstr ""
 
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/frontpage_overview.html:26
 msgid "Search for research results"
-msgstr "Suchen Sie nach Forschungsergebnisse"
+msgstr "Suchen Sie nach Forschungsergebnissen"
 
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/frontpage_overview.html:29
 msgid "Upload research results"
@@ -330,10 +333,6 @@ msgstr "Warum"
 msgid "All"
 msgstr "Alle"
 
-#: invenio_theme_tugraz/templates/invenio_theme_tugraz/navbar.html:17
-msgid "Research Results"
-msgstr "Forschungsergebenisse"
-
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/navbar.html:78
 msgid "TU GRAZ"
 msgstr ""
@@ -359,7 +358,9 @@ msgid "TECHNOLOGY"
 msgstr "LEIDENSCHAFT"
 
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/overview.html:31
-msgid "Overview: Description for research result"
+#, fuzzy
+#| msgid "Overview: Description for research result"
+msgid "Overview: Description for research results"
 msgstr "Die Forschungsergebnisse bilden die Grundlage für Veröffentlichungen."
 
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/overview.html:42
@@ -407,7 +408,7 @@ msgstr "Datum der Veröffentlichung"
 msgid "Resource type"
 msgstr "Art der Veröffentlichung"
 
-#: invenio_theme_tugraz/templates/invenio_theme_tugraz/recent_uploads.html:88
+#: invenio_theme_tugraz/templates/invenio_theme_tugraz/recent_uploads.html:86
 msgid "More"
 msgstr "Mehr"
 
@@ -500,6 +501,9 @@ msgstr "Mit Ihrem TUGonline-Account registrieren"
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/accounts/register_user.html:61
 msgid "Sign up with repository credentials"
 msgstr "Mit Ihren Repository Daten registrieren"
+
+#~ msgid "Research Result"
+#~ msgstr "Forschungsergebnisse"
 
 #~ msgid "Open Educational Resources"
 #~ msgstr "Open Educational Resources"
