@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: invenio-theme-tugraz 1.0.4\n"
 "Report-Msgid-Bugs-To: mojib.wali@tugraz.at\n"
-"POT-Creation-Date: 2024-01-25 21:51+0100\n"
-"PO-Revision-Date: 2024-01-25 21:51+0100\n"
+"POT-Creation-Date: 2024-01-25 22:36+0100\n"
+"PO-Revision-Date: 2024-01-25 22:47+0100\n"
 "Last-Translator: \n"
 "Language-Team: de <LL@li.org>\n"
 "Language: de\n"
@@ -48,36 +48,25 @@ msgid "Safe"
 msgstr "Sicher"
 
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/benefits.html:10
-msgid ""
-"your research is stored safely for the future in TU Graz library for as long "
-"as TU Graz library exists."
+msgid "Your research is stored safely for the future in TU Graz library."
 msgstr ""
-"Ihre Forschung ist in der Bibliothek der TU Graz für die Zukunft "
-"gespeichert, solange die Bibliothek der TU Graz existiert."
+"Ihre Forschung ist in der Bibliothek der TU Graz für die Zukunft gespeichert."
 
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/benefits.html:11
 msgid "Trusted"
 msgstr "Vertrauenswürdig"
 
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/benefits.html:11
-msgid ""
-"built and operated by CERN and OpenAIRE to ensure that everyone can join in "
-"Open Science."
-msgstr ""
-"Aufgebaut und betrieben von CERN und OpenAIRE, um sicherzustellen, dass "
-"jeder an Open Science teilnehmen kann."
+msgid "Built by CERN and TU Graz. Operated by TU Graz."
+msgstr "Gebaut von CERN und TU Graz. Betrieben von der TU Graz."
 
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/benefits.html:12
 msgid "Citeable"
 msgstr "Zitierfähig"
 
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/benefits.html:12
-msgid ""
-"every upload is assigned a Digital Object Identifier (DOI), to make them "
-"citable and trackable."
-msgstr ""
-"Jeder Upload wird mit einem Digital Object Identifier (DOI) versehen,um ihn "
-"zitierfähig und nachverfolgbar zu machen."
+msgid "Every upload is assigned a Digital Object Identifier (DOI)."
+msgstr "Jedem Upload wird ein Digital Object Identifier (DOI) zugewiesen."
 
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/benefits.html:13
 msgid "No waiting time"
@@ -85,39 +74,39 @@ msgstr "Keine Wartezeit"
 
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/benefits.html:13
 msgid ""
-"Uploads are made available online as soon as you hit publish, and your DOI "
-"is registered within seconds."
+"Uploads are made available online as soon as you hit publish. Your DOI is "
+"registered within seconds."
 msgstr ""
-"Uploads stehen sofort nach drücken auf “Veröffentlichen” zur Verfügung. Ihre "
-"DOI wird innerhalb von Sekunden registriert."
+"Uploads sind online verfügbar, sobald Sie auf \"Veröffentlichen\" klicken. "
+"Ihre DOI wird innerhalb von Sekunden registriert."
 
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/benefits.html:14
 msgid "Open or closed"
 msgstr "Offen oder geschlossen"
 
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/benefits.html:14
-msgid ""
-"Share e.g. anonymized clinical trial data with only medical professionals "
-"via our restricted access mode."
+msgid "Share private or anonymized data via the restricted access mode."
 msgstr ""
-"Teilen Sie z.B. anonymisierte klinische Studiendaten nur mit medizinischem "
-"Fachpersonal über unseren eingeschränkten Zugriffsmodus."
+"Teilen Sie private oder anonymisierte Daten über den eingeschränkten "
+"Zugriffsmodus."
 
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/benefits.html:15
 msgid "Versioning"
 msgstr "Versionierung"
 
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/benefits.html:15
-msgid "Easily update your dataset with our versioning feature."
-msgstr "Einfaches Updaten ihrer Datensätze mit unserer Versionierung."
+msgid "Easily update your dataset with the versioning feature."
+msgstr ""
+"Aktualisieren Sie Ihren Datensatz ganz einfach mit der "
+"Versionierungsfunktion."
 
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/benefits.html:16
 msgid "Usage statisics"
 msgstr "Nutzungsstatistiken"
 
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/benefits.html:16
-msgid "All uploads display standards compliant usage statistics"
-msgstr "Alle Uploads entsprechen den Standards der Nutzungsstatistiken"
+msgid "All uploads display standards compliant usage statistics."
+msgstr "Alle Uploads zeigen standardkonforme Nutzungsstatistiken an."
 
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/footer.html:29
 msgid "Documentation"
@@ -501,6 +490,13 @@ msgstr "Mit Ihrem TUGonline-Account registrieren"
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/accounts/register_user.html:61
 msgid "Sign up with repository credentials"
 msgstr "Mit Ihren Repository Daten registrieren"
+
+#~ msgid ""
+#~ "built and operated by CERN and OpenAIRE to ensure that everyone can join "
+#~ "in Open Science."
+#~ msgstr ""
+#~ "Aufgebaut und betrieben von CERN und OpenAIRE, um sicherzustellen, dass "
+#~ "jeder an Open Science teilnehmen kann."
 
 #~ msgid "Research Result"
 #~ msgstr "Forschungsergebnisse"
