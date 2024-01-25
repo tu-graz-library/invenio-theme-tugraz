@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: invenio-theme-tugraz 4.12.0\n"
 "Report-Msgid-Bugs-To: mojib.wali@tugraz.at\n"
-"POT-Creation-Date: 2023-12-06 23:09+0100\n"
-"PO-Revision-Date: 2023-12-06 23:25+0100\n"
+"POT-Creation-Date: 2024-01-25 21:47+0100\n"
+"PO-Revision-Date: 2024-01-25 21:47+0100\n"
 "Last-Translator: \n"
 "Language-Team: en <LL@li.org>\n"
 "Language: en\n"
@@ -30,11 +30,11 @@ msgid "Repository"
 msgstr ""
 
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/overview.html:12
-#: invenio_theme_tugraz/views.py:80
+#: invenio_theme_tugraz/views.py:70
 msgid "Overview"
 msgstr ""
 
-#: invenio_theme_tugraz/views.py:86
+#: invenio_theme_tugraz/views.py:76
 msgid "My dashboard"
 msgstr ""
 
@@ -186,12 +186,15 @@ msgid "to change the font size."
 msgstr ""
 
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/frontpage_overview.html:13
+#: invenio_theme_tugraz/templates/invenio_theme_tugraz/navbar.html:17
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/overview.html:26
-msgid "Research Result"
+msgid "Research Results"
 msgstr ""
 
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/frontpage_overview.html:16
-msgid "Frontpage: Description for research result"
+#, fuzzy
+#| msgid "Frontpage: Description for research result"
+msgid "Frontpage: Description for research results"
 msgstr ""
 "Research results is the collective term for all the results of a research "
 "project. They describe the data, source code and all digital objects on "
@@ -318,10 +321,6 @@ msgstr ""
 msgid "All"
 msgstr ""
 
-#: invenio_theme_tugraz/templates/invenio_theme_tugraz/navbar.html:17
-msgid "Research Results"
-msgstr ""
-
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/navbar.html:78
 msgid "TU GRAZ"
 msgstr ""
@@ -347,7 +346,9 @@ msgid "TECHNOLOGY"
 msgstr ""
 
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/overview.html:31
-msgid "Overview: Description for research result"
+#, fuzzy
+#| msgid "Overview: Description for research result"
+msgid "Overview: Description for research results"
 msgstr "Research results gives the base on which publications are built."
 
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/overview.html:42
@@ -392,7 +393,7 @@ msgstr ""
 msgid "Resource type"
 msgstr ""
 
-#: invenio_theme_tugraz/templates/invenio_theme_tugraz/recent_uploads.html:88
+#: invenio_theme_tugraz/templates/invenio_theme_tugraz/recent_uploads.html:86
 msgid "More"
 msgstr ""
 
