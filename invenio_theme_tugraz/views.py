@@ -65,16 +65,6 @@ def modify_user_dashboard():
     """Modify user dashboard."""
     user_dashboard_menu = current_menu.submenu("dashboard")
 
-    # order matters, this has to be here, otherwise it want override the orginal
-    # entry
-
-    # this is to buggy, it depends on the load order of the packages which is indeterminate
-    # user_dashboard_menu.submenu("uploads").register(
-    #     "invenio_app_rdm_users.uploads",
-    #     text=_("Research Results"),
-    #     order=1,
-    # )
-
     user_dashboard_menu.submenu("overview").register(
         "invenio_theme_tugraz.overview",
         text=_("Overview"),
