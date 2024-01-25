@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 #
-# Copyright (C) 2020-2021 Graz University of Technology.
+# Copyright (C) 2020-2024 Graz University of Technology.
 #
 # invenio-theme-tugraz is free software; you can redistribute it and/or
 # modify it under the terms of the MIT License; see LICENSE file for more
@@ -93,7 +93,6 @@ def ui_blueprint(app):
     routes = app.config.get("TUG_ROUTES")
 
     blueprint.add_url_rule(routes["index"], view_func=index)
-    blueprint.add_url_rule(routes["comingsoon"], view_func=comingsoon)
 
     return blueprint
 
@@ -111,8 +110,3 @@ def index():
     return render_template(
         "invenio_theme_tugraz/index.html", records=records_serializer(records)
     )
-
-
-def comingsoon():
-    """Comingsoon."""
-    return render_template("invenio_theme_tugraz/comingsoon.html")
