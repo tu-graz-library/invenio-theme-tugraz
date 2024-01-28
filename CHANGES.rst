@@ -8,6 +8,14 @@
 Changes
 =======
 
+Version v4.12.3 (release 2024-01-28)
+
+- wording: update text in benefits
+- translation: fix research result typo
+- ui: remove commented code
+- ui: remove comingsoon rule
+
+
 Version v4.12.2 (release 2024-01-07)
 
 - ui: use only first type
