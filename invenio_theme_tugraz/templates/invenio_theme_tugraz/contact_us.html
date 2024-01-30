@@ -1,0 +1,29 @@
+{#
+  Copyright (C) 2020-2024 Graz University of Technology.
+
+  invenio-theme-tugraz is free software; you can redistribute it and/or
+  modify it under the terms of the MIT License; see LICENSE file for more
+  details.
+#}
+
+<div class="ui segment">
+  <h4>{{ _("Need help?") }}</h4>
+
+  {%- if config.THEME_TUGRAZ_CONTACT_FORM %}
+    <div style="padding-bottom: 10px;">
+      <a id="feedback-form" class="fluid ui button">
+        {{ _("Contact us") }}
+      </a>
+    </div>
+  {%- endif %}
+  <p>
+    {{ _("We can help with:") }}
+  </p>
+
+  <ul>
+    <li>{{ _("Upload your research results, software, preprints, etc.") }}</li>
+    <li>{{ _("Increase upload limit beyond our default policy of 10GB.") }}</li>
+    <li>{{ _("Create contact with data stewards.") }}</li>
+    <li>{{ _("Find individual solutions.") }}</li>
+  </ul>
+</div>
