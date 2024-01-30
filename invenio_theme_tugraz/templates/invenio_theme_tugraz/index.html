@@ -25,36 +25,8 @@
 
     <!---segments-->
     <div class="six wide column">
-      <!--contact us-->
-      <div class="ui segment">
-        <h4>{{ _("Need help?") }}</h4>
-        {%- if config.THEME_TUGRAZ_CONTACT_FORM %}
-        <div style="padding-bottom: 10px;">
-          <a id="feedback-form" class="fluid ui button">
-            {{ _("Contact us") }}
-          </a>
-        </div>
-        {%- endif %}
-        <p>
-          {{ config.THEME_SITENAME }} {{ _("prioritizes all Recent uploads.") }}
-        </p>
-        <p>
-          {{ _("We can help with:") }}
-        </p>
-
-        <ul>
-          <li>{{ _("Uploading your research data, software, preprints, etc.") }}</li>
-          <li>{{ _("One-on-one with") }} {{ config.THEME_SITENAME }} {{ _("supporters.") }}</li>
-          <li>{{ _("Quota increases beyond our default policy.") }}</li>
-          <li>{{ _("Scripts for automated uploading of larger datasets.") }}</li>
-        </ul>
-      </div>
-
-      <div class="ui segment" style="padding-bottom: 10px;">
-        <h4>{{ _("Why use") }} {{ config.THEME_SITENAME }}</h4>
-
-        {% include "invenio_theme_tugraz/benefits.html" %}
-      </div>
+      {% include "invenio_theme_tugraz/contact_us.html" %}
+      {% include "invenio_theme_tugraz/benefits.html" %}
     </div>
   </div>
 </div>
