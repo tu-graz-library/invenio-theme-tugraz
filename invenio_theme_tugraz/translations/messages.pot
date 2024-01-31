@@ -9,14 +9,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: invenio-theme-tugraz 4.12.3\n"
 "Report-Msgid-Bugs-To: mojib.wali@tugraz.at\n"
-"POT-Creation-Date: 2024-01-30 10:06+0100\n"
+"POT-Creation-Date: 2024-01-31 09:23+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.10.3\n"
+"Generated-By: Babel 2.13.1\n"
 
 #: invenio_theme_tugraz/config.py:13 invenio_theme_tugraz/config.py:60
 msgid "TU Graz Repository"
@@ -131,7 +131,7 @@ msgid "Increase upload limit beyond our default policy of 10GB."
 msgstr ""
 
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/contact_us.html:26
-msgid "Create contact with data stewards."
+msgid "Establish contact with data stewards."
 msgstr ""
 
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/contact_us.html:27
