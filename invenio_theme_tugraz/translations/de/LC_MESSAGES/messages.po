@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: invenio-theme-tugraz 1.0.4\n"
 "Report-Msgid-Bugs-To: mojib.wali@tugraz.at\n"
-"POT-Creation-Date: 2024-01-30 10:06+0100\n"
-"PO-Revision-Date: 2024-01-30 10:06+0100\n"
+"POT-Creation-Date: 2024-01-31 09:23+0100\n"
+"PO-Revision-Date: 2024-01-31 10:03+0100\n"
 "Last-Translator: \n"
 "Language-Team: de <LL@li.org>\n"
 "Language: de\n"
@@ -140,10 +140,12 @@ msgstr "Hochladen Ihrer Forschungsergebnisse, Software, Preprints usw."
 
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/contact_us.html:25
 msgid "Increase upload limit beyond our default policy of 10GB."
-msgstr "Upload Limiterhöhung über unsere Standardrichtlinie von 10 GB hinaus."
+msgstr "Upload-Limit Erhöhung über unsere Standardrichtlinie von 10 GB hinaus."
 
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/contact_us.html:26
-msgid "Create contact with data stewards."
+#, fuzzy
+#| msgid "Create contact with data stewards."
+msgid "Establish contact with data stewards."
 msgstr "Kontakt mit den Data Stewards herstellen."
 
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/contact_us.html:27
