@@ -30,9 +30,11 @@
         </span>
 
         {# Resource type badge #}
-        <span class="ui label grey" data-tooltip="{{ _("Resource type") }}" data-inverted="">
-          {{ r.metadata.types[0] }}
-        </span>
+        {% if r.metadata.types | length > 0%}
+          <span class="ui label grey" data-tooltip="{{ _("Resource type") }}" data-inverted="">
+            {{ r.metadata.types[0] }}
+          </span>
+        {% endif %}
 
         <span class="ui label access-status {{ r.access_status.id }}"
               data-tooltip="{{ r.access_status.description_l10n }}"
