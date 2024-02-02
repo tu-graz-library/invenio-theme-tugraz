@@ -100,3 +100,8 @@ def index():
     return render_template(
         "invenio_theme_tugraz/index.html", records=records_serializer(records)
     )
+
+
+def locked():
+    """Error page for status locked."""
+    return render_template("invenio_theme_tugraz/423.html")

@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 #
-# Copyright (C) 2020-2021 Graz University of Technology.
+# Copyright (C) 2020-2024 Graz University of Technology.
 #
 # invenio-theme-tugraz is free software; you can redistribute it and/or
 # modify it under the terms of the MIT License; see LICENSE file for more
@@ -9,7 +9,7 @@
 """invenio module for TUGRAZ theme."""
 
 from . import config
-from .views import index
+from .views import index, locked
 
 
 class InvenioThemeTugraz(object):
@@ -26,6 +26,9 @@ class InvenioThemeTugraz(object):
         # https://flask.palletsprojects.com/en/1.1.x/api/#flask.Flask.add_url_rule
         app.add_url_rule("/", "index", index)
         self.init_config(app)
+
+        app.register_error_handler(423, locked)
+
         app.extensions["invenio-theme-tugraz"] = self
 
     def init_config(self, app):
