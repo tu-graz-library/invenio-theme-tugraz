@@ -8,6 +8,16 @@
 Changes
 =======
 
+Version v4.12.4 (release 2024-02-02)
+
+- ui: add 423 error page
+- fix: types could be empty list
+- setup: sort tests imports
+- workflows: change to reusable workflows
+- wording: update one string frontpage
+- wording: update frontpage
+
+
 Version v4.12.3 (release 2024-01-28)
 
 - wording: update text in benefits
