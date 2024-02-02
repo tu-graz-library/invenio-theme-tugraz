@@ -8,6 +8,11 @@
 Changes
 =======
 
+Version v4.12.5 (release 2024-02-02)
+
+
+
+
 Version v4.12.4 (release 2024-02-02)
 
 - ui: add 423 error page
