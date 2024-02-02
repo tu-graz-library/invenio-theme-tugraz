@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: invenio-theme-tugraz 4.12.0\n"
 "Report-Msgid-Bugs-To: mojib.wali@tugraz.at\n"
-"POT-Creation-Date: 2024-01-31 09:23+0100\n"
-"PO-Revision-Date: 2024-01-31 10:00+0100\n"
+"POT-Creation-Date: 2024-02-02 10:08+0100\n"
+"PO-Revision-Date: 2024-02-02 10:09+0100\n"
 "Last-Translator: \n"
 "Language-Team: en <LL@li.org>\n"
 "Language: en\n"
@@ -36,6 +36,14 @@ msgstr ""
 
 #: invenio_theme_tugraz/views.py:76
 msgid "My dashboard"
+msgstr ""
+
+#: invenio_theme_tugraz/templates/invenio_theme_tugraz/423.html:12
+msgid "Locked"
+msgstr ""
+
+#: invenio_theme_tugraz/templates/invenio_theme_tugraz/423.html:13
+msgid "The resource that is being accessed is locked."
 msgstr ""
 
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/accounts/accounts_base.html:26
@@ -108,7 +116,7 @@ msgid "All uploads display standards compliant usage statistics. "
 msgstr ""
 
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/benefits.html:19
-#: invenio_theme_tugraz/templates/invenio_theme_tugraz/recent_uploads.html:86
+#: invenio_theme_tugraz/templates/invenio_theme_tugraz/recent_uploads.html:88
 msgid "More"
 msgstr ""
 
@@ -380,7 +388,7 @@ msgstr ""
 msgid "Publication date"
 msgstr ""
 
-#: invenio_theme_tugraz/templates/invenio_theme_tugraz/recent_uploads.html:33
+#: invenio_theme_tugraz/templates/invenio_theme_tugraz/recent_uploads.html:34
 msgid "Resource type"
 msgstr ""
 
