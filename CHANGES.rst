@@ -8,6 +8,11 @@
 Changes
 =======
 
+Version v4.12.6 (release 2024-02-02)
+
+- fix: error_handler gets 1 parameter
+
+
 Version v4.12.5 (release 2024-02-02)
 
 
