@@ -102,6 +102,6 @@ def index():
     )
 
 
-def locked():
+def locked(e):
     """Error page for status locked."""
     return render_template("invenio_theme_tugraz/423.html")
