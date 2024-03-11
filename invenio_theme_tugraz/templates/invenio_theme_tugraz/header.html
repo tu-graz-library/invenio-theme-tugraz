@@ -15,6 +15,11 @@
 
 <div>
   <header>
+    {%- block site_banner %}
+      {% from 'invenio_banners/banner.html' import banner %}
+      {{ banner() }}
+    {%- endblock site_banner %}
+
     {%- block navbar %}
       <nav>
         {%- block navbar_header %}
