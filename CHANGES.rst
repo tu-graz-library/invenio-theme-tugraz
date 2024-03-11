@@ -8,6 +8,11 @@
 Changes
 =======
 
+Version v4.12.8 (release 2024-03-11)
+
+- ui: add banner to header
+
+
 Version v4.12.7 (release 2024-02-12)
 
 - translation: fix typo
