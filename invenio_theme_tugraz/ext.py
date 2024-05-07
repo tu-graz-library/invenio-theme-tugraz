@@ -8,6 +8,8 @@
 
 """invenio module for TUGRAZ theme."""
 
+from invenio_records_marc21.ui.theme import current_identity_can_view
+
 from . import config
 from .views import index, locked
 
@@ -28,6 +30,10 @@ class InvenioThemeTugraz(object):
         self.init_config(app)
 
         app.register_error_handler(423, locked)
+
+        @app.context_processor
+        def inject_visibility():
+            return {"can_view_marc21": current_identity_can_view()}
 
         app.extensions["invenio-theme-tugraz"] = self
 

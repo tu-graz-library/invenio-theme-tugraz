@@ -54,6 +54,7 @@
           </div>
         </div>
       </div>
+      {% if can_view_marc21 %}
       <div class="column">
         <div class="ui segment" style="height: 480px">
           <h2>{{ _("Publications") }}</h2>
@@ -65,6 +66,7 @@
           </div>
         </div>
       </div>
+      {% endif %}
       <div class="column">
         <div class="ui segment" style="height: 480px">
           <h2>{{ _("Educational Resources") }}</h2>
