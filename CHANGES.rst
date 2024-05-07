@@ -8,6 +8,11 @@
 Changes
 =======
 
+Version v4.12.9 (release 2024-05-07)
+
+- overview: view publications only if permission
+
+
 Version v4.12.8 (release 2024-03-11)
 
 - ui: add banner to header
