@@ -12,10 +12,6 @@ from typing import Dict
 
 from flask import Blueprint, g, render_template
 from flask_login import current_user, login_required
-from flask_menu import current_menu
-from invenio_i18n import lazy_gettext as _
-
-# from invenio_rdm_records.resources.serializers import UIJSONSerializer
 from invenio_records_global_search.resources.serializers import (
     GlobalSearchJSONSerializer,
 )
@@ -58,24 +54,6 @@ def make_dict_like(value: str, key: str) -> Dict[str, str]:
 def cast_to_dict(attr_dict):
     """Return the dict structure of AttrDict variable."""
     return AttrDict.to_dict(attr_dict)
-
-
-@blueprint.before_app_first_request
-def modify_user_dashboard():
-    """Modify user dashboard."""
-    user_dashboard_menu = current_menu.submenu("dashboard")
-
-    user_dashboard_menu.submenu("overview").register(
-        "invenio_theme_tugraz.overview",
-        text=_("Overview"),
-        order=0,
-    )
-
-    current_menu.submenu("actions.deposit").register(
-        "invenio_theme_tugraz.overview",
-        _("My dashboard"),
-        order=1,
-    )
 
 
 def ui_blueprint(app):
