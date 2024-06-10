@@ -8,6 +8,7 @@
 
 """invenio module for TUGRAZ theme."""
 
+from invenio_i18n import lazy_gettext as _
 from invenio_records_marc21.ui.theme import current_identity_can_view
 
 from . import config
@@ -42,3 +43,26 @@ class InvenioThemeTugraz(object):
         for k in dir(config):
             if k.startswith("INVENIO_THEME_TUGRAZ_") or k.startswith("THEME_TUGRAZ_"):
                 app.config.setdefault(k, getattr(config, k))
+
+
+def finalize_app(app):
+    """Finalize app."""
+    modify_user_dashboard(app)
+
+
+def modify_user_dashboard(app):
+    """Modify user dashboard."""
+    root_menu = app.extensions["menu"].root_node
+
+    user_dashboard_menu = root_menu.submenu("dashboard")
+    user_dashboard_menu.submenu("overview").register(
+        "invenio_theme_tugraz.overview",
+        text=_("Overview"),
+        order=0,
+    )
+
+    root_menu.submenu("actions.deposit").register(
+        "invenio_theme_tugraz.overview",
+        _("My dashboard"),
+        order=1,
+    )
