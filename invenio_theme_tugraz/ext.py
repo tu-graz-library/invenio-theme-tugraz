@@ -8,11 +8,12 @@
 
 """invenio module for TUGRAZ theme."""
 
+from flask_login import login_required
 from invenio_i18n import lazy_gettext as _
 from invenio_records_marc21.ui.theme import current_identity_can_view
 
 from . import config
-from .views import index, locked
+from .views import index, locked, require_tugraz_authenticated
 
 
 class InvenioThemeTugraz(object):
@@ -48,6 +49,7 @@ class InvenioThemeTugraz(object):
 def finalize_app(app):
     """Finalize app."""
     modify_user_dashboard(app)
+    guard_view_functions(app)
 
 
 def modify_user_dashboard(app):
@@ -66,3 +68,29 @@ def modify_user_dashboard(app):
         _("My dashboard"),
         order=1,
     )
+
+
+def guard_view_functions(app):
+    """Guard view-functions against unauthenticated access."""
+    endpoints_to_guard = [
+        "invenio_app_rdm_users.communities",
+        "invenio_app_rdm_users.requests",
+        "invenio_app_rdm_users.uploads",
+    ]
+
+    for endpoint in endpoints_to_guard:
+        view_func = app.view_functions.get(endpoint)
+        if not view_func:
+            continue
+
+        # decorate view-func
+        # same as if view-func were defined with:
+        #   @login_required
+        #   @require_tugraz_authenticated_user
+        view_func = login_required(
+            require_tugraz_authenticated(
+                view_func,
+            ),
+        )
+
+        app.view_functions[endpoint] = view_func
