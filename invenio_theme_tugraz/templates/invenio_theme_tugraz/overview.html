@@ -11,6 +11,11 @@
 {%- set active_dashboard_menu_item = "overview" %}
 {%- set title = _("Overview") %}
 
+{% block javascript %}
+  {{ super() }}
+  {{ webpack['invenio-theme-tugraz-unlock.js'] }}
+{% endblock javascript %}
+
 {%- block page_body %}
   {%- block user_dashboard_header %}
     {% include "invenio_app_rdm/users/header.html" %}
@@ -19,8 +24,9 @@
   <div class="ui container rel-mt-2">
     <h2>Overview</h2>
 
-
     <div class="ui five column stackable grid overview">
+      {% if is_tugraz_authenticated %}
+      {# 3 columns: Research-Uploads, Communities, and Requests #}
       <div class="column">
         <div class="ui segment" style="height: 480px">
           <h2>{{ _("Research Results") }}</h2>
@@ -54,6 +60,46 @@
           </div>
         </div>
       </div>
+      {% else %}  {# not is_tugraz_authenticated #}
+      {# 1 column: greyed out Research-Uploads #}
+      <div class="column">
+        {# a modal's HTML can be placed anywhere, so I placed it here, right before it's used #}
+        <div class="ui small modal" id="tugraz-unlock-modal">
+          <div class="header">{{ _("On unlocking research uploads") }}</div>
+          <div class="content">
+            <p>
+              {{ _('To ensure a well-curated repository, new users need to get unlocked
+              before being allowed to upload. Once unlocked, you can upload your research,
+              request its inclusion in a community, generate a DOI for it, and publish it.') }}
+              {# TODO: extra lines on policy about who gets accepted how for Research-Uploads #}
+            </p>
+            <div id="anchor-unlock-form">  {# will be replaced with ZammadForm when generating it #}
+              <button class="ui fluid button" onclick="
+                $('#tugraz-unlock-modal')
+                .modal('hide')"
+              >Got it!</button>
+              <button id="generate-unlock-form" class="ui fluid button">
+                {{ _("Request unlocking") }}
+              </button>
+            </div>
+          </div>
+        </div>
+
+        {# actual column contents start here #}
+        <div class="ui disabled segment" style="height: 480px">
+          <h2>{{ _("Research Results") }}</h2>
+          <div class="ui left floated image" style="cursor: pointer" onclick="
+            $('#tugraz-unlock-modal')
+            .modal('show')"
+          >
+            <img width="400px" alt="Research Results" src="{{ url_for("static", filename="images/diamond.svg") }}">
+          </div>
+          <div class="ui right floated text">
+            {{ _("Overview: Description for research results") }}
+          </div>
+        </div>
+      </div>
+      {% endif %}
       {% if can_view_marc21 %}
       <div class="column">
         <div class="ui segment" style="height: 480px">
