@@ -35,10 +35,16 @@ THEME_TUGRAZ_PRODUCTION = False
     has to be 'INVENIO_THEME_TUGRAZ_PRODUCTION'.
 """
 
+THEME_TUGRAZ_SUPPORT_EMAIL = ""
+"""Shown as contact-info on default error-page."""
+
 # Invenio-theme
 # ============
 # See https://invenio-theme.readthedocs.io/en/latest/configuration.html
 #
+THEME_500_TEMPLATE = "invenio_theme_tugraz/default_error.html"
+"""Used for any internal server errors and uncaught exceptions."""
+
 THEME_LOGO = "images/tug_logo.png"
 """TU Graz logo"""
 

@@ -11,7 +11,7 @@
 from functools import wraps
 from typing import Dict
 
-from flask import Blueprint, g, redirect, render_template, url_for
+from flask import Blueprint, current_app, g, redirect, render_template, url_for
 from flask_login import current_user, login_required
 from invenio_rdm_records.proxies import current_rdm_records
 from invenio_records_global_search.resources.serializers import (
@@ -86,11 +86,26 @@ def cast_to_dict(attr_dict):
     return AttrDict.to_dict(attr_dict)
 
 
+def default_error_handler(e: Exception):
+    """Called when an otherwise unhandled error occurs."""
+    # TODO: use sentry here once it's configured
+    # information we might want to log for debugging the error:
+    #   - `flask.request`, a proxy to the current http-request in which the error occured
+    #   - `flask.session`, a proxy to the current http-session
+    #   - `e`, the passed-in exception
+    # to get proxied-to objects: `flask.request._get_current_object()`
+
+    return render_template(current_app.config["THEME_500_TEMPLATE"]), 500
+
+
 def ui_blueprint(app):
     """Blueprint for the routes and resources provided by Invenio-theme-tugraz."""
     routes = app.config.get("TUG_ROUTES")
 
     blueprint.add_url_rule(routes["index"], view_func=index)
+
+    # base case for any otherwise unhandled exception
+    app.register_error_handler(Exception, default_error_handler)
 
     return blueprint
 
