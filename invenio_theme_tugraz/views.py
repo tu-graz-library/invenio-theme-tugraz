@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 #
-# Copyright (C) 2020-2024 Graz University of Technology.
+# Copyright (C) 2020-2025 Graz University of Technology.
 #
 # invenio-theme-tugraz is free software; you can redistribute it and/or
 # modify it under the terms of the MIT License; see LICENSE file for more
@@ -28,6 +28,20 @@ blueprint = Blueprint(
     template_folder="templates",
     static_folder="static",
 )
+
+
+@blueprint.route("/records/search")
+def records_search():
+    """Search page ui.
+
+    With this route it is possible to override the default route
+    "/search" to get to the rdm-records search. The default route will
+    be overriden by the global search with changing the
+    SEARCH_UI_SEARCH_TEMPLATE variable to the value
+    "invenio_records_global_search/search/search.html" in the
+    invenio.cfg file.
+    """
+    return render_template("invenio_app_rdm/records/search.html")
 
 
 def current_identity_is_tugraz_authenticated() -> bool:
