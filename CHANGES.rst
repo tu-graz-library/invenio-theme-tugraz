@@ -8,6 +8,16 @@
 Changes
 =======
 
+Version v4.13.0 (release 2025-01-24)
+
+- setup: necessary because devs not released
+- view: add route for rdm-search
+- setup: relax upper pins
+- add default-page for unhandled errors
+- guard views/dashboard by `tugraz_authenticated`
+- fix deprecated `before_app_first_request`
+
+
 Version v4.12.9 (release 2024-05-07)
 
 - overview: view publications only if permission
