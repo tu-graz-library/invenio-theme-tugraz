@@ -50,5 +50,22 @@ ReactDOM.render(
     options={searchBarOptions}
     placeholder={i18next.t("Search records...")}
   />,
-  headerSearchbar
+  headerSearchbar,
 );
+
+/* User profile dropdown */
+$("#user-profile-dropdown.ui.dropdown").dropdown({
+  showOnFocus: false,
+  selectOnKeydown: false,
+  action: (text, value, element) => {
+    // needed to trigger navigation on keyboard interaction
+    let path = element.attr("href");
+    window.location.pathname = path;
+  },
+  onShow: () => {
+    $("#user-profile-dropdown-btn").attr("aria-expanded", true);
+  },
+  onHide: () => {
+    $("#user-profile-dropdown-btn").attr("aria-expanded", false);
+  },
+});

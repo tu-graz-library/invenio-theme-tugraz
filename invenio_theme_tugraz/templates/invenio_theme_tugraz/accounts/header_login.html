@@ -1,36 +1,60 @@
 {%- if config.ACCOUNTS %}
+  {%- if not current_user.is_authenticated %}
+    {%- if config.SECURITY_REGISTERABLE %}
+      <div class="short-menu-right-button">
+        <a href="{{ url_for('security.register') }}" class="no-decoration">
+          {{_ ("Sign up")}}
+        </a>
+      </div>
+    {%- endif %}
+    <div class="short-menu-right-button">
+      <a href="{{url_for_security('login', next=request.path)}}" class="no-decoration">
+          {{_ ("Log in")}}
+      </a>
+    </div>
+  {%- else %}
+    {%- if config.USERPROFILES %}
+      <div class="short-menu-right-button">
+        <div  id="user-profile-dropdown" class="ui floating dropdown computer only">
+          <a href="{{ url_for('invenio_userprofiles.profile') }}" class="no-decoration">
+            <i class="user icon"></i> {{ current_user.email }}
+          </a>
+          <div
+            id="user-profile-menu"
+            class="ui menu"
+            role="menu"
+            aria-labelledby="user-profile-dropdown-btn"
+            >
+            {%- for item in current_menu.submenu('settings').children if item.visible %}
+              <a role="menuitem" class="item" href="{{ item.url }}" tabindex="-1">
+                {{ item.text|safe }}
+              </a>
+            {%- endfor %}
 
-{%- if not current_user.is_authenticated %}
+            <div class="ui divider"></div>
 
-{%- if config.SECURITY_REGISTERABLE %}
-<div class="short-menu-right-button">
-    <a href="{{ url_for('security.register') }}" class="no-decoration">
-        {{_ ("Sign up")}}
-    </a>
-</div>
-   {%- endif %}
+            {% set ns = namespace(admin_menu=False) %}
+            {%- for item in current_menu.submenu('profile-admin').children if item.visible %}
+              {% set ns.admin_menu = True %}
+              <a role="menuitem" class="item" href="{{ item.url }}" tabindex="-1">
+                {{ item.text|safe }}
+              </a>
+            {%- endfor %}
+            </div>
+        </div>
 
-<div class="short-menu-right-button">
-    <a href="{{url_for_security('login', next=request.path)}}" class="no-decoration">
-        {{_ ("Log in")}}
-    </a>
-</div>
-
-
-{%- else %}
-{%- if config.USERPROFILES %}
-
-<div class="short-menu-right-button">
-    <a href="{{ url_for('invenio_userprofiles.profile') }}" class="no-decoration">
-        <i class="user icon"></i> {{ current_user.email }}
-    </a>
-</div>
-<div class="short-menu-right-button">
-    <a class="dropdown-item no-decoration" href="{{url_for_security('logout')}}">
-        {{_('Sign out')}}
-    </a>
-</div>
-
-{%- endif %}
-{%- endif %}
+        {# Mobile/Tablet Account menu #}
+        <div class="sub-menu mobile tablet only">
+          <a href="{{ url_for('invenio_userprofiles.profile') }}" class="no-decoration">
+            <i class="user icon"></i> {{ current_user.email }}
+          </a>
+        </div>
+      </div>
+      <div class="short-menu-right-button">
+        <a class="dropdown-item no-decoration" href="{{url_for_security('logout')}}">
+          {{_('Sign out')}}
+        </a>
+      </div>
+    {%- endif %}
+  {%- endif %}
 {%- endif %}
