@@ -8,6 +8,13 @@
 Changes
 =======
 
+Version v4.13.1 (release 2025-05-01)
+
+- ui: add menu to user.email
+- refactor: create blueprint to newer style
+- setup: remove upper pins
+
+
 Version v4.13.0 (release 2025-01-24)
 
 - setup: necessary because devs not released
