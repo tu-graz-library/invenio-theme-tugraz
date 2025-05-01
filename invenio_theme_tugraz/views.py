@@ -11,7 +11,7 @@
 from functools import wraps
 from typing import Dict
 
-from flask import Blueprint, current_app, g, redirect, render_template, url_for
+from flask import Blueprint, Flask, current_app, g, redirect, render_template, url_for
 from flask_login import current_user, login_required
 from invenio_rdm_records.proxies import current_rdm_records
 from invenio_records_global_search.resources.serializers import (
@@ -22,15 +22,30 @@ from opensearch_dsl.utils import AttrDict
 
 from .search import FrontpageRecordsSearch
 
-blueprint = Blueprint(
-    "invenio_theme_tugraz",
-    __name__,
-    template_folder="templates",
-    static_folder="static",
-)
+
+def create_blueprint(app: Flask) -> Blueprint:
+    """Create blueprint."""
+    blueprint = Blueprint(
+        "invenio_theme_tugraz",
+        __name__,
+        template_folder="templates",
+        static_folder="static",
+    )
+    routes = app.config.get("THEME_TUGRAZ_ROUTES")
+
+    blueprint.add_url_rule(routes["records-search"], view_func=records_search)
+    blueprint.add_url_rule(routes["index"], view_func=index)
+    blueprint.add_url_rule(routes["overview"], view_func=overview)
+
+    # base case for any otherwise unhandled exception
+    app.register_error_handler(Exception, default_error_handler)
+
+    blueprint.add_app_template_filter(make_dict_like)
+    blueprint.add_app_template_filter(cast_to_dict)
+
+    return blueprint
 
 
-@blueprint.route("/records/search")
 def records_search():
     """Search page ui.
 
@@ -70,7 +85,6 @@ def require_tugraz_authenticated(view_func):
     return decorated_view
 
 
-@blueprint.route("/me/overview")
 @login_required
 def overview():
     """Overview."""
@@ -85,7 +99,6 @@ def overview():
     )
 
 
-@blueprint.app_template_filter("make_dict_like")
 def make_dict_like(value: str, key: str) -> Dict[str, str]:
     """Convert the value to a dict like structure.
 
@@ -94,7 +107,6 @@ def make_dict_like(value: str, key: str) -> Dict[str, str]:
     return {key: value}
 
 
-@blueprint.app_template_filter("cast_to_dict")
 def cast_to_dict(attr_dict):
     """Return the dict structure of AttrDict variable."""
     return AttrDict.to_dict(attr_dict)
@@ -110,18 +122,6 @@ def default_error_handler(e: Exception):
     # to get proxied-to objects: `flask.request._get_current_object()`
 
     return render_template(current_app.config["THEME_500_TEMPLATE"]), 500
-
-
-def ui_blueprint(app):
-    """Blueprint for the routes and resources provided by Invenio-theme-tugraz."""
-    routes = app.config.get("TUG_ROUTES")
-
-    blueprint.add_url_rule(routes["index"], view_func=index)
-
-    # base case for any otherwise unhandled exception
-    app.register_error_handler(Exception, default_error_handler)
-
-    return blueprint
 
 
 def records_serializer(records=None):
