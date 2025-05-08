@@ -26,12 +26,14 @@
 
           <div class="ui divider"></div>
           <!--Log in with SSO-->
-          {% if config.OAUTHCLIENT_REMOTE_APPS or config.SSO_SAML_IDPS or config.EDUGAIN_LOGIN_ENABLED %}
+          {% if config.OAUTHCLIENT_REMOTE_APPS %}
             <div class="ui form">
               {% for name in config.OAUTHCLIENT_REMOTE_APPS.keys() %}
                 {{ oauth_button(name, next=request.args.get('next')) }}
               {% endfor %}
             </div>
+          {% endif %}
+          {% if config.SSO_SAML_IDPS %}
             {% for name in config.SSO_SAML_IDPS.keys() %}
               <div class="field">
                 <a class="login-page-button ui fluid large button" href="{{ url_for('sso_saml.sso', idp=name) }}">
@@ -42,19 +44,19 @@
                 </a>
               </div>
             {% endfor %}
-            {% if config.EDUGAIN_LOGIN_ENABLED %}
-              <div class="field">
-                <a class="login-page-button ui fluid large button" href="{{ url_for('invenio_edugain.login_discover', next=request.args.get('next')) }}">
-                  {{ _('Log in with edugain') }}
-                  <img src="{{ url_for('static', filename='icons/eduGAIN-FavIcon-transparent.png') }}" height="20px" />
-                </a>
-              </div>
-            {% endif %}
-            {%- if config.ACCOUNTS_LOCAL_LOGIN_ENABLED %}
-              <div class="ui horizontal divider">
-                {{ _("Or") }}
-              </div>
-            {%- endif %}
+          {% endif %}
+          {% if config.EDUGAIN_LOGIN_ENABLED %}
+            <div class="field">
+              <a class="login-page-button ui fluid large button" href="{{ url_for('invenio_edugain.login_discover', next=request.args.get('next')) }}">
+                {{ _('Log in with edugain') }}
+                <img src="{{ url_for('static', filename='icons/eduGAIN-FavIcon-transparent.png') }}" height="20px" />
+              </a>
+            </div>
+          {% endif %}
+          {% if (config.OAUTHCLIENT_REMOTE_APPS or config.SSO_SAML_IDPS or config.EDUGAIN_LOGIN_ENABLED) and config.ACCOUNTS_LOCAL_LOGIN_ENABLED %}
+            <div class="ui horizontal divider">
+              {{ _("Or") }}
+            </div>
           {% endif %}
 
           {%- block form_outer %}
