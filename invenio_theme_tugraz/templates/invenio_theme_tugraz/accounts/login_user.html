@@ -1,5 +1,5 @@
 {#
-  Copyright (C) 2020-2021 Graz University of Technology.
+  Copyright (C) 2020-2025 Graz University of Technology.
 
   invenio-theme-tugraz is free software; you can redistribute it and/or
   modify it under the terms of the MIT License; see LICENSE file for more
@@ -8,99 +8,102 @@
 
 {% extends config.INVENIO_THEME_TUGRAZ_ACCOUNT_BASE %}
 
-
 {% from "invenio_accounts/_macros.html" import render_field, form_errors %}
 {%- from "invenio_oauthclient/_macros.html" import oauth_button %}
+
 {% block page_body %}
-<div class="spacer-long"></div>
-<div class="spacer-long"></div>
-<div class="ui container">
-  <div class="ui centered grid padded">
+  <div class="spacer-long"></div>
+  <div class="spacer-long"></div>
+  <div class="ui container">
+    <div class="ui centered grid padded">
+      <div class="ui padded segments large form">
+        <div class="ui login segment padded">
+          <div class="divider hidden"></div>
 
-    <div class="ui padded segments large form">
-      <div class="ui login segment padded">
-        <div class="divider hidden"></div>
-        {%- block form_header %}
-        <h3 class="ui login header">{{ _('Log in to Repository') }}</h3>
-        {%- endblock form_header %}
-        <div class="ui divider"></div>
-        <!--Log in with SSO-->
-        {% if config.OAUTHCLIENT_REMOTE_APPS or config.SSO_SAML_IDPS or config.EDUGAIN_LOGIN_ENABLED %}
-        <div class="ui form">
-          {% for name in config.OAUTHCLIENT_REMOTE_APPS.keys() %}
-            {{ oauth_button(name, next=request.args.get('next')) }}
-          {% endfor %}
-        </div>
-        {% for name in config.SSO_SAML_IDPS.keys() %}
-        <div class="field">
-          <a class="login-page-button ui fluid large button" href="{{ url_for('sso_saml.sso', idp=name) }}">
-            {{
-            _('Log in with %(title)s', title=config.SSO_SAML_IDPS[name]['title']|default("SAML", true))
-            }}
-            <img src="{{ url_for('static', filename=config.INVENIO_THEME_TUGRAZ_ICON)}}" height="20px" />
-          </a>
-        </div>
-        {% endfor %}
-        {% if config.EDUGAIN_LOGIN_ENABLED %}
-        <div class="field">
-          <a class="login-page-button ui fluid large button" href="{{ url_for('invenio_edugain.login_discover', next=request.args.get('next')) }}">
-            {{ _('Log in with edugain') }}
-            <img src="{{ url_for('static', filename='icons/eduGAIN-FavIcon-transparent.png') }}" height="20px" />
-          </a>
-        </div>
-        {% endif %}
-        {%- if config.ACCOUNTS_LOCAL_LOGIN_ENABLED %}
-        <div class="ui horizontal divider">
-          {{ _("Or") }}
-        </div>
-        {%- endif %}
-        {% endif %}
+          {%- block form_header %}
+            <h3 class="ui login header">{{ _('Log in to Repository') }}</h3>
+          {%- endblock form_header %}
 
-        {%- block form_outer %}
-        {%- if config.ACCOUNTS_LOCAL_LOGIN_ENABLED %}
-        {%- with form = login_user_form %}
-        {%- set accordion_active = "active" if form.errors else "" %}
-        <div class="ui styled accordion">
-          <div class="title trigger {{ accordion_active }}">
-            {{ _('Log in with repository credentials') }}
-            <i class="user icon button"></i>
-          </div>
-          <div class="content {{ accordion_active }}">
-            <form action="{{ url_for_security('login') }}" method="POST" name="login_user_form" class="ui large form">
-              {{ form.hidden_tag() }}
-              {{ form_errors(form) }}
-              {{ render_field(form.email, icon="user icon", autofocus=True, errormsg=False) }}
-              {{ render_field(form.password, icon="lock icon", errormsg=False) }}
-              <button type="submit" class="ui fluid large submit button">
-                <i class="ui sign-in icon"></i>{{ _('Log In') }}
-              </button>
-            </form>
-          </div>
+          <div class="ui divider"></div>
+          <!--Log in with SSO-->
+          {% if config.OAUTHCLIENT_REMOTE_APPS or config.SSO_SAML_IDPS or config.EDUGAIN_LOGIN_ENABLED %}
+            <div class="ui form">
+              {% for name in config.OAUTHCLIENT_REMOTE_APPS.keys() %}
+                {{ oauth_button(name, next=request.args.get('next')) }}
+              {% endfor %}
+            </div>
+            {% for name in config.SSO_SAML_IDPS.keys() %}
+              <div class="field">
+                <a class="login-page-button ui fluid large button" href="{{ url_for('sso_saml.sso', idp=name) }}">
+                  {{
+                    _('Log in with %(title)s', title=config.SSO_SAML_IDPS[name]['title']|default("SAML", true))
+                  }}
+                  <img src="{{ url_for('static', filename=config.INVENIO_THEME_TUGRAZ_ICON) }}" height="20px" />
+                </a>
+              </div>
+            {% endfor %}
+            {% if config.EDUGAIN_LOGIN_ENABLED %}
+              <div class="field">
+                <a class="login-page-button ui fluid large button" href="{{ url_for('invenio_edugain.login_discover', next=request.args.get('next')) }}">
+                  {{ _('Log in with edugain') }}
+                  <img src="{{ url_for('static', filename='icons/eduGAIN-FavIcon-transparent.png') }}" height="20px" />
+                </a>
+              </div>
+            {% endif %}
+            {%- if config.ACCOUNTS_LOCAL_LOGIN_ENABLED %}
+              <div class="ui horizontal divider">
+                {{ _("Or") }}
+              </div>
+            {%- endif %}
+          {% endif %}
+
+          {%- block form_outer %}
+            {%- if config.ACCOUNTS_LOCAL_LOGIN_ENABLED %}
+              {%- with form = login_user_form %}
+                {%- set accordion_active = "active" if form.errors else "" %}
+                <div class="ui styled accordion">
+                  <div class="title trigger {{ accordion_active }}">
+                    {{ _('Log in with repository credentials') }}
+                    <i class="user icon button"></i>
+                  </div>
+                  <div class="content {{ accordion_active }}">
+                    <form action="{{ url_for_security('login') }}" method="POST" name="login_user_form" class="ui large form">
+                      {{ form.hidden_tag() }}
+                      {{ form_errors(form) }}
+                      {{ render_field(form.email, icon="user icon", autofocus=True, errormsg=False) }}
+                      {{ render_field(form.password, icon="lock icon", errormsg=False) }}
+                      <button type="submit" class="ui fluid large submit button">
+                        <i class="ui sign-in icon"></i>{{ _('Log In') }}
+                      </button>
+                    </form>
+                  </div>
+                </div>
+              {%- endwith %}
+            {%- endif %}
+          {%- endblock form_outer %}
+
+          <div class="divider hidden"></div>
         </div>
-        {%- endwith %}
-        {%- endif %}
-        {%- endblock form_outer %}
-        <div class="divider hidden"></div>
+
+        {%- block registerable %}
+          {%- if security.registerable %}
+            <div class="ui primary segment padded text-muted">
+              {% trans sitename=config.ACCOUNTS_SITENAME %}New to {{ sitename }}?{% endtrans %}
+              <a href="{{ url_for_security('register', next=request.args.get('next')) }}">{{ _('Sign up') }}</a>
+            </div>
+          {%- endif %}
+        {%- endblock registerable %}
+
+        {%- block recoverable %}
+          {%- if security.recoverable %}
+            <div class="ui basic segment padded">
+              <a class="ui inverted header tiny"
+                href="{{ url_for_security('forgot_password') }}">{{ _('Forgot password?') }}</a>
+            </div>
+          {%- endif %}
+        {%- endblock recoverable %}
+
       </div>
-
-      {%- block registerable %}
-      {%- if security.registerable %}
-      <div class="ui primary segment padded text-muted">
-        {% trans sitename=config.ACCOUNTS_SITENAME %}New to {{ sitename }}?{% endtrans %}
-        <a href="{{ url_for_security('register', next=request.args.get('next')) }}">{{ _('Sign up') }}</a>
-      </div>
-      {%- endif %}
-      {%- endblock registerable %}
-
-      {%- block recoverable %}
-      {%- if security.recoverable %}
-      <div class="ui basic segment padded">
-        <a class="ui inverted header tiny"
-          href="{{ url_for_security('forgot_password') }}">{{ _('Forgot password?') }}</a>
-      </div>
-      {%- endif %}
-      {%- endblock recoverable %}
     </div>
   </div>
-</div>
 {% endblock page_body %}
