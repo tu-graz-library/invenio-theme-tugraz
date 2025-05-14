@@ -8,6 +8,13 @@
 Changes
 =======
 
+Version v4.13.2 (release 2025-05-14)
+
+- templates: guard against possibly nonexistent vars
+- templates: reformat indentation of login_user.html
+- ui: add edugain login-button to login-buttons
+
+
 Version v4.13.1 (release 2025-05-01)
 
 - setup: setuptools changed to underscore
