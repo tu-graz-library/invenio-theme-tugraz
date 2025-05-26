@@ -8,6 +8,7 @@
 
 """invenio module for TUGRAZ theme."""
 
+import traceback
 from functools import wraps
 from typing import Dict
 
@@ -121,6 +122,8 @@ def default_error_handler(e: Exception):
     #   - `e`, the passed-in exception
     # to get proxied-to objects: `flask.request._get_current_object()`
 
+    msg = "default_error_handler of invenio-theme-tugraz captured following error type: %s with message %s and stack trace %s"
+    current_app.logger.error(msg, type(e), e, traceback.format_exc())
     return render_template(current_app.config["THEME_500_TEMPLATE"]), 500
 
 
