@@ -8,6 +8,11 @@
 Changes
 =======
 
+Version v4.13.3 (release 2025-05-27)
+
+- fix: add logger output
+
+
 Version v4.13.2 (release 2025-05-14)
 
 - templates: guard against possibly nonexistent vars
