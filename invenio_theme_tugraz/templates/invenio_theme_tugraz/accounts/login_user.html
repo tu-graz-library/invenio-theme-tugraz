@@ -33,10 +33,11 @@
               {% endfor %}
             </div>
           {% endif %}
+          {% set next_url=request.args.get('next') or request.referrer %}
           {% if config.SSO_SAML_IDPS %}
             {% for name in config.SSO_SAML_IDPS.keys() %}
               <div class="field">
-                <a class="login-page-button ui fluid large button" href="{{ url_for('sso_saml.sso', idp=name) }}">
+                <a class="login-page-button ui fluid large button" href="{{ url_for('sso_saml.sso', idp=name, next=next_url) }}">
                   {{
                     _('Log in with %(title)s', title=config.SSO_SAML_IDPS[name]['title']|default("SAML", true))
                   }}
@@ -47,7 +48,8 @@
           {% endif %}
           {% if config.EDUGAIN_LOGIN_ENABLED %}
             <div class="field">
-              <a class="login-page-button ui fluid large button" href="{{ url_for('invenio_edugain.login_discover', next=request.args.get('next')) }}">
+              {% set return_url = url_for('invenio_edugain.authn_request', next=next_url, _external=True) %}
+              <a class="login-page-button ui fluid large button" href="{{ url_for('invenio_edugain.login_discover', **{'return': return_url}) }}">
                 {{ _('Log in with edugain') }}
                 <img src="{{ url_for('static', filename='icons/eduGAIN-FavIcon-transparent.png') }}" height="20px" />
               </a>
