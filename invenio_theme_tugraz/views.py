@@ -8,6 +8,7 @@
 
 """invenio module for TUGRAZ theme."""
 
+import secrets
 import traceback
 from functools import wraps
 from typing import Dict
@@ -122,9 +123,21 @@ def default_error_handler(e: Exception):
     #   - `e`, the passed-in exception
     # to get proxied-to objects: `flask.request._get_current_object()`
 
-    msg = "default_error_handler of invenio-theme-tugraz captured following error type: %s with message %s and stack trace %s"
-    current_app.logger.error(msg, type(e), e, traceback.format_exc())
-    return render_template(current_app.config["THEME_500_TEMPLATE"]), 500
+    error_id = secrets.token_hex(4)  # 4 bytes == 8 hex-chars
+    tb = "".join(traceback.format_exception(e))
+    msg = (
+        "(caught by invenio-theme-tugraz's default_error_handler):\n"
+        "Error ID: #%s\n"
+        "Exception class: %s\n"
+        "Exception: %s\n"
+        "%s"  # NOTE: tracebacks starts with "Traceback (most recent call last):", so no need to also mention "Traceback: " explicitly here
+    )
+    current_app.logger.error(msg, error_id, type(e), e, tb)
+
+    return (
+        render_template(current_app.config["THEME_500_TEMPLATE"], error_id=error_id),
+        500,
+    )
 
 
 def records_serializer(records=None):

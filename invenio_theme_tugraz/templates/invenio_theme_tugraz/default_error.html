@@ -9,13 +9,19 @@
   {% extends config.THEME_ERROR_TEMPLATE %}
 
   {% block message %}
-    <h1> {{ _('Internal server error') }} </h1>
-    <p>
+    <h1><i class="bolt icon"></i> {{ _('An unexpected error occured') }} </h1>
+    <div>
       {{ _(
           'Please contact <a href="mailto:{support_email}">our support</a>
           to let us know about this error.'
         ).format(support_email=config.THEME_TUGRAZ_SUPPORT_EMAIL)
       }}
-    </p>
+      <br>
+      {{ _('Please add to your email:') }}
+    </div>
+    <ul class="m-0">
+      <li>this error-id: <b>{{ error_id }}</b></li>
+      <li>a brief description of how you got to this error page</li>
+    </ul>
     {# TODO: provide g.sentry_event_id here once sentry is configured, cf. invenio_theme/500.html #}
   {% endblock message %}
