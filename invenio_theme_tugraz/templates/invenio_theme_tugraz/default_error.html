@@ -20,8 +20,8 @@
       {{ _('Please add to your email:') }}
     </div>
     <ul class="m-0">
-      <li>this error-id: <b>{{ error_id }}</b></li>
-      <li>a brief description of how you got to this error page</li>
+      <li>{{ _('this error-id:') }} <b>{{ error_id }}</b></li>
+      <li>{{ _('a brief description of how you got to this error page') }}</li>
     </ul>
     {# TODO: provide g.sentry_event_id here once sentry is configured, cf. invenio_theme/500.html #}
   {% endblock message %}
