@@ -13,7 +13,12 @@ from invenio_i18n import lazy_gettext as _
 from invenio_records_marc21.ui.theme import current_identity_can_view
 
 from . import config
-from .views import index, locked, require_tugraz_authenticated
+from .views import (
+    index,
+    locked,
+    require_tugraz_authenticated_else_redirect,
+    require_tugraz_authenticated_else_render,
+)
 
 
 class InvenioThemeTugraz(object):
@@ -72,25 +77,33 @@ def modify_user_dashboard(app):
 
 def guard_view_functions(app):
     """Guard view-functions against unauthenticated access."""
-    endpoints_to_guard = [
-        "invenio_app_rdm_users.communities",
-        "invenio_app_rdm_users.requests",
-        "invenio_app_rdm_users.uploads",
-    ]
+    endpoint_guards = {
+        "invenio_app_rdm_users.communities": [
+            login_required,
+            require_tugraz_authenticated_else_redirect,
+        ],
+        "invenio_app_rdm_users.requests": [
+            login_required,
+            require_tugraz_authenticated_else_redirect,
+        ],
+        "invenio_app_rdm_users.uploads": [
+            login_required,
+            require_tugraz_authenticated_else_render,
+        ],
+    }
 
-    for endpoint in endpoints_to_guard:
+    for endpoint, guarding_decorators in endpoint_guards.items():
         view_func = app.view_functions.get(endpoint)
         if not view_func:
             continue
 
         # decorate view-func
         # same as if view-func were defined with:
-        #   @login_required
-        #   @require_tugraz_authenticated_user
-        view_func = login_required(
-            require_tugraz_authenticated(
-                view_func,
-            ),
-        )
+        #   @guarding_decorator[0]
+        #   @guarding_decorator[1]
+        #   @...
+        # lowest line decorator needs be applied first, so iterate over reversed(...)
+        for guarding_decorator in reversed(guarding_decorators):
+            view_func = guarding_decorator(view_func)
 
         app.view_functions[endpoint] = view_func
