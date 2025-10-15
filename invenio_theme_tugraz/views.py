@@ -72,16 +72,38 @@ def current_identity_is_tugraz_authenticated() -> bool:
     return rdm_service.check_permission(g.identity, "tugraz_authenticated")
 
 
-def require_tugraz_authenticated(view_func):
+def require_tugraz_authenticated_else_redirect(view_func):
     """Decorator for guarding view-functions against unauthenticated users.
 
-    Redirects un-authenticated users to their personal dashboard's overview.
+    Redirects un-authenticated users to Uploads,
+    where unauthenticated users are shown a message on how to get authenticated.
     """
 
     @wraps(view_func)
     def decorated_view(*args, **kwargs):
         if not current_identity_is_tugraz_authenticated():
-            return redirect(url_for("invenio_theme_tugraz.overview"))
+            return redirect(url_for("invenio_app_rdm_users.uploads"))
+        return view_func(*args, **kwargs)
+
+    return decorated_view
+
+
+def require_tugraz_authenticated_else_render(view_func):
+    """Decorator for guarding view-functions against unauthenticated users.
+
+    For unauthenticated users, renders the message on how to get authenticated.
+    """
+
+    @wraps(view_func)
+    def decorated_view(*args, **kwargs):
+        if not current_identity_is_tugraz_authenticated():
+            url = current_user_resources.users_service.links_item_tpl.expand(
+                identity=g.identity, obj=current_user
+            )["avatar"]
+            return render_template(
+                "invenio_theme_tugraz/not_tugraz_authenticated.html",
+                user_avatar=url,
+            )
         return view_func(*args, **kwargs)
 
     return decorated_view
