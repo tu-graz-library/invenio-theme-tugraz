@@ -1,5 +1,5 @@
 ..
-    Copyright (C) 2020-2021 Graz University of Technology.
+    Copyright (C) 2020-2025 Graz University of Technology.
 
     invenio-theme-tugraz is free software; you can redistribute it and/or
     modify it under the terms of the MIT License; see LICENSE file for more
@@ -7,6 +7,15 @@
 
 Changes
 =======
+
+Version v4.13.4 (released 2025-10-21)
+
+- ui: hide dashboard tabs from unauthenticated users
+- fix(ui): dashboard icon box overlapping text
+- dashboard: update look and behavior
+- fix: mark for translation strings in error page
+- logging: update default error-handling
+- login: redirect to next-url after login
 
 Version v4.13.3 (release 2025-05-27)
 
