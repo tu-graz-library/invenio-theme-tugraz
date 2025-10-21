@@ -10,6 +10,8 @@
 
 from invenio_i18n import gettext as _
 
+from .views import current_identity_is_tugraz_authenticated
+
 INVENIO_THEME_TUGRAZ_DEFAULT_VALUE = _("TU Graz Repository")
 """Default value for the application."""
 
@@ -90,6 +92,12 @@ SEARCH_UI_HEADER_TEMPLATE = "invenio_theme_tugraz/header.html"
 
 DEPOSITS_HEADER_TEMPLATE = "invenio_theme_tugraz/header.html"
 """Deposits header page's template."""
+
+USER_DASHBOARD_MENU_OVERRIDES = {
+    "communities": {"visible_when": current_identity_is_tugraz_authenticated},
+    "requests": {"visible_when": current_identity_is_tugraz_authenticated},
+}
+"""Overrides for "dashboard" menu."""
 
 
 # Invenio-rdm-records
