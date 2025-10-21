@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 #
-# Copyright (C) 2020-2022 Graz University of Technology.
+# Copyright (C) 2020-2025 Graz University of Technology.
 #
 # invenio-theme-tugraz is free software; you can redistribute it and/or
 # modify it under the terms of the MIT License; see LICENSE file for more
@@ -10,6 +10,6 @@
 
 from .ext import InvenioThemeTugraz
 
-__version__ = "4.13.3"
+__version__ = "4.13.4"
 
 __all__ = ("__version__", "InvenioThemeTugraz")
