@@ -8,6 +8,10 @@
 Changes
 =======
 
+Version v4.13.5 (released 2025-11-03)
+
+- benefits: update in context of curation
+
 Version v4.13.4 (released 2025-10-21)
 
 - ui: hide dashboard tabs from unauthenticated users
