@@ -141,14 +141,27 @@
         <div class="column">
           <div class="logos">
             <strong>Supported by</strong>
-            <a href="https://www.openeducation.at" target="_blank" title="Open Education Austria">
-              <img src="{{ url_for("static", filename="images/oea.svg")}}"
-                   alt="Open Education Austria"
-                   style="display: block; height: auto; margin-top: 15px; width: 200px;">
-            </a>
+            <div class="ui two column grid">
+              <div class="row">
+                <div class="column">
+                  <a href="https://www.openeducation.at" target="_blank" title="Open Education Austria">
+                    <img src="{{ url_for("static", filename="images/oea.svg")}}"
+                            alt="Open Education Austria"
+                            style="display: block; height: auto; margin-top: 15px; width: 200px;">
+                    </a>
+                  </div>
+                  <div class="column">
+                    <a href="https://forschungsdaten.at/en/sharedrdm/" target="_blank" title="Shared RDM">
+                      <img src="{{ url_for("static", filename="images/SharedRDM-orange.png")}}"
+                            alt="Shared RDM"
+                            style="display: block; height: auto; margin-top: 15px; width: 380px;">
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
 
       <div class="ui divider"></div>
 
