@@ -10,7 +10,7 @@ Changes
 
 Version v4.13.6 (released 2026-01-08)
 
-- ui: add SharedRDM logo to footer * add logo in the _Supported by_ footer section
+- ui: add SharedRDM logo to footer
 
 Version v4.13.5 (released 2025-11-03)
 
