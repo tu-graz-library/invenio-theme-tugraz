@@ -8,6 +8,10 @@
 Changes
 =======
 
+Version v4.13.7 (released 2026-01-08)
+
+- fix(CHANGES): syntax problem
+
 Version v4.13.6 (released 2026-01-08)
 
 - ui: add SharedRDM logo to footer
