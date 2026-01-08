@@ -1,5 +1,5 @@
 ..
-    Copyright (C) 2020-2025 Graz University of Technology.
+    Copyright (C) 2020-2026 Graz University of Technology.
 
     invenio-theme-tugraz is free software; you can redistribute it and/or
     modify it under the terms of the MIT License; see LICENSE file for more
@@ -7,6 +7,10 @@
 
 Changes
 =======
+
+Version v4.13.6 (released 2026-01-08)
+
+- ui: add SharedRDM logo to footer * add logo in the _Supported by_ footer section
 
 Version v4.13.5 (released 2025-11-03)
 
