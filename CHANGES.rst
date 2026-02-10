@@ -8,6 +8,10 @@
 Changes
 =======
 
+Version v4.14.0 (released 2026-02-10)
+
+- chore(setup): bump dependencies
+
 Version v4.13.7 (released 2026-01-08)
 
 - fix(CHANGES): syntax problem
