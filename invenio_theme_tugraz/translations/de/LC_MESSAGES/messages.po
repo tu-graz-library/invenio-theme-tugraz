@@ -499,6 +499,18 @@ msgstr "Mit Ihrem TUGonline-Account registrieren"
 msgid "Sign up with repository credentials"
 msgstr "Mit Ihren Repository Daten registrieren"
 
+#: invenio_theme_tugraz/templates/invenio_theme_tugraz/footer.html:64
+msgid "Accessibility Statement"
+msgstr "Barrierefreiheitserklärung"
+
+#: invenio_theme_tugraz/templates/invenio_theme_tugraz/footer.html:71
+msgid "List of preferred file formats"
+msgstr "Liste der bevorzugten Dateiformate"
+
+#: invenio_theme_tugraz/templates/invenio_theme_tugraz/footer.html:78
+msgid "Curation Workflow"
+msgstr "Kuratierung Workflow"
+
 #~ msgid "Why use"
 #~ msgstr "Warum"
 
