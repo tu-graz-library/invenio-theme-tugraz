@@ -1,5 +1,5 @@
 {#
-  Copyright (C) 2020-2023 Graz University of Technology.
+  Copyright (C) 2020-2026 Graz University of Technology.
 
   invenio-theme-tugraz is free software; you can redistribute it and/or
   modify it under the terms of the MIT License; see LICENSE file for more
@@ -33,7 +33,7 @@
             <div class="item">
               <a href="{{ url_for('invenio_config_tugraz.guide') }}"
                  title="Quick guide" target="_blank">
-                 {{ _("Reference Guide") }} <i class="download icon"></i>
+                 {{ _("Reference Guide") }} <i class="external alternate icon"></i>
               </a>
             </div>
 
@@ -47,19 +47,39 @@
             <div class="item">
               <a href="{{ url_for('invenio_config_tugraz.gdpr') }}"
                  title="General Data Protection Rights" target="_blank">
-                 {{ _("Data Protection") }} <i class="download icon"></i>
+                 {{ _("Data Protection") }} <i class="external alternate icon"></i>
               </a>
             </div>
 
             <div class="item">
               <a href="{{ url_for('invenio_config_tugraz.terms') }}"
                  title="Terms and Conditions" target="_blank">
-                 {{ _("Terms and Conditions") }} <i class="download icon"></i>
+                 {{ _("Terms and Conditions") }} <i class="external alternate icon"></i>
+              </a>
+            </div>
+
+            <div class="item">
+              <a href="{{ url_for('invenio_config_tugraz.accessibility') }}"
+                 title="Accessibility Statement" target="_blank">
+                 {{ _("Accessibility Statement") }} <i class="external alternate icon"></i>
+              </a>
+            </div>
+
+            <div class="item">
+              <a href="{{ url_for('invenio_config_tugraz.file_formats') }}"
+                 title="List of preferred file formats" target="_blank">
+                 {{ _("List of preferred file formats") }} <i class="external alternate icon"></i>
+              </a>
+            </div>
+
+            <div class="item">
+              <a href="{{ url_for('invenio_config_tugraz.curations') }}"
+                 title="Curation Workflow" target="_blank">
+                 {{ _("Curation Workflow") }} <i class="external alternate icon"></i>
               </a>
             </div>
           </div>
         </div>
-
 
         <div class="column">
           <h2>{{ _("Features") }}</h2>
