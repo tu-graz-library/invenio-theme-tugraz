@@ -478,3 +478,15 @@ msgstr ""
 #: invenio_theme_tugraz/templates/invenio_theme_tugraz/accounts/register_user.html:61
 msgid "Sign up with repository credentials"
 msgstr ""
+
+#: invenio_theme_tugraz/templates/invenio_theme_tugraz/footer.html:64
+msgid "Accessibility Statement"
+msgstr ""
+
+#: invenio_theme_tugraz/templates/invenio_theme_tugraz/footer.html:71
+msgid "List of preferred file formats"
+msgstr ""
+
+#: invenio_theme_tugraz/templates/invenio_theme_tugraz/footer.html:78
+msgid "Curation Workflow"
+msgstr ""
