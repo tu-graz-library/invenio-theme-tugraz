@@ -8,6 +8,13 @@
 Changes
 =======
 
+Version v4.14.1 (released 2026-03-13)
+
+- fix(ui): nested comments layout
+- chore: bump config-tugraz dependency
+- chore(translations): update footer translations
+- chore: update footer items
+
 Version v4.14.0 (released 2026-02-10)
 
 - chore(setup): bump dependencies
